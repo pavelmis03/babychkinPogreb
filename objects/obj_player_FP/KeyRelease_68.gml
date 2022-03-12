@@ -1,0 +1,1 @@
+ds_list_delete(player_move_key_list, ds_list_find_index(player_move_key_list, "D"));

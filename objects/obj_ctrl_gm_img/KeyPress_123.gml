@@ -1,0 +1,3 @@
+/// @description скриншот
+
+action = "createScreenShot";
