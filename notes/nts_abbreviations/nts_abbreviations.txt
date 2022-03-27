@@ -1,4 +1,4 @@
-achieve - achievement
+achv - achievement
 diff - difference
 stat - statistics
 ctrl - controller
@@ -28,6 +28,9 @@ lvl - level
 val - value 
 ref - reference
 jrn - journal
+cnt - count
+inv - inventory
+rmv - remove
 
 bg - background
 el - element
@@ -36,3 +39,4 @@ ld - load
 fp - first_part
 sp - second_part
 mv - moving
+hp - healph

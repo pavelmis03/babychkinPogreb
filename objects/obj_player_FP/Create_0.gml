@@ -25,9 +25,11 @@ player_attack = false;	//показывает, что персонаж соби�
 //в нужную ячейку списка записывается id объекта коллизии
 player_col = ds_map_create();
 player_col[?"enemy"] = 0;
-player_col[?"inventory"] = 0;
+player_col[?"inv"] = 0;
 //player_col[?"sth"] = 0;
 
+//interaction 
+player_pressE = false;
 
 
 

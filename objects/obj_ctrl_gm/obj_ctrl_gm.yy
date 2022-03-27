@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Gm",
-    "path": "folders/Objects/Ctrl/Gm.yy",
+    "name": "main",
+    "path": "folders/Objects/Ctrl/Gm/main.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_ctrl_gm",

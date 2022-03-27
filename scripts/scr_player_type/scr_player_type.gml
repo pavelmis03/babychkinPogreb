@@ -1,6 +1,5 @@
 /// @function scr_player_type();
 /// @description определяет, какой игрок присутствует в комнате и возвращает его
-
 function scr_player_type() {
 	var player = obj_player_FP;
 	

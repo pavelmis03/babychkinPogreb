@@ -2,19 +2,29 @@
 
 //ОПИСАНИЕ ПРЕДМЕТОВ
 
+//все, что можно съесть и влияние этого на параметры игрока
 global.CONST_PRODUCT = ds_map_create();
 
+//описание оружия
 global.CONST_WEAPON = ds_map_create();
 
-global.CONST_CRAFT_INSTRUCTION = ds_map_create();
+//чертежи и карты
+global.CONST_DRAWINGS = ds_map_create();
 
+//гипотетические предметы
 global.CONST_AMULET = ds_map_create();		//!НЕ ГОТОВО
 
+//описаник патронов
 global.CONST_PATRON = ds_map_create();
 
+//вещи
 global.CONST_CLOTHES = ds_map_create();
 
-global.CONST_WEIGHT = ds_map_create();		//!НЕ ГОТОВО	
+//описание предметов
+global.CONST_ITEMS = ds_map_create();
+
+//вес
+//global.CONST_WEIGHT = ds_map_create();		//!НЕ ГОТОВО
 
 {
 //ПРОДУКТЫ, НАПИТКИ И МЕДИКАМЕНТЫ
@@ -356,56 +366,67 @@ global.CONST_WEAPON[?"coctail"] = [[10, 20], /*урон*/
 }
 	
 {
-//ИНСТРУКЦИИ
+//ЧЕРТЕЖИ И КАРТЫ
 	//есть или нет, при определенных действиях будет проверяться наличие
-global.CONST_CRAFT_INSTRUCTION[?"tunnelMap1"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"tunnelMap2"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"tunnelMap3"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"tunnelMap4"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"tunnelMap5"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"ghostTownMap1"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"ghostTownMap2"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"ghostBaseMap1"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"ghostBaseMap2"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"drawingModifMakarov1"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"drawingModifMakarov2"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"drawingModifAuto1"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"drawingModifAuto2"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"drawingModifAuto3"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"drawingModifHIAC1"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"drawingModifHIAC2"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"drawingModifHIAC3"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"drawingModifHIAC4"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"drawingModifHIAC5"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"drawingRocket1"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"drawingRocket2"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"drawingGrenade1"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"drawingGrenade2"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"repairInstructionAuto"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"repairInstructionMakarov"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"mechanicTextbook1"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"mechanicTextbook2"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"mechanicTextbook3"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"engineeringTextbook"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"engineeringTextbook"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"psychologyTextbook"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"equipmentTextbook"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"instructionsInstallingTurret"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"instructionsCreatingTurret1"] = [false];
-global.CONST_CRAFT_INSTRUCTION[?"instructionsCreatingTurret2"] = [false];
+global.CONST_DRAWINGS[?"tunnelMap1"] = [false];
+global.CONST_DRAWINGS[?"tunnelMap2"] = [false];
+global.CONST_DRAWINGS[?"tunnelMap3"] = [false];
+global.CONST_DRAWINGS[?"tunnelMap4"] = [false];
+global.CONST_DRAWINGS[?"tunnelMap5"] = [false];
+global.CONST_DRAWINGS[?"ghostTownMap1"] = [false];
+global.CONST_DRAWINGS[?"ghostTownMap2"] = [false];
+global.CONST_DRAWINGS[?"ghostBaseMap1"] = [false];
+global.CONST_DRAWINGS[?"ghostBaseMap2"] = [false];
+global.CONST_DRAWINGS[?"drawingModifMakarov1"] = [false];
+global.CONST_DRAWINGS[?"drawingModifMakarov2"] = [false];
+global.CONST_DRAWINGS[?"drawingModifAuto1"] = [false];
+global.CONST_DRAWINGS[?"drawingModifAuto2"] = [false];
+global.CONST_DRAWINGS[?"drawingModifAuto3"] = [false];
+global.CONST_DRAWINGS[?"drawingModifHIAC1"] = [false];
+global.CONST_DRAWINGS[?"drawingModifHIAC2"] = [false];
+global.CONST_DRAWINGS[?"drawingModifHIAC3"] = [false];
+global.CONST_DRAWINGS[?"drawingModifHIAC4"] = [false];
+global.CONST_DRAWINGS[?"drawingModifHIAC5"] = [false];
+global.CONST_DRAWINGS[?"drawingRocket1"] = [false];
+global.CONST_DRAWINGS[?"drawingRocket2"] = [false];
+global.CONST_DRAWINGS[?"drawingGrenade1"] = [false];
+global.CONST_DRAWINGS[?"drawingGrenade2"] = [false];
+global.CONST_DRAWINGS[?"repairInstructionAuto"] = [false];
+global.CONST_DRAWINGS[?"repairInstructionMakarov"] = [false];
+global.CONST_DRAWINGS[?"mechanicTextbook1"] = [false];
+global.CONST_DRAWINGS[?"mechanicTextbook2"] = [false];
+global.CONST_DRAWINGS[?"mechanicTextbook3"] = [false];
+global.CONST_DRAWINGS[?"engineeringTextbook"] = [false];
+global.CONST_DRAWINGS[?"engineeringTextbook"] = [false];
+global.CONST_DRAWINGS[?"psychologyTextbook"] = [false];
+global.CONST_DRAWINGS[?"equipmentTextbook"] = [false];
+global.CONST_DRAWINGS[?"instructionsInstallingTurret"] = [false];
+global.CONST_DRAWINGS[?"instructionsCreatingTurret1"] = [false];
+global.CONST_DRAWINGS[?"instructionsCreatingTurret2"] = [false];
 
 }
 	
 {
-//ВЕС, МАКС. КОЛИЧЕСТВО И ЦЕНА
-	//вес, макс. кол-во, цена
-global.CONST_WEIGHT[?""] = [1, /*вес*/ -1, /*кол-во*/ 20/*цена*/];
-global.CONST_WEIGHT[?""] = [1, /*вес*/ -1, /*кол-во*/ 20/*цена*/];
-global.CONST_WEIGHT[?""] = [1, /*вес*/ -1, /*кол-во*/ 20/*цена*/];
-global.CONST_WEIGHT[?""] = [1, /*вес*/ -1, /*кол-во*/ 20/*цена*/];
-global.CONST_WEIGHT[?""] = [1, /*вес*/ -1, /*кол-во*/ 20/*цена*/];
-global.CONST_WEIGHT[?""] = [1, /*вес*/ -1, /*кол-во*/ 20/*цена*/];
-global.CONST_WEIGHT[?""] = [1, /*вес*/ -1, /*кол-во*/ 20/*цена*/];
-global.CONST_WEIGHT[?""] = [1, /*вес*/ -1, /*кол-во*/ 20/*цена*/];
-global.CONST_WEIGHT[?""] = [1, /*вес*/ -1, /*кол-во*/ 20/*цена*/];
+//описание предметов для инвентаря и журнала, здесь же вес
+global.CONST_ITEMS[?""] = ["", //название для игрока
+							1, //вес
+							-1, //кол-во предметов на инвентарь
+							-1, //кол-во предметов на ячейку
+							"", //тип предмета (пища, снаряга, инструменты, детали, сюжет, мусор)
+							"", //описание предмета
+							"", //применение (для чего нужен) (крафт, продажа, использование)
+							"", //редкость (Обычный , редкий, сюжетный, коллекционный)
+							[10, 20], //цена покупки и продажи (нельзя продать сюжетный или коллекционный, если -1 - цена, тоже нельзя)
+							[1, 1], //количество предмедметов в коробке
+							10,	//жизни предмета
+							false, //нужно ли удалять предмет после того, как он был поднят
+];
+	
 }
+//{
+////ВЕС, МАКС. КОЛИЧЕСТВО И ЦЕНА
+//	//вес, макс. кол-во на инвентарь, кол-во предметов на ячейку инвентаря, цена продажи (цена покупки на 25-45% дороже)
+	
+//global.CONST_WEIGHT[?""] = [1, /*вес*/ -1, -1,/*кол-во*/ 10/*цена макс*/, 20/*цена мин*/];
+//global.CONST_WEIGHT[?""] = [1, /*вес*/ -1, -1,/*кол-во*/ 10/*цена макс*/, 20/*цена мин*/];
+//}

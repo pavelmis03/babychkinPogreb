@@ -1,6 +1,5 @@
 /// @function scr_player_moveType();
 /// @description скрипт определяет тип движения игрока и направление движения в зависимости от типа
-
 function scr_player_moveType() {
 	//если ни одна клавиша движения не нажата, то тип движения, очевидно, - стоит
 	if (ds_list_size(player_move_key_list) == 0) {
@@ -65,11 +64,10 @@ function scr_player_moveType() {
 
 
 /// @function scr_player_angleDiff();
+/// @param {} key передаваемая клавиша
 /// @description определяет разницу между оригинальным направлением (на 90 градусов) и направлением на 
 //курсор, это нужно для движения игрока по сетке, чтобы определить, каким он боком двигается на самом деле
 //не зависимо от нажатой клавиши, а лишь от направления на курсор, и поменять название клавиши в соответствии с этим
-/// @param {} key передаваемая клавиша
-
 function scr_player_angleDiff(key) {
 	var tarr = ds_list_create();
 	ds_list_add(tarr, "W", "A", "S", "D");
@@ -91,9 +89,8 @@ function scr_player_angleDiff(key) {
 
 
 /// @function scr_player_dir();
-/// @description определяет непосредственно направление
 /// @param {} str клавиши, из которых складывается направление. нужно для движения по сетке
-
+/// @description определяет непосредственно направление
 function scr_player_dir(str) {
 	switch (player_moveType) {
 		case "forward": 
@@ -149,7 +146,6 @@ function scr_player_dir(str) {
 
 /// @function scr_player_spd();
 /// @description определяет скорость по типу
-
 function scr_player_spd() {
 	var spd = 0;
 	//вроде костыль, но безобидный: при движении по сетке скорость должна быть положительной всегда
@@ -186,10 +182,8 @@ function scr_player_spd() {
 	return spd;
 }
 
-
 /// @function scr_player_moveSpr();
 /// @description определяет спрайт по типу движения
-
 function scr_player_moveSpr() {
 	var spr = spr_playerFP_state;
 	switch (player_moveType) {
