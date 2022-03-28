@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "test&debug",
-    "path": "folders/Sprites/sys/test&debug.yy",
+    "path": "folders/Sprites/test&debug.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_test_enemy",

@@ -27,11 +27,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "debug&tmpObj",
-    "path": "folders/Objects/debug&tmpObj.yy",
+    "name": "parent",
+    "path": "folders/Objects/Game/Character/Enemy/parent.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_test_enemy",
+  "name": "obj_enemy_parent",
   "tags": [],
   "resourceType": "GMObject",
 }
