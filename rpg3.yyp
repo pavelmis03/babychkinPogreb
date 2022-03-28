@@ -298,6 +298,7 @@
     {"id":{"name":"spr_btn_info_journal2","path":"sprites/spr_btn_info_journal2/spr_btn_info_journal2.yy",},"order":1,},
     {"id":{"name":"spr_weapon_brokenHIAC","path":"sprites/spr_weapon_brokenHIAC/spr_weapon_brokenHIAC.yy",},"order":6,},
     {"id":{"name":"spr_gm_item_book","path":"sprites/spr_gm_item_book/spr_gm_item_book.yy",},"order":3,},
+    {"id":{"name":"spr_test_enemy_attack","path":"sprites/spr_test_enemy_attack/spr_test_enemy_attack.yy",},"order":1,},
     {"id":{"name":"spr_gm_item_apple","path":"sprites/spr_gm_item_apple/spr_gm_item_apple.yy",},"order":1,},
     {"id":{"name":"obj_ctrl_gm","path":"objects/obj_ctrl_gm/obj_ctrl_gm.yy",},"order":0,},
     {"id":{"name":"spr_journal_page","path":"sprites/spr_journal_page/spr_journal_page.yy",},"order":5,},
