@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "player",
-    "path": "folders/Scripts/Game/Character/player.yy",
+    "name": "Ctrl",
+    "path": "folders/Scripts/Ctrl.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_player_moveTypeAndSprite",
+  "name": "scr_ctrl_inv",
   "tags": [],
   "resourceType": "GMScript",
 }

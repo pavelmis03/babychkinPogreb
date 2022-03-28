@@ -1,0 +1,26 @@
+/// @description инициализация
+
+//enemy info
+var arr = global.CONST_ENEMY[?enemy_keyName];
+enemy_name = arr[0];		//название
+enemy_spd = arr[1];			//скорость
+//если враг бродит с момента создания, сразу задаем ему скорость
+if (enemy_wander) {
+	speed = enemy_spd;
+}
+
+enemy_type = arr[4];		//тип врага
+enemy_discription = arr[5];	//описание
+enemy_application = arr[6];	//редкость
+
+enemy_seeDist = arr[7];		//дальность зрения
+
+if (!enemy_isCustom) {
+	enemy_hp = arr[2];			//количесвто здоровья (-1 если бесконечное)
+	enemy_damage = arr[3];		//урон (ближний бой, дальний1, дальний2, ...)
+} 
+
+init = true;
+
+
+
