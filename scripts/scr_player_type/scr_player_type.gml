@@ -1,8 +1,11 @@
 /// @function scr_player_type();
 /// @description определяет, какой игрок присутствует в комнате и возвращает его
 function scr_player_type() {
-	var player = obj_player_FP;
+	var player = -1;
 	
+	if (instance_exists(obj_player_FP)) {
+		player = obj_player_FP;
+	}
 	if (instance_exists(obj_player_SP)) {
 		player = obj_player_SP;
 	}

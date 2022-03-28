@@ -1,6 +1,7 @@
 /// @description 
 
 //main
+hp = 1080;
 
 //moving
 //нажатые клавиши движения
@@ -30,6 +31,5 @@ player_col[?"inv"] = 0;
 
 //interaction 
 player_pressE = false;
-
 
 

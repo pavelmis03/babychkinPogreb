@@ -11,5 +11,4 @@ instance_create_depth(-10000, 0, 0, obj_ctrl_stat);
 instance_create_depth(-10000, 0, 0, obj_ctrl_tml);
 
 instance_create_depth(-10000, 0, 0, obj_ctrl_gm);
-instance_create_depth(-10000, 0, 0, obj_ctrl_gm_img);
-instance_create_depth(-10000, 0, 0, obj_ctrl_gm_pause);
+

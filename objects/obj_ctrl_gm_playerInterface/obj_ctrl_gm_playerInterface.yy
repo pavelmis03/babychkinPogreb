@@ -1,12 +1,12 @@
 {
   "spriteId": {
-    "name": "spr_test_enemy",
-    "path": "sprites/spr_test_enemy/spr_test_enemy.yy",
+    "name": "spr_ico_sys_ctrl",
+    "path": "sprites/spr_ico_sys_ctrl/spr_ico_sys_ctrl.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
-  "persistent": false,
+  "persistent": true,
   "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
@@ -22,16 +22,16 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player_FP","path":"objects/obj_player_FP/obj_player_FP.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "debug&tmpObj",
-    "path": "folders/Objects/debug&tmpObj.yy",
+    "name": "player",
+    "path": "folders/Objects/Ctrl/Gm/Character/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_test_enemy",
+  "name": "obj_ctrl_gm_playerInterface",
   "tags": [],
   "resourceType": "GMObject",
 }

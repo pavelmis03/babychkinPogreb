@@ -3,6 +3,7 @@
   "glyphOperations": 0,
   "interpreter": 0,
   "pointRounding": 0,
+  "applyKerning": 0,
   "fontName": "Arial",
   "styleName": "Bold Italic",
   "size": 16.0,
@@ -20,6 +21,7 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 0,
+  "ascender": 0,
   "glyphs": {
     "32": {"x":2,"y":2,"w":6,"h":25,"character":32,"shift":6,"offset":0,},
     "33": {"x":189,"y":83,"w":7,"h":25,"character":33,"shift":7,"offset":1,},
@@ -394,8 +396,8 @@
   "canGenerateBitmap": true,
   "maintainGms1Font": false,
   "parent": {
-    "name": "Fonts",
-    "path": "folders/Fonts.yy",
+    "name": "Menu",
+    "path": "folders/Fonts/Menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "fnt_menu_jrn_header",

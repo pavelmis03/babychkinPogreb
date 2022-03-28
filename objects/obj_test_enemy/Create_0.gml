@@ -3,6 +3,7 @@
 
 //main
 action = "";
+type = "enemy";
 init = false;	//инициализация
 
 //interaction
