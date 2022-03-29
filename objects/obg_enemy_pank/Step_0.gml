@@ -15,6 +15,6 @@ if (distance_to_object(player) >= enemy_seeDist) {
 }
 
 //если игрока пора атаковать, панк бежит к нему
-if (enemy_needAttack) {
+if (enemy_needAttack and !enemy_attack) {
 	scr_enemy_moveToPlayer();
 }

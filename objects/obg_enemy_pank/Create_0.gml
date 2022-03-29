@@ -4,3 +4,6 @@ event_inherited();
 
 //main
 enemy_keyName = "pank1";
+
+//setting
+//enemy_isDrawHp = false;	//D

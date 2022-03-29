@@ -11,10 +11,13 @@ enemy_isCustom = false;	//задается в creation code и отвечает 
 
 //interaction
 enemy_needAttack = false;	//если тру, враг движется к игроку
-//enemy_attack = false;		//атака игрока
+enemy_attack = false;		//атака игрока
 
 //рандомное перемещение при отсутсвии игрока
 enemy_wander = false;	//при отсутствии игрока враги, если могут, ходят в некоторой области
+
+//drawing
+enemy_isDrawHp = true;	//нужно ли отображать жизни врагам
 
 //setting
 alarm[6] = 1;	//бесцельное перемещение
