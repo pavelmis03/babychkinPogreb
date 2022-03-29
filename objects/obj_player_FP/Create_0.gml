@@ -21,6 +21,7 @@ player_main_speed = 3;	//константа скорости
 
 //attack
 player_attack = false;	//показывает, что персонаж собирается ударить
+player_attackDamage = 15;		//урон игрока
 
 //collisions
 //в нужную ячейку списка записывается id объекта коллизии
