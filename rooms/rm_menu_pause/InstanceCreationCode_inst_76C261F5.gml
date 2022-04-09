@@ -1,6 +1,7 @@
-sprite_index = spr_btn_mm_ldGm1;
+//загрузить
+sprite_index = spr_btn_pause_ldGm1;
 
-var t = scr_btn_posInScr(1, 6);
+var t = scr_btn_posInScr(2, 4);
 x = t[0];
 y = room_height * 0.478;
 image_xscale = 0.95;
