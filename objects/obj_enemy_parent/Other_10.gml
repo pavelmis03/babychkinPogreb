@@ -15,6 +15,8 @@ enemy_application = arr[6];	//редкость
 
 enemy_seeDist = arr[7];		//дальность зрения
 
+enemy_wanderDist = arr[8]
+
 if (!enemy_isCustom) {
 	hp = arr[2];				//количество здоровья (-1 если бесконечное)
 	maxHp = hp;					//изначальное количество жизней, нужно для рисования полоски жизней
