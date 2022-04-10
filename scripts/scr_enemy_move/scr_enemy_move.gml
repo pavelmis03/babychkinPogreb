@@ -30,7 +30,7 @@ function scr_enemy_moveToPoint(targetX, targetY){
 	if (point_distance(x, y, targetX, targetY) > 10) {
 		direction = point_direction(x, y, targetX, targetY);
 		image_angle = direction;
-		speed = enemy_spd;
+		speed = enemy_spd / 2;
 	} else {
 		speed = 0;
 	}

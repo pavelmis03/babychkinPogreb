@@ -15,4 +15,8 @@ switch (action) {
 		array_pop(ctrl_mv_arr_mv);
 		room_goto(ctrl_mv_arr_mv[array_length(ctrl_mv_arr_mv) - 1]);
 	break;
+	////переход в назнаенную комнату
+	//case "addRm":
+	//	array_push(ctrl_mv_arr_mv, room);
+	//break;
 }

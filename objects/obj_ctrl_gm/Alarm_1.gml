@@ -13,10 +13,12 @@ if (obj_ctrl_set.ctrl_set_map_curr[?"pixels"] and ctrl_gm_pixel_time != -1) {
 } else {
 	//если надо сначала зайти в комнату истории
 	if (obj_ctrl_gm.ctrl_gm_goHistory) { 
-		room_goto(rm_gm_cmn_history);
+		room_goto(rm_menu_history);
 	} else {
-		room_goto(obj_ctrl_mv.next_rm);
-		obj_ctrl_mv.next_rm = rm_menu_mm;
+		//переходим в следующую комнату в списке
+		room_goto(obj_ctrl_mv.next_rm[|0]);
+		ds_list_delete(obj_ctrl_mv.next_rm, 0);
+		ds_list_add(obj_ctrl_mv.next_rm, rm_menu_mm); //после диалога пойдем в комнату истории
 	}
 }
 obj_ctrl_mv.action = "addRm";

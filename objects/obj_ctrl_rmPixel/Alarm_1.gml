@@ -32,11 +32,11 @@ for (var i = 0; i < kol; i++) {
 			obj_ctrl_mv.action = "addRm";
 			//проверка особого флага в контроллере игры на то, что после пикселей надо зайти в историю, прежде, чем идти сразу в комнату
 			if (obj_ctrl_gm.ctrl_gm_goHistory) { 
-				room_goto(rm_gm_cmn_history);
+				room_goto(rm_menu_history);
 			} else {
-				room_goto(obj_ctrl_mv.next_rm);
-				//дефолтное значение 
-				obj_ctrl_mv.next_rm = rm_menu_mm;
+				//переходим в следующую комнату в списке
+				room_goto(obj_ctrl_mv.next_rm[|0]);
+				ds_list_delete(obj_ctrl_mv.next_rm, 0);
 			}
 			break;
 		}

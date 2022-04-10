@@ -10,7 +10,7 @@ ctrl_tml_list = ds_list_create();
 //свободные таймеры
 ctrl_tml_alarmFree_list = ds_list_create();
 ds_list_add(ctrl_tml_alarmFree_list, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
-//дейстиве, приписанное к таймеру
+//действие, приписанное к таймеру
 ctrl_tml_alarmAction_arr[0] = "";
 ctrl_tml_alarmAction_arr[1] = "";
 ctrl_tml_alarmAction_arr[2] = "";

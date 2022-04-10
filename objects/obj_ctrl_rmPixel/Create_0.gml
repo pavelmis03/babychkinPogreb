@@ -7,7 +7,6 @@ ctrl_pixelRm_on = obj_ctrl_set.ctrl_set_map_curr[?"pixels"];
 time = obj_ctrl_gm.ctrl_gm_pixel_time;	 //время заполнения экрана, время очистки в два раза меньше
 ctrl_pixelRm_full = false;
 //action = "";
-//next_rm = rm_menu_mm;		//комната, в которую надо перейти после завершения действий здесь
 
 //надпись посередине
 draw_txt_xscale = 3;

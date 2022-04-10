@@ -15,12 +15,16 @@ enemy_attack = false;		//атака игрока
 
 //рандомное перемещение при отсутсвии игрока
 enemy_wander = true;	//при отсутствии игрока враги, если могут, ходят в некоторой области
-enemy_baseX = x;		//коородината, от которой отсчитывается область, в которой может бродить враг
-enemy_basey = y;
-enemy_wanderDist = 100;	//расстояние, на которое может ото
+enemy_wanderBaseX = x;		//коородината, от которой отсчитывается область, в которой может бродить враг
+enemy_wanderBaseY = y;
+enemy_wanderMaxDist = 100;	//расстояние, на которое может отойти враг при рандомной хотьбе
 
 //drawing
 enemy_isDrawHp = true;	//нужно ли отображать жизни врагам
+//основные спрайты
+enemy_spr_go = spr_sys_none;
+enemy_spr_state = spr_sys_none;
+enemy_spr_attack = spr_sys_none;
 
 //setting
 alarm[6] = 10;	//бесцельное перемещение

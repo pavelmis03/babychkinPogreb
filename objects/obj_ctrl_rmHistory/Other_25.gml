@@ -6,9 +6,9 @@ switch (action) {
 		obj_ctrl_mv.action = "addRm";
 		obj_ctrl_gm.ctrl_gm_goDlg = false;
 		obj_ctrl_gm.ctrl_gm_goHistory = false;
-		room_goto(obj_ctrl_mv.next_rm);
-		//дефолтное значение 
-		obj_ctrl_mv.next_rm = rm_menu_mm;
+		//переходим в следующую комнату в списке
+		room_goto(obj_ctrl_mv.next_rm[|0]);
+		ds_list_delete(obj_ctrl_mv.next_rm, 0);
 		obj_ctrl_gm_img.action = "delImg";
 	break;
 	case "historyNextImg":

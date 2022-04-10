@@ -52,7 +52,6 @@ switch (action) {
 	//перейти в меню новой игры
 	case "goToNewGm": 
 		room_goto(rm_menu_newGm); 
-		///*//!D*/room_goto(rm_gm_fp_office); 
 		obj_ctrl_mv.action = "addRm";
 	break;
 	//перейти в меню информации 
@@ -159,6 +158,12 @@ switch (action) {
 	break;
 	
 	//GAME
+	//ПАУЗА
+	case "goToMM_pause": 
+		obj_ctrl_gm.action = "exitToMM";
+		obj_ctrl_dlg.ctrl_dlg_del = true;
+		//сам переход происходит в obj_ctrl_gm после всех необходимых действий
+	break;
 	//НОВАЯ ИГРА
 	case "newGm": 
 		obj_ctrl_mv.action = "addRm";

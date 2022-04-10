@@ -3,9 +3,10 @@
 
 //игра создана впервые?
 if (!directory_exists("saves")) {
+	obj_ctrl_mv.action = "addRm";
 	scr_newGm();	//вызываем скрипт создания новой игры, полномочия все)
 } else {
-		
+	
 }
 /*
 var flag = false;

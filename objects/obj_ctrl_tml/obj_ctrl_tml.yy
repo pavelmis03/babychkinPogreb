@@ -1,12 +1,12 @@
 {
   "spriteId": {
-    "name": "spr_ico_sys_ctrl",
-    "path": "sprites/spr_ico_sys_ctrl/spr_ico_sys_ctrl.yy",
+    "name": "spr_ico_sys_ctrl_tml",
+    "path": "sprites/spr_ico_sys_ctrl_tml/spr_ico_sys_ctrl_tml.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
-  "persistent": true,
+  "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,

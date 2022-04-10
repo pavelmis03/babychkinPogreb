@@ -2,7 +2,9 @@
 /// @description скрипт определяет тип движения игрока и направление движения в зависимости от типа
 function scr_player_moveType() {
 	//если ни одна клавиша движения не нажата, то тип движения, очевидно, - стоит
-	if (ds_list_size(player_move_key_list) == 0) {
+	//если игрок близко подошел к курсору
+	if ((ds_list_size(player_move_key_list) == 0) or 
+		(distance_to_point(mouse_x, mouse_y) < 1)) {
 		player_moveType = "stand";
 		speed = 0;
 		sprite_index = spr_playerFP_state;

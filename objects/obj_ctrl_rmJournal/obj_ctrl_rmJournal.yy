@@ -38,7 +38,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "menu",
-    "path": "folders/Objects/Ctrl/Local/menu.yy",
+    "path": "folders/Objects/Ctrl/Local/menu/menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_ctrl_rmJournal",

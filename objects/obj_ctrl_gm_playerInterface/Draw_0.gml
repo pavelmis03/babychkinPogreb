@@ -15,8 +15,8 @@ if (player != -1) {
 	draw_set_font(fnt_gm_cmn);
 	draw_set_color(c_white);
 
-	//if (obj_ctrl_gm.ctrl_gm_phase != 1) {
-	if (obj_ctrl_gm.ctrl_gm_phase == 1) {
+	//if (obj_ctrl_gm.ctrl_gm_stage != 1) {  //D
+	if (obj_ctrl_gm.ctrl_gm_stage == 1) {	 //!D
 		//текстовые жизни (цвет зависит от остатка)
 		draw_set_color(c_lime);						
 		if (player.hp < 900) {draw_set_color(c_blue)}

@@ -1,5 +1,5 @@
 /// @description кнопка удара дубинкой 
-if (!player_attack) {
+if (!player_attack and !player_pressE) {
 	player_attack = true;
 	speed = 0;
 	sprite_index = spr_playerFP_attack;

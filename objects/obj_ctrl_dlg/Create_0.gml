@@ -35,12 +35,13 @@ ctrl_dlg_map_depth[?rm_menu_stat] = 50;
 ctrl_dlg_map_depth[?rm_menu_settings] = -20;
 ctrl_dlg_map_depth[?rm_menu_reference] = -20;
 ctrl_dlg_map_depth[?rm_menu_editor] = 50;
-ctrl_dlg_map_depth[?rm_menu_pause] = 50;
+ctrl_dlg_map_depth[?rm_menu_pause] = -50;
 ctrl_dlg_map_depth[?rm_menu_lvlEnd] = 50;
 ctrl_dlg_map_depth[?rm_menu_endless] = 50;
 
 //словарь тестов на диалогах, работает по action вызвавшей кнопки
 ctrl_dlg_map_txt = ds_map_create();
+//menu
 ctrl_dlg_map_txt[?"exitGm"] = "Вы уверены,\nчто хотите выйти из игры?!";
 ctrl_dlg_map_txt[?"backSaveSettings"] = "Хотите сохранить настройки\nперед выходом?";
 ctrl_dlg_map_txt[?"defaultSettings"] = "Вы уверены,\nчто хотите сбросить настройки\nдо значений по умолчанию?";
@@ -49,3 +50,5 @@ ctrl_dlg_map_txt[?"saveSettings"] = "Настройки успешно сохр�
 ctrl_dlg_map_txt[?"newGm"] = "Вы уверены, что хотите\nначать игру сначала?\nВесь достигнутый Вами прогресс\nбудет потерян!";
 ctrl_dlg_map_txt[?"noEditor"] = "        Извините,\nсюда пока нельзя :(";
 ctrl_dlg_map_txt[?"noEndless"] = "        Извините,\nсюда пока нельзя :(";
+//game
+ctrl_dlg_map_txt[?"goToMM_pause"] = "Вы уверены, что хотите выйти в\nглавное меню?\nВсе несохраненные данные будут потеряны!";

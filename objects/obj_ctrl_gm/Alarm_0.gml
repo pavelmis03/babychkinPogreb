@@ -3,7 +3,7 @@
 
 //if - костыль. почему-то cursor_sprite не срабатывает за один такт
 if (cursor_sprite == -1) {
-	alarm[1] = 15; //в тактах 
+	alarm[1] = 10; //в тактах 
 	obj_ctrl_gm_img.action = "createTempScreenShot"; //создаем скрин экрана
 } else {
 	alarm[0] = 2;
