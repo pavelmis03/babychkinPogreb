@@ -21,14 +21,14 @@ ctrl_history_page_last = 2;		//последняя
 //промежутки просмотра для комнаты истории
 ctrl_history_arr[0] = [0, 2];
 ctrl_history_arr[1] = [3, 4];
-ctrl_history_arr[2] = [5, 7];
-ctrl_history_arr[3] = [8, 8];
+ctrl_history_arr[2] = [5, 6];
+ctrl_history_arr[3] = [7, 8];
 //для комнаты диалогов
 if (obj_ctrl_gm.ctrl_gm_goDlg) {
 	ctrl_history_arr[0] = [0, 2];
 	ctrl_history_arr[1] = [3, 4];
-	ctrl_history_arr[2] = [5, 7];
-	ctrl_history_arr[3] = [8, 8];
+	ctrl_history_arr[2] = [5, 6];
+	ctrl_history_arr[3] = [7, 8];
 }
 
 //отрисовка фона-скриншота при выводе диалогов 

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "other",
-    "path": "folders/Scripts/Ctrl/other.yy",
+    "name": "save",
+    "path": "folders/Scripts/Ctrl/save.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_ctrl_stat",
+  "name": "scr_ctrl_sv_svRm",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Ctrl",
-    "path": "folders/Scripts/Ctrl.yy",
+    "name": "other",
+    "path": "folders/Scripts/Ctrl/other.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_ctrl_inv",

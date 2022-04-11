@@ -1,8 +1,10 @@
+persist - persistent
 achv - achievement
 diff - difference
 stat - statistics
 ctrl - controller
 curr - current
+inst - instance
 equ - equipment
 dev - developers 
 set - settings
