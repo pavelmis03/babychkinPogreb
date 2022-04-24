@@ -32,8 +32,12 @@ player_col = ds_map_create();
 player_col[?"enemy"] = 0;
 player_col[?"inv"] = 0;
 player_col[?"mapObj"] = 0;
-player_col[?"solidObj"] = 0;
+//player_col[?"solidObj"] = 0;
 //player_col[?"sth"] = 0;
+//объекты, через которые игрок не может пройти (стены и т.д.)
+player_solidObj[0] = obj_simple_wall;
+player_solidObj[1] = obj_inv_parent;
+//player_solidObj[2] = obj_evn_door;	//чтобы можно было пройти
 
 //interaction 
 player_pressE = false;

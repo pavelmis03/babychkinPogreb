@@ -33,8 +33,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu",
-    "path": "folders/Objects/Menu.yy",
+    "name": "btn_menu",
+    "path": "folders/Objects/Menu/btn_menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_btn_slider",

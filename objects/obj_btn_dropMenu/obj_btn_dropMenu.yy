@@ -34,8 +34,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu",
-    "path": "folders/Objects/Menu.yy",
+    "name": "other",
+    "path": "folders/Objects/Menu/other.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_btn_dropMenu",

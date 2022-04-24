@@ -146,9 +146,31 @@ function scr_player_dir(str) {
 	//если игрок близко к курсору, то, если он приближается, останавливаем его
 	var tx = lerp(x, x + hspeed, 1);
 	var ty = lerp(y, y + vspeed, 1);
+	var player_need_stop = false;	//флаг остановки игрока
 	if ((distance_to_point(mouse_x, mouse_y) < 1) and
 		//проверка на приближение
 		(point_distance(x, y, mouse_x, mouse_y) > point_distance(tx, ty, mouse_x, mouse_y))) {
+		player_need_stop = true;
+	}
+	
+	//если мы следующим шагом столкнемся со стеной или чем-то подобным, останавливаемся
+	for (var i = 0; i < array_length(player_solidObj); i++) {
+		var curr_dist = distance_to_object(player_solidObj[i]);
+		if (curr_dist < 2) {
+			var curr_x = x;
+			var curr_y = y;
+			x = tx;
+			y = ty;
+			//если при следующем шаге расстояние до стены не увеличится, то идти не нужно
+			if (distance_to_object(player_solidObj[i]) <= curr_dist) {
+				player_need_stop = true;
+			}
+			x = curr_x;
+			y = curr_y;
+		}
+	}
+	
+	if (player_need_stop) {
 		player_moveType = "stand";
 		speed = 0;
 		sprite_index = spr_playerFP_state;
@@ -173,7 +195,7 @@ function scr_player_spd() {
 			spd = player_main_speed;
 		break;
 		case "rforward": 
-			spd = player_main_speed;
+	 		spd = player_main_speed;
 		break;
 		case "backward": 
 			spd = -player_main_speed * t;
