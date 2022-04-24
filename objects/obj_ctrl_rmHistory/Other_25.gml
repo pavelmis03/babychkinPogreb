@@ -12,12 +12,12 @@ switch (action) {
 		obj_ctrl_gm_img.action = "delImg";
 	break;
 	case "historyNextImg":
-		if (ctrl_history_page_curr < ctrl_history_page_last) {
+		if (ctrl_history_page_curr <= ctrl_history_page_last) {
 			ctrl_history_page_curr++;
 		}
 	break;
 	case "historyPreImg":
-		if (ctrl_history_page_curr > ctrl_history_page_first) {
+		if (ctrl_history_page_curr >= ctrl_history_page_first) {
 			ctrl_history_page_curr--;
 		}
 	break;

@@ -1,10 +1,9 @@
-/// @function scr_player_moveType();
+/// @function scr_player_moveType();;
 /// @description скрипт определяет тип движения игрока и направление движения в зависимости от типа
 function scr_player_moveType() {
 	//если ни одна клавиша движения не нажата, то тип движения, очевидно, - стоит
 	//если игрок близко подошел к курсору
-	if ((ds_list_size(player_move_key_list) == 0) or 
-		(distance_to_point(mouse_x, mouse_y) < 1)) {
+	if (ds_list_size(player_move_key_list) == 0) {
 		player_moveType = "stand";
 		speed = 0;
 		sprite_index = spr_playerFP_state;
@@ -36,32 +35,32 @@ function scr_player_moveType() {
 		//т.к. направление движения зависит именно от нажатой клавиши (а в случае движения по сетке 
 		//клавиша искуственно подменяется), то в скрипт опр. направления движения передается клавиша из массива
 		scr_player_dir(player_move_key_list[|ds_list_size(player_move_key_list) - 1])
-		return;
+	} else {
+		//если в массиве нажатых клавиш больше одной ячейки, повторяем те же действия, что и выше, только для двух клавиш
+		var t2 = player_move_key_list[|ds_list_size(player_move_key_list) - 2];
+		if (obj_ctrl_set.ctrl_set_map_curr[?"gridMv"]) { 
+			t2 = scr_player_angleDiff(t2);
+		}
+		//вторая клавиша может добавить побочное направление или не может, если это клавиша противоположна
+		//нажатой, тогда эта часть скрипта ничего не изменит
+		var s = t1 + t2;
+		if (s == "WA" or s == "AW") {
+			player_moveType = "lforward";
+		}
+		if (s == "WD" or s == "DW") {
+			player_moveType = "rforward";
+		}
+		if (s == "SA" or s == "AS") {
+			player_moveType = "lbackward";
+		}
+		if (s == "SD" or s == "DS") {
+			player_moveType = "rbackward";
+		}
+		//т.к. направление движения зависит именно от нажатой клавиши (а в случае движения по сетке 
+		//клавиша искуственно подменяется), то в скрипт опр. направления движения передается клавиша из массива
+		s = player_move_key_list[|ds_list_size(player_move_key_list) - 1] + player_move_key_list[|ds_list_size(player_move_key_list) - 2];
+		scr_player_dir(s);
 	}
-	//если в массиве нажатых клавиш больше одной ячейки, повторяем те же действия, что и выше, только для двух клавиш
-	var t2 = player_move_key_list[|ds_list_size(player_move_key_list) - 2];
-	if (obj_ctrl_set.ctrl_set_map_curr[?"gridMv"]) { 
-		t2 = scr_player_angleDiff(t2);
-	}
-	//вторая клавиша может добавить побочное направление или не может, если это клавиша противоположна
-	//нажатой, тогда эта часть скрипта ничего не изменит
-	var s = t1 + t2;
-	if (s == "WA" or s == "AW") {
-		player_moveType = "lforward";
-	}
-	if (s == "WD" or s == "DW") {
-		player_moveType = "rforward";
-	}
-	if (s == "SA" or s == "AS") {
-		player_moveType = "lbackward";
-	}
-	if (s == "SD" or s == "DS") {
-		player_moveType = "rbackward";
-	}
-	//т.к. направление движения зависит именно от нажатой клавиши (а в случае движения по сетке 
-	//клавиша искуственно подменяется), то в скрипт опр. направления движения передается клавиша из массива
-	s = player_move_key_list[|ds_list_size(player_move_key_list) - 1] + player_move_key_list[|ds_list_size(player_move_key_list) - 2];
-	scr_player_dir(s);
 }
 
 
@@ -143,6 +142,17 @@ function scr_player_dir(str) {
 	}
 	speed = scr_player_spd();
 	sprite_index = scr_player_moveSpr();
+	
+	//если игрок близко к курсору, то, если он приближается, останавливаем его
+	var tx = lerp(x, x + hspeed, 1);
+	var ty = lerp(y, y + vspeed, 1);
+	if ((distance_to_point(mouse_x, mouse_y) < 1) and
+		//проверка на приближение
+		(point_distance(x, y, mouse_x, mouse_y) > point_distance(tx, ty, mouse_x, mouse_y))) {
+		player_moveType = "stand";
+		speed = 0;
+		sprite_index = spr_playerFP_state;
+	}
 }
 
 

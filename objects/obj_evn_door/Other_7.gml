@@ -11,7 +11,8 @@ switch (destination) { //нужно учесть, что когда очеред
 		image_index = image_number - 0.01;
 		//door_wall.image_angle += 90;
 	break;
-	default: 
+	default:
+		obj_ctrl_mv.action = "addRm";
 		room_goto(destination);	//если в destination название комнаты
 	break;
 }

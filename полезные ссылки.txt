@@ -1,0 +1,36 @@
+Оптимизация Ваших игр в GameMaker: Studio.
+https://forum.hellroom.ru/index.php?topic=18542
+
+Примеры проектов 
+https://gcup.ru/load/source/gml/28-5
+
+пример игры
+https://gcup.ru/load/source/gml/iskhodnik_rts_igry_the_dark_ages_game_maker/28-1-0-937
+
+генерация карты
+http://netlib.narod.ru/library/book0031/ch10_06.htm
+
+примеры проектов
+https://forum.hellroom.ru/index.php?board=22.90
+
+How To Pause Your Game - GameMaker Studio 2
+https://yandex.ru/video/preview/?family=yes&filmId=7475554967309268184&from=tabbar&text=How%20To%20Pause%20Your%20Game%20-%20GameMaker%20Studio%202&url=http%3A%2F%2Ffrontend.vh.yandex.ru%2Fplayer%2FvMlejtLspExU
+
+
+Инвентарь, часть 1 [Game Maker Studio 2]
+https://yandex.ru/video/preview/?family=yes&filmId=16199943566943075075&from=tabbar&text=%D0%98%D0%BD%D0%B2%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D1%8C%2C%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201%20%5BGame%20Maker%20Studio%202%5D&url=http%3A%2F%2Ffrontend.vh.yandex.ru%2Fplayer%2FvdtGmGAYZ6XQ
+https://yandex.ru/video/preview/?family=yes&filmId=16978404828351132885&from=tabbar&text=%D0%98%D0%BD%D0%B2%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D1%8C%2C%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201%20%5BGame%20Maker%20Studio%202%5D&url=http%3A%2F%2Ffrontend.vh.yandex.ru%2Fplayer%2Fv4M_DbsE2X2g
+
+Инвентарь, часть 1 [Game Maker Studio 2]
+https://yandex.ru/video/preview/?family=yes&filmId=9445360231494280034&from=tabbar&text=%D0%98%D0%BD%D0%B2%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D1%8C%2C%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201%20%5BGame%20Maker%20Studio%202%5D&url=http%3A%2F%2Ffrontend.vh.yandex.ru%2Fplayer%2FvnxWVEtlbrG4
+
+
+Инвентарь, часть 1 [Game Maker Studio 2]
+https://yandex.ru/video/preview/?family=yes&filmId=16199943566943075075&from=tabbar&text=%D0%98%D0%BD%D0%B2%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D1%8C%2C+%D1%87%D0%B0%D1%81%D1%82%D1%8C+1+%5BGame+Maker+Studio+2%5D&url=http%3A%2F%2Ffrontend.vh.yandex.ru%2Fplayer%2FvdtGmGAYZ6XQ
+
+Инвентарь, часть 1 [Game Maker Studio 2]
+https://yandex.ru/video/preview/?family=yes&filmId=8836442164999720108&from=tabbar&text=%D0%98%D0%BD%D0%B2%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D1%8C%2C%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201%20%5BGame%20Maker%20Studio%202%5D&url=http%3A%2F%2Ffrontend.vh.yandex.ru%2Fplayer%2FvH8ualK_pUB4
+
+
+How To Pause Your Game - GameMaker Studio 2
+https://yandex.ru/video/preview/?family=yes&filmId=5306097647864465529&from=tabbar&text=How%20To%20Pause%20Your%20Game%20-%20GameMaker%20Studio%202&url=http%3A%2F%2Ffrontend.vh.yandex.ru%2Fplayer%2FvWJe9IBhhHl0

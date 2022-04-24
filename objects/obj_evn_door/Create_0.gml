@@ -3,10 +3,11 @@
 
 //main
 action = "";
-//next_room - открыть дверь, pre_room - закрыть. room name - перейти в комнату
-destination = "next_room";	//куда идти 
+//открыть дверь, pre_room - закрыть. room name - перейти в комнату
+destination = 0;
 //door_open = false;
 init = false;	//инициализация
+type = "mapObj";
 
 //interaction
 can_interact = false;	//можно ли взаимодествавать

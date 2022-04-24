@@ -25,8 +25,8 @@ ctrl_history_arr[2] = [5, 6];
 ctrl_history_arr[3] = [7, 8];
 //для комнаты диалогов
 if (obj_ctrl_gm.ctrl_gm_goDlg) {
-	ctrl_history_arr[0] = [0, 2];
-	ctrl_history_arr[1] = [3, 4];
+	ctrl_history_arr[0] = [0, 1];
+	ctrl_history_arr[1] = [2, 2];
 	ctrl_history_arr[2] = [5, 6];
 	ctrl_history_arr[3] = [7, 8];
 }

@@ -15,7 +15,17 @@ switch (action) {
 		array_pop(ctrl_mv_arr_mv);
 		room_goto(ctrl_mv_arr_mv[array_length(ctrl_mv_arr_mv) - 1]);
 	break;
-	////переход в назнаенную комнату
+	//отправляет нас в меню справки
+	case "goToRmRef":
+		array_push(ctrl_mv_arr_mv, room);
+		room_goto(rm_menu_reference);
+	break;
+	//отправляет нас в меню журнала
+	case "goToRmJournal":
+		array_push(ctrl_mv_arr_mv, room);
+		room_goto(rm_menu_journal);
+	break;
+	//переход в назнаенную комнату
 	//case "addRm":
 	//	array_push(ctrl_mv_arr_mv, room);
 	//break;

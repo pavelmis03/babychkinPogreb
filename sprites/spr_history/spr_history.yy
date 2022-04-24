@@ -106,7 +106,7 @@
   "nineSlice": null,
   "parent": {
     "name": "history",
-    "path": "folders/Sprites/Game/History&comics&riddles&drawings&dialogs/history.yy",
+    "path": "folders/Sprites/Game/History&comics&riddles&drawings&dialogs&MiniRms/history.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_history",

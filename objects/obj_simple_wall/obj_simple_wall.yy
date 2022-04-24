@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Simple",
-    "path": "folders/Objects/Game/MapObj/Simple.yy",
+    "name": "Other",
+    "path": "folders/Objects/Game/MapObj/Simple/Other.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_simple_wall",

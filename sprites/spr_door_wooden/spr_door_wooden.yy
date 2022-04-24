@@ -1,21 +1,21 @@
 {
-  "bboxMode": 0,
+  "bboxMode": 2,
   "collisionKind": 4,
   "type": 0,
-  "origin": 4,
+  "origin": 9,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 26,
+  "bbox_left": 33,
+  "bbox_right": 39,
   "bbox_top": 0,
-  "bbox_bottom": 49,
+  "bbox_bottom": 39,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 50,
-  "height": 50,
+  "width": 40,
+  "height": 40,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5e6cfd97-a6ac-4774-b0bd-9ed26f638f9e","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5e6cfd97-a6ac-4774-b0bd-9ed26f638f9e","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"LayerId":{"name":"58f889af-10dd-402b-ab61-236b03b8adf6","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_door_wooden","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","name":"5e6cfd97-a6ac-4774-b0bd-9ed26f638f9e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a0cac0c0-81da-4821-8c4f-00364ee24c97","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a0cac0c0-81da-4821-8c4f-00364ee24c97","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"LayerId":{"name":"58f889af-10dd-402b-ab61-236b03b8adf6","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_door_wooden","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","name":"a0cac0c0-81da-4821-8c4f-00364ee24c97","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"990323e4-f242-459e-bc59-f81e37272414","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"990323e4-f242-459e-bc59-f81e37272414","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"LayerId":{"name":"58f889af-10dd-402b-ab61-236b03b8adf6","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_door_wooden","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","name":"990323e4-f242-459e-bc59-f81e37272414","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"277e97d2-f4e3-4ffd-b00f-91d5c5fe36ea","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"277e97d2-f4e3-4ffd-b00f-91d5c5fe36ea","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"LayerId":{"name":"58f889af-10dd-402b-ab61-236b03b8adf6","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_door_wooden","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","name":"277e97d2-f4e3-4ffd-b00f-91d5c5fe36ea","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_door_wooden","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},
@@ -44,8 +44,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e7c89441-de84-424e-8012-23340a55a240","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e6cfd97-a6ac-4774-b0bd-9ed26f638f9e","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"386df656-c41e-4653-8f0c-89186c76b56d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a0cac0c0-81da-4821-8c4f-00364ee24c97","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"65931911-f332-48c6-af6f-021580247507","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"990323e4-f242-459e-bc59-f81e37272414","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5094ddfc-35b1-47ce-be57-9eb2e4ad2366","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"277e97d2-f4e3-4ffd-b00f-91d5c5fe36ea","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,8 +58,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 25,
-    "yorigin": 25,
+    "xorigin": 37,
+    "yorigin": 19,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_door_wooden","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},

@@ -9,6 +9,7 @@ switch (action) {
 		destination = "next_room";
 		image_speed = -1;
 	break;
+	//переход в заданную комнату
 	case "goTo":
 		
 	break;

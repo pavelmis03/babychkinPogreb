@@ -31,6 +31,8 @@ player_attackDamage = 15;		//урон игрока
 player_col = ds_map_create();
 player_col[?"enemy"] = 0;
 player_col[?"inv"] = 0;
+player_col[?"mapObj"] = 0;
+player_col[?"solidObj"] = 0;
 //player_col[?"sth"] = 0;
 
 //interaction 

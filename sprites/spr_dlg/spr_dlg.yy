@@ -98,7 +98,7 @@
   "nineSlice": null,
   "parent": {
     "name": "dialogs",
-    "path": "folders/Sprites/Game/History&comics&riddles&drawings&dialogs/dialogs.yy",
+    "path": "folders/Sprites/Game/History&comics&riddles&drawings&dialogs&MiniRms/dialogs.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_dlg",
