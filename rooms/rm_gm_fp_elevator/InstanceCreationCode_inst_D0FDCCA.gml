@@ -1,15 +1,12 @@
 sprite_index = spr_btn_elevatorDisp1;
 
-var t = scr_btn_posInScr(1, 1);
-x = t[0];
-y = room_height * 0.278;
-image_xscale = 0.95;
-image_yscale = 0.95;
+//x = room_width * 0.35;
+//y = room_height * 0.5;
+image_xscale = 1;
+image_yscale = 1;
 
-type = "transition";
-action = "goTo";	//этаж
+type = "func";
+action = "scaryVoice";
 sound = [20, "snd_menu_snd_enterDoor", "snd_menu_snd_openDoor"];
 
-txt = "";	//цифра на кнопке
-
-
+//вызов диспетчера

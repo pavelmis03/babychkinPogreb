@@ -1,6 +1,7 @@
 /// @description 
 
 room_goto(rm_menu_mm);
+//room_goto(rm_gm_fp_elevator);
 
 event_user(13);	//константы
 event_user(14);	//глобальные переменные и массивы

@@ -1,18 +1,5 @@
-/// @description объект кнопки 
+/// @description 
 
-//main
-//(типы и действия можно посмотреть в событиях user_event 14 и 15)
-action = "";	//действие, которое выполняет кнопка
-type = ""		//тип кнопки 
-//массив звуков при наведении и нажатии на кнопку
-sound = [-1, "snd_none", "snd_none"]; //-1 показывает, что этой книпке не были назначены звуки
-
-
-//interaction
-btn_pressed = false;	//кнопку нажали
-btn_enter = false;		//на кнопку навели мышь
-
-//sprite
-image_speed = 0;
-
+// Inherit the parent event
+event_inherited();
 
