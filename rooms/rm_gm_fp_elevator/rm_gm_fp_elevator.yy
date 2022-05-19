@@ -33,7 +33,7 @@
     {"spriteId":{"name":"spr_elevator_bg","path":"sprites/spr_elevator_bg/spr_elevator_bg.yy",},"colour":4294967295,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":10.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":64,"gridY":64,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Background","tags":[],"resourceType":"GMRBackgroundLayer",},
   ],
   "inheritLayers": false,
-  "creationCodeFile": "${project_dir}/rooms/rm_gm_fp_office/RoomCreationCode.gml",
+  "creationCodeFile": "${project_dir}/rooms/rm_gm_fp_elevator/RoomCreationCode.gml",
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_790A581D","path":"rooms/rm_gm_fp_elevator/rm_gm_fp_elevator.yy",},

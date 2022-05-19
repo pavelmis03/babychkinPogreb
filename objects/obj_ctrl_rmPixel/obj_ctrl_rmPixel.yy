@@ -31,7 +31,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Gm",
-    "path": "folders/Objects/Ctrl/Local/Gm.yy",
+    "path": "folders/Objects/Ctrl/Gm/Local/Gm.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_ctrl_rmPixel",

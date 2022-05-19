@@ -20,7 +20,7 @@ rbackward
 left
 right
 */
-player_main_speed = 3;	//константа скорости
+player_main_speed = 6;	//константа скорости
 
 //attack
 player_attack = false;	//показывает, что персонаж собирается ударить
@@ -37,7 +37,7 @@ player_col[?"mapObj"] = 0;
 //объекты, через которые игрок не может пройти (стены и т.д.)
 player_solidObj[0] = obj_simple_wall;
 player_solidObj[1] = obj_inv_parent;
-//player_solidObj[2] = obj_evn_door;	//чтобы можно было пройти
+player_solidObj[2] = obj_evn_door;
 
 //interaction 
 player_pressE = false;

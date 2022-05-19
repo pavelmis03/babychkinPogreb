@@ -18,6 +18,10 @@ if (instance_exists(obj_ctrl_gm_playerInterface)) {
 	instance_destroy(obj_ctrl_gm_playerInterface);
 }
 
+if (instance_exists(obj_ctrl_gm_hint)) {
+	instance_destroy(obj_ctrl_gm_hint);
+}
+
 //удаление папки сохранения игры, если игрок вышел в меню, не сделав ни одного сохранения
 ini_open(obj_ctrl_gm_sv.ctrl_sv_gmDir + "save_cmn.ini");
 if (ini_read_real("SAVES", "save_number", 0) == 0) {

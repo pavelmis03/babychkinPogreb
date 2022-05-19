@@ -11,3 +11,4 @@ if (!player_pressE) {
 		image_speed = 1;
 	}
 }
+

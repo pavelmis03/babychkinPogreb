@@ -153,23 +153,47 @@ function scr_player_dir(str) {
 		player_need_stop = true;
 	}
 	
-	//если мы следующим шагом столкнемся со стеной или чем-то подобным, останавливаемся
+	//проверяю все объекты, через которые нельзя пройти, 
 	for (var i = 0; i < array_length(player_solidObj); i++) {
-		var curr_dist = distance_to_object(player_solidObj[i]);
-		if (curr_dist < 2) {
-			var curr_x = x;
-			var curr_y = y;
+		
+		var obj = player_solidObj[i];
+		//расстояние на текущий момент (потом сравним его с расстоянием, которое получилось бы, если бы игрок шагнул еще раз)
+		var curr_dist = distance_to_object(obj);
+		//ближайший экземпляр (логично, что именно через него может попытаться пройти игрок)
+		var inst = instance_nearest(x, y, obj);
+		var curr_x = x;
+		var curr_y = y;
+		
+		//дверь проверяю таким образом только если она закрыта, иначе сквозь нее можно пройти) - скип)
+		if (obj == obj_evn_door) {
+			//если дверь закрыта
+			if (inst.destination == "pre_room") {
+				continue;
+			}
+		}
+		
+		//если игрок слишком близко подошел к препятствию
+		if (curr_dist < 1) {
+			//по-другому distance_to_object не сработает 
 			x = tx;
 			y = ty;
-			//если при следующем шаге расстояние до стены не увеличится, то идти не нужно
-			if (distance_to_object(player_solidObj[i]) <= curr_dist) {
-				player_need_stop = true;
+			//если при следующем шаге расстояние до препятствия уменьшится, останавливаемся
+			if (distance_to_object(obj) <= curr_dist) {
+				//на маленьких расстояниях distance_to_object не работает, поэтому
+				if (distance_to_object(obj) == curr_dist) {
+					//проверяю расстояние до центра объекта (если на следующем шаге мы будем ближе к центру твердого объекта, остановиться)
+					if (point_distance(x, y, inst.x, inst.y) < point_distance(curr_x, curr_y, inst.x, inst.y)) {
+						player_need_stop = true;
+					}
+				} else { //если расстояние работает
+					player_need_stop = true;
+				}
 			}
 			x = curr_x;
 			y = curr_y;
 		}
 	}
-	
+	//остановка персонажа
 	if (player_need_stop) {
 		player_moveType = "stand";
 		speed = 0;
