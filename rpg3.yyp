@@ -340,6 +340,7 @@
     {"id":{"name":"box","path":"sprites/box/box.yy",},"order":19,},
     {"id":{"name":"spr_menu_bg_newGm_start","path":"sprites/spr_menu_bg_newGm_start/spr_menu_bg_newGm_start.yy",},"order":4,},
     {"id":{"name":"spr_gm_item_armyConcentrate","path":"sprites/spr_gm_item_armyConcentrate/spr_gm_item_armyConcentrate.yy",},"order":13,},
+    {"id":{"name":"fnt_gm_hint","path":"fonts/fnt_gm_hint/fnt_gm_hint.yy",},"order":2,},
     {"id":{"name":"spr_ico_weapon_machine","path":"sprites/spr_ico_weapon_machine/spr_ico_weapon_machine.yy",},"order":3,},
     {"id":{"name":"spr_gm_item_dieselRusty","path":"sprites/spr_gm_item_dieselRusty/spr_gm_item_dieselRusty.yy",},"order":3,},
     {"id":{"name":"spr_menu_bg_reference","path":"sprites/spr_menu_bg_reference/spr_menu_bg_reference.yy",},"order":12,},
