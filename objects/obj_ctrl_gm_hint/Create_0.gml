@@ -2,6 +2,8 @@
 
 //main
 action = "";
+ctrl_hint_currHint = "";
+ctrl_hint_newHint = ""; //подсказка, которая назначается извне, по ней уже ищется нужный текст
 
 //drawing
 draw_txt = "";		//строка подсказки
@@ -11,17 +13,20 @@ draw_txt_y = 0;
 ctrl_hint_hint_map = ds_map_create();
 //с помощью этой подсказки определяю, обновлен ли массив в соответствии с частью игры (см. степ)
 ctrl_hint_hint_map[?"gmPart"] = "1";	//1, если первая, 2, если вторая
-ctrl_hint_hint_map[?""] = "";
-ctrl_hint_hint_map[?""] = "";
-ctrl_hint_hint_map[?""] = "";
-ctrl_hint_hint_map[?""] = "";
-ctrl_hint_hint_map[?""] = "";
-ctrl_hint_hint_map[?""] = "";
-ctrl_hint_hint_map[?""] = "";
-ctrl_hint_hint_map[?""] = "";
-ctrl_hint_hint_map[?""] = "";
-ctrl_hint_hint_map[?""] = "";
-ctrl_hint_hint_map[?""] = "";
-ctrl_hint_hint_map[?""] = "";
+//["hint", priority, liveTime (sec), time_reload] чем больше число, тем выше приоритет
+//последний параметр - сколько времени осталось до того, как подсказку можно будет использовать еще раз 
+//последний параметр только для рандомых подсказок (RH_)
+ctrl_hint_hint_map[?""] = ["", 100, 1.5, 0];		
+ctrl_hint_hint_map[?""] = ["", 100, 1.5, 0];
+//random hint (RH_) - подсказки, которые будут выводиться раз в некоторое время, как мысли
+ctrl_hint_hint_map[?"RH_petrovich"] = ["Интересно,\n сколько спирта\nможет выпить\n Петрович \nза раз?", 1, 3, 0];
+ctrl_hint_hint_map[?"RH_khe"] = ["Кхе-кх... Прохладно здесь", 1, 3, 0];
+ctrl_hint_hint_map[?"RH_worried"] = ["Что-то неспокойно мне...", 1, 3, 0];
+ctrl_hint_hint_map[?"RH_shiz"] = ["Эй, крыша, как поживаешь?", 1, 3, 0];
+
+ctrl_hint_TWH = 0;	//time without hints (время, прошедшее с последней подсказки)
+
+
+alarm[1] = 1 * room_speed;	//таймер ежесекундный
 
 
