@@ -17,6 +17,12 @@ switch (action) {
 			//время жизни подсказки
 			alarm[0] = newH[2] * room_speed;
 			draw_txt = newH[0];
+			//если рабатаем с мыслью-подсказкой, нужно поставить ей таймер обновления 
+			if (string_copy(ctrl_hint_currHint, 0, 3) == "RH_") {
+				//объявляю, что подсказка использовалась и теперь не стоит ее брать в ближайшее время
+				newH[3] = 15 * 60; //15 минут
+				ctrl_hint_hint_map[?ctrl_hint_currHint] = newH;
+			}
 		}
 	break;
 }

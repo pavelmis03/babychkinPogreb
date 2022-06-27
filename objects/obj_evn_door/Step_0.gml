@@ -5,10 +5,18 @@ can_interact = false;
 if (distance_to_point(player_obj.x, player_obj.y) < 70) {
 	//проверяю корректность направления взгляда игрока
 	if (abs(angle_difference(player_obj.image_angle, point_direction(player_obj.x, player_obj.y, x, y))) <= 30) {
-		can_interact = true;
-		//массив коллизий игрока
-		player_obj.player_col[?type] = id;
-		//добавление подсказки
+		//если дверь сейчас не находится в процессе открытия/закрытия (спрайт уже проигрался и статичен)
+		if (image_speed == 0) {
+			can_interact = true;
+			//массив коллизий игрока
+			player_obj.player_col[?type] = id;
+			//добавление подсказки (если дверь открыта, подсказка на закрытие и наоборот)
+			if (destination == "pre_room") {
+				obj_ctrl_gm_hint.ctrl_hint_newHint = "closeDoor";
+			} else {
+				obj_ctrl_gm_hint.ctrl_hint_newHint = "openDoor";
+			}
+		}
 	}
 }
 

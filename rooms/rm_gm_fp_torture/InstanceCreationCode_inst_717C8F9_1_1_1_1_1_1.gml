@@ -1,1 +1,1 @@
-//action = "dlg1_2";
+action = "hint_torture1";
