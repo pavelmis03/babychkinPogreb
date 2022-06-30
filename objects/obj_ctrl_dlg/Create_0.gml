@@ -28,6 +28,8 @@ ctrl_dlg_map_depth = ds_map_create();
 ctrl_dlg_map_depth[?rm_menu_mm] = -100;
 ctrl_dlg_map_depth[?rm_menu_ldGm] = 50;
 ctrl_dlg_map_depth[?rm_menu_newGm] = 50;
+ctrl_dlg_map_depth[?rm_menu_endless] = 50;
+ctrl_dlg_map_depth[?rm_menu_newGm_start] = 50;
 ctrl_dlg_map_depth[?rm_menu_info] = 50;
 ctrl_dlg_map_depth[?rm_menu_dev] = 50;
 ctrl_dlg_map_depth[?rm_menu_journal] = 50;
@@ -36,8 +38,11 @@ ctrl_dlg_map_depth[?rm_menu_settings] = -20;
 ctrl_dlg_map_depth[?rm_menu_reference] = -20;
 ctrl_dlg_map_depth[?rm_menu_editor] = 50;
 ctrl_dlg_map_depth[?rm_menu_pause] = -50;
-ctrl_dlg_map_depth[?rm_menu_lvlEnd] = 50;
-ctrl_dlg_map_depth[?rm_menu_endless] = 50;
+ctrl_dlg_map_depth[?rm_menu_lvlEnd] = -50;
+ctrl_dlg_map_depth[?rm_menu_deathFP] = -50;
+ctrl_dlg_map_depth[?rm_menu_deathSP] = -50;
+ctrl_dlg_map_depth[?rm_menu_history] = -50;
+ctrl_dlg_map_depth[?rm_menu_riddle] = -50;
 
 //словарь тестов на диалогах, работает по action вызвавшей кнопки
 ctrl_dlg_map_txt = ds_map_create();

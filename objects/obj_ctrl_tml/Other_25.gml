@@ -17,6 +17,7 @@ switch (action) {
 		}
 		ds_list_clear(ctrl_tml_list);
 	break;
+	
 	case "dlg1_1":
 		obj_ctrl_gm.action = "dlg1_1";
 	break;

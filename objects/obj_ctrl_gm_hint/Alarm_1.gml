@@ -10,6 +10,8 @@ for (var i = 0; i < ds_map_size(ctrl_hint_hint_map); i++) {
 	var arr = ctrl_hint_hint_map[?key];
 	//первый элемент словаря не массив (см. create)
 	if (!is_array(arr)) {
+		//тогда это не подсказка, поэтому выбираем след. ключ и идем дальше 
+		key = ds_map_find_next(ctrl_hint_hint_map, key);
 		continue;
 	}
 	//если эта подсказка не использовалась давно и подсказка является мыслью, запоминаю ключ 
@@ -25,18 +27,21 @@ for (var i = 0; i < ds_map_size(ctrl_hint_hint_map); i++) {
 	key = ds_map_find_next(ctrl_hint_hint_map, key);
 }
 
-//если больше двух минут не выводилось никаких подсказок и есть что выводить
-if ((ctrl_hint_TWH mod 120 == 0) and (ds_list_size(keyList) > 0)) {
-	var t = irandom(ds_list_size(keyList) - 1);
-	//var newH = ctrl_hint_hint_map[?keyList[|t]];
-	//предлагаю новую подсказку на рассмотрение 
-	ctrl_hint_newHint = keyList[|t];
-	/* перенесено в UE(15)
-	//объявляю, что подсказка использовалась и теперь не стоит ее брать в ближайшее время
-	newH[3] = 15 * 60; //15 минут
-	ctrl_hint_hint_map[?keyList[|t]] = newH;
-	*/
-}	
+//если подсказки отключены, не нужно выбирать мысль-подсказку и комната должна быть игровая 
+if ((obj_ctrl_set.ctrl_set_map_curr[?"hints"]) and (obj_ctrl_gm.ctrl_gm_phase == 1)) {
+	//если больше двух минут не выводилось никаких подсказок и есть что выводить
+	if ((ctrl_hint_TWH mod 120 == 0) and (ds_list_size(keyList) > 0)) {
+		var t = irandom(ds_list_size(keyList) - 1);
+		//var newH = ctrl_hint_hint_map[?keyList[|t]];
+		//предлагаю новую подсказку на рассмотрение 
+		ctrl_hint_newHint = keyList[|t];
+		/* перенесено в UE(15)
+		//объявляю, что подсказка использовалась и теперь не стоит ее брать в ближайшее время
+		newH[3] = 15 * 60; //15 минут
+		ctrl_hint_hint_map[?keyList[|t]] = newH;
+		*/
+	}	
+}
 	
 ds_list_destroy(keyList);
 

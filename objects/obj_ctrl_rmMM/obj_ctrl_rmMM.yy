@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": false,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -29,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "menu",
-    "path": "folders/Objects/Ctrl/Gm/Local/menu/menu.yy",
+    "path": "folders/Objects/Ctrl/Local/menu/menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_ctrl_rmMM",

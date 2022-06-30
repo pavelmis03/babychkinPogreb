@@ -1,1 +1,6 @@
-//action = "dlg1_2";
+//метка, куда прийти
+type = "posM";
+action = "selfDestroy";
+
+image_xscale = 0.5;
+image_yscale = 0.5;

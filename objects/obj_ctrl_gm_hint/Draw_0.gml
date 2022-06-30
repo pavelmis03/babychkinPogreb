@@ -8,7 +8,8 @@ draw_set_color(c_grey);
 draw_set_valign(fa_bottom);
 draw_set_halign(fa_center);
 
-if ((player_obj != -1) and (draw_txt != "")) {
+//если сущестсует перс. текст подсказки не пустой и в настройках подсказки включены
+if ((player_obj != -1) and (draw_txt != "") and (obj_ctrl_set.ctrl_set_map_curr[?"hints"]) and (obj_ctrl_gm.ctrl_gm_phase == 1)) {
 	draw_txt_x = player_obj.x;
 	//по У отступаю длины проекций высоты и ширины спрайта на ось У
 	//draw_txt_y = player_obj.y - abs(lengthdir_y((player_obj.sprite_height + player_obj.sprite_width) / 2, player_obj.image_angle));

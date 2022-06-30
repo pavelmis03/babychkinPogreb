@@ -14,7 +14,7 @@ function scr_gm_phase() {
 	}
 	
 	if (room == rm_menu_history) {
-		phase = 3;
+		phase = 2;
 	}
 	
 	return phase;

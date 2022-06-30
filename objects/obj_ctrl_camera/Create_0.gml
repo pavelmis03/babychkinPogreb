@@ -5,8 +5,6 @@
 action = ""
 
 
-
-
 //настройка режима экрана
 if (obj_ctrl_set.ctrl_set_map_curr[?"screenMode"] = "Полноэкранный") {
 	window_set_fullscreen(1);

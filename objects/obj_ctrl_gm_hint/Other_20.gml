@@ -12,7 +12,8 @@ if (obj_ctrl_gm.ctrl_gm_stage == 1) {
 	ctrl_hint_hint_map[?"takeIt"] = ["Жми Е и подними это!", 100, 2, 0];		//поднять инвентарь
 	ctrl_hint_hint_map[?"useIt"] = ["Жми Е и сделай уже это!", 100, 2, 0];		//использовать
 	ctrl_hint_hint_map[?"sitCar"] = ["Клацай Е, заводи и погнали!", 100, 2, 0];	//сесть в машину
-} else {
+}
+if (obj_ctrl_gm.ctrl_gm_stage == 2) {
 	ctrl_hint_hint_map[?"gmPart"] = "2";
 	//random hint (RH_) - подсказки, которые будут выводиться раз в некоторое время, как мысли
 	ctrl_hint_hint_map[?"RH_petrovich"] = ["Интересно, сколько спирта\nможет выпить Петрович \nза раз?", 1, 3, 0];

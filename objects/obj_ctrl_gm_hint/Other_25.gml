@@ -4,6 +4,8 @@ switch (action) {
 	//очистка подсказки
 	case "cleareHint":
 		draw_txt = "";
+		ctrl_hint_newHint = "";
+		ctrl_hint_currHint = "";
 	break;
 	//
 	case "set_hint":

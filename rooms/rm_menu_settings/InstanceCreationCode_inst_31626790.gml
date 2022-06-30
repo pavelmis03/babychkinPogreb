@@ -1,3 +1,4 @@
+//звуки
 sprite_index = spr_btn_other_check;
 
 //var t = scr_btn_posInScr(id, 1, -1);

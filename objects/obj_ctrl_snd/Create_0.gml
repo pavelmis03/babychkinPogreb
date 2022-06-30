@@ -22,7 +22,7 @@ ctrl_msc_arr_on = [];
 //!ctrl_snd_map[?"enterDoor"] = [20, "snd_menu_snd_enterDoor"];
 //!ctrl_snd_map[?"openDoor"] = [20, "snd_menu_snd_openDoor"];
 
-//работает по принципу комната-музыка
+//работает по принципу комната-музыка [priority, mysic]
 ctrl_msc_map = ds_map_create();
 ctrl_msc_map[?"rm_menu_mm"] = [50, "snd_menu_msc_mm1", "snd_menu_msc_mm2", "snd_menu_msc_mm3"];
 ctrl_msc_map[?"rm_menu_editor"] = [50, "snd_menu_msc_mm2"];

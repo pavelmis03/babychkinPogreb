@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -30,7 +31,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Gm_menu",
-    "path": "folders/Objects/Ctrl/Gm/Local/menu/Gm_menu.yy",
+    "path": "folders/Objects/Ctrl/Local/menu/Gm_menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_ctrl_rmDeath",

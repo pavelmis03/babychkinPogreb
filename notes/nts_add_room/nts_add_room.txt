@@ -1,1 +1,2 @@
-ctrl_dlg_map_depth - obj_ctrl_dlg
+1) ctrl_dlg_map_depth - obj_ctrl_dlg - глубина отрисовки диалогов
+2) ctrl_msc_map - ctrl_msc_map - create - музыка к комнате
