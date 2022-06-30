@@ -12,6 +12,11 @@ sound = [-1, "snd_none", "snd_none"]; //-1 показывает, что этой
 btn_pressed = false;	//кнопку нажали
 btn_enter = false;		//на кнопку навели мышь
 
+//oter
+//в некоторых случаях нужно задержаться в текущей комнате перед переходом
+//задается в creationCode, используется в UE15
+btn_transitionDelay = 0;
+
 //sprite
 image_speed = 0;
 

@@ -8,6 +8,6 @@ image_yscale = 1;
 
 type = "transition";
 action = "goToBoss";	//этаж шефа (6)
-sound = [20, "snd_menu_snd_enterDoor", "snd_menu_snd_openDoor"];
+sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];
 
 

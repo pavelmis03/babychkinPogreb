@@ -6,4 +6,4 @@ y = room_height * 0.88;
 
 type = "confirmYNCl_def";
 action = ["defaultSettings", "cansel", "cansel"];
-//sound = [20, "snd_menu_snd_enterDoor", "snd_menu_snd_openDoor"];
+//sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];

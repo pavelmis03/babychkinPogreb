@@ -9,4 +9,4 @@ image_yscale = 0.95;
 
 type = "transition";
 action = "goToSet";
-sound = [20, "snd_menu_snd_enterDoor", "snd_menu_snd_openDoor"];
+sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];

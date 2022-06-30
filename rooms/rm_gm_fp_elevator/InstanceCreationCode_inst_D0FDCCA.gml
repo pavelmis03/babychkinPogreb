@@ -7,6 +7,6 @@ image_yscale = 1;
 
 type = "func";
 action = "scaryVoice";
-sound = [20, "snd_menu_snd_enterDoor", "snd_menu_snd_openDoor"];
+sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];
 
 //вызов диспетчера

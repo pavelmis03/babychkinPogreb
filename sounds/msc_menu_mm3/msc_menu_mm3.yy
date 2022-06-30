@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -10,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_menu_snd_openDoor.mp3",
-  "duration": 1.880816,
+  "soundFile": "msc_menu_mm3.mp3",
+  "duration": 25.78285,
   "parent": {
     "name": "Menu",
-    "path": "folders/Sounds/Snd/Menu.yy",
+    "path": "folders/Sounds/Music/Menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_menu_snd_openDoor",
+  "name": "msc_menu_mm3",
   "tags": [],
   "resourceType": "GMSound",
 }

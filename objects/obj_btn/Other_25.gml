@@ -128,7 +128,12 @@ switch (type) {
 	break;
 	//кнопки перехода в другую комнату 
 	case "transition": 
-		event_user(14);
+		//в некоторых случаях нужно задержаться в текущей комнате перед переходом
+		if (btn_transitionDelay == 0) {
+			event_user(14);
+		} else {
+			alarm[7] = btn_transitionDelay;
+		}
 	break;
 	//выполняющие определенные функции
 	case "func": 

@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -10,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_menu_msc_mm1.mp3",
-  "duration": 125.178772,
+  "soundFile": "msc_menu_mm2.mp3",
+  "duration": 63.60815,
   "parent": {
     "name": "Menu",
     "path": "folders/Sounds/Music/Menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_menu_msc_mm1",
+  "name": "msc_menu_mm2",
   "tags": [],
   "resourceType": "GMSound",
 }
