@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Gm_menu",
-    "path": "folders/Objects/Ctrl/Local/menu/Gm_menu.yy",
+    "name": "Gm",
+    "path": "folders/Objects/Ctrl/Local/Gm.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_ctrl_rmDeath",

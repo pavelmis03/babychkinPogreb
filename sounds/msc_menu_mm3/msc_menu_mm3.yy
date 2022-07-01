@@ -14,8 +14,8 @@
   "soundFile": "msc_menu_mm3.mp3",
   "duration": 25.78285,
   "parent": {
-    "name": "Menu",
-    "path": "folders/Sounds/Music/Menu.yy",
+    "name": "menu",
+    "path": "folders/Sounds/Music/Menu/menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "msc_menu_mm3",

@@ -14,8 +14,8 @@
   "soundFile": "snd_menu_opendoor.mp3",
   "duration": 1.880816,
   "parent": {
-    "name": "Menu",
-    "path": "folders/Sounds/Snd/Menu.yy",
+    "name": "mm",
+    "path": "folders/Sounds/Snd/Menu/Menu/mm.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_menu_openDoor",

@@ -132,7 +132,7 @@ switch (type) {
 		if (btn_transitionDelay == 0) {
 			event_user(14);
 		} else {
-			alarm[7] = btn_transitionDelay;
+			alarm[7] = btn_transitionDelay * room_speed;
 		}
 	break;
 	//выполняющие определенные функции

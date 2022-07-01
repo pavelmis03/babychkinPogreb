@@ -18,6 +18,12 @@ switch (action) {
 	//подсказка с уровня офиса о степашке (что он забыл у босса)
 	case "hint_office1":
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "hint_office1";
+		instance_destroy();	
+	break;
+	//подсказка с этажа босса 
+	case "hint_boss1":
+		obj_ctrl_gm_hint.ctrl_hint_newHint = "hint_office1";
+		instance_destroy();	
 	break;
 	//подсказка с уровня ,,холл,, о том, что выйти из здания еще нельзя
 	case "hint_hole1":

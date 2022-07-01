@@ -14,8 +14,8 @@
   "soundFile": "snd_menu_enterdoor.mp3",
   "duration": 0.261224,
   "parent": {
-    "name": "Menu",
-    "path": "folders/Sounds/Snd/Menu.yy",
+    "name": "mm",
+    "path": "folders/Sounds/Snd/Menu/Menu/mm.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_menu_enterDoor",

@@ -8,8 +8,12 @@ image_yscale = 1;
 
 type = "transition";
 action = "goToOffice";	//этаж
-sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];
+sound = [20, "snd_none", "snd_gm_lift_pressBtn"];
+
+//задержка срабатывания transition, чтобы создать эффект движения в лифте и успеть прошлушать звук
+btn_transitionDelay = 4; //секунды
 
 
 //этаж Леонида (10)
+
 
