@@ -6,11 +6,12 @@ x = -1000;
 y = -1000;
 depth = 100;
 
-//main vars
+//main
 ctrl_dlg_exist = false;		//диалог существует
 ctrl_dlg_need = false;		//создать диалог? (false)
 ctrl_dlg_del = false;		//удалить диалог?
-action[0] = "";
+ctrl_dlg_disable_btn = 0;	//показывает, что не диалоговые кнопки нужно деактивировать (0 - ничего, 1 - деактивация, 2 - активация)
+action[0] = "";		//в данном случае это массив
 type = "";
 
 //drawig

@@ -5,8 +5,28 @@ var x2 = x + sprite_get_bbox_right(sprite_index);
 var y1 = y + sprite_get_bbox_top(sprite_index);
 var y2 = y + sprite_get_bbox_bottom(sprite_index);
 
-//при диалоге остальные кнопки не активны
-if (!obj_ctrl_dlg.ctrl_dlg_exist or type == "dlg_btn") {
+//если был сигнал на деактивацию кнопок 
+if ((obj_ctrl_dlg.ctrl_dlg_disable_btn == 1) and (type != "dlg_btn")) {
+	btn_enable = false;
+	image_speed = 0;
+	image_index = 0;
+	//спрайт деактивации кнопки
+	var str = sprite_get_name(sprite_index);
+	var str1 = string_copy(str, 0, string_length(str) - 1); 
+	sprite_index = asset_get_index(str1 + "0");
+} 
+if ((obj_ctrl_dlg.ctrl_dlg_disable_btn == 2) and (type != "dlg_btn")) {
+	btn_enable = true;
+	image_speed = 0;
+	image_index = 0;
+	//спрайт активации кнопки
+	var str = sprite_get_name(sprite_index);
+	var str1 = string_copy(str, 0, string_length(str) - 1); 
+	sprite_index = asset_get_index(str1 + "1");
+} 	
+
+//деактивируются, например, при диалогах
+if (btn_enable) {
 	if (point_in_rectangle(mouse_x, mouse_y, x1, y1, x2, y2)) {
 		//действия один раз выполняются (запустили спрайт)
 		if (!btn_enter) {
