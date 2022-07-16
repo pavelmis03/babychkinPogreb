@@ -3,9 +3,9 @@
 ctrl_stat_arr_draw[0] = ["", false, 9, "", ""];		//общее
 ctrl_stat_arr_draw[1] = ["Прогресс игры: ", false, 0, ctrl_stat_map[?"gameProgress"], "%"];
 ctrl_stat_arr_draw[2] = ["Прогресс основной сюжетки: ", false, 0, ctrl_stat_map[?"plotProgress"], "%"];
-ctrl_stat_arr_draw[3] = ["Прогресс дополнительных миссий: ", false, 0, ctrl_stat_map[?"subPlotProgress"], "%"];
+ctrl_stat_arr_draw[3] = ["Прогресс дополнительных задач: ", false, 0, ctrl_stat_map[?"subPlotProgress"], "%"];
 ctrl_stat_arr_draw[4] = ["Достижений получено: ", false, 0, ctrl_stat_map[?"achvCnt"], ""];
-ctrl_stat_arr_draw[5] = ["Миссий завершено: ", false, 0, ctrl_stat_map[?"questCopmlete"], ""];
+ctrl_stat_arr_draw[5] = ["Задач выполнено: ", false, 0, ctrl_stat_map[?"questCopmlete"], ""];
 ctrl_stat_arr_draw[6] = ["Собрано особых предметов: ", false, 0, ctrl_stat_map[?"specialItems"], ""];
 ctrl_stat_arr_draw[7] = ["Время в игре: ", false, 0, ctrl_stat_map[?"timeInGame"], ""];	
 ctrl_stat_arr_draw[8] = ["Test: ", false, 0, "", ""];

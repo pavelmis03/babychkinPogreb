@@ -27,4 +27,10 @@ switch (action) {
 			}
 		}
 	break;
+	case "newTask": 
+		draw_caption = spr_gm_caption_newTask;
+		draw_caption_y = room_height / 2;
+		//движение текста вверх
+		alarm[2] = 0.1 * room_speed;
+	break;
 }

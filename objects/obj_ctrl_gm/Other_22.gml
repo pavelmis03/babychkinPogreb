@@ -8,7 +8,6 @@ if (instance_exists(obj_ctrl_gm_img)) {
 if (instance_exists(obj_ctrl_gm_pause)) {
 	instance_destroy(obj_ctrl_gm_pause);
 }
-
 /*
 if (instance_exists(obj_ctrl_inv)) {
 	instance_destroy(obj_ctrl_inv);
@@ -22,12 +21,17 @@ if (instance_exists(obj_ctrl_gm_hint)) {
 	instance_destroy(obj_ctrl_gm_hint);
 }
 
+if (instance_exists(obj_ctrl_gm_iss)) {
+	instance_destroy(obj_ctrl_gm_iss);
+}
+
 //удаление папки сохранения игры, если игрок вышел в меню, не сделав ни одного сохранения
 ini_open(obj_ctrl_gm_sv.ctrl_sv_gmDir + "save_cmn.ini");
 if (ini_read_real("SAVES", "save_number", 0) == 0) {
 	directory_destroy(obj_ctrl_gm_sv.ctrl_sv_gmDir);
 }
 ini_close();
+
 //очищаю список сохраненных комнат (теперь он не нужен)
 ds_list_clear(ctrl_gm_changedRm);
 

@@ -5,6 +5,7 @@ stat - statistics
 ctrl - controller
 curr - current
 inst - instance
+iss - issue
 equ - equipment
 dev - developers 
 set - settings

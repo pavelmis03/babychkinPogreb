@@ -21,8 +21,6 @@ switch (action) {
 		screen_save("screenshots//ScreenShot" + string(i) + ".png");
 		draw_caption = spr_gm_caption_screen;
 		draw_caption_y = room_height / 2;
-		//обнуление текста
-		alarm[0] = 2 * room_speed;
 		//движение текста вверх
 		alarm[1] = 0.1 * room_speed;
 	break;

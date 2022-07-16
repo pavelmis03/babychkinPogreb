@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_gm_lift_pressbtn",
-  "duration": 0.0,
+  "soundFile": "snd_gm_lift_pressbtn.wav",
+  "duration": 5.221333,
   "parent": {
     "name": "lift",
     "path": "folders/Sounds/Snd/Menu/Game/Other/lift.yy",

@@ -1,8 +1,5 @@
 /// @description конечные действия кнопки
 
-// Inherit the parent event
-event_inherited();
-
 switch (action) {
 	//просто этаж
 	case "goToFloor1": 

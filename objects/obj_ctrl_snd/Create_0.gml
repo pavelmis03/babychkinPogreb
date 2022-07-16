@@ -15,19 +15,55 @@ action = "sndChange";	//меняем громкость в соответств�
 ctrl_msc_arr_on = [];
 
 //массив включенных звуков
-//!ctrl_snd_arr_on = [];
+//ctrl_snd_arr_on = [];
 
 //работает по принципу действие-звук 
 //!ctrl_snd_map = ds_map_create();
 //!ctrl_snd_map[?"enterDoor"] = [20, "snd_menu_enterDoor"];
 //!ctrl_snd_map[?"openDoor"] = [20, "snd_menu_openDoor"];
 
-//работает по принципу комната-музыка [priority, mysic]
+//работает по принципу комната-музыка [priority, mysic1, mysic2...] запускаются все mysic1, mysic2...
+//или
+//работает по принципу комната-музыка [priority, [mysic1, mysic2...]], запускается одна из [mysic1, mysic2...]
 ctrl_msc_map = ds_map_create();
 ctrl_msc_map[?"rm_menu_mm"] = [50, "msc_menu_mm1", "msc_menu_mm2", "msc_menu_mm3"];
-ctrl_msc_map[?"rm_menu_editor"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_menu_ldGm"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_menu_newGm"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_menu_endless"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_menu_newGm_start"] = [50, "msc_menu_mm2"];
 ctrl_msc_map[?"rm_menu_settings"] = [50, "msc_menu_mm1"];
+ctrl_msc_map[?"rm_menu_reference"] = [50, "msc_menu_mm1"];
 ctrl_msc_map[?"rm_menu_info"] = [50, "msc_menu_mm1"];
 ctrl_msc_map[?"rm_menu_dev"] = [50, "msc_menu_mm1"];
 ctrl_msc_map[?"rm_menu_journal"] = [50, "msc_menu_mm1"];
 ctrl_msc_map[?"rm_menu_stat"] = [50, "msc_menu_mm1"];
+ctrl_msc_map[?"rm_menu_editor"] = [50, "msc_menu_mm2"];
+//game menu
+ctrl_msc_map[?"rm_menu_pause"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_menu_lvlEnd"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_menu_deathFP"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_menu_deathSP"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_menu_history"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_menu_riddle"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_pixel"] = [50, "msc_menu_mm2"];
+//game
+	//fp
+ctrl_msc_map[?"rm_gm_fp_office"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_gm_fp_floor1"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_gm_fp_floor2"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_gm_fp_floor3"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_gm_fp_floor4"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_gm_fp_bossFloor"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_gm_fp_hole"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_gm_fp_torture"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_gm_fp_armory"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_gm_fp_parking"] = [50, "msc_menu_mm2"];
+ctrl_msc_map[?"rm_gm_fp_elevator"] = [50, ["msc_gm_lift1", "msc_gm_lift2", "msc_gm_lift3", "msc_gm_lift4"]];
+	//sp
+	
+//other
+
+
+
+
+

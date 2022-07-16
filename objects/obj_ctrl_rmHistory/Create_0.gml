@@ -40,3 +40,20 @@ event_user(14);	//проверка на наличие сохранений, в�
 
 //sys
 x = -100000;
+
+//настройка комнаты
+//если слайдов больше одного
+if (ctrl_history_page_last - ctrl_history_page_first > 0) {
+	//кнопка ,,предыдущий слайд,,
+	var obj = instance_create_depth(room_width * 0.19, room_height * 0.88, depth, obj_btn);
+	obj.sprite_index = spr_btn_ref_pre1;
+	obj.type = "func";
+	obj.action = "historyPreImg";
+	obj.sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];
+	//кнопка ,,следующий слайд,,
+	var obj = instance_create_depth(room_width * 0.32, room_height * 0.88, depth, obj_btn);
+	obj.sprite_index = spr_btn_ref_next1;
+	obj.type = "func";
+	obj.action = "historyNextImg";
+	obj.sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];
+}
