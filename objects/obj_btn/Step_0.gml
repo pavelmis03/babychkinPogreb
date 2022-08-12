@@ -8,22 +8,30 @@ var y2 = y + sprite_get_bbox_bottom(sprite_index);
 //если был сигнал на деактивацию кнопок 
 if ((obj_ctrl_dlg.ctrl_dlg_disable_btn == 1) and (type != "dlg_btn")) {
 	btn_enable = false;
-	image_speed = 0;
-	image_index = 0;
-	//спрайт деактивации кнопки
-	var str = sprite_get_name(sprite_index);
-	var str1 = string_copy(str, 0, string_length(str) - 1); 
-	sprite_index = asset_get_index(str1 + "0");
 } 
-if ((obj_ctrl_dlg.ctrl_dlg_disable_btn == 2) and (type != "dlg_btn")) {
+
+if (obj_ctrl_dlg.ctrl_dlg_disable_btn == 2) {
 	btn_enable = true;
-	image_speed = 0;
+}
+
+var str = sprite_get_name(sprite_index);
+var str1 = string_copy(str, 0, string_length(str) - 1); 
+//настройка спрайта недоступности
+if (!btn_enable) {
+	//image_speed = 0;
+	//спрайт деактивации кнопки
+	sprite_index = asset_get_index(str1 + "0");
 	image_index = 0;
+}
+
+//если кнопка стала доступна, а спрайт является спрайтом недоступности, меняем на первый
+var num_spr = string_copy(str, string_length(str), 1);
+if ((btn_enable) and (num_spr == "0")) {
+	image_speed = 0;
 	//спрайт активации кнопки
-	var str = sprite_get_name(sprite_index);
-	var str1 = string_copy(str, 0, string_length(str) - 1); 
-	sprite_index = asset_get_index(str1 + "1");
-} 	
+	sprite_index = asset_get_index(str1 + "1");	
+	image_index = 0;
+}
 
 //деактивируются, например, при диалогах
 if (btn_enable) {

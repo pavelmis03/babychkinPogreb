@@ -12,5 +12,5 @@ action = "goToFloor1";	//этаж
 sound = [20, "snd_none", "snd_gm_lift_pressBtn"];
 
 //задержка срабатывания transition, чтобы создать эффект движения в лифте и успеть прошлушать звук
-btn_transitionDelay = 4; //секунды
+btn_transitionDelay = 0; //секунды
 

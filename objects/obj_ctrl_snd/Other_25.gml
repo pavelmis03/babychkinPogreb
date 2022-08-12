@@ -8,7 +8,7 @@ switch (action) {
 	//проигрывает набор переданных звуков
 	case "playSnd":
 		scr_snd_playSnd();
-	break;
+	break; 
 	//изменение настроек звуков и музыки
 	case "sndChange":
 		ctrl_snd_vol = real(obj_ctrl_set.ctrl_set_map_curr[?"sound_val"] / 100);	//громкость музыки и звуков

@@ -48,7 +48,7 @@ btn_id2 = 0;
 //если слайдов больше одного
 if (ctrl_history_page_last - ctrl_history_page_first > 0) {
 	//кнопка ,,Следующий слайд,,
-	btn_id1 = instance_create_depth(room_width * 0.19, room_height * 0.88, depth, obj_btn);
+	btn_id1 = instance_create_depth(room_width * 0.32, room_height * 0.88, depth, obj_btn);
 	btn_id1.sprite_index = spr_btn_history_next1;
 	btn_id1.type = "func";
 	btn_id1.action = "historyNextImg";
