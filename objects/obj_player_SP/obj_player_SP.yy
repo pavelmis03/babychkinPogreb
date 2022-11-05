@@ -1,10 +1,17 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_playerFP_state",
+    "path": "sprites/spr_playerFP_state/spr_playerFP_state.yy",
+  },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_player_FP",
+    "path": "objects/obj_player_FP/obj_player_FP.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

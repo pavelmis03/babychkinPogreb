@@ -8,11 +8,11 @@ if (instance_exists(obj_ctrl_gm_img)) {
 if (instance_exists(obj_ctrl_gm_pause)) {
 	instance_destroy(obj_ctrl_gm_pause);
 }
-/*
-if (instance_exists(obj_ctrl_inv)) {
-	instance_destroy(obj_ctrl_inv);
+
+if (instance_exists(obj_ctrl_gm_inv)) {
+	instance_destroy(obj_ctrl_gm_inv);
 }
-*/
+
 if (instance_exists(obj_ctrl_gm_playerInterface)) {
 	instance_destroy(obj_ctrl_gm_playerInterface);
 }

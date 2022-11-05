@@ -21,4 +21,5 @@ if (obj_ctrl_set.ctrl_set_map_curr[?"pixels"] and ctrl_gm_pixel_time != -1) {
 		ds_list_add(obj_ctrl_mv.next_rm, rm_menu_mm); 
 	}
 }
+
 obj_ctrl_mv.action = "addRm";

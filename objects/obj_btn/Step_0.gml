@@ -8,7 +8,7 @@ var y2 = y + sprite_get_bbox_bottom(sprite_index);
 //если был сигнал на деактивацию кнопок 
 if ((obj_ctrl_dlg.ctrl_dlg_disable_btn == 1) and (type != "dlg_btn")) {
 	btn_enable = false;
-} 
+}
 
 if (obj_ctrl_dlg.ctrl_dlg_disable_btn == 2) {
 	btn_enable = true;

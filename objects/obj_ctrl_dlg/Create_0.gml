@@ -44,6 +44,7 @@ ctrl_dlg_map_depth[?rm_menu_deathFP] = -50;
 ctrl_dlg_map_depth[?rm_menu_deathSP] = -50;
 ctrl_dlg_map_depth[?rm_menu_history] = -50;
 ctrl_dlg_map_depth[?rm_menu_riddle] = -50;
+ctrl_dlg_map_depth[?rm_menu_inv] = -50;
 
 //словарь тестов на диалогах, работает по action вызвавшей кнопки
 ctrl_dlg_map_txt = ds_map_create();

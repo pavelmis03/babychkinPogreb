@@ -9,10 +9,17 @@ if (obj_ctrl_gm.ctrl_gm_stage == 1) {
 	//последний параметр - сколько времени осталось до того, как подсказку можно будет использовать еще раз 
 	//последний параметр только для рандомых подсказок (RH_)
 	ctrl_hint_hint_map[?"openDoor"] = ["Нажимай Е, чтобы открыть её!", 100, 1.5, 0]; //открыть дверь
-	ctrl_hint_hint_map[?"takeIt"] = ["Жми Е и подними это!", 100, 2, 0];		//поднять инвентарь
+	ctrl_hint_hint_map[?"take_inv"] = ["Жми Е и поднимай!", 100, 1.5, 0];
 	ctrl_hint_hint_map[?"useIt"] = ["Жми Е и сделай уже это!", 100, 2, 0];		//использовать
 	ctrl_hint_hint_map[?"sitCar"] = ["Клацай Е, заводи и погнали!", 100, 2, 0];	//сесть в машину
+	
+	//удаление ненужных (из второй части)
+	ds_map_delete(ctrl_hint_hint_map, "RH_petrovich");
+	ds_map_delete(ctrl_hint_hint_map, "RH_khe");
+	ds_map_delete(ctrl_hint_hint_map, "RH_worried");
+	ds_map_delete(ctrl_hint_hint_map, "RH_shiz");
 }
+
 if (obj_ctrl_gm.ctrl_gm_stage == 2) {
 	ctrl_hint_hint_map[?"gmPart"] = "2";
 	//random hint (RH_) - подсказки, которые будут выводиться раз в некоторое время, как мысли
@@ -20,4 +27,11 @@ if (obj_ctrl_gm.ctrl_gm_stage == 2) {
 	ctrl_hint_hint_map[?"RH_khe"] = ["Кхе-кх... Прохладно здесь", 1, 3, 0];
 	ctrl_hint_hint_map[?"RH_worried"] = ["Что-то неспокойно мне...", 1, 3, 0];
 	ctrl_hint_hint_map[?"RH_shiz"] = ["Эй, крыша, как поживаешь?", 1, 3, 0];
+	
+	
+	//удаление ненужных (из первой части)
+	ds_map_delete(ctrl_hint_hint_map, "openDoor");
+	ds_map_delete(ctrl_hint_hint_map, "take_inv");
+	ds_map_delete(ctrl_hint_hint_map, "useIt");
+	ds_map_delete(ctrl_hint_hint_map, "sitCar");
 }

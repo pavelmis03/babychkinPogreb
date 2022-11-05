@@ -16,3 +16,5 @@ switch (destination) { //нужно учесть, что когда очеред
 		room_goto(destination);	//если в destination название комнаты
 	break;
 }
+//сообщаю персонажу, что действие закончено
+player_obj.player_pressE = false;

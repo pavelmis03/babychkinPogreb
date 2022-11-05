@@ -1,53 +1,55 @@
 /// @description
-var player = scr_player_type();
 
 if (!init) {
 	event_user(0);	
 }
 
 //провeрка нахождения игрока рядом
-if (player.player_col[?type] == id) {
-	inv_nearPlayer = true;	
-} else {
-	inv_nearPlayer = false;	
-}
-
-//проверка смотрит ли игрок в сторону предмета
-//if (point_direction(player.x, player.y, x, y) == player.image_angle) {
-//	inv_dirIsSatisfies = true;
-//} else {	
-//	inv_dirIsSatisfies = false;
+//if (player_obj.player_col[?type] == id) {
+//	inv_nearPlayer = true;	
+//} else {
+//	inv_nearPlayer = false;	
 //}
-/*
-//если есть контакт с объектом инвентаря
-	if (player_col[?"inv"] != 0) {
-		var obj_ind = asset_get_index(object_get_name(player_col[?"inv"].object_index));
-		//если игрок смотрит в сторону объекта инвентаря
-		if (collision_line(x, y, x + lengthdir_x(1000, image_angle), y + lengthdir_y(1000, image_angle), obj_ind, true, true) != noone) {
-			//сообщаем предмету, что перс. ,,смотрит,, на него
-			player_col[?"inv"].inv_dirIsSatisfies = true;
-		} else {
-			player_col[?"inv"].inv_dirIsSatisfies = false;
-		}
-	}*/
+
 
 //проверка возможности будущего взаимодейтсвия с предметом
 if (inv_hp == 0 or inv_cnt == 0) {
+	if (inv_cnt == 0) {
+		//если есть спрайт пустой коробки/предмета
+		sprite_index = inv_empty_spr;
+		image_speed = 1;
+	}
+	//если предмет необходимо удалить при невозможности взаимодействовать
+	if (inv_hp == 0 and inv_isRmv) {
+		//назначаю спрайт разрушения. после его завершения, предмет будет удален
+		sprite_index = inv_death_spr;
+		image_speed = 1;
+	}
+	
 	inv_canLoot = false;	
 }
 
-//проверка возможности непостредственного взаимодейтсвия с предметом
-if (inv_nearPlayer and inv_dirIsSatisfies and inv_canLoot) {
-	//если игрок нажал на кнопку E и он взаимодействует с экз. нашего объекта, то выполнить дейтсвие
-	if (player.player_pressE) {
-		//obj_ctrl_gm_inv.action = "add_item";
-		scr_inv_addItem();
-		player.player_pressE = false;
-		//если предмет забран полностью и его необходимо удалить, то происходит удаление
-		if (inv_cnt == 0 and inv_isRmv) {
-			instance_destroy();	
+//можно ли в принципе использовать предмет
+if (inv_canLoot) {
+	//проверка на то, что направление и расстояние совпадают
+	can_interact = false;
+	if (distance_to_point(player_obj.x, player_obj.y) < 70) {
+		//проверяю корректность направления взгляда игрока
+		if (abs(angle_difference(player_obj.image_angle, point_direction(player_obj.x, player_obj.y, x, y))) <= 30) {
+			//если персонаж взаимодействует с именно с нашим объектом (чтобы сразу два случайно не сработали)
+			if ((player_obj.player_col[?type] == 0) or (player_obj.player_col[?type] == id)) {
+				can_interact = true;
+				//массив коллизий игрока
+				player_obj.player_col[?type] = id;
+				//добавление подсказки
+				obj_ctrl_gm_hint.ctrl_hint_newHint = hint;
+			}		
 		}
 	}
 }
 
-
+//выполнение действия
+if (action != "") {
+	event_user(15);
+	action = "";
+}

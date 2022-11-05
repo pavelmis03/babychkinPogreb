@@ -7,7 +7,7 @@ action = "";
 destination = 0;
 //door_open = false;
 init = false;	//инициализация
-type = "mapObj";
+type = "mapObj";//для взаимодействия с игроком
 
 //interaction
 can_interact = false;	//можно ли взаимодествавать

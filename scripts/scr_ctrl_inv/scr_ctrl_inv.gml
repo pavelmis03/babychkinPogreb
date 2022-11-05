@@ -2,7 +2,7 @@
 /// @description эта функция добаляет предмет в инвентарь, если это позволяет инвентарь 
 
 function scr_inv_addItem(){
-	//далее описаны локальные перемнные
+	//далее описаны локальные переменные
 	var invItems = obj_ctrl_gm_inv.ctrl_inv_items;   //двумерный массив инвентаря   
 	var maxWeight = obj_ctrl_gm_inv.ctrl_inv_maxWeight;  //маскимальный вес инвентаря
 	var weightInv = obj_ctrl_gm_inv.ctrl_inv_weight;  //текущий вес инвентаря
