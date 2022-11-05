@@ -48,8 +48,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Gm",
-    "path": "",
+    "name": "Cmn",
+    "path": "folders/Rooms/Cmn.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_menu_history",

@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Game/Character/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_player_moveTypeAndSprite",
+  "name": "scr_player_movement",
   "tags": [],
   "resourceType": "GMScript",
 }

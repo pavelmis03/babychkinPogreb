@@ -21,6 +21,7 @@ for (var i = 0; i < ds_map_size(player_col); i++) {
 	key = ds_map_find_next(player_col, key);
 }
 
+//проверка на смерь персонажа
 if (hp <= 0 and !player_isDeath) {
 	obj_ctrl_gm.action = "player_death_FP";
 	player_isDeath = true;

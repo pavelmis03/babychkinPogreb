@@ -1,6 +1,6 @@
 /// @description быстрый бег
 
-player_moveShift = true;
+player_wantRun = true;
 
 
 

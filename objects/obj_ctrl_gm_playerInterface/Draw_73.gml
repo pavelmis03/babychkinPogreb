@@ -31,7 +31,7 @@ if (interface_on) {
 	draw_text(view_x + view_w * (coefx + 0.17), view_y + view_h * (coefy + 0.074), "Дыхалка: ");
 	draw_rectangle(view_x + view_w * (coefx + 0.17), view_y + view_h * (coefy + 0.100), view_x + view_w * (coefx + 0.227), view_y + view_h * (coefy + 0.115), true);
 	draw_set_color(c_orange);
-	draw_rectangle(view_x + view_w * (coefx + 0.1715), view_y + view_h * (coefy + 0.103), view_x + view_w * (coefx + 0.172) + 50/*заглушка (должны быть силы для бега)*/, view_y + view_h * (coefy + 0.112), false);
+	draw_rectangle(view_x + view_w * (coefx + 0.1715), view_y + view_h * (coefy + 0.103), view_x + view_w * (coefx + 0.172) + player.player_runPower, view_y + view_h * (coefy + 0.112), false);
 		
 	//текстовые жизни (цвет зависит от остатка)
 	draw_set_color(c_lime);						
@@ -76,13 +76,6 @@ if (interface_on) {
 	draw_set_color(c_dkgray);
 	draw_rectangle(view_x + view_w * (coefx + 0.2915), view_y + view_h * (coefy + 0.286), view_x + view_w * (coefx + 0.292) + 50/*заглушка (должны быть силы для бега)*/, view_y + view_h * (coefy + 0.295), false);
 	
-	//жизни
-	draw_set_color(c_white);
-	draw_rectangle(player.x - 56, player.y - 32, player.x + 56, player.y - 49, true);
-	draw_rectangle_color(player.x - 54, player.y - 34, player.x + 54, player.y - 47, c_red, c_lime, c_lime, c_red, false);
-	draw_set_color(c_black);
-	draw_rectangle(player.x - 54 + (player.hp) / 10, player.y - 34, player.x + 54 , player.y - 47, false);
-		
 	//ИНФОРМАЦИЯ О СНАРЯЖЕНИИ И БОЕПРИПАСАХ (здесь выводятся предметы, которые лежат в ячейках инвентаря снаряжения а-ля быстрые клавиши)
 	var coefx1 = 0;
 	var coefy1 = 0;
@@ -123,6 +116,16 @@ if (interface_on) {
 	//ОСНОВНОЕ ОРУЖИЕ
 		
 	//ВСПОМОГАТЕЛЬНОЕ ОРУЖИЕ
+}
+
+//этот if - костыль, не трогай) (дело в том, что жизни должны рисоваться, независимо от того, открыт интерфейс или скрыт)
+if (visible == 1) {
+	//жизни
+	draw_set_color(c_white);
+	draw_rectangle(player.x - 56, player.y - 32, player.x + 56, player.y - 49, true);
+	draw_rectangle_color(player.x - 54, player.y - 34, player.x + 54, player.y - 47, c_red, c_lime, c_lime, c_red, false);
+	draw_set_color(c_black);
+	draw_rectangle(player.x - 54 + (player.hp) / 10, player.y - 34, player.x + 54 , player.y - 47, false);
 }
 
 //если интерфейс открыт

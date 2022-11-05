@@ -213,37 +213,52 @@ function scr_player_spd() {
 	}
 	switch (player_moveType) {
 		case "forward": 
-			spd = player_main_speed;
+			spd = CONST_PLAYER_NORMALSPEED;
 		break;
 		case "lforward": 
-			spd = player_main_speed;
+			spd = CONST_PLAYER_NORMALSPEED;
 		break;
 		case "rforward": 
-	 		spd = player_main_speed;
+	 		spd = CONST_PLAYER_NORMALSPEED;
 		break;
 		case "backward": 
-			spd = -player_main_speed * t;
+			spd = -CONST_PLAYER_NORMALSPEED * t;
 		break;
 		case "lbackward": 
-			spd = -player_main_speed * t;
+			spd = -CONST_PLAYER_NORMALSPEED * t;
 		break;
 		case "rbackward": 
-			spd = -player_main_speed * t;
+			spd = -CONST_PLAYER_NORMALSPEED * t;
 		break;
 		case "right": 
-			spd = player_main_speed / 3 * 2;
+			spd = CONST_PLAYER_NORMALSPEED / 3 * 2;
 		break;
 		case "left": 
-			spd = player_main_speed / 3 * 2;
+			spd = CONST_PLAYER_NORMALSPEED / 3 * 2;
 		break;
 	}
+	
+	//бег
+	if (player_wantRun) {
+		//проверяем, что бежать можно
+		if (scr_player_checkCanRun()) {
+			//увеличиваю скорость
+			player_run = true;
+			spd *= CONST_PLAYER_RUNSPEED;
+		} else {
+			player_run = false;
+		}
+	}
+	
 	return spd;
 }
 
 /// @function scr_player_moveSpr();
 /// @description определяет спрайт по типу движения
 function scr_player_moveSpr() {
+	
 	var spr = spr_playerFP_state;
+	
 	switch (player_moveType) {
 		case "forward": 
 			spr = spr_playerFP_go;
@@ -278,5 +293,79 @@ function scr_player_moveSpr() {
 			image_speed = -1;
 		break;
 	}
+	
+	//если персонаж бежиn
+	if (player_run) {
+		spr = spr_playerFP_run;
+		image_speed = 1;
+	}
+	
 	return spr;
+}
+
+/// @function scr_player_checkCanRun();
+/// @description проверяет, можно ли использовать бег
+function scr_player_checkCanRun() {
+
+	var canRun = true;
+
+	//проверка на совместимость способа передвижения с бегом (бежать можно только прямо и прямо наискосок)	
+	if (scr_arr_fingEl(["left", "right"], player_moveType, 1) != -1) {
+		canRun = false;
+		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_left&right";
+	}
+	if (scr_arr_fingEl(["backward", "lbackward", "rbackward"], player_moveType, 1) != -1) {
+		canRun = false;
+		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_back";
+	}
+	//проверка, что силы восстановились
+	if (player_runPower <= 0) {
+		canRun = false;
+		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_tired";
+		player_runPower = 0;
+	}
+	//проверка на возможность бежать 
+	if (hp <= 150) {
+		canRun = false;
+		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_hp";
+	}
+	/*
+	//голод
+	if (hp <= 150) {
+		canRun = false;
+		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_hungry";
+	} 
+	//жажда
+	if (hp <= 150) {
+		canRun = false;
+		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_drink";
+	} 
+	//тепло
+	if (hp <= 150) {
+		canRun = false;
+		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_cold";
+	} 
+	//вес инвентаря > 70%
+	if (hp <= 150) {
+		canRun = false;
+		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_weight";
+	} 
+	//тяжелое оружие в руках
+	if (hp <= 150) {
+		canRun = false;
+		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_weapoon";
+	} 
+	//лед под ногами
+	if (hp <= 150) {
+		canRun = false;
+		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_slide";
+	} 
+	//снег под ногами
+	if (hp <= 150) {
+		canRun = false;
+		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_snow";
+	} 
+	*/
+	
+	return canRun;
 }
