@@ -198,6 +198,7 @@ function scr_player_dir(str) {
 		player_moveType = "stand";
 		speed = 0;
 		sprite_index = spr_playerFP_state;
+		player_run = false;
 	}
 }
 
@@ -323,6 +324,12 @@ function scr_player_checkCanRun() {
 		canRun = false;
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_tired";
 		player_runPower = 0;
+	}
+	//после того, как энергия была потрачена больше, чем на 20%, нужно подождать, пока она восстановится до 40%
+	//но чтобы у нас не отрубился бег сразу по пересечении 20%, нужно, чтобы пользователь сначала отпустил shift
+	if ((obj_ctrl_gm_playerStatus.ctrl_status_runPowerEnded != 0) and (!player_run)) {
+		canRun = false;
+		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_tiredSo";
 	}
 	//проверка на возможность бежать 
 	if (hp <= 150) {

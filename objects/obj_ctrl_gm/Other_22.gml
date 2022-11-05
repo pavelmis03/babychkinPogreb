@@ -16,6 +16,9 @@ if (instance_exists(obj_ctrl_gm_inv)) {
 if (instance_exists(obj_ctrl_gm_playerInterface)) {
 	instance_destroy(obj_ctrl_gm_playerInterface);
 }
+if (instance_exists(obj_ctrl_gm_playerStatus)) {
+	instance_destroy(obj_ctrl_gm_playerStatus);
+}
 
 if (instance_exists(obj_ctrl_gm_hint)) {
 	instance_destroy(obj_ctrl_gm_hint);

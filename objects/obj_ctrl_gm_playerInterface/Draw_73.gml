@@ -29,17 +29,18 @@ if (interface_on) {
 	//силы для быстрого бега
 	draw_set_color(c_white);
 	draw_text(view_x + view_w * (coefx + 0.17), view_y + view_h * (coefy + 0.074), "Дыхалка: ");
-	draw_rectangle(view_x + view_w * (coefx + 0.17), view_y + view_h * (coefy + 0.100), view_x + view_w * (coefx + 0.227), view_y + view_h * (coefy + 0.115), true);
+	draw_rectangle(view_x + view_w * (coefx + 0.17), view_y + view_h * (coefy + 0.100), view_x + view_w * (coefx + 0.226), view_y + view_h * (coefy + 0.115), true);
 	draw_set_color(c_orange);
 	draw_rectangle(view_x + view_w * (coefx + 0.1715), view_y + view_h * (coefy + 0.103), view_x + view_w * (coefx + 0.172) + player.player_runPower, view_y + view_h * (coefy + 0.112), false);
-		
+	
 	//текстовые жизни (цвет зависит от остатка)
-	draw_set_color(c_lime);						
+	draw_set_color(c_lime);		
 	if (player.hp < 900) {draw_set_color(c_blue)}
 	if (player.hp < 800) {draw_set_color(c_green)}
 	if (player.hp < 700) {draw_set_color(c_yellow)}
 	if (player.hp < 500) {draw_set_color(c_orange)}
 	if (player.hp < 250) {draw_set_color(c_red)}
+	
 	//числовые параметры
 	draw_text(view_x + view_w * (coefx + 0.17), view_y + view_h * (coefy + 0.155), "Твои HP: " + string(round(player.hp)));
 		
