@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "floorMat",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -24,18 +28,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b3a02c19-32e3-439d-910d-5e71b6e206f3","path":"sprites/floorMat/floorMat.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b3a02c19-32e3-439d-910d-5e71b6e206f3","path":"sprites/floorMat/floorMat.yy",},"LayerId":{"name":"e6d8dbb1-a3b6-47c7-a7a2-8bfc11948fee","path":"sprites/floorMat/floorMat.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"floorMat","path":"sprites/floorMat/floorMat.yy",},"resourceVersion":"1.0","name":"b3a02c19-32e3-439d-910d-5e71b6e206f3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8294084a-319c-4b66-88fe-102433b55986","path":"sprites/floorMat/floorMat.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8294084a-319c-4b66-88fe-102433b55986","path":"sprites/floorMat/floorMat.yy",},"LayerId":{"name":"e6d8dbb1-a3b6-47c7-a7a2-8bfc11948fee","path":"sprites/floorMat/floorMat.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"floorMat","path":"sprites/floorMat/floorMat.yy",},"resourceVersion":"1.0","name":"8294084a-319c-4b66-88fe-102433b55986","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ec16f1fe-8bff-4870-a142-57f99fe2e2ec","path":"sprites/floorMat/floorMat.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ec16f1fe-8bff-4870-a142-57f99fe2e2ec","path":"sprites/floorMat/floorMat.yy",},"LayerId":{"name":"e6d8dbb1-a3b6-47c7-a7a2-8bfc11948fee","path":"sprites/floorMat/floorMat.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"floorMat","path":"sprites/floorMat/floorMat.yy",},"resourceVersion":"1.0","name":"ec16f1fe-8bff-4870-a142-57f99fe2e2ec","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b3a02c19-32e3-439d-910d-5e71b6e206f3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8294084a-319c-4b66-88fe-102433b55986",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ec16f1fe-8bff-4870-a142-57f99fe2e2ec",},
   ],
   "sequence": {
-    "spriteId": {"name":"floorMat","path":"sprites/floorMat/floorMat.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "floorMat",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -46,11 +46,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"8847c2ad-e855-43f3-b50d-0a337457c2bd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b3a02c19-32e3-439d-910d-5e71b6e206f3","path":"sprites/floorMat/floorMat.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"49afa529-7034-4313-8364-dc785373c338","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8294084a-319c-4b66-88fe-102433b55986","path":"sprites/floorMat/floorMat.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"dff52c47-d5fa-4ffe-a954-bd5264b41a1a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ec16f1fe-8bff-4870-a142-57f99fe2e2ec","path":"sprites/floorMat/floorMat.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +66,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"floorMat","path":"sprites/floorMat/floorMat.yy",},
-    "resourceVersion": "1.4",
-    "name": "floorMat",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e6d8dbb1-a3b6-47c7-a7a2-8bfc11948fee","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e6d8dbb1-a3b6-47c7-a7a2-8bfc11948fee","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "buhanka",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/buhanka.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "floorMat",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

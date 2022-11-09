@@ -10,11 +10,8 @@ if (player != -1) {
 		player.player_runPower -= player.CONST_PLAYER_RUNPOWERCONSUMPTION / room_speed;
 		ctrl_status_runTimeLess = 0;	//время с остановки бега
 		//если мы потратили много энергии за раз, придется ждать, пока она восстановится больше
-		if (player.player_runPower < 20) {
-			ctrl_status_runPowerEnded = 20;
-		}
-		if (player.player_runPower < 10) {
-			ctrl_status_runPowerEnded = 30;
+		if (player.player_runPower < 15) {
+			ctrl_status_runPowerEnded = 25;
 		}
 		if (player.player_runPower < 5) {
 			ctrl_status_runPowerEnded = 40;

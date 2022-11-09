@@ -7,5 +7,5 @@
 //main
 
 //показывает, что лифтовые кнопки нужно деактивировать (0 - ничего, 1 - деактивация, 2 - активация)
-ctrl_elevator_disable_btn = 0; 
+///ctrl_elevator_disable_btn = 0; 
 ctrl_elevator_id_btn_pressed = 0; //id нажатой кнопки, потому что она не должна деактивироваться и на ее animation end все равняются

@@ -12,7 +12,12 @@ if (room == rm_menu_pause) {
 	if (obj_ctrl_gm.ctrl_gm_phase == 1) {	//если мы в игре
 		//создаем копию нашей комнаты, чтобы сохранить состояние экземпляров
 		room_goto(rm_menu_pause);
+		//если комната была непостоянна до паузы, мы ее запоминаем, чтобы при случае вернуть ей постоянность
+		if (room_persistent == 0) {
+			ds_list_add(ctrl_pause_rmEscapeId, room);
+		}
 		room_persistent = 1;
+		isPause = true;
 		obj_ctrl_mv.action = "addRm";
 		//action = "goToPause";
 	}

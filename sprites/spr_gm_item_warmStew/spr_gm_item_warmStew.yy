@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_item_warmStew",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"217c1777-3828-45f7-97dd-a49aa0ec1f02","path":"sprites/spr_gm_item_warmStew/spr_gm_item_warmStew.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"217c1777-3828-45f7-97dd-a49aa0ec1f02","path":"sprites/spr_gm_item_warmStew/spr_gm_item_warmStew.yy",},"LayerId":{"name":"4fdf6f61-38bb-4b20-85ad-a884d1eac157","path":"sprites/spr_gm_item_warmStew/spr_gm_item_warmStew.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_item_warmStew","path":"sprites/spr_gm_item_warmStew/spr_gm_item_warmStew.yy",},"resourceVersion":"1.0","name":"217c1777-3828-45f7-97dd-a49aa0ec1f02","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"217c1777-3828-45f7-97dd-a49aa0ec1f02",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_item_warmStew","path":"sprites/spr_gm_item_warmStew/spr_gm_item_warmStew.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_item_warmStew",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"6439c31d-0ea8-4c6c-85a9-f0477498cae5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"217c1777-3828-45f7-97dd-a49aa0ec1f02","path":"sprites/spr_gm_item_warmStew/spr_gm_item_warmStew.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_item_warmStew","path":"sprites/spr_gm_item_warmStew/spr_gm_item_warmStew.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_item_warmStew",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4fdf6f61-38bb-4b20-85ad-a884d1eac157","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4fdf6f61-38bb-4b20-85ad-a884d1eac157","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "water&food",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/water&food.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_item_warmStew",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

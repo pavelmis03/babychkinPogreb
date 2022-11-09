@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "chair",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -24,18 +28,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c606aa06-88e2-48e1-9125-692992c6b1f9","path":"sprites/chair/chair.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c606aa06-88e2-48e1-9125-692992c6b1f9","path":"sprites/chair/chair.yy",},"LayerId":{"name":"6e6c56da-b716-40d3-aec3-295767654c54","path":"sprites/chair/chair.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"chair","path":"sprites/chair/chair.yy",},"resourceVersion":"1.0","name":"c606aa06-88e2-48e1-9125-692992c6b1f9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"91f17c4e-1c19-4222-b95c-b2615ad698c1","path":"sprites/chair/chair.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"91f17c4e-1c19-4222-b95c-b2615ad698c1","path":"sprites/chair/chair.yy",},"LayerId":{"name":"6e6c56da-b716-40d3-aec3-295767654c54","path":"sprites/chair/chair.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"chair","path":"sprites/chair/chair.yy",},"resourceVersion":"1.0","name":"91f17c4e-1c19-4222-b95c-b2615ad698c1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2a5d8943-c634-4238-946f-ae125d8c8824","path":"sprites/chair/chair.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2a5d8943-c634-4238-946f-ae125d8c8824","path":"sprites/chair/chair.yy",},"LayerId":{"name":"6e6c56da-b716-40d3-aec3-295767654c54","path":"sprites/chair/chair.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"chair","path":"sprites/chair/chair.yy",},"resourceVersion":"1.0","name":"2a5d8943-c634-4238-946f-ae125d8c8824","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c606aa06-88e2-48e1-9125-692992c6b1f9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"91f17c4e-1c19-4222-b95c-b2615ad698c1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2a5d8943-c634-4238-946f-ae125d8c8824",},
   ],
   "sequence": {
-    "spriteId": {"name":"chair","path":"sprites/chair/chair.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "chair",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -46,11 +46,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"aa6c9a73-4a64-472d-aa0f-9746589fc51e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c606aa06-88e2-48e1-9125-692992c6b1f9","path":"sprites/chair/chair.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"36d3b73a-ff62-4678-af8b-c0f03bf5d978","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"91f17c4e-1c19-4222-b95c-b2615ad698c1","path":"sprites/chair/chair.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6a4ed3e2-319d-45ee-a8da-82a919750ccf","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2a5d8943-c634-4238-946f-ae125d8c8824","path":"sprites/chair/chair.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +66,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"chair","path":"sprites/chair/chair.yy",},
-    "resourceVersion": "1.4",
-    "name": "chair",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6e6c56da-b716-40d3-aec3-295767654c54","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6e6c56da-b716-40d3-aec3-295767654c54","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "buhanka",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/buhanka.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "chair",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

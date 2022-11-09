@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_craft_makarovShutter",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"12988978-4657-4603-9a25-416ace20e2bd","path":"sprites/spr_gm_craft_makarovShutter/spr_gm_craft_makarovShutter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"12988978-4657-4603-9a25-416ace20e2bd","path":"sprites/spr_gm_craft_makarovShutter/spr_gm_craft_makarovShutter.yy",},"LayerId":{"name":"a2368671-0e07-48f6-b18a-c37422f7ad91","path":"sprites/spr_gm_craft_makarovShutter/spr_gm_craft_makarovShutter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_craft_makarovShutter","path":"sprites/spr_gm_craft_makarovShutter/spr_gm_craft_makarovShutter.yy",},"resourceVersion":"1.0","name":"12988978-4657-4603-9a25-416ace20e2bd","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"12988978-4657-4603-9a25-416ace20e2bd",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_craft_makarovShutter","path":"sprites/spr_gm_craft_makarovShutter/spr_gm_craft_makarovShutter.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_craft_makarovShutter",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"759850fb-451e-4241-b83c-f3e1f28448af","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"12988978-4657-4603-9a25-416ace20e2bd","path":"sprites/spr_gm_craft_makarovShutter/spr_gm_craft_makarovShutter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_craft_makarovShutter","path":"sprites/spr_gm_craft_makarovShutter/spr_gm_craft_makarovShutter.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_craft_makarovShutter",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a2368671-0e07-48f6-b18a-c37422f7ad91","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a2368671-0e07-48f6-b18a-c37422f7ad91","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "craft",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/craft.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_craft_makarovShutter",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

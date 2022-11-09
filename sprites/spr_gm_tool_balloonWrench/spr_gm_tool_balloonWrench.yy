@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_tool_balloonWrench",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 80,
   "height": 80,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4f90537a-de0e-4997-ae53-2776cb4a732d","path":"sprites/spr_gm_tool_balloonWrench/spr_gm_tool_balloonWrench.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4f90537a-de0e-4997-ae53-2776cb4a732d","path":"sprites/spr_gm_tool_balloonWrench/spr_gm_tool_balloonWrench.yy",},"LayerId":{"name":"4233a397-adb3-441c-9288-38a12f61b1ee","path":"sprites/spr_gm_tool_balloonWrench/spr_gm_tool_balloonWrench.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_tool_balloonWrench","path":"sprites/spr_gm_tool_balloonWrench/spr_gm_tool_balloonWrench.yy",},"resourceVersion":"1.0","name":"4f90537a-de0e-4997-ae53-2776cb4a732d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4f90537a-de0e-4997-ae53-2776cb4a732d",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_tool_balloonWrench","path":"sprites/spr_gm_tool_balloonWrench/spr_gm_tool_balloonWrench.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_tool_balloonWrench",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"1b9dfa19-ed61-47db-b7ec-2795e4591d54","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4f90537a-de0e-4997-ae53-2776cb4a732d","path":"sprites/spr_gm_tool_balloonWrench/spr_gm_tool_balloonWrench.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 40,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_tool_balloonWrench","path":"sprites/spr_gm_tool_balloonWrench/spr_gm_tool_balloonWrench.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_tool_balloonWrench",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4233a397-adb3-441c-9288-38a12f61b1ee","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4233a397-adb3-441c-9288-38a12f61b1ee","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "tools",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/tools.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_tool_balloonWrench",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

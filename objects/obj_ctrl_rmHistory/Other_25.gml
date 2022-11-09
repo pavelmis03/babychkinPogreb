@@ -15,8 +15,12 @@ switch (action) {
 		if (ctrl_history_page_curr < ctrl_history_page_last) {
 			ctrl_history_page_curr++;
 		}
-		//т.к. мы пролистнули вперед, теперь можно отлистать назад, поэтому появляется кнопка ,,назад,,
-		btn_id2.btn_enable = true;
+		
+		//если у нас одна картинка, то кнопки деактивированы
+		if (ctrl_history_page_last - ctrl_history_page_first > 0) {
+			//т.к. мы пролистнули вперед, теперь можно отлистать назад, поэтому появляется кнопка ,,назад,,
+			btn_id2.btn_enable = true;
+		}
 
 		//если это последний слайд в серии, удаляем кнопку ,,вперед,,
 		if (ctrl_history_page_last == ctrl_history_page_curr) {
@@ -27,8 +31,12 @@ switch (action) {
 		if (ctrl_history_page_curr > ctrl_history_page_first) {
 			ctrl_history_page_curr--;
 		}
-		//т.к. мы пролистнули назад, теперь можно отлистать вперед, поэтому появляется кнопка ,,вперед,,
-		btn_id1.btn_enable = true;
+		
+		//если у нас одна картинка, то кнопки деактивированы
+		if (ctrl_history_page_last - ctrl_history_page_first > 0) {
+			//т.к. мы пролистнули назад, теперь можно отлистать вперед, поэтому появляется кнопка ,,вперед,,
+			btn_id1.btn_enable = true;
+		}
 
 		//если это первый слайд в серии, удаляем кнопку ,,назад,,
 		if (ctrl_history_page_first == ctrl_history_page_curr) {

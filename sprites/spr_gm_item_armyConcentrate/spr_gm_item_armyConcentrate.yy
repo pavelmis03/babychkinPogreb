@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_item_armyConcentrate",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cd11cc25-1b3e-4636-97a1-7c3fb997b4a5","path":"sprites/spr_gm_item_armyConcentrate/spr_gm_item_armyConcentrate.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cd11cc25-1b3e-4636-97a1-7c3fb997b4a5","path":"sprites/spr_gm_item_armyConcentrate/spr_gm_item_armyConcentrate.yy",},"LayerId":{"name":"485066be-8ec1-41db-bbd7-47c70c9dac69","path":"sprites/spr_gm_item_armyConcentrate/spr_gm_item_armyConcentrate.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_item_armyConcentrate","path":"sprites/spr_gm_item_armyConcentrate/spr_gm_item_armyConcentrate.yy",},"resourceVersion":"1.0","name":"cd11cc25-1b3e-4636-97a1-7c3fb997b4a5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cd11cc25-1b3e-4636-97a1-7c3fb997b4a5",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_item_armyConcentrate","path":"sprites/spr_gm_item_armyConcentrate/spr_gm_item_armyConcentrate.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_item_armyConcentrate",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"0412d2a3-ec9b-40da-ba41-cf56a5532721","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cd11cc25-1b3e-4636-97a1-7c3fb997b4a5","path":"sprites/spr_gm_item_armyConcentrate/spr_gm_item_armyConcentrate.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_item_armyConcentrate","path":"sprites/spr_gm_item_armyConcentrate/spr_gm_item_armyConcentrate.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_item_armyConcentrate",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"485066be-8ec1-41db-bbd7-47c70c9dac69","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"485066be-8ec1-41db-bbd7-47c70c9dac69","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "water&food",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/water&food.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_item_armyConcentrate",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

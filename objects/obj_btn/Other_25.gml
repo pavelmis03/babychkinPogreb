@@ -38,7 +38,7 @@ switch (type) {
 		image_speed = -1;
 		btn_pressed = false;
 		//*/
-		obj_ctrl_set.action = "saveSettings";
+		//obj_ctrl_set.action = "saveSettings";
 	break;
 	//отдельно для меню настроек с условием (кнопка выхода)
 	case "confirmYNCl_set": 

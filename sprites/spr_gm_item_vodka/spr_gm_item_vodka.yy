@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_item_vodka",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 80,
   "height": 93,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"348e7124-bf1d-48e9-ad7b-dc69e61b62ac","path":"sprites/spr_gm_item_vodka/spr_gm_item_vodka.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"348e7124-bf1d-48e9-ad7b-dc69e61b62ac","path":"sprites/spr_gm_item_vodka/spr_gm_item_vodka.yy",},"LayerId":{"name":"9e10935c-4265-45dc-a284-e63aec1b8236","path":"sprites/spr_gm_item_vodka/spr_gm_item_vodka.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_item_vodka","path":"sprites/spr_gm_item_vodka/spr_gm_item_vodka.yy",},"resourceVersion":"1.0","name":"348e7124-bf1d-48e9-ad7b-dc69e61b62ac","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"348e7124-bf1d-48e9-ad7b-dc69e61b62ac",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_item_vodka","path":"sprites/spr_gm_item_vodka/spr_gm_item_vodka.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_item_vodka",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"37d521b8-00c5-4d0e-b6dd-c685d9bccab1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"348e7124-bf1d-48e9-ad7b-dc69e61b62ac","path":"sprites/spr_gm_item_vodka/spr_gm_item_vodka.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 46,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_item_vodka","path":"sprites/spr_gm_item_vodka/spr_gm_item_vodka.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_item_vodka",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9e10935c-4265-45dc-a284-e63aec1b8236","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9e10935c-4265-45dc-a284-e63aec1b8236","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "water&food",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/water&food.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_item_vodka",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_item_crackers",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ec2dcb74-fd1d-421a-a9f6-d33060f43e97","path":"sprites/spr_gm_item_crackers/spr_gm_item_crackers.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ec2dcb74-fd1d-421a-a9f6-d33060f43e97","path":"sprites/spr_gm_item_crackers/spr_gm_item_crackers.yy",},"LayerId":{"name":"5b7efd73-8132-4ba7-98ca-6858f4ddafcf","path":"sprites/spr_gm_item_crackers/spr_gm_item_crackers.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_item_crackers","path":"sprites/spr_gm_item_crackers/spr_gm_item_crackers.yy",},"resourceVersion":"1.0","name":"ec2dcb74-fd1d-421a-a9f6-d33060f43e97","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ec2dcb74-fd1d-421a-a9f6-d33060f43e97",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_item_crackers","path":"sprites/spr_gm_item_crackers/spr_gm_item_crackers.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_item_crackers",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"65e0a4be-b3ce-4f54-8b69-ce2a2b47db10","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ec2dcb74-fd1d-421a-a9f6-d33060f43e97","path":"sprites/spr_gm_item_crackers/spr_gm_item_crackers.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_item_crackers","path":"sprites/spr_gm_item_crackers/spr_gm_item_crackers.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_item_crackers",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5b7efd73-8132-4ba7-98ca-6858f4ddafcf","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5b7efd73-8132-4ba7-98ca-6858f4ddafcf","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "water&food",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/water&food.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_item_crackers",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

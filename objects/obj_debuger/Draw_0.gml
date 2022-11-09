@@ -1,5 +1,6 @@
 /// @description
 if (instance_exists(obj_player_FP)) {
+	/*
 	draw_set_color(c_white);	
 	draw_text(100, 100, "direction: " + string(obj_player_FP.direction));
 	//x + lengthdir_x(100, t)
@@ -22,4 +23,5 @@ if (instance_exists(obj_player_FP)) {
 	} else {
 		draw_text(100, 300, string(0));
 	}
+	*/
 }

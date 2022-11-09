@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_btn_journal_weaponInfo2",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 150,
   "height": 40,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f9c850b2-fc4c-4091-bb6a-d6f5b79bab04","path":"sprites/spr_btn_journal_weaponInfo2/spr_btn_journal_weaponInfo2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f9c850b2-fc4c-4091-bb6a-d6f5b79bab04","path":"sprites/spr_btn_journal_weaponInfo2/spr_btn_journal_weaponInfo2.yy",},"LayerId":{"name":"473e8777-1e8b-4bf7-80d3-55bd78aa25d2","path":"sprites/spr_btn_journal_weaponInfo2/spr_btn_journal_weaponInfo2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_btn_journal_weaponInfo2","path":"sprites/spr_btn_journal_weaponInfo2/spr_btn_journal_weaponInfo2.yy",},"resourceVersion":"1.0","name":"f9c850b2-fc4c-4091-bb6a-d6f5b79bab04","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f9c850b2-fc4c-4091-bb6a-d6f5b79bab04",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_btn_journal_weaponInfo2","path":"sprites/spr_btn_journal_weaponInfo2/spr_btn_journal_weaponInfo2.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_btn_journal_weaponInfo2",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"3b00ce89-50f2-44b6-81e4-f184fe7f29d7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f9c850b2-fc4c-4091-bb6a-d6f5b79bab04","path":"sprites/spr_btn_journal_weaponInfo2/spr_btn_journal_weaponInfo2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_btn_journal_weaponInfo2","path":"sprites/spr_btn_journal_weaponInfo2/spr_btn_journal_weaponInfo2.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_btn_journal_weaponInfo2",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"473e8777-1e8b-4bf7-80d3-55bd78aa25d2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"473e8777-1e8b-4bf7-80d3-55bd78aa25d2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "btn_journal_weaponInfo",
     "path": "folders/Sprites/Menu/Main/Info/Journal/Btn/btn_journal_weaponInfo.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_btn_journal_weaponInfo2",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_amulet_reductionRadioactivity",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"60e31e4a-890c-41da-8b55-5e15d911c749","path":"sprites/spr_gm_amulet_reductionRadioactivity/spr_gm_amulet_reductionRadioactivity.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"60e31e4a-890c-41da-8b55-5e15d911c749","path":"sprites/spr_gm_amulet_reductionRadioactivity/spr_gm_amulet_reductionRadioactivity.yy",},"LayerId":{"name":"a6be901d-db3b-4c41-a06c-e0fbe8cc92ca","path":"sprites/spr_gm_amulet_reductionRadioactivity/spr_gm_amulet_reductionRadioactivity.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_amulet_reductionRadioactivity","path":"sprites/spr_gm_amulet_reductionRadioactivity/spr_gm_amulet_reductionRadioactivity.yy",},"resourceVersion":"1.0","name":"60e31e4a-890c-41da-8b55-5e15d911c749","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"60e31e4a-890c-41da-8b55-5e15d911c749",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_amulet_reductionRadioactivity","path":"sprites/spr_gm_amulet_reductionRadioactivity/spr_gm_amulet_reductionRadioactivity.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_amulet_reductionRadioactivity",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d41247dd-4c2f-4848-8fc3-6dd38b6b28af","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60e31e4a-890c-41da-8b55-5e15d911c749","path":"sprites/spr_gm_amulet_reductionRadioactivity/spr_gm_amulet_reductionRadioactivity.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_amulet_reductionRadioactivity","path":"sprites/spr_gm_amulet_reductionRadioactivity/spr_gm_amulet_reductionRadioactivity.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_amulet_reductionRadioactivity",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a6be901d-db3b-4c41-a06c-e0fbe8cc92ca","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a6be901d-db3b-4c41-a06c-e0fbe8cc92ca","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "amulet",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/Equipment/amulet.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_amulet_reductionRadioactivity",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

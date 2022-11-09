@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_craft_armorPlates",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6d0c5517-8d26-465a-b2c1-e038d2d020a9","path":"sprites/spr_gm_craft_armorPlates/spr_gm_craft_armorPlates.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6d0c5517-8d26-465a-b2c1-e038d2d020a9","path":"sprites/spr_gm_craft_armorPlates/spr_gm_craft_armorPlates.yy",},"LayerId":{"name":"24508ac8-03bc-468c-8d9b-72b743bf0db0","path":"sprites/spr_gm_craft_armorPlates/spr_gm_craft_armorPlates.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_craft_armorPlates","path":"sprites/spr_gm_craft_armorPlates/spr_gm_craft_armorPlates.yy",},"resourceVersion":"1.0","name":"6d0c5517-8d26-465a-b2c1-e038d2d020a9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6d0c5517-8d26-465a-b2c1-e038d2d020a9",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_craft_armorPlates","path":"sprites/spr_gm_craft_armorPlates/spr_gm_craft_armorPlates.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_craft_armorPlates",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"3eaa1cb7-0129-42cd-9785-2f98a09d0b05","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6d0c5517-8d26-465a-b2c1-e038d2d020a9","path":"sprites/spr_gm_craft_armorPlates/spr_gm_craft_armorPlates.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_craft_armorPlates","path":"sprites/spr_gm_craft_armorPlates/spr_gm_craft_armorPlates.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_craft_armorPlates",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"24508ac8-03bc-468c-8d9b-72b743bf0db0","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"24508ac8-03bc-468c-8d9b-72b743bf0db0","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "craft",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/craft.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_craft_armorPlates",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

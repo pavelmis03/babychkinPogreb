@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_door_wooden",
   "bboxMode": 2,
   "collisionKind": 4,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 40,
   "height": 40,
   "textureGroupId": {
@@ -24,15 +28,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"990323e4-f242-459e-bc59-f81e37272414","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"990323e4-f242-459e-bc59-f81e37272414","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"LayerId":{"name":"58f889af-10dd-402b-ab61-236b03b8adf6","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_door_wooden","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","name":"990323e4-f242-459e-bc59-f81e37272414","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"277e97d2-f4e3-4ffd-b00f-91d5c5fe36ea","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"277e97d2-f4e3-4ffd-b00f-91d5c5fe36ea","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"LayerId":{"name":"58f889af-10dd-402b-ab61-236b03b8adf6","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_door_wooden","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","name":"277e97d2-f4e3-4ffd-b00f-91d5c5fe36ea","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"990323e4-f242-459e-bc59-f81e37272414",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"277e97d2-f4e3-4ffd-b00f-91d5c5fe36ea",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_door_wooden","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_door_wooden",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -43,10 +45,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"65931911-f332-48c6-af6f-021580247507","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"990323e4-f242-459e-bc59-f81e37272414","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5094ddfc-35b1-47ce-be57-9eb2e4ad2366","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"277e97d2-f4e3-4ffd-b00f-91d5c5fe36ea","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +64,13 @@
     "yorigin": 19,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_door_wooden","path":"sprites/spr_door_wooden/spr_door_wooden.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_door_wooden",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"58f889af-10dd-402b-ab61-236b03b8adf6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"58f889af-10dd-402b-ab61-236b03b8adf6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "door",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Environment/door.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_door_wooden",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

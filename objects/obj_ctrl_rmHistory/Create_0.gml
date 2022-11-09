@@ -47,21 +47,26 @@ depth = -100;
 //настройка комнаты
 btn_id1 = 0;	//id кнопок ,,вперед,, и ,,назад,,
 btn_id2 = 0;
-//если слайдов больше одного
-if (ctrl_history_page_last - ctrl_history_page_first > 0) {
-	//кнопка ,,Следующий слайд,,
-	btn_id1 = instance_create_depth(room_width * 0.32, room_height * 0.88, depth, obj_btn);
-	btn_id1.sprite_index = spr_btn_history_next1;
-	btn_id1.type = "func";
-	btn_id1.action = "historyNextImg";
-	btn_id1.sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];
+
+//создаю кнопки
+//кнопка ,,Следующий слайд,,
+btn_id1 = instance_create_depth(room_width * 0.32, room_height * 0.88, depth, obj_btn);
+btn_id1.sprite_index = spr_btn_history_next1;
+btn_id1.type = "func";
+btn_id1.action = "historyNextImg";
+btn_id1.sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];
+btn_id1.btn_enable = true;
 	
-	//кнопка ,,предыдущий слайд,,
-	btn_id2 = instance_create_depth(room_width * 0.19, room_height * 0.88, depth, obj_btn);
-	btn_id2.sprite_index = spr_btn_history_pre1;
-	btn_id2.type = "func";
-	btn_id2.action = "historyPreImg";
-	btn_id2.sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];
-	//листать назад незачем, т.к. это первый слайд в очереди
-	btn_id2.btn_enable = false;
+//кнопка ,,предыдущий слайд,,
+btn_id2 = instance_create_depth(room_width * 0.19, room_height * 0.88, depth, obj_btn);
+btn_id2.sprite_index = spr_btn_history_pre1;
+btn_id2.type = "func";
+btn_id2.action = "historyPreImg";
+btn_id2.sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];
+//листать назад незачем, т.к. это первый слайд в очереди
+btn_id2.btn_enable = false;
+
+//если слайд только один, деактивирую вторую кнопку
+if (ctrl_history_page_last - ctrl_history_page_first == 0) {
+	btn_id1.btn_enable = false;
 }

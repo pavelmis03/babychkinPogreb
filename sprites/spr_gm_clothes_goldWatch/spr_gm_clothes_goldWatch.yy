@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_clothes_goldWatch",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a69ec1e8-9335-4421-9deb-cd8278868f07","path":"sprites/spr_gm_clothes_goldWatch/spr_gm_clothes_goldWatch.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a69ec1e8-9335-4421-9deb-cd8278868f07","path":"sprites/spr_gm_clothes_goldWatch/spr_gm_clothes_goldWatch.yy",},"LayerId":{"name":"1eae4d73-e819-41b0-aadb-dea8dd5862d7","path":"sprites/spr_gm_clothes_goldWatch/spr_gm_clothes_goldWatch.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_clothes_goldWatch","path":"sprites/spr_gm_clothes_goldWatch/spr_gm_clothes_goldWatch.yy",},"resourceVersion":"1.0","name":"a69ec1e8-9335-4421-9deb-cd8278868f07","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a69ec1e8-9335-4421-9deb-cd8278868f07",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_clothes_goldWatch","path":"sprites/spr_gm_clothes_goldWatch/spr_gm_clothes_goldWatch.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_clothes_goldWatch",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"9a4938af-5d0f-4630-858a-7cf05b370841","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a69ec1e8-9335-4421-9deb-cd8278868f07","path":"sprites/spr_gm_clothes_goldWatch/spr_gm_clothes_goldWatch.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_clothes_goldWatch","path":"sprites/spr_gm_clothes_goldWatch/spr_gm_clothes_goldWatch.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_clothes_goldWatch",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1eae4d73-e819-41b0-aadb-dea8dd5862d7","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1eae4d73-e819-41b0-aadb-dea8dd5862d7","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "clothes",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/Equipment/clothes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_clothes_goldWatch",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

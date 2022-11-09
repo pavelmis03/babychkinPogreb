@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_item_nut",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6be38932-2bc7-4fb8-897f-82ee9b3f4859","path":"sprites/spr_gm_item_nut/spr_gm_item_nut.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6be38932-2bc7-4fb8-897f-82ee9b3f4859","path":"sprites/spr_gm_item_nut/spr_gm_item_nut.yy",},"LayerId":{"name":"8f00a903-afc6-4220-87f1-761d7f1337f3","path":"sprites/spr_gm_item_nut/spr_gm_item_nut.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_item_nut","path":"sprites/spr_gm_item_nut/spr_gm_item_nut.yy",},"resourceVersion":"1.0","name":"6be38932-2bc7-4fb8-897f-82ee9b3f4859","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6be38932-2bc7-4fb8-897f-82ee9b3f4859",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_item_nut","path":"sprites/spr_gm_item_nut/spr_gm_item_nut.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_item_nut",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"77fd2d71-f789-49af-b1a2-ec826b99c6c4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6be38932-2bc7-4fb8-897f-82ee9b3f4859","path":"sprites/spr_gm_item_nut/spr_gm_item_nut.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_item_nut","path":"sprites/spr_gm_item_nut/spr_gm_item_nut.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_item_nut",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8f00a903-afc6-4220-87f1-761d7f1337f3","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8f00a903-afc6-4220-87f1-761d7f1337f3","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "water&food",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/water&food.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_item_nut",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

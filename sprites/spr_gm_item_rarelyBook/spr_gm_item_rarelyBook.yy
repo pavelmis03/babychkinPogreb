@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_item_rarelyBook",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 100,
   "height": 100,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"41b176c8-2541-44d3-9671-c6d1f1a24373","path":"sprites/spr_gm_item_rarelyBook/spr_gm_item_rarelyBook.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"41b176c8-2541-44d3-9671-c6d1f1a24373","path":"sprites/spr_gm_item_rarelyBook/spr_gm_item_rarelyBook.yy",},"LayerId":{"name":"a6e782bd-2ea0-44c3-81e4-6af979956755","path":"sprites/spr_gm_item_rarelyBook/spr_gm_item_rarelyBook.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_item_rarelyBook","path":"sprites/spr_gm_item_rarelyBook/spr_gm_item_rarelyBook.yy",},"resourceVersion":"1.0","name":"41b176c8-2541-44d3-9671-c6d1f1a24373","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"41b176c8-2541-44d3-9671-c6d1f1a24373",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_item_rarelyBook","path":"sprites/spr_gm_item_rarelyBook/spr_gm_item_rarelyBook.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_item_rarelyBook",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d9bdfea1-7fc2-479e-be2c-9923d07e85b9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"41b176c8-2541-44d3-9671-c6d1f1a24373","path":"sprites/spr_gm_item_rarelyBook/spr_gm_item_rarelyBook.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 50,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_item_rarelyBook","path":"sprites/spr_gm_item_rarelyBook/spr_gm_item_rarelyBook.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_item_rarelyBook",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a6e782bd-2ea0-44c3-81e4-6af979956755","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a6e782bd-2ea0-44c3-81e4-6af979956755","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "materials&books",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/materials&books.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_item_rarelyBook",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

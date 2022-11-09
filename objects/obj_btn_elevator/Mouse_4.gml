@@ -16,20 +16,28 @@ if (btn_enable) {
 		//включаем скорость проигрывания 
 		image_speed = 1;
 		//image_speed = sprite_get_speed(sprite_index);
-		//воспроизводим звук клика
-		obj_ctrl_snd.action = "playSnd";
-		//!!!!!добавлено следующее условие:!!!!
-		if (btn_lift_floor[?action] == rm) { //если этаж тот же самый, то звук другой
-			array_push(obj_ctrl_snd.sound, sound[0], "snd_gm_lift_currFloor");
-			btn_transitionDelay = 0;
+		//проверяем, что еще не было нажато ни одной кнопки, иначе мы только меняем ей спрайт и все
+		//НАХНАЧЕНИЕ НАШЕГО ID ПРОИСХОДИТ В ANIMeND. ПОЭТОМУ СПРАЙТ ДОЛЖЕН БЫТЬ БЫСТРЫМ 
+		if (obj_ctrl_rmElevator.ctrl_elevator_id_btn_pressed == 0) {
+			//воспроизводим звук клика
+			obj_ctrl_snd.action = "playSnd";
+			//!!!!!добавлено следующее условие:!!!!
+			if (btn_lift_floor[?action] == rm) { //если этаж тот же самый, то звук другой
+				array_push(obj_ctrl_snd.sound, sound[0], "snd_gm_lift_currFloor");
+				btn_transitionDelay = 3;
+			} else {
+				array_push(obj_ctrl_snd.sound, sound[0], sound[2]);
+				btn_transitionDelay = 6;
+			}
 		} else {
-			array_push(obj_ctrl_snd.sound, sound[0], sound[2]);
+			//если мы нажимаем на кнопки диспетчера и выжженную, то звук надо воспроизвести
+			if ((action == "scaryVoice") or (action == "none")) {
+				//воспроизводим звук клика
+				obj_ctrl_snd.action = "playSnd";
+				array_push(obj_ctrl_snd.sound, sound[0], sound[2]);
+			}
 		}
+		//назначаем нажатие, чтобы поменялся спрайт
 		btn_pressed = true;
-		//кнопка диспетчера не деактивирует другие кнопки
-		if ((action != "scaryVoice") and (action != "none")) {
-			obj_ctrl_rmElevator.ctrl_elevator_disable_btn = 1;
-			obj_ctrl_rmElevator.ctrl_elevator_id_btn_pressed = id;
-		}
 	}
 }

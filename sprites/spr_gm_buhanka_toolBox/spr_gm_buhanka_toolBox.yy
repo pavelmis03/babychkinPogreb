@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_buhanka_toolBox",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 100,
   "height": 100,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d16c5dc3-bf3c-4ca4-bf19-2ecdfcf7edae","path":"sprites/spr_gm_buhanka_toolBox/spr_gm_buhanka_toolBox.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d16c5dc3-bf3c-4ca4-bf19-2ecdfcf7edae","path":"sprites/spr_gm_buhanka_toolBox/spr_gm_buhanka_toolBox.yy",},"LayerId":{"name":"bfca338a-a607-4079-8eb3-8a85adbe16df","path":"sprites/spr_gm_buhanka_toolBox/spr_gm_buhanka_toolBox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_buhanka_toolBox","path":"sprites/spr_gm_buhanka_toolBox/spr_gm_buhanka_toolBox.yy",},"resourceVersion":"1.0","name":"d16c5dc3-bf3c-4ca4-bf19-2ecdfcf7edae","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d16c5dc3-bf3c-4ca4-bf19-2ecdfcf7edae",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_buhanka_toolBox","path":"sprites/spr_gm_buhanka_toolBox/spr_gm_buhanka_toolBox.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_buhanka_toolBox",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"b7ed9d7c-a31d-42a8-b264-63442f79ac1c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d16c5dc3-bf3c-4ca4-bf19-2ecdfcf7edae","path":"sprites/spr_gm_buhanka_toolBox/spr_gm_buhanka_toolBox.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 50,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_buhanka_toolBox","path":"sprites/spr_gm_buhanka_toolBox/spr_gm_buhanka_toolBox.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_buhanka_toolBox",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bfca338a-a607-4079-8eb3-8a85adbe16df","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"bfca338a-a607-4079-8eb3-8a85adbe16df","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "buhanka",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/buhanka.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_buhanka_toolBox",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

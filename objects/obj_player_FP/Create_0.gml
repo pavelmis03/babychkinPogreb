@@ -38,6 +38,7 @@ player_attackDamage = 15;		//урон игрока
 //в нужную ячейку списка записывается id объекта коллизии
 player_col = ds_map_create();
 player_col[?"enemy"] = 0;
+player_col[?"npc"] = 0;
 player_col[?"inv"] = 0;
 player_col[?"mapObj"] = 0;
 //player_col[?"solidObj"] = 0;
@@ -54,3 +55,4 @@ player_pressE = false;
 //player_action = "";	//что в данный момент делает игрок
 
 
+//СОСТОЯНИЯ

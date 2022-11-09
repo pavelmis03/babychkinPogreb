@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_amulet_acceleration",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8844652e-c88f-4f2f-a67e-e5faddecda5f","path":"sprites/spr_gm_amulet_acceleration/spr_gm_amulet_acceleration.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8844652e-c88f-4f2f-a67e-e5faddecda5f","path":"sprites/spr_gm_amulet_acceleration/spr_gm_amulet_acceleration.yy",},"LayerId":{"name":"0c6ac4f5-e402-42e0-ba82-10772747c9ac","path":"sprites/spr_gm_amulet_acceleration/spr_gm_amulet_acceleration.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_amulet_acceleration","path":"sprites/spr_gm_amulet_acceleration/spr_gm_amulet_acceleration.yy",},"resourceVersion":"1.0","name":"8844652e-c88f-4f2f-a67e-e5faddecda5f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8844652e-c88f-4f2f-a67e-e5faddecda5f",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_amulet_acceleration","path":"sprites/spr_gm_amulet_acceleration/spr_gm_amulet_acceleration.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_amulet_acceleration",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"426eeb0f-977c-402c-8d6d-8bdea781a225","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8844652e-c88f-4f2f-a67e-e5faddecda5f","path":"sprites/spr_gm_amulet_acceleration/spr_gm_amulet_acceleration.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_amulet_acceleration","path":"sprites/spr_gm_amulet_acceleration/spr_gm_amulet_acceleration.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_amulet_acceleration",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0c6ac4f5-e402-42e0-ba82-10772747c9ac","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0c6ac4f5-e402-42e0-ba82-10772747c9ac","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "amulet",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/Equipment/amulet.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_amulet_acceleration",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_craft_garbage",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"190988fb-896c-4e0e-bf50-7abe3e09bba6","path":"sprites/spr_gm_craft_garbage/spr_gm_craft_garbage.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"190988fb-896c-4e0e-bf50-7abe3e09bba6","path":"sprites/spr_gm_craft_garbage/spr_gm_craft_garbage.yy",},"LayerId":{"name":"8db57783-dbbd-43ca-9070-19f3f5ed24ae","path":"sprites/spr_gm_craft_garbage/spr_gm_craft_garbage.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_craft_garbage","path":"sprites/spr_gm_craft_garbage/spr_gm_craft_garbage.yy",},"resourceVersion":"1.0","name":"190988fb-896c-4e0e-bf50-7abe3e09bba6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"190988fb-896c-4e0e-bf50-7abe3e09bba6",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_craft_garbage","path":"sprites/spr_gm_craft_garbage/spr_gm_craft_garbage.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_craft_garbage",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"2350353d-2c7d-421a-bc10-0c953dfdc9b2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"190988fb-896c-4e0e-bf50-7abe3e09bba6","path":"sprites/spr_gm_craft_garbage/spr_gm_craft_garbage.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_craft_garbage","path":"sprites/spr_gm_craft_garbage/spr_gm_craft_garbage.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_craft_garbage",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8db57783-dbbd-43ca-9070-19f3f5ed24ae","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8db57783-dbbd-43ca-9070-19f3f5ed24ae","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "craft",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/craft.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_craft_garbage",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

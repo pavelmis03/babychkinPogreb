@@ -2,6 +2,12 @@
 
 //проверка на то, что направление и расстояние совпадают
 can_interact = false;
+//освобождаем персонажа от коллизии
+if (player_obj.player_col[?type] == id) {	
+	//массив коллизий игрока
+	player_obj.player_col[?type] = 0;
+}
+
 if (distance_to_point(player_obj.x, player_obj.y) < 70) {
 	//проверяю корректность направления взгляда игрока
 	if (abs(angle_difference(player_obj.image_angle, point_direction(player_obj.x, player_obj.y, x, y))) <= 30) {

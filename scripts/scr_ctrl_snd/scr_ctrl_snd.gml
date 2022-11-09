@@ -41,7 +41,7 @@ function scr_snd_musicInRm() {
 			//проверяю, что играющая сейчас музыка есть в массиве тех, которые надо запустить
 			var ind = scr_arr_fingEl(t_arr, t_msc, 1);
 			if (ind != -1) {
-				//audio_resume_sound(asset_get_index(t_msc));
+				audio_resume_sound(asset_get_index(t_msc));
 				//удаляю ее из массива тех, что надо запустить, чтобы не было дубляжа 
 				array_delete(t_arr, ind, 1);
 			} else {
@@ -53,7 +53,8 @@ function scr_snd_musicInRm() {
 			i++;
 		}
 		//проигрываем все оставшиеся звуки и запускаем неудаленную музыку
-		audio_resume_all();
+		//audio_resume_all();
+		
 		//запускаю новые, которых не было в пред. комнате
 		for (var i = 0; i < array_length(t_arr); i++) {
 			var t_msc = asset_get_index(t_arr[i]);
@@ -100,7 +101,11 @@ function scr_snd_playSnd() {
 				audio_sound_gain(t_msc, ctrl_snd_vol, 0);
 				audio_play_sound(t_msc, priority, 0);
 				//добавляем в массив проигрываемых звуков
-				//array_push(ctrl_msc_arr_on, t_msc);
+				//array_push(ctrl_snd_arr_on, t_msc);
+			} else { //или остановлен
+				if (audio_is_paused(t_msc)) {
+					audio_resume_sound(t_msc);
+				}
 			}
 		}
 	}

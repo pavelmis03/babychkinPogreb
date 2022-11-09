@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_tool_screwJack",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 80,
   "height": 80,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"acecfbc2-6d1b-4747-b21d-9385aa0b3103","path":"sprites/spr_gm_tool_screwJack/spr_gm_tool_screwJack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"acecfbc2-6d1b-4747-b21d-9385aa0b3103","path":"sprites/spr_gm_tool_screwJack/spr_gm_tool_screwJack.yy",},"LayerId":{"name":"c43fbc0f-9c3c-43b8-a3a0-b3f0d219ebb4","path":"sprites/spr_gm_tool_screwJack/spr_gm_tool_screwJack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_tool_screwJack","path":"sprites/spr_gm_tool_screwJack/spr_gm_tool_screwJack.yy",},"resourceVersion":"1.0","name":"acecfbc2-6d1b-4747-b21d-9385aa0b3103","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"acecfbc2-6d1b-4747-b21d-9385aa0b3103",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_tool_screwJack","path":"sprites/spr_gm_tool_screwJack/spr_gm_tool_screwJack.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_tool_screwJack",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"9b63f636-c270-44ef-b89f-7a3e2de5a4e4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"acecfbc2-6d1b-4747-b21d-9385aa0b3103","path":"sprites/spr_gm_tool_screwJack/spr_gm_tool_screwJack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 40,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_tool_screwJack","path":"sprites/spr_gm_tool_screwJack/spr_gm_tool_screwJack.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_tool_screwJack",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c43fbc0f-9c3c-43b8-a3a0-b3f0d219ebb4","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c43fbc0f-9c3c-43b8-a3a0-b3f0d219ebb4","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "tools",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/tools.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_tool_screwJack",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

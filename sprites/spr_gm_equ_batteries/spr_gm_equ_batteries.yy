@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gm_equ_batteries",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a4e44e79-3e93-4190-879e-4f21a8d2075a","path":"sprites/spr_gm_equ_batteries/spr_gm_equ_batteries.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a4e44e79-3e93-4190-879e-4f21a8d2075a","path":"sprites/spr_gm_equ_batteries/spr_gm_equ_batteries.yy",},"LayerId":{"name":"479c4f67-ccbf-423b-afb6-fa3506a49640","path":"sprites/spr_gm_equ_batteries/spr_gm_equ_batteries.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gm_equ_batteries","path":"sprites/spr_gm_equ_batteries/spr_gm_equ_batteries.yy",},"resourceVersion":"1.0","name":"a4e44e79-3e93-4190-879e-4f21a8d2075a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a4e44e79-3e93-4190-879e-4f21a8d2075a",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gm_equ_batteries","path":"sprites/spr_gm_equ_batteries/spr_gm_equ_batteries.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gm_equ_batteries",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"9703c5c5-e826-4113-9a3b-f3ca8ce8f8fa","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a4e44e79-3e93-4190-879e-4f21a8d2075a","path":"sprites/spr_gm_equ_batteries/spr_gm_equ_batteries.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gm_equ_batteries","path":"sprites/spr_gm_equ_batteries/spr_gm_equ_batteries.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gm_equ_batteries",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"479c4f67-ccbf-423b-afb6-fa3506a49640","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"479c4f67-ccbf-423b-afb6-fa3506a49640","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "equipement",
     "path": "folders/Sprites/Game/Map/MapObj/Interaction/Object/Inventory/Items/Equipment/equipement.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gm_equ_batteries",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

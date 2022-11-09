@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "msc_gm_lift4",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -11,14 +14,10 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "msc_gm_lift4",
-  "duration": 0.0,
+  "soundFile": "msc_gm_lift4.mp3",
+  "duration": 227.29463,
   "parent": {
     "name": "fp",
     "path": "folders/Sounds/Music/Menu/Game/fp.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "msc_gm_lift4",
-  "tags": [],
-  "resourceType": "GMSound",
 }
