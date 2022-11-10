@@ -1,9 +1,14 @@
 /// @description 
-
+/*
 var x1 = x + sprite_get_bbox_left(sprite_index);
 var x2 = x + sprite_get_bbox_right(sprite_index);
 var y1 = y + sprite_get_bbox_top(sprite_index);
 var y2 = y + sprite_get_bbox_bottom(sprite_index);
+*/
+var x1 = bbox_left;
+var x2 = bbox_right;
+var y1 = bbox_top;
+var y2 = bbox_bottom;
 
 //если был сигнал на деактивацию кнопок 
 if ((obj_ctrl_dlg.ctrl_dlg_disable_btn == 1) and (type != "dlg_btn")) {

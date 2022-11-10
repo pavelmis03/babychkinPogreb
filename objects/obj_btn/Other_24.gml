@@ -93,6 +93,48 @@ switch (action) {
 	break;
 	
 	//ФУНКЦИОНАЛЬНЫЕ
+	//ЗАГРУЗКА ИГРЫ
+	//если нет сохранений, начинаем новую игру после диалога
+	case "nothingSv": 
+		obj_ctrl_mv.action = "addRm";
+		obj_ctrl_dlg.ctrl_dlg_del = true;
+		scr_newGm(); //скрипт приготовлений к игре
+	break;
+	//загрузить выбранное сохранени
+	case "ldSv": 
+		
+		obj_ctrl_dlg.ctrl_dlg_del = true;
+	break;
+	//удалить выбранное сохранение
+	case "delSv": 
+		
+		obj_ctrl_dlg.ctrl_dlg_del = true;
+	break;
+	//удалить текущую игру
+	case "delGm": 
+		
+		obj_ctrl_dlg.ctrl_dlg_del = true;
+	break;
+	//Следующее сохранение
+	case "nextSv": 
+		
+		obj_ctrl_dlg.ctrl_dlg_del = true;
+	break;
+	//предыдущее сохранение
+	case "preSv": 
+		
+		obj_ctrl_dlg.ctrl_dlg_del = true;
+	break;
+	//следующая игровая сессия 
+	case "nextGm": 
+		
+		obj_ctrl_dlg.ctrl_dlg_del = true;
+	break;
+	//предыдущая игровая сессия
+	case "preGm": 
+		
+		obj_ctrl_dlg.ctrl_dlg_del = true;
+	break;
 	//НАСТРОЙКИ
 	//сохранение настроек
 	case "saveSettings": 

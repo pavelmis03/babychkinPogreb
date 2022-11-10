@@ -11,14 +11,23 @@ switch (type) {
 		obj_ctrl_dlg.action = action;
 		//для дверей с подтверждением надо отменить нажатие после появления диалога. т.к. в step 
 		//это теперь не делатется, чтобы после нажатия и снятия курсора с кнопки, действие нажатия не отменялось
-		///new/ /*
 		var str = sprite_get_name(sprite_index);
 		var str1 = string_copy(str, 0, string_length(str) - 1); 
 		sprite_index = asset_get_index(str1 + "1");
 		btn_enter = false;
 		image_speed = -1;
 		btn_pressed = false;
-		//*/
+	break;
+	case "confirmYNCl": 
+		obj_ctrl_dlg.ctrl_dlg_need = true;
+		obj_ctrl_dlg.type = type;
+		obj_ctrl_dlg.action = action;
+		var str = sprite_get_name(sprite_index);
+		var str1 = string_copy(str, 0, string_length(str) - 1); 
+		sprite_index = asset_get_index(str1 + "1");
+		btn_enter = false;
+		image_speed = -1;
+		btn_pressed = false;
 	break;
 	//отдельно для меню настроек с условием (действие сохранения)
 	case "confirmYCl_svSet": 
@@ -28,16 +37,19 @@ switch (type) {
 		obj_ctrl_dlg.type = type;
 		//передаем действия
 		obj_ctrl_dlg.action = action;
+		//сохраняем сразу, а диалог чисто уведомительный
+		action = "saveSettings";
+		event_user(14);
+		//костыль, без которого диалог не работает
+		action = ["saveSettings", "cansel"];
 		//для дверей с подтверждением надо отменить нажатие после появления диалога. т.к. в step 
 		//это теперь не делатется, чтобы после нажатия и снятия курсора с кнопки, действие нажатия не отменялось
-		///new/ /*
 		var str = sprite_get_name(sprite_index);
 		var str1 = string_copy(str, 0, string_length(str) - 1); 
 		sprite_index = asset_get_index(str1 + "1");
 		btn_enter = false;
 		image_speed = -1;
 		btn_pressed = false;
-		//*/
 		//obj_ctrl_set.action = "saveSettings";
 	break;
 	//отдельно для меню настроек с условием (кнопка выхода)
@@ -54,14 +66,12 @@ switch (type) {
 			action = "back";
 			event_user(14);
 		}
-		///new/ /*
 		var str = sprite_get_name(sprite_index);
 		var str1 = string_copy(str, 0, string_length(str) - 1); 
 		sprite_index = asset_get_index(str1 + "1");
 		btn_enter = false;
 		image_speed = -1;
 		btn_pressed = false;
-		//*/
 	break;
 	//отдельно для меню настроек с условием (кнопка ,,настройки по умолчанию,,)
 	case "confirmYNCl_def": 
@@ -81,14 +91,12 @@ switch (type) {
 			//передаем действия
 			obj_ctrl_dlg.action = ["alreadYdefaultSet", "cansel"];
 		}
-		///new/ /*
 		var str = sprite_get_name(sprite_index);
 		var str1 = string_copy(str, 0, string_length(str) - 1); 
 		sprite_index = asset_get_index(str1 + "1");
 		btn_enter = false;
 		image_speed = -1;
 		btn_pressed = false;
-		//*/
 	break;
 	//отдельно для меню новой игры с условием
 	case "confirmYNCl_new": 
@@ -104,27 +112,12 @@ switch (type) {
 			action = "newGm";
 			event_user(14);
 		}
-		///new/ /*
 		var str = sprite_get_name(sprite_index);
 		var str1 = string_copy(str, 0, string_length(str) - 1); 
 		sprite_index = asset_get_index(str1 + "1");
 		btn_enter = false;
 		image_speed = -1;
 		btn_pressed = false;
-		//*/
-	break;
-	case "confirmYNCl": 
-		obj_ctrl_dlg.ctrl_dlg_need = true;
-		obj_ctrl_dlg.type = type;
-		obj_ctrl_dlg.action = action;
-		///new/ /*
-		var str = sprite_get_name(sprite_index);
-		var str1 = string_copy(str, 0, string_length(str) - 1); 
-		sprite_index = asset_get_index(str1 + "1");
-		btn_enter = false;
-		image_speed = -1;
-		btn_pressed = false;
-		//*/
 	break;
 	//кнопки перехода в другую комнату 
 	case "transition": 

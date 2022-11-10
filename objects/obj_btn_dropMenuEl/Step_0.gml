@@ -1,9 +1,15 @@
 /// @description 
 
+/*
 var x1 = x + sprite_get_bbox_left(sprite_index);
 var x2 = x + sprite_get_bbox_right(sprite_index);
 var y1 = y + sprite_get_bbox_top(sprite_index);
 var y2 = y + sprite_get_bbox_bottom(sprite_index);
+*/
+var x1 = bbox_left;
+var x2 = bbox_right;
+var y1 = bbox_top;
+var y2 = bbox_bottom;
 
 //проверка на наведении курсора на кнопку
 //при диалоге остальные кнопки не активны

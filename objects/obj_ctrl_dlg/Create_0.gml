@@ -27,7 +27,7 @@ ctrl_dlg_arr_btn = [];		//созданные кнопки
 //словарь глубины
 ctrl_dlg_map_depth = ds_map_create();
 ctrl_dlg_map_depth[?rm_menu_mm] = -100;
-ctrl_dlg_map_depth[?rm_menu_ldGm] = 50;
+ctrl_dlg_map_depth[?rm_menu_ldGm] = -50;
 ctrl_dlg_map_depth[?rm_menu_newGm] = 50;
 ctrl_dlg_map_depth[?rm_menu_endless] = 50;
 ctrl_dlg_map_depth[?rm_menu_newGm_start] = 50;
@@ -50,11 +50,19 @@ ctrl_dlg_map_depth[?rm_menu_inv] = -50;
 ctrl_dlg_map_txt = ds_map_create();
 //menu
 ctrl_dlg_map_txt[?"exitGm"] = "Вы уверены,\nчто хотите выйти из игры?!";
+//меню загрузки
+ctrl_dlg_map_txt[?"nothingSv"] = "Сохранений нет\nхотите начать новую игру?";
+ctrl_dlg_map_txt[?"ldSv"] = "Загрузить это сохранение?";
+ctrl_dlg_map_txt[?"delSv"] = "Вы уверены,\nчто хотите удалить это сохранение?\nОтменить это действие будет нельзя...";
+ctrl_dlg_map_txt[?"delGm"] = "Вы уверены,\nчто хотите удалить\nэту игровую историю полностью?\nОтменить это действие будет нельзя...";
+//меню настроек
 ctrl_dlg_map_txt[?"backSaveSettings"] = "Хотите сохранить настройки\nперед выходом?";
 ctrl_dlg_map_txt[?"defaultSettings"] = "Вы уверены,\nчто хотите сбросить настройки\nдо значений по умолчанию?";
 ctrl_dlg_map_txt[?"alreadYdefaultSet"] = "Настройки уже сброшены!";
 ctrl_dlg_map_txt[?"saveSettings"] = "Настройки успешно сохранены! :)";
+//новая игра
 ctrl_dlg_map_txt[?"newGm"] = "Вы уверены, что хотите\nначать игру сначала?\nВесь достигнутый Вами прогресс\nбудет потерян!";
+//
 ctrl_dlg_map_txt[?"noEditor"] = "        Извините,\nсюда пока нельзя :(";
 ctrl_dlg_map_txt[?"noEndless"] = "        Извините,\nсюда пока нельзя :(";
 //game

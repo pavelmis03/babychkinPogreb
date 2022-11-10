@@ -9,6 +9,8 @@ if (!obj_ctrl_dlg.ctrl_dlg_exist) {
 			with (obj_btn_dropMenuEl) {
 				instance_destroy();	
 			}
+			//очистка массива субэлементов 
+			ds_list_clear(btn_list_dropEl);
 		}
 		//если на ,,родителя,, кликнули и у него не был развернут список, создаем его
 		if (btn_pressed) {

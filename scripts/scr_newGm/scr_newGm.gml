@@ -31,6 +31,7 @@ function scr_newGm() {
 	
 	//сообщаем объекту контроллера игры, что пора начинать новую игру
 	obj_ctrl_gm.action = "startNewGm";
+	obj_ctrl_mv.action = "addRm";
 	//отправляемся в комнату псевдо загрузки
 	room_goto(rm_menu_newGm_start);
 }

@@ -17,11 +17,13 @@ if (btn_pressed) {
 	if (obj_ctrl_rmElevator.ctrl_elevator_id_btn_pressed == 0) {
 		event_user(15);	
 	}
-	//btn_pressed = false; 
 	//кнопка диспетчера не деактивирует другие кнопки
 	if ((action != "scaryVoice") and (action != "none")) {
 		//obj_ctrl_rmElevator.ctrl_elevator_disable_btn = 1;
 		//ЕСЛИ ЭТО КНОПКА ЭТАЖА, ТО НАЗНАЧАЕМ ID НАЖАТОЙ КНОПКИ, ЧТОБЫ БОЛЬШЕ НЕ СРАБОТАЛО НАЖАТИЕ НА ДРУГИЕ
 		obj_ctrl_rmElevator.ctrl_elevator_id_btn_pressed = id;
+	} else {
+		//бесполезные кнопки можно несколько раз нажимать
+		btn_pressed = false; 
 	}
 }
