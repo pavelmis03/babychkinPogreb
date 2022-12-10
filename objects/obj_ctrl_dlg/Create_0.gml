@@ -23,6 +23,9 @@ draw_txt_cl = c_black;		//цвет текста
 
 //другие
 ctrl_dlg_arr_btn = [];		//созданные кнопки
+ctrl_dlg_arr_btn[0] = -1;
+ctrl_dlg_arr_btn[1] = -1;
+ctrl_dlg_arr_btn[2] = -1;
 
 //словарь глубины
 ctrl_dlg_map_depth = ds_map_create();

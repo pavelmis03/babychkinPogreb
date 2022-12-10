@@ -19,7 +19,9 @@ if (ctrl_dlg_del) {
 	draw_txt = "";
 	//удаление кнопок диалога
 	for (var i = 0; i < array_length(ctrl_dlg_arr_btn); i++) {
-		instance_destroy(ctrl_dlg_arr_btn[i]);	//удаляю кнопку
+		if (ctrl_dlg_arr_btn[i] != -1) {
+			instance_destroy(ctrl_dlg_arr_btn[i]);	//удаляю кнопку
+		}
 	}
 	array_delete(ctrl_dlg_arr_btn, 0, array_length(ctrl_dlg_arr_btn));	//очищаю массив
 	ctrl_dlg_exist = false;

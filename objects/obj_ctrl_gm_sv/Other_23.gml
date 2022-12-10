@@ -9,7 +9,7 @@ ctrl_sv_svDir = new_path;
 
 //если это не первый запуск данной игры, если папка загрузки текущего сохранения сущетвует
 //копируем файлы из папки последнего сохранения в новую папку
-if ((ctrl_sv_ldDir != "newGm") and (directory_exists(ctrl_sv_gmDir + ctrl_sv_ldDir))) {
+if (/*(ctrl_sv_ldDir != "newGm") and*/ (directory_exists(ctrl_sv_gmDir + ctrl_sv_ldDir))) {
 	
 	//начинаем поиск в папке загрузки
 	var fname = file_find_first(ctrl_sv_gmDir + ctrl_sv_ldDir + "*.*", 0);
@@ -21,8 +21,6 @@ if ((ctrl_sv_ldDir != "newGm") and (directory_exists(ctrl_sv_gmDir + ctrl_sv_ldD
 	}
 		
 	file_find_close();
-	//теперь источник файлов для будущего сохранения вновь созданная папка
-	ctrl_sv_ldDir = new_path;
 }
 
 //сохраняем информацию о том, что было произведено сохранение
@@ -30,6 +28,9 @@ if ((ctrl_sv_ldDir != "newGm") and (directory_exists(ctrl_sv_gmDir + ctrl_sv_ldD
 ini_open(ctrl_sv_gmDir + "save_cmn.ini");
 ini_write_real("SAVES", "save_number", ini_read_real("SAVES", "save_number", 0) + 1);
 ini_close();
+
+//теперь источник файлов для будущего сохранения вновь созданная папка
+ctrl_sv_ldDir = new_path;
 
 //если это первое в игре сохранение, шаг с копированием просто пропускаем
 //начинаем сохранение

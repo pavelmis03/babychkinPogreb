@@ -1,5 +1,4 @@
-var player = scr_player_type();
-if (player != -1) {
-	player.hp = 1080;
-}
+obj_ctrl_gm_playerStatus.hp = 1080;
 
+
+//obj_evn_terminal.hp -= 100;

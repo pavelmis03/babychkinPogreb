@@ -1,7 +1,9 @@
 /// @description 
 
+//ВНИМАНИЕ: ВСЕ ИЗМЕНЯЕМЫЕ ПАРАМЕТРЫ ХРАНЯТСЯ В КОНТРОЛЛЕРАХ ПЕРСОНАЖА
+
 //main
-hp = 1080;
+need_sv = 1;	//нужно ли сохранять данный объект
 player_isDeath = false;	//переменная, которая становится true, когда игрок умирает
 						//нужна, чтобы отключить основные функции игрока на время подготовки перехода
 						//в меню смерти
@@ -15,7 +17,6 @@ CONST_PLAYER_RUNPOWERREGDELAY = 10;	//задержка перед восстан
 CONST_PLAYER_RUNPOWERREGSPEED = 5;	//скорость восстановления сил для бега
 player_wantRun = false;	//если нажат shift - true (персонаж хочет побежать)
 player_run = false;		//персонаж бежит
-player_runPower = 100;	//силы для бега
 //нажатые клавиши движения
 player_move_key_list = ds_list_create();
 player_moveType = "stand";	//тип движения
@@ -46,7 +47,8 @@ player_col[?"mapObj"] = 0;
 //объекты, через которые игрок не может пройти (стены и т.д.)
 player_solidObj[0] = obj_simple_wall;
 player_solidObj[1] = obj_inv_parent;
-player_solidObj[2] = obj_evn_door;
+player_solidObj[2] = obj_env_door;
+player_solidObj[3] = obj_env_terminal;
 
 //interaction 
 player_pressE = false;

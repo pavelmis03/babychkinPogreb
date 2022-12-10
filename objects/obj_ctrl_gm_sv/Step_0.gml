@@ -29,5 +29,4 @@ if ((obj_ctrl_mv.ctrl_mv_change_rm) and (ctrl_sv_saving == 2)) {
 if ((room != rm_pixel) and (ctrl_sv_saving == 1)) {
 	alarm[0] = 1;
 	ctrl_sv_saving = 2;
-	
 }

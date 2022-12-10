@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_debug_playerGetDamage",
   "spriteId": {
     "name": "spr_test_enemy",
     "path": "sprites/spr_test_enemy/spr_test_enemy.yy",
@@ -22,8 +25,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player_FP","path":"objects/obj_player_FP/obj_player_FP.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player_FP","path":"objects/obj_player_FP/obj_player_FP.yy",},},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -31,8 +34,4 @@
     "name": "debug&tmpObj",
     "path": "folders/Objects/debug&tmpObj.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_debug_playerGetDamage",
-  "tags": [],
-  "resourceType": "GMObject",
 }

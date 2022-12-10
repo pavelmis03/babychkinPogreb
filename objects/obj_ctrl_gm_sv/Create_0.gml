@@ -4,17 +4,24 @@
 action = "";
 
 //SAVES
+/* УСТАРЕЛО:
+	теперь все объекты, которые нужно сохранять, будут иметь переменную need_sv = 1
+	и все их переменные будут сохраняться полностью
 //содержит в себе все объекты, состояние которых нужно сохранять
 ctrl_sv_saveInst = [
-obj_player_FP, obj_player_home, obj_player_SP, obj_player_village, 
-obj_enemy_pank, obj_enemy_parent, 
+obj_ctrl_gm_playerStatus, obj_ctrl_gm_iss,  obj_ctrl_gm_iss,
+obj_enemy_pank, 
 
 ];
+
 //переменные, которые нужно сохранять. встроенные сохраняю вручную в самом скрипте
 ctrl_sv_saveVar = [
-	"hp", 
-	
+	["hp", "player_runPower", ], 
+	[],
+	[],
+	["hp", "damage", ],
 ];
+*/
 //!сохранение директорий со слешом на конце!: ctrl_sv_gmDir = "saves/game_n/"
 //директория игры (saves/game_n/)
 ctrl_sv_gmDir = "";	//ее буду определять позже в меню загрузки игры

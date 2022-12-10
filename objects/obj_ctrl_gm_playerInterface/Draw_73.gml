@@ -31,18 +31,18 @@ if (interface_on) {
 	draw_text(view_x + view_w * (coefx + 0.17), view_y + view_h * (coefy + 0.074), "Дыхалка: ");
 	draw_rectangle(view_x + view_w * (coefx + 0.17), view_y + view_h * (coefy + 0.100), view_x + view_w * (coefx + 0.226), view_y + view_h * (coefy + 0.115), true);
 	draw_set_color(c_orange);
-	draw_rectangle(view_x + view_w * (coefx + 0.1715), view_y + view_h * (coefy + 0.103), view_x + view_w * (coefx + 0.172) + player.player_runPower, view_y + view_h * (coefy + 0.112), false);
+	draw_rectangle(view_x + view_w * (coefx + 0.1715), view_y + view_h * (coefy + 0.103), view_x + view_w * (coefx + 0.172) + obj_ctrl_gm_playerStatus.player_runPower, view_y + view_h * (coefy + 0.112), false);
 	
 	//текстовые жизни (цвет зависит от остатка)
 	draw_set_color(c_lime);		
-	if (player.hp < 900) {draw_set_color(c_blue)}
-	if (player.hp < 800) {draw_set_color(c_green)}
-	if (player.hp < 700) {draw_set_color(c_yellow)}
-	if (player.hp < 500) {draw_set_color(c_orange)}
-	if (player.hp < 250) {draw_set_color(c_red)}
+	if (obj_ctrl_gm_playerStatus.hp < 900) {draw_set_color(c_blue)}
+	if (obj_ctrl_gm_playerStatus.hp < 800) {draw_set_color(c_green)}
+	if (obj_ctrl_gm_playerStatus.hp < 700) {draw_set_color(c_yellow)}
+	if (obj_ctrl_gm_playerStatus.hp < 500) {draw_set_color(c_orange)}
+	if (obj_ctrl_gm_playerStatus.hp < 250) {draw_set_color(c_red)}
 	
 	//числовые параметры
-	draw_text(view_x + view_w * (coefx + 0.17), view_y + view_h * (coefy + 0.155), "Твои HP: " + string(round(player.hp)));
+	draw_text(view_x + view_w * (coefx + 0.17), view_y + view_h * (coefy + 0.155), "Твои HP: " + string(round(obj_ctrl_gm_playerStatus.hp)));
 		
 	draw_set_color(c_white);
 	draw_text(view_x + view_w * (coefx + 0.17), view_y + view_h * (coefy + 0.20), "Деревянные: " + string(round(100 /*заглушка (должны быть рубли)*/)) + "₽");
@@ -126,7 +126,7 @@ if (visible == 1) {
 	draw_rectangle(player.x - 56, player.y - 32, player.x + 56, player.y - 49, true);
 	draw_rectangle_color(player.x - 54, player.y - 34, player.x + 54, player.y - 47, c_red, c_lime, c_lime, c_red, false);
 	draw_set_color(c_black);
-	draw_rectangle(player.x - 54 + (player.hp) / 10, player.y - 34, player.x + 54 , player.y - 47, false);
+	draw_rectangle(player.x - 54 + (obj_ctrl_gm_playerStatus.hp) / 10, player.y - 34, player.x + 54 , player.y - 47, false);
 }
 
 //если интерфейс открыт

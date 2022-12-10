@@ -1,5 +1,10 @@
 /// @description инициализация
 
+//main
+//ПОТОМ УБРАТЬ ИЗ РОДИТЕЛЯ И ПОМЕСТИТЬ В НУЖНЫХ МОНСТРОВ
+need_sv = 1;	//нужно ли сохранять данный объект
+action = "";
+
 //enemy info
 var arr = global.CONST_ENEMY[?enemy_keyName];
 enemy_name = arr[0];		//название

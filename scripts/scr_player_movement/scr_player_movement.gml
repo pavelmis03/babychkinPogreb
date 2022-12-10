@@ -165,7 +165,7 @@ function scr_player_dir(str) {
 		var curr_y = y;
 		
 		//дверь проверяю таким образом только если она закрыта, иначе сквозь нее можно пройти) - скип)
-		if (obj == obj_evn_door) {
+		if (obj == obj_env_door) {
 			//если дверь закрыта
 			if (inst.destination == "pre_room") {
 				continue;
@@ -320,35 +320,35 @@ function scr_player_checkCanRun() {
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_back";
 	}
 	//проверка, что силы восстановились
-	if (player_runPower <= 0) {
+	if (obj_ctrl_gm_playerStatus.player_runPower <= 0) {
 		canRun = false;
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_tired";
-		player_runPower = 0;
+		obj_ctrl_gm_playerStatus.player_runPower = 0;
 	}
 	//после того, как энергия была потрачена больше, чем на 20%, нужно подождать, пока она восстановится до 40%
 	//но чтобы у нас не отрубился бег сразу по пересечении 20%, нужно, чтобы пользователь сначала отпустил shift
-	if ((obj_ctrl_gm_playerStatus.ctrl_status_runPowerEnded != 0) and (!player_run)) {
+	if ((obj_ctrl_gm_playerStatus.player_runPowerEnded != 0) and (!player_run)) {
 		canRun = false;
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_tiredSo";
 	}
 	//проверка на возможность бежать 
-	if (hp <= 150) {
+	if (obj_ctrl_gm_playerStatus.hp <= 150) {
 		canRun = false;
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_hp";
 	}
 	/*
 	//голод
-	if (hp <= 150) {
+	if (obj_ctrl_gm_playerStatus.hp <= 150) {
 		canRun = false;
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_hungry";
 	} 
 	//жажда
-	if (hp <= 150) {
+	if (obj_ctrl_gm_playerStatus.hp <= 150) {
 		canRun = false;
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_drink";
 	} 
 	//тепло
-	if (hp <= 150) {
+	if (obj_ctrl_gm_playerStatus.hp <= 150) {
 		canRun = false;
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_cold";
 	} 
@@ -358,17 +358,17 @@ function scr_player_checkCanRun() {
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_weight";
 	} 
 	//тяжелое оружие в руках
-	if (hp <= 150) {
+	if (obj_ctrl_gm_playerStatus.hp <= 150) {
 		canRun = false;
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_weapoon";
 	} 
 	//лед под ногами
-	if (hp <= 150) {
+	if (obj_ctrl_gm_playerStatus.hp <= 150) {
 		canRun = false;
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_slide";
 	} 
 	//снег под ногами
-	if (hp <= 150) {
+	if (obj_ctrl_gm_playerStatus.hp <= 150) {
 		canRun = false;
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_snow";
 	} 

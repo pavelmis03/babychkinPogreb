@@ -11,14 +11,15 @@
 if (obj_ctrl_set.ctrl_set_map_curr[?"pixels"] and ctrl_gm_pixel_time != -1) {
 	room_goto(rm_pixel);
 } else {
-	//если надо зайти в комнату истории после пикселей 
+	//если необходимо зайти в комнату истории
 	if (obj_ctrl_gm.ctrl_gm_goHistory) { 
 		room_goto(rm_menu_history);
-	} else {	//??? что за случай
+	} else {	//??? что за случай - я так понимаю, что это для перехода после истории в комнату, которая
+										//сохранена в next_rm[|0] еще до того, как игрок отправился в комнату истории 
 		//переходим в следующую комнату в списке
 		room_goto(obj_ctrl_mv.next_rm[|0]);
 		ds_list_delete(obj_ctrl_mv.next_rm, 0);
-		ds_list_add(obj_ctrl_mv.next_rm, rm_menu_mm); 
+		ds_list_add(obj_ctrl_mv.next_rm, rm_menu_mm); //а вот зачем это...
 	}
 }
 

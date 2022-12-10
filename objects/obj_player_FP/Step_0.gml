@@ -22,9 +22,9 @@ for (var i = 0; i < ds_map_size(player_col); i++) {
 }
 
 //проверка на смерь персонажа
-if (hp <= 0 and !player_isDeath) {
+if (obj_ctrl_gm_playerStatus.hp <= 0 and !player_isDeath) {
 	obj_ctrl_gm.action = "player_death_FP";
 	player_isDeath = true;
-	hp = 0;
+	obj_ctrl_gm_playerStatus.hp = 0;
 }
 

@@ -34,6 +34,7 @@ jrn - journal
 cnt - count
 inv - inventory
 rmv - remove
+env - environment
 
 bg - background
 el - element

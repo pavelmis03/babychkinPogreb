@@ -1,4 +1,4 @@
 /// @description 
 
-var player = scr_player_type();
-player.hp -= 100;
+//var player = scr_player_type();
+obj_ctrl_gm_playerStatus.hp -= 100;
