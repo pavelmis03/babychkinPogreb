@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMFont",
+  "resourceVersion": "1.0",
+  "name": "fnt_menu_jrn_header",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -399,8 +402,4 @@
     "name": "Menu",
     "path": "folders/Fonts/Menu.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "fnt_menu_jrn_header",
-  "tags": [],
-  "resourceType": "GMFont",
 }

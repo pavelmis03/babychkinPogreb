@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_player_SP",
   "spriteId": {
     "name": "spr_playerFP_state",
     "path": "sprites/spr_playerFP_state/spr_playerFP_state.yy",
@@ -31,8 +34,4 @@
     "name": "player",
     "path": "folders/Objects/Game/Character/player.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_player_SP",
-  "tags": [],
-  "resourceType": "GMObject",
 }

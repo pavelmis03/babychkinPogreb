@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "msc_menu_mm3",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "menu",
     "path": "folders/Sounds/Music/Menu/menu.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "msc_menu_mm3",
-  "tags": [],
-  "resourceType": "GMSound",
 }

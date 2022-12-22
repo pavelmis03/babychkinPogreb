@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_player_village",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -24,8 +28,4 @@
     "name": "player",
     "path": "folders/Objects/Game/Character/player.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_player_village",
-  "tags": [],
-  "resourceType": "GMObject",
 }

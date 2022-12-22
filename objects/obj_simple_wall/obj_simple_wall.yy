@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_simple_wall",
   "spriteId": {
     "name": "spr_invis_wall",
     "path": "sprites/spr_invis_wall/spr_invis_wall.yy",
@@ -22,7 +25,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -30,8 +33,4 @@
     "name": "Other",
     "path": "folders/Objects/Game/MapObj/Simple/Other.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_simple_wall",
-  "tags": [],
-  "resourceType": "GMObject",
 }

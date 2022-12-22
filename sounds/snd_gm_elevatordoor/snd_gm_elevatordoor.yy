@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_gm_elevatorDoor",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "door",
     "path": "folders/Sounds/Snd/Game/Map/MapObj/Interraction/Object/Environment/door.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_gm_elevatorDoor",
-  "tags": [],
-  "resourceType": "GMSound",
 }

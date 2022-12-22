@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_gm_lift_angryWomen5",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "lift",
     "path": "folders/Sounds/Snd/Menu/Game/Other/lift.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_gm_lift_angryWomen5",
-  "tags": [],
-  "resourceType": "GMSound",
 }

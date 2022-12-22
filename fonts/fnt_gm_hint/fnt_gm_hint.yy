@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMFont",
+  "resourceVersion": "1.0",
+  "name": "fnt_gm_hint",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -218,8 +221,4 @@
     "name": "Game",
     "path": "folders/Fonts/Game.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "fnt_gm_hint",
-  "tags": [],
-  "resourceType": "GMFont",
 }
