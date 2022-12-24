@@ -26,10 +26,14 @@ function scr_sv_getName(str) {
 }
 
 /// @function scr_sv_dtDirName();
-/// @description возвращает строку, состоящую из даты и времени, пригодную для названия папки
+/*/// @description возвращает строку, состоящую из даты и времени, пригодную для названия папки*/
+/// @description возвращает строку - имя папки save_n по номеру сохранения
 function scr_sv_dtDirName() {
+	var str;
+	
+	/*
 	//создаем строку дата_время
-	var str = date_datetime_string(date_current_datetime());
+	str = date_datetime_string(date_current_datetime());
 
 	//удаляет из строки недопустимые символы
 	str = string_replace_all(str, " ", "-");
@@ -37,6 +41,11 @@ function scr_sv_dtDirName() {
 	str = string_replace_all(str, ":", "-");
 	
 	str = "_" + str + "_";
+	*/
+	
+	ini_open(ctrl_sv_gmDir + "save_cmn.ini");
+	str = "save_" + string(ini_read_real("SAVES", "save_number", 0) + 1);
+	ini_close();
 	
 	return str;
 }

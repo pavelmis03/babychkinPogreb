@@ -100,17 +100,24 @@ switch (type) {
 	break;
 	//отдельно для меню новой игры с условием
 	case "confirmYNCl_new": 
-		//если есть начатая игра
-		if (directory_exists("saves")) {
-			//говорим, что нужно создать диалог
-			obj_ctrl_dlg.ctrl_dlg_need = true;
-			//передаем тип диалога
-			obj_ctrl_dlg.type = "confirmYNCl";
-			//передаем действия
-			obj_ctrl_dlg.action = ["newGm", "cansel", "cansel"];
-		} else {	//если это первая начатая игра
+		//считаю количество начатых игр
+		var i = 0;
+		while (directory_exists("saves/game_" + string(i))) {
+			i++; 
+		}
+		//если это первая начатая игра, то не спрашиваем игрока, уверен ли он, что хочет создавать новую игру
+		if (i == 0) {
 			action = "newGm";
 			event_user(14);
+		} else {	
+			obj_ctrl_dlg.ctrl_dlg_need = true;
+			if (i >= 5) {//если уже начато 5 новых игр, создать новую не получится.
+				obj_ctrl_dlg.type = "confirmYCl";
+				obj_ctrl_dlg.action = ["newGmErr", "cansel"];
+			} else {	//если это одна из 5 возможных начинаемых игр
+				obj_ctrl_dlg.type = "confirmYNCl";
+				obj_ctrl_dlg.action = ["newGm", "cansel", "cansel"];
+			}
 		}
 		var str = sprite_get_name(sprite_index);
 		var str1 = string_copy(str, 0, string_length(str) - 1); 

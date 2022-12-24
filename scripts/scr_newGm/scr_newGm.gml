@@ -8,8 +8,9 @@ function scr_newGm() {
 	var i = 0;
 	//с началом новой игры создается директория игры
 	while (directory_exists("saves/game_" + string(i))) {
-		i++;
+		i++; 
 	}
+	
 	//папка игры
 	var game_path = "saves/game_" + string(i) + "/";
 	directory_create(game_path);

@@ -212,6 +212,10 @@ switch (action) {
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 		scr_newGm(); //скрипт приготовлений к игре
 	break;
+	//если невозможно начать новую игру, просто удаляем диалог
+	case "newGmErr": 
+		obj_ctrl_dlg.ctrl_dlg_del = true;
+	break;
 	//пропустить просмотр истории (для комнаты истории)
 	case "skipHistory": 
 		obj_ctrl_rmHistory.action = "skipHistory";

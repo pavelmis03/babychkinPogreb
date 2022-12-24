@@ -15,7 +15,6 @@ if (btn_enable) {
 		image_index = 0;
 		//включаем скорость проигрывания 
 		image_speed = 1;
-		//image_speed = sprite_get_speed(sprite_index);
 		//проверяем, что еще не было нажато ни одной кнопки, иначе мы только меняем ей спрайт и все
 		//НАХНАЧЕНИЕ НАШЕГО ID ПРОИСХОДИТ В ANIMeND. ПОЭТОМУ СПРАЙТ ДОЛЖЕН БЫТЬ БЫСТРЫМ 
 		if (obj_ctrl_rmElevator.ctrl_elevator_id_btn_pressed == 0) {

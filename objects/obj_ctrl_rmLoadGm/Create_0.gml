@@ -27,7 +27,7 @@ btn_delGmId.sprite_index = spr_btn_ldGm_delGm1;
 btn_delGmId.type = "confirmYNCl";
 btn_delGmId.action = ["delGm", "cansel", "cansel"];
 btn_delGmId.sound = [20, "snd_none", "snd_none"];
-btn_delGmId.btn_enable = true;
+btn_delGmId.btn_enable = false;
 	
 //кнопка ,,удалить сохранение,,
 btn_delSvId = instance_create_depth(room_width * 0.45, room_height * 0.65, depth, obj_btn);

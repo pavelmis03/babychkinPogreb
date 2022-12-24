@@ -12,10 +12,6 @@ if (can_interact) {
 		default: 
 			action = "goTo";	//если в destination название комнаты
 	}
-	
-	//спрайт взаимодействия
-	var str = sprite_get_name(sprite_index);
-	sprite_index = asset_get_index(string_copy(str, 0, string_length(str) - 1) + "2");
 }
 //остальные действия наследуются
 

@@ -123,10 +123,10 @@ if (interface_on) {
 if (visible == 1) {
 	//жизни
 	draw_set_color(c_white);
-	draw_rectangle(player.x - 56, player.y - 32, player.x + 56, player.y - 49, true);
-	draw_rectangle_color(player.x - 54, player.y - 34, player.x + 54, player.y - 47, c_red, c_lime, c_lime, c_red, false);
+	draw_rectangle(player.x - 56, player.y - 37, player.x + 56, player.y - 54, true);
+	draw_rectangle_color(player.x - 54, player.y - 39, player.x + 54, player.y - 52, c_red, c_lime, c_lime, c_red, false);
 	draw_set_color(c_black);
-	draw_rectangle(player.x - 54 + (obj_ctrl_gm_playerStatus.hp) / 10, player.y - 34, player.x + 54 , player.y - 47, false);
+	draw_rectangle(player.x - 54 + (obj_ctrl_gm_playerStatus.hp) / 10, player.y - 39, player.x + 54 , player.y - 52, false);
 }
 
 //если интерфейс открыт

@@ -29,8 +29,10 @@
   "gridY": 0,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"990323e4-f242-459e-bc59-f81e37272414",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ff666de3-e439-45a7-9787-9dcafa63d250",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1b3843cb-faf0-43e7-888a-8a8102a9f766",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"97954171-61bf-42a8-92a1-5d5156df9015",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"15616189-4cdb-4870-a7a5-92dffddcf414",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"213d063f-508e-48c0-84ae-df43c8bd9fce",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"277e97d2-f4e3-4ffd-b00f-91d5c5fe36ea",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -42,14 +44,16 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 3.0,
+    "length": 5.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"65931911-f332-48c6-af6f-021580247507","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"990323e4-f242-459e-bc59-f81e37272414","path":"sprites/spr_door_wooden1/spr_door_wooden1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"d4e60a82-7b1f-41a6-baf2-9857b5152a74","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ff666de3-e439-45a7-9787-9dcafa63d250","path":"sprites/spr_door_wooden1/spr_door_wooden1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"7119b2db-12bd-49b5-9c2c-bd5c5c10000b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1b3843cb-faf0-43e7-888a-8a8102a9f766","path":"sprites/spr_door_wooden1/spr_door_wooden1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"784d7873-0f6d-47df-a941-bbaa6704d4e4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"990323e4-f242-459e-bc59-f81e37272414","path":"sprites/spr_door_wooden1/spr_door_wooden1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d876dc2a-7fc9-4542-8478-daf6740cf7d8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"97954171-61bf-42a8-92a1-5d5156df9015","path":"sprites/spr_door_wooden1/spr_door_wooden1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"70c31529-98e0-4ec3-b7b5-3c68f81a8c60","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"15616189-4cdb-4870-a7a5-92dffddcf414","path":"sprites/spr_door_wooden1/spr_door_wooden1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ce73421c-8709-4b21-ad0c-b0f4ab832284","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"213d063f-508e-48c0-84ae-df43c8bd9fce","path":"sprites/spr_door_wooden1/spr_door_wooden1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5763ef18-cd55-4c19-94ef-13562c4d6687","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"277e97d2-f4e3-4ffd-b00f-91d5c5fe36ea","path":"sprites/spr_door_wooden1/spr_door_wooden1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

@@ -10,6 +10,7 @@ equ - equipment
 dev - developers 
 set - settings
 btl - bullet
+dmg - damage
 ptr - patron
 cmn - common
 msc - music
