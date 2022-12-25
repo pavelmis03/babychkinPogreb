@@ -12,7 +12,7 @@ if (ctrl_sv_saving == 3) {
 }
 
 //если мы перешли в другую комнату в состоянии сохранения игры (ctrl_sv_saving == 2), то запускаем
-//скрипт сохранения комнпты
+//скрипт сохранения комнаты
 if ((obj_ctrl_mv.ctrl_mv_change_rm) and (ctrl_sv_saving == 2)) {
 	scr_sv_svRm(ctrl_sv_gmDir + ctrl_sv_svDir + room_get_name(room) + "_save.txt");
 	//последняя комната (в которой было начато сохранение) не должна быть удалена, потому что

@@ -25,12 +25,17 @@ if (/*(ctrl_sv_ldDir != "newGm") and*/ (directory_exists(ctrl_sv_gmDir + ctrl_sv
 
 //сохраняем информацию о том, что было произведено сохранение
 //нужно для контроллера игры, который удаляет папку сохранений игры при выходе в ММ, если не было ни одного сохранения
+//также добавляется информация о дате очередного сохранения
 ini_open(ctrl_sv_gmDir + "save_cmn.ini");
 ini_write_real("SAVES", "save_number", ini_read_real("SAVES", "save_number", 0) + 1);
+ini_write_real("SAVES_INFO", new_path, date_datetime_string(date_current_datetime()) + "__" /*+ игровые дата и время, название квеста, локация*/); 
 ini_close();
 
 //теперь источник файлов для будущего сохранения вновь созданная папка
 ctrl_sv_ldDir = new_path;
+
+//создание скриншота для меню загрузки
+obj_ctrl_gm_img.action = "createLdScreenShot";
 
 //если это первое в игре сохранение, шаг с копированием просто пропускаем
 //начинаем сохранение

@@ -8,14 +8,16 @@
 action = "";
 
 //drawing
-//draw_spr = spr_ldGm_form;	//форма для сохранений
-//draw_txt_x = room_width * 0.31;	//начало рисования текста на книге
-//draw_txt_y = room_height * 0.36;
-//ctrl_ldGm_page_curr = 1; //текущая страница
-//ctrl_ldGm_page = 1;		 //всего страниц
+draw_spr = spr_sys_none;	//спрайт скриншота сохранения
+draw_txt_x = room_width * 0.31;	//координаты отрисовки скрина
+draw_txt_y = room_height * 0.36;
+ctrl_ldGm_page_curr = 1; //текущая страница сохранений
+ctrl_ldGm_page = 1;		 //всего страниц
+ctrl_ldGm_gm_curr = 1;	//текущая игра
+ctrl_ldGm_gm = 1;		//всего игр
 
 //text
-ctrl_ldGm_save_map = ds_map_create();	//здесь будeт храниться сохранения и данные о них
+//ctrl_ldGm_sv_map = ds_map_create();	//здесь будeт храниться сохранения и данные о них
 
 event_user(14);	//проверка на наличие сохранений, выгрузка их, если нет сохр. то начало новой игры
 

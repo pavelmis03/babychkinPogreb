@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "save",
-    "path": "folders/Scripts/Ctrl/save.yy",
+    "name": "save&load",
+    "path": "folders/Scripts/Ctrl/save&load.yy",
   },
 }

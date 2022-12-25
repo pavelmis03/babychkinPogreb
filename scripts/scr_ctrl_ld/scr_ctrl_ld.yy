@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_ctrl_sv_svRm",
+  "name": "scr_ctrl_ld",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

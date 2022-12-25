@@ -14,4 +14,3 @@ instance_create_depth(-10000, 0, 0, obj_ctrl_gm_iss);
 
 
 
-

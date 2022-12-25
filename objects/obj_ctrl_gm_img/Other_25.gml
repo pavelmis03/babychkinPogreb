@@ -11,14 +11,23 @@ switch (action) {
 	case "delImg":
 		draw_img = spr_sys_none;
 	break;
+	//создание скрина для сохранения
+	case "createLdScreenShot":
+		var i = 0;
+		//выбираем номер скриншота, проверяя существование файлов 
+		while (file_exists(obj_ctrl_gm_sv.ctrl_sv_gmDir + "save_screenshots/SvScreenShot" + string(i) + ".png")) {
+			i++;
+		}
+		screen_save("screenshots/ScreenShot_" + string(i) + ".png");
+	break;
 	//создание пользовательского скрина 
 	case "createScreenShot":
 		var i = 1;
 		//выбираем номер скриншота, проверяя существование файлов 
-		while (file_exists("screenshots//ScreenShot" + string(i) + ".png")) {
+		while (file_exists("screenshots/ScreenShot" + string(i) + ".png")) {
 			i++;
 		}
-		screen_save("screenshots//ScreenShot" + string(i) + ".png");
+		screen_save("screenshots/ScreenShot" + string(i) + ".png");//всплывающая надпись
 		draw_caption = spr_gm_caption_screen;
 		draw_caption_y = room_height / 2;
 		//движение текста вверх
