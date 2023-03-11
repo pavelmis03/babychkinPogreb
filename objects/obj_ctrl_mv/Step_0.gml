@@ -14,6 +14,12 @@ if (pre_rm != room) {
 	//action = "addRm";
 }
 
+//таймер перехода в новую комнату
+if (ctrl_mv_rmChangeDelay != 0) {
+	alarm[0] = ctrl_mv_rmChangeDelay * room_speed;
+	ctrl_mv_rmChangeDelay = 0;
+}
+
 //выполнение действия
 if (action != "") {
 	event_user(15);

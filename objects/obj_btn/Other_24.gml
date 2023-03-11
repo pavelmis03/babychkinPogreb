@@ -102,43 +102,42 @@ switch (action) {
 	break;
 	//загрузить выбранное сохранени
 	case "ldSv": 
-		
+		obj_ctrl_rmLdGm.action = "ldSv";
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
 	//удалить выбранное сохранение
 	case "delSv": 
-		
+		obj_ctrl_rmLdGm.action = "delSv";
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
 	//удалить текущую игру
 	case "delGm": 
-		
+		obj_ctrl_rmLdGm.action = "delGm";
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
 	//Следующее сохранение
 	case "nextSv": 
-		
+		obj_ctrl_rmLdGm.action = "nextSv";
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
 	//предыдущее сохранение
 	case "preSv": 
-		
+		obj_ctrl_rmLdGm.action = "preSv";
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
 	//следующая игровая сессия 
 	case "nextGm": 
-		
+		obj_ctrl_rmLdGm.action = "nextGm";
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
 	//предыдущая игровая сессия
 	case "preGm": 
-		
+		obj_ctrl_rmLdGm.action = "preGm";
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
 	//НАСТРОЙКИ
 	//сохранение настроек
 	case "saveSettings": 
-		obj_ctrl_set.action = "saveSettings";
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
 	//СПРАВКА

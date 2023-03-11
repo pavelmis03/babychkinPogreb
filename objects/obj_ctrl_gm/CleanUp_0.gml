@@ -1,2 +1,2 @@
 /// @description 
-ds_list_destroy(ctrl_gm_changedRm);
+//ds_list_destroy(ctrl_gm_changedRm);

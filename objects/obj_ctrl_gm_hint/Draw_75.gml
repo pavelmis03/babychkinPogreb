@@ -13,7 +13,7 @@ if (draw_caption != 0) {
 	draw_set_halign(fa_top);
 	draw_sprite(draw_caption, depth - 10000, tx, draw_caption_y);
 	
-	//если тект ушел за пределы экрана
+	//если текст ушел за пределы экрана
 	if (draw_caption_y <= 0) {
 		draw_caption = 0;
 	}

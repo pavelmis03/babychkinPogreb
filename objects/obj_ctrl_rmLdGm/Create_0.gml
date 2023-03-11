@@ -2,7 +2,10 @@
 // ОН ЛОКАЛЬНЫЙ
 //действия:
 	//отрисовка формы загрузок
-	//
+	//перемещенние по сохранениям и загрузка оных в форму
+	//перемещение по играм и подгрузка сохранений из папки
+	//вывод информации о сохранении
+	//загрузка игры с нужными параметрами
 
 //main
 action = "";
@@ -11,10 +14,22 @@ action = "";
 draw_spr = spr_sys_none;	//спрайт скриншота сохранения
 draw_txt_x = room_width * 0.31;	//координаты отрисовки скрина
 draw_txt_y = room_height * 0.36;
-ctrl_ldGm_page_curr = 1; //текущая страница сохранений
-ctrl_ldGm_page = 1;		 //всего страниц
+//узнать, как хранятся сохранения и считать, исходя их того, сколько всего и сколько помещается на странице
+ctrl_ldGm_sv_curr = 1;	//текущее сохранение
+ctrl_ldGm_sv = 1;		//всего сохранений (это для меня)
+ctrl_ldGm_page_curr = 1; //текущая страница сохранений (для пользователя)
+ctrl_ldGm_svOnPage = 4; // количество сохранений на странице
+//узнать, как хранятся сохранения и считать, исходя их того, сколько всего и сколько помещается на странице
+ctrl_ldGm_page = ctrl_ldGm_sv / 4;	 //всего страниц (делим на количество сохранений на странице)
 ctrl_ldGm_gm_curr = 1;	//текущая игра
-ctrl_ldGm_gm = 1;		//всего игр
+var n = 0;
+while (directory_exists("saves/game_" + string(n))) {
+	n++;
+}
+ctrl_ldGm_gm = n;		//всего игр
+
+//ПРИ АВТОПОДСТАНОВКЕ ПОСЛЕДНЕЙ ИГРОВОЙ СЕССИИ ПРОВЕРЯТЬ, СУЩЕСТВУЕТ ЛИ ЗАПИСЬ В ФАЙЛЕ "gameInfo.ini" -> "lastGame"
+
 
 //text
 //ctrl_ldGm_sv_map = ds_map_create();	//здесь будeт храниться сохранения и данные о них
@@ -28,7 +43,7 @@ btn_delGmId = instance_create_depth(room_width * 0.25, room_height * 0.65, depth
 btn_delGmId.sprite_index = spr_btn_ldGm_delGm1;
 btn_delGmId.type = "confirmYNCl";
 btn_delGmId.action = ["delGm", "cansel", "cansel"];
-btn_delGmId.sound = [20, "snd_none", "snd_none"];
+btn_delGmId.sound = [20, "snd_none", "snd_none"]; 
 btn_delGmId.btn_enable = false;
 	
 //кнопка ,,удалить сохранение,,

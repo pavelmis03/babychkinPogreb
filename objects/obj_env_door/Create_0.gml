@@ -4,7 +4,7 @@
 //main
 //открыть дверь, pre_room - закрыть. room name - перейти в комнату
 destination = 0;
-
+need_sv = 1;  //нужно сохранять
 
 
 // Inherit the parent event

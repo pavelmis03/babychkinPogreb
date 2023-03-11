@@ -10,16 +10,7 @@ switch (action) {
 	break;
 	case "delImg":
 		draw_img = spr_sys_none;
-	break;
-	//создание скрина для сохранения
-	case "createLdScreenShot":
-		var i = 0;
-		//выбираем номер скриншота, проверяя существование файлов 
-		while (file_exists(obj_ctrl_gm_sv.ctrl_sv_gmDir + "save_screenshots/SvScreenShot" + string(i) + ".png")) {
-			i++;
-		}
-		screen_save("screenshots/ScreenShot_" + string(i) + ".png");
-	break;
+	break;	
 	//создание пользовательского скрина 
 	case "createScreenShot":
 		var i = 1;
@@ -29,6 +20,18 @@ switch (action) {
 		}
 		screen_save("screenshots/ScreenShot" + string(i) + ".png");//всплывающая надпись
 		draw_caption = spr_gm_caption_screen;
+		draw_caption_y = room_height / 2;
+		//движение текста вверх
+		alarm[1] = 0.1 * room_speed;
+	break;
+	case "newTaskAlert": 
+		draw_caption = spr_gm_caption_newTask;
+		draw_caption_y = room_height / 2;
+		//движение текста вверх
+		alarm[1] = 0.1 * room_speed;
+	break;
+	case "gameSaveAlert": 
+		draw_caption = spr_gm_caption_gameSave;
 		draw_caption_y = room_height / 2;
 		//движение текста вверх
 		alarm[1] = 0.1 * room_speed;

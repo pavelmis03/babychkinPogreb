@@ -7,18 +7,24 @@
 //на которые требуется время до перехода в другую комнату
 
 //если пользователь не запретил посещение комнаты пикселей, второе условие для случаев, 
-//когда я не хочу отправлять игрока в пиксели между игрой и диалогом, например
+//когда я не хочу отправлять игрока в пиксели между игрой и диалогом
 if (obj_ctrl_set.ctrl_set_map_curr[?"pixels"] and ctrl_gm_pixel_time != -1) {
 	room_goto(rm_pixel);
+	//ЕСЛИ ПОСЛЕ ПИКСЕЛЕЙ БУДЕМ ПЕРЕХОДИТЬ В ДРУГУЮ КОМНАТУ 
+	//obj_ctrl_gm_sv.action = "saveRoom";		//сохраняем комнату
 } else {
 	//если необходимо зайти в комнату истории
 	if (obj_ctrl_gm.ctrl_gm_goHistory) { 
 		room_goto(rm_menu_history);
+		//ЕСЛИ ПОСЛЕ ИСТОРИИ БУДЕМ ПЕРЕХОДИТЬ В ДРУГУЮ КОМНАТУ 
+		//obj_ctrl_gm_sv.action = "saveRoom";		//сохраняем комнату
 	} else {	//??? что за случай - я так понимаю, что это для перехода после истории в комнату, которая
 										//сохранена в next_rm[|0] еще до того, как игрок отправился в комнату истории 
 		//переходим в следующую комнату в списке
-		room_goto(obj_ctrl_mv.next_rm[|0]);
-		ds_list_delete(obj_ctrl_mv.next_rm, 0);
+		//ЕСЛИ ПОСЛЕ ИСТОРИИ БУДЕМ ПЕРЕХОДИТЬ В ДРУГУЮ КОМНАТУ 
+		//obj_ctrl_gm_sv.action = "saveRoom";		//сохраняем комнату
+		room_goto(obj_ctrl_mv.next_rm[|ds_list_size(obj_ctrl_mv.next_rm) - 1]);
+		ds_list_delete(obj_ctrl_mv.next_rm, ds_list_size(obj_ctrl_mv.next_rm) - 1);
 		ds_list_add(obj_ctrl_mv.next_rm, rm_menu_mm); //а вот зачем это...
 	}
 }

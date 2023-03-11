@@ -7,8 +7,8 @@ switch (action) {
 		obj_ctrl_gm.ctrl_gm_goDlg = false;
 		obj_ctrl_gm.ctrl_gm_goHistory = false;
 		//переходим в следующую комнату в списке
-		room_goto(obj_ctrl_mv.next_rm[|0]);
-		ds_list_delete(obj_ctrl_mv.next_rm, 0);
+		room_goto(obj_ctrl_mv.next_rm[|ds_list_size(obj_ctrl_mv.next_rm) - 1]);
+		ds_list_delete(obj_ctrl_mv.next_rm, ds_list_size(obj_ctrl_mv.next_rm) - 1);
 		obj_ctrl_gm_img.action = "delImg";
 	break;
 	case "historyNextImg":

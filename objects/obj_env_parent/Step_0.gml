@@ -8,21 +8,23 @@ if (player_obj.player_col[?type] == id) {
 	player_obj.player_col[?type] = 0;
 }
 
-if (distance_to_point(player_obj.x, player_obj.y) < 70) {
-	//проверяю корректность направления взгляда игрока
-	if (abs(angle_difference(player_obj.image_angle, point_direction(player_obj.x, player_obj.y, x, y))) <= 30) {
-		//если персонаж взаимодействует с именно с нашим объектом (чтобы сразу два случайно не сработали)
-		if ((player_obj.player_col[?type] == 0) or (player_obj.player_col[?type] == id)) {
-			//массив коллизий игрока
-			player_obj.player_col[?type] = id;
-			//если дверь сейчас не находится в процессе открытия/закрытия
-			if (!interacting) {
-				can_interact = true;
-				event_user(10);
-			}
-		}
-	}
-}
+//ВМЕСТО ЭТОГО ТЕПЕРЬ СКРИПТ:
+//scr_env_canInteract() КОТОРЫЙ ВЫЗЫВАЕТСЯ ИЗ КАЖДОГО РЕБЕНКА ОТДЕЛЬНО СО СВОИМИ УСЛОВИЯМИ
+//if (distance_to_point(player_obj.x, player_obj.y) < 70) {
+//	//проверяю корректность направления взгляда игрока
+//	if (abs(angle_difference(player_obj.image_angle, point_direction(player_obj.x, player_obj.y, x, y))) <= 30) {
+//		//если персонаж взаимодействует с именно с нашим объектом (чтобы сразу два случайно не сработали)
+//		if ((player_obj.player_col[?type] == 0) or (player_obj.player_col[?type] == id)) {
+//			//массив коллизий игрока
+//			player_obj.player_col[?type] = id;
+//			//если дверь сейчас не находится в процессе открытия/закрытия
+//			if (!interacting) {
+//				can_interact = true;
+//				event_user(10);
+//			}
+//		}
+//	}
+//}
 
 
 //выполнение действия

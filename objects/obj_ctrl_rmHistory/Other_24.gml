@@ -1,7 +1,7 @@
 /// @description проверка наличия сохранений и выгрузка данных 
 
 //переносим в память информацию из файла
-ini_open(obj_ctrl_gm_sv.ctrl_sv_gmDir + "save_cmn.ini");
+ini_open(obj_ctrl_gm_sv.ctrl_sv_gmDir + "/save_cmn.ini");
 //количество просмотров истории (по нему ориентируюсь какой промежуток выбирать)
 var t = ini_read_real("HISTORY", "history_number", 0);
 if (obj_ctrl_gm.ctrl_gm_goDlg) {

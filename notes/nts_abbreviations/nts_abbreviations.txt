@@ -36,6 +36,7 @@ cnt - count
 inv - inventory
 rmv - remove
 env - environment
+eff - effect
 
 bg - background
 el - element

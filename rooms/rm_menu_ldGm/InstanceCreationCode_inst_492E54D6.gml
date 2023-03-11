@@ -7,5 +7,5 @@ image_angle = 180;	//чтобы не создавать 4 стрелки, про
 //y = view_hport[0] * 0.8;
 
 type = "func";
-action = "nextSv";
+action = "preGm";
 sound = [20, "snd_none", "snd_none"];

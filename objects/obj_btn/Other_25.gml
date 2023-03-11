@@ -37,9 +37,8 @@ switch (type) {
 		obj_ctrl_dlg.type = type;
 		//передаем действия
 		obj_ctrl_dlg.action = action;
-		//сохраняем сразу, а диалог чисто уведомительный
-		action = "saveSettings";
-		event_user(14);
+		//сразу сохраняем настройки, а диалог исключительно уведомительный
+		obj_ctrl_set.action = "saveSettings";
 		//костыль, без которого диалог не работает
 		action = ["saveSettings", "cansel"];
 		//для дверей с подтверждением надо отменить нажатие после появления диалога. т.к. в step 

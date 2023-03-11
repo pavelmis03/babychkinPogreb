@@ -31,10 +31,15 @@ if (btn_enable) {
 		} else {
 			//если мы нажимаем на кнопки диспетчера и выжженную, то звук надо воспроизвести
 			if ((action == "scaryVoice") or (action == "none")) {
+			//if (action == "scaryVoice") {
 				//воспроизводим звук клика
 				obj_ctrl_snd.action = "playSnd";
 				array_push(obj_ctrl_snd.sound, sound[0], sound[2]);
+				//array_push(obj_ctrl_snd.sound, sound[0], sound[2][irandom_range(1, 6)]);
 			}
+			/*} else { //для пустой кнопки
+				array_push(obj_ctrl_snd.sound, sound[0], sound[2]);
+			}*/
 		}
 		//назначаем нажатие, чтобы поменялся спрайт
 		btn_pressed = true;

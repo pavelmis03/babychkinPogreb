@@ -12,11 +12,11 @@ function scr_newGm() {
 	}
 	
 	//папка игры
-	var game_path = "saves/game_" + string(i) + "/";
+	var game_path = "saves/game_" + string(i);
 	directory_create(game_path);
 	
 	//папка скриншотов игры
-	directory_create("saves/game_" + string(i) + "/save_screenshots/");
+	//directory_create("saves/game_" + string(i) + "/save_screenshots/");
 
 	//говорим, что загрузки не было
 	obj_ctrl_gm_sv.ctrl_sv_ldDir = "newGm";
@@ -24,7 +24,7 @@ function scr_newGm() {
 	
 	//пересоздаю или затираю данные, не важно
 	//общие данные по сохранениям
-	ini_open(game_path + "save_cmn.ini");
+	ini_open(game_path + "/save_cmn.ini");
 	//данные для истории (номер просмотра)
 	ini_write_real("HISTORY", "history_number", 0);
 	//данные для диалогов (номер просмотра)

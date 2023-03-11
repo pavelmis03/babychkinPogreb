@@ -31,40 +31,44 @@ switch (action) {
 	break;  
 	//перелистывание страницы раздела
 	case "journalNext":
-		//получаю текущую страницу и максимальное количество страниц
-		var t = ctrl_jrn_btn_map[?ctrl_jrn_btn_active];
-		var t2 = ctrl_jrn_txt_map[?ctrl_jrn_btn_active];
-		//если страница не последняя
-		if (t[2] + 2 <= ceil(array_length(t2) / ctrl_jrn_txt_str)) {
-			t[2] += 2;	//у нас ведь разворот и перелистывается сразу две страницы
-			//спрайт перелистывания страницы
-			sprite_index = spr_journal_page;
-			image_speed = 1;
-			//стрелочки на страницах не должны существовать во время перелистывания
-			instance_destroy(ctrl_jrn_btn_arrow_arr[0]);
-			instance_destroy(ctrl_jrn_btn_arrow_arr[1]);
+		if (array_length(ctrl_jrn_btn_arrow_arr) != 0) {
+			//получаю текущую страницу и максимальное количество страниц
+			var t = ctrl_jrn_btn_map[?ctrl_jrn_btn_active];
+			var t2 = ctrl_jrn_txt_map[?ctrl_jrn_btn_active];
+			//если страница не последняя
+			if (t[2] + 2 <= ceil(array_length(t2) / ctrl_jrn_txt_str)) {
+				t[2] += 2;	//у нас ведь разворот и перелистывается сразу две страницы
+				//спрайт перелистывания страницы
+				sprite_index = spr_journal_page;
+				image_speed = 1;
+				//стрелочки на страницах не должны существовать во время перелистывания
+				instance_destroy(ctrl_jrn_btn_arrow_arr[0]);
+				instance_destroy(ctrl_jrn_btn_arrow_arr[1]);
+			}
+			//переносим измененные данные (напрямую не позволяет движок)
+			array_copy(ctrl_jrn_btn_map[?ctrl_jrn_btn_active], 0, t, 0, array_length(t));
 		}
-		//переносим измененные данные (напрямую не позволяет движок)
-		array_copy(ctrl_jrn_btn_map[?ctrl_jrn_btn_active], 0, t, 0, array_length(t));
 	break;
 	//перелистывание страницы раздела
 	case "journalPre":
-		//получаю текущую страницу и максимальное количество страниц
-		var t = ctrl_jrn_btn_map[?ctrl_jrn_btn_active];
-		var t2 = ctrl_jrn_txt_map[?ctrl_jrn_btn_active];
-		//если страница не последняя
-		if (t[2] - 2 >= 1) {
-			t[2] -= 2;
-			//спрайт перелистывания страницы
-			sprite_index = spr_journal_page;
-			image_index = image_number - 0.1;
-			image_speed = -1;
-			//стрелочки на страницах не должны существовать во время перелистывания
-			instance_destroy(ctrl_jrn_btn_arrow_arr[0]);
-			instance_destroy(ctrl_jrn_btn_arrow_arr[1]);
+		if (array_length(ctrl_jrn_btn_arrow_arr) != 0) {
+			//получаю текущую страницу и максимальное количество страниц
+			var t = ctrl_jrn_btn_map[?ctrl_jrn_btn_active];
+			var t2 = ctrl_jrn_txt_map[?ctrl_jrn_btn_active];
+			//если страница не последняя
+			if (t[2] - 2 >= 1) {
+				t[2] -= 2;
+				//спрайт перелистывания страницы
+				sprite_index = spr_journal_page;
+				image_index = image_number - 0.1;
+				image_speed = -1;
+				//стрелочки на страницах не должны существовать во время перелистывания
+				instance_destroy(ctrl_jrn_btn_arrow_arr[0]);
+				instance_destroy(ctrl_jrn_btn_arrow_arr[1]);
+			}
+			//переносим измененные данные (напрямую не позволяет движок)
+			array_copy(ctrl_jrn_btn_map[?ctrl_jrn_btn_active], 0, t, 0, array_length(t));
 		}
-		//переносим измененные данные (напрямую не позволяет движок)
-		array_copy(ctrl_jrn_btn_map[?ctrl_jrn_btn_active], 0, t, 0, array_length(t));
 	break;
 	case "journalHistory":
 		//переходим в раздел истории

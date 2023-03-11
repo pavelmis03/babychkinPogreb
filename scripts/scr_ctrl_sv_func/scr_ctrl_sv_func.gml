@@ -43,10 +43,16 @@ function scr_sv_dtDirName() {
 	str = "_" + str + "_";
 	*/
 	
-	ini_open(ctrl_sv_gmDir + "save_cmn.ini");
+	ini_open(ctrl_sv_gmDir + "/save_cmn.ini");
 	str = "save_" + string(ini_read_real("SAVES", "save_number", 0) + 1);
 	ini_close();
 	
 	return str;
 }
 
+/// @function scr_sv_ldSvOnPage(action);
+/// @description загружает список сохранений в меню загрузок 
+/// @param {} action действие: подгрузка из новой папки при смене игры или подгрузка следующей страницы
+function scr_sv_ldSvOnPage(action) {
+
+}

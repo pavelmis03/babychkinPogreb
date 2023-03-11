@@ -2,7 +2,7 @@
 
 //main
 action = "";
-isPause = false;	//активирована ли пауза
+//isPause = false;	//активирована ли пауза
 
 
 //drawing

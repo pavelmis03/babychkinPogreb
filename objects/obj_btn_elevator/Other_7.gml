@@ -24,6 +24,10 @@ if (btn_pressed) {
 		obj_ctrl_rmElevator.ctrl_elevator_id_btn_pressed = id;
 	} else {
 		//бесполезные кнопки можно несколько раз нажимать
+		//поэтому отжимаем ее обратно и она снова говтова к использованию
 		btn_pressed = false; 
+		var str = sprite_get_name(sprite_index);
+		var str1 = string_copy(str, 0, string_length(str) - 1); 
+		sprite_index = asset_get_index(str1 + "1");
 	}
 }

@@ -29,16 +29,31 @@ if (instance_exists(obj_ctrl_gm_iss)) {
 }
 
 //удаление папки сохранения игры, если игрок вышел в меню, не сделав ни одного сохранения
-ini_open(obj_ctrl_gm_sv.ctrl_sv_gmDir + "save_cmn.ini");	//файл общей инфы по сохранениям
+ini_open(obj_ctrl_gm_sv.ctrl_sv_gmDir + "/save_cmn.ini");	//файл общей инфы по сохранениям
 
 if (ini_read_real("SAVES", "save_number", 0) == 0) {
 	directory_destroy(obj_ctrl_gm_sv.ctrl_sv_gmDir);
+	ini_open("gameInfo.ini");
+	ini_write_string("GAMEINFO", "lastGame", obj_ctrl_gm_sv.ctrl_sv_gmDir);
+	ini_close();
+} else { //если были сохранения, то записываем текущую игру, как последнюю, 
+			//чтобы потом автоматически подставить в меню загрузок
+	ini_open("gameInfo.ini");
+	ini_write_string("GAMEINFO", "lastGame", obj_ctrl_gm_sv.ctrl_sv_gmDir);
+	ini_close();
+	
+	//удаляем недействительное сохранение
+	ini_open(obj_ctrl_gm_sv.ctrl_sv_svDir + "/saveInfo.ini");
+	if (!ini_read_real("MAIN", "saveValid", 0)) {	//если текущее сохранение помечено как недействительное
+		directory_destroy(obj_ctrl_gm_sv.ctrl_sv_svDir);
+	}
+	ini_close();
 }
 
 ini_close();
 
 //очищаю список сохраненных комнат (теперь он не нужен)
-ds_list_clear(ctrl_gm_changedRm);
+//ds_list_clear(ctrl_gm_changedRm);
 
 obj_ctrl_mv.action = "addRm";
 room_goto(rm_menu_mm);
