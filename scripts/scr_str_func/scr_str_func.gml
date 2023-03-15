@@ -42,6 +42,10 @@ function scr_str_extractNums(str) {
 			tStr = "";
 		}
 	}
+	//если на последней итерации была цифра 
+	if (tStr != "") {
+		array_push(numArr, tStr);
+	}
 	
 	if (array_length(numArr) == 0) {
 		return "^";

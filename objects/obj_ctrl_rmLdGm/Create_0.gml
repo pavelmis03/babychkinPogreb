@@ -15,21 +15,33 @@ draw_spr = spr_sys_none;	//спрайт скриншота сохранения
 draw_txt_x = room_width * 0.31;	//координаты отрисовки скрина
 draw_txt_y = room_height * 0.36;
 //узнать, как хранятся сохранения и считать, исходя их того, сколько всего и сколько помещается на странице
-ctrl_ldGm_sv_curr = 1;	//текущее сохранение
-ctrl_ldGm_sv = 1;		//всего сохранений (это для меня)
-ctrl_ldGm_page_curr = 1; //текущая страница сохранений (для пользователя)
+ctrl_ldGm_sv_curr = 0;	//текущее сохранение
+ctrl_ldGm_sv_currPath = "";	//текущее сохранение (путь)
+ctrl_ldGm_sv = 0;		//всего сохранений (это для меня)
+ctrl_ldGm_page_curr = 0; //текущая страница сохранений (для пользователя)
 ctrl_ldGm_svOnPage = 4; // количество сохранений на странице
 //узнать, как хранятся сохранения и считать, исходя их того, сколько всего и сколько помещается на странице
 ctrl_ldGm_page = ctrl_ldGm_sv / 4;	 //всего страниц (делим на количество сохранений на странице)
-ctrl_ldGm_gm_curr = 1;	//текущая игра
+ctrl_ldGm_gm_curr = 0;	//текущая игра
+ctrl_ldGm_gm_currPath = "";	//текущая игра (путь)
 var n = 0;
 while (directory_exists("saves/game_" + string(n))) {
 	n++;
 }
 ctrl_ldGm_gm = n;		//всего игр
 
-//ПРИ АВТОПОДСТАНОВКЕ ПОСЛЕДНЕЙ ИГРОВОЙ СЕССИИ ПРОВЕРЯТЬ, СУЩЕСТВУЕТ ЛИ ЗАПИСЬ В ФАЙЛЕ "gameInfo.ini" -> "lastGame"
-
+//автоподстановка последних игры и сохранения
+if (file_exists("gameInfo.ini")) {
+	ini_open("gameInfo.ini");
+	//если игры не существует, мы до этой строки просто не дойдем т.к. при попытке зайти 
+	//в меню загрузок начнется новая игра, аналогично с сохранением
+	var str = ini_read_string("GAMEINFO", "lastGame", "saves/game_0");
+	var str1 = ini_read_string("GAMEINFO", "lastSave", "saves/game_0/save_1");
+	ctrl_ldGm_gm_currPath = str;
+	ctrl_ldGm_gm_curr = int64(string_copy(str, string_last_pos("_", str) + 1, 10) + 1);	//копируем последний символ
+	ctrl_ldGm_sv_currPath = str1;
+	ctrl_ldGm_sv_curr = int64(string_copy(str1, string_last_pos("_", str1) + 1, 10));	//копируем последний символ
+}
 
 //text
 //ctrl_ldGm_sv_map = ds_map_create();	//здесь будeт храниться сохранения и данные о них

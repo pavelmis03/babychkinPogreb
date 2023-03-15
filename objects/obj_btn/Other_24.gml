@@ -29,21 +29,24 @@ switch (action) {
 		obj_ctrl_set.action = "defaultSettings";
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
-	//просто оповещение
+	//оповещение о том, что настройки уже равны настройкам по умолчанию
 	case "alreadYdefaultSet": 
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
-	//просто оповещение
+	//оповещение, что редктор карт пока не доступен
 	case "noEditor": 
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
+	//оповещение, что режим бесконечной игры пока недоступен
 	case "noEndless": 
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
 	
 	//ГЛАВНОЕ МЕНЮ
 	//пока только выход, возможно, понадобится сохранение
-	case "exitGm": game_end(); break;
+	case "exitGm": 
+		game_end(); 
+	break;
 	//перейти в меню загрузки уровня
 	case "goToLdGm": 
 		room_goto(rm_menu_ldGm);

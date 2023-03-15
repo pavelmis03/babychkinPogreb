@@ -1,4 +1,4 @@
-/// @description обеъкт монстр
+/// @description объект монстр
 
 
 //main

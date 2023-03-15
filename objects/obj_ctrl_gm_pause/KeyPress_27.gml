@@ -5,7 +5,9 @@ if (room == rm_menu_pause) {
 	if (!obj_ctrl_dlg.ctrl_dlg_exist) {
 		//если мы уже в паузе, возвращаемся
 		obj_ctrl_mv.action = "goToRmPre";
-		//isPause = false;
+		/* объяснение см. в Clean up
+		isPause = false;
+		*/
 	}
 } else {
 	//из паузы можно попасть только в эти меню, чтобы ее оттуда нельзя было вызвать
@@ -17,12 +19,14 @@ if (room == rm_menu_pause) {
 		obj_ctrl_mv.ctrl_mv_rmChangeDelay = 0.1;		//даем время на сохранение
 		obj_ctrl_gm_sv.action = "saveRoom";				//сохраняем комнату
 		
+		/* объяснение см. в Clean up
 		//если комната была непостоянна до паузы, мы ее запоминаем, чтобы при случае вернуть ей постоянность
 		if (room_persistent == 0) {
 			ds_list_add(ctrl_pause_rmEscapeId, room);
 		}
 		room_persistent = 1;
-		//isPause = true;
+		isPause = true;		//включаем индикатор паузы, чтобы сработало 
+		*/
 		//action = "goToPause";
 	}
 }

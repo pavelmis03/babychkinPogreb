@@ -9,7 +9,7 @@ switch (action) {
 	break;
 	//сохранение комнаты при переходе в следующую
 	case "saveRoom":
-		scr_sv_svRm(ctrl_sv_svDir + "/" + room_get_name(room) + ".txt");
+		scr_sv_svRm(ctrl_sv_svDir);	
 	break;
 	//загрузка комнаты 
 	case "loadRm":

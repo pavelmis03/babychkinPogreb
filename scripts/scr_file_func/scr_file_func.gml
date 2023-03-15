@@ -10,7 +10,7 @@ function scr_file_findStr(file, str) {
 			file = file_text_open_read(file);
 			var fileInStr = "";
 
-			while (!file_text_eof(file)) {
+			while (!file_text_eof(file)) { //собираю весь файл в одну строку
 				fileInStr += file_text_readln(file);
 			}
 			res = string_count(str, fileInStr);
