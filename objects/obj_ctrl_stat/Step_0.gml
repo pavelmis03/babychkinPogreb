@@ -44,9 +44,9 @@ if (ctrl_stat_menu) {
 		if (room_height <= view_hport[0]) {
 			//удаляю стрелочки, если они есть
 			if (array_length(ctrl_stat_arr_btn) == 3) {
-				instance_destroy(ctrl_stat_arr_btn[array_length(ctrl_stat_arr_btn) - 1]);
+				instance_destroy(array_last(ctrl_stat_arr_btn));
 				array_pop(ctrl_stat_arr_btn);
-				instance_destroy(ctrl_stat_arr_btn[array_length(ctrl_stat_arr_btn) - 1]);
+				instance_destroy(array_last(ctrl_stat_arr_btn));
 				array_pop(ctrl_stat_arr_btn);
 			}
 		}

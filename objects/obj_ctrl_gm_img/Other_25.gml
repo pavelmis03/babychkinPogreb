@@ -9,6 +9,8 @@ switch (action) {
 		draw_img = sprite_add("tempScreenShot.png", 1, true, true, 0, 0);
 	break;
 	case "delImg":
+		//удаляю загруженный спрайт
+		sprite_delete(draw_img);
 		draw_img = spr_sys_none;
 	break;	
 	//создание пользовательского скрина 

@@ -103,7 +103,7 @@ switch (action) {
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 		scr_newGm(); //скрипт приготовлений к игре
 	break;
-	//загрузить выбранное сохранени
+	//загрузить выбранное сохранение
 	case "ldSv": 
 		obj_ctrl_rmLdGm.action = "ldSv";
 		obj_ctrl_dlg.ctrl_dlg_del = true;
@@ -128,6 +128,16 @@ switch (action) {
 		obj_ctrl_rmLdGm.action = "preSv";
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
+	//следующая страница сохранений
+	case "ldNextPage": 
+		obj_ctrl_rmLdGm.action = "ldNextPage";
+		obj_ctrl_dlg.ctrl_dlg_del = true;
+	break;
+	//предыдущая страница сохранений
+	case "ldPrePage": 
+		obj_ctrl_rmLdGm.action = "ldPrePage";
+		obj_ctrl_dlg.ctrl_dlg_del = true;
+	break;
 	//следующая игровая сессия 
 	case "nextGm": 
 		obj_ctrl_rmLdGm.action = "nextGm";
@@ -136,6 +146,13 @@ switch (action) {
 	//предыдущая игровая сессия
 	case "preGm": 
 		obj_ctrl_rmLdGm.action = "preGm";
+		obj_ctrl_dlg.ctrl_dlg_del = true;
+	break;
+	//выбрать текущее сохранение
+	case "selectLoaderBtn": 
+		obj_ctrl_rmLdGm.action = "selectLoaderBtn";
+		//передаю номер, под которым хранится мой id в массиве id кнопок (костыль)
+		obj_ctrl_rmLdGm.btn_loaderNum = scr_arr_fingEl(obj_ctrl_rmLdGm.btn_loaderId, id, 1);
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
 	//НАСТРОЙКИ

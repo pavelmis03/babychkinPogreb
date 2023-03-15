@@ -1,6 +1,6 @@
-/// @description переход между начатыми играми
+/// @description переход между страницами
 
-action = "preGm";
+action = "ldPrePage";
 
 
 

@@ -1,2 +1,4 @@
 /// @description 
-//ds_map_destroy(ctrl_ldGm_sv_map);
+
+//удаляю спрайт скрина сохранения
+sprite_delete(draw_img);

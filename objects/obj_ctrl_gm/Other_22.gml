@@ -47,7 +47,7 @@ if (ini_read_real("SAVES", "save_number", 0) == 0) {
 	if (!ini_read_real("MAIN", "saveValid", 0)) {	//если текущее сохранение помечено как недействительное
 		directory_destroy(lastSv);
 		var num = scr_str_extractNums(lastSv); //номера сохранений
-		num = num[array_length(num) - 1];	//номер последнего сохранения
+		num = array_last(num);	//номер последнего сохранения
 		//вырезаем строку до номера сохранения и добавляем номер - 1 
 		lastSv = string_copy(lastSv, 0, string_last_pos("_", lastSv)) + string(int64(num) - 1);
 	}

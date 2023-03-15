@@ -1,6 +1,6 @@
 /// @description пролистывание сохранений
 
-action = "preSv";
+action = "nextSv";
 
 
 
