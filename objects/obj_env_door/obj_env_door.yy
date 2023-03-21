@@ -14,7 +14,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Environment",
-    "path": "folders/Objects/Game/MapObj/Simple/Environment.yy",
+    "path": "folders/Objects/Game/MapObj/Interaction/Environment.yy",
   },
   "parentObjectId": {
     "name": "obj_env_parent",

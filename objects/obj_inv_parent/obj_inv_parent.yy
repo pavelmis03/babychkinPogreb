@@ -13,7 +13,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "parent",
-    "path": "folders/Objects/Game/MapObj/Simple/Inventory/parent.yy",
+    "path": "folders/Objects/Game/MapObj/Interaction/Inventory/parent.yy",
   },
   "parentObjectId": null,
   "persistent": false,

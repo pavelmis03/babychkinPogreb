@@ -1,5 +1,8 @@
 /// @description 
 
+if (!init) {
+	event_user(0);
+}
 
 //выполнение действия
 if (action != "") {

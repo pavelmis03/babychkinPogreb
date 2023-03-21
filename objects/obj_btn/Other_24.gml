@@ -113,6 +113,11 @@ switch (action) {
 		obj_ctrl_rmLdGm.action = "delSv";
 		obj_ctrl_dlg.ctrl_dlg_del = true;
 	break;
+	//удалить выбранное сохранение (если найдены ветви). по сути делает сути то же, что и delSv
+	case "delSv1": 
+		obj_ctrl_rmLdGm.action = "delSv";
+		obj_ctrl_dlg.ctrl_dlg_del = true;
+	break;
 	//удалить текущую игру
 	case "delGm": 
 		obj_ctrl_rmLdGm.action = "delGm";

@@ -125,6 +125,25 @@ switch (type) {
 		image_speed = -1;
 		btn_pressed = false;
 	break;
+	//относится к меню загрузки игры. при удалении сохранения
+	case "confirmYNCl_delSv": 
+		obj_ctrl_dlg.ctrl_dlg_need = true;
+		obj_ctrl_dlg.type = type;
+		action[0] = "delSv";
+		//если в папке есть ветви, выводим дополнительное предупреждение
+		var t = file_find_first(obj_ctrl_rmLdGm.ctrl_ldGm_sv_currPath + "/*", fa_directory);
+		if ((t != "") and (string_pos(".", t) == 0)) {	//второе условие, чтобы не находились файлы
+			action[0] = "delSv1";
+		}
+		//выводим диалог предупреждения
+		obj_ctrl_dlg.action = action;
+		var str = sprite_get_name(sprite_index);
+		var str1 = string_copy(str, 0, string_length(str) - 1); 
+		sprite_index = asset_get_index(str1 + "1");
+		btn_enter = false;
+		image_speed = -1;
+		btn_pressed = false;
+	break;
 	//кнопки перехода в другую комнату 
 	case "transition": 
 		//в некоторых случаях нужно задержаться в текущей комнате перед переходом

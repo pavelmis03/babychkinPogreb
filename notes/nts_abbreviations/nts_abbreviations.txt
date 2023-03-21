@@ -37,6 +37,7 @@ inv - inventory
 rmv - remove
 env - environment
 eff - effect
+buh - buhanka
 
 bg - background
 el - element

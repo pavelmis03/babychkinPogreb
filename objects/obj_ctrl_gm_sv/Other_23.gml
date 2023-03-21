@@ -10,6 +10,7 @@ ini_write_string("SAVE_INFO", "dateTime", date_datetime_string(date_current_date
 ini_write_string("SAVE_INFO", "dateTimeInGame", string("/*игровые дата и время*/"));
 ini_write_string("SAVE_INFO", "quest", string("/*название квеста*/"));
 ini_write_string("SAVE_INFO", "location", string("/*локация*/"));
+ini_write_string("SAVE_INFO", "name", string(irandom(99999)));	//имя, которое потом сохранится в родителя
 ini_close();
 
 //сохраняем информацию о том, что было произведено сохранение

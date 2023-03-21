@@ -10,6 +10,9 @@ var x2 = bbox_right;
 var y1 = bbox_top;
 var y2 = bbox_bottom;
 
+var str = sprite_get_name(sprite_index);
+var str1 = string_copy(str, 0, string_length(str) - 1); 
+
 //если был сигнал на деактивацию кнопок 
 if ((obj_ctrl_dlg.ctrl_dlg_disable_btn == 1) and (type != "dlg_btn")) {
 	btn_enable = false;
@@ -19,8 +22,6 @@ if (obj_ctrl_dlg.ctrl_dlg_disable_btn == 2) {
 	btn_enable = true;
 }
 
-var str = sprite_get_name(sprite_index);
-var str1 = string_copy(str, 0, string_length(str) - 1); 
 //настройка спрайта недоступности
 if (!btn_enable) {
 	//image_speed = 0;

@@ -49,8 +49,9 @@ player_solidObj[0] = obj_simple_wall;
 player_solidObj[1] = obj_inv_parent;
 player_solidObj[2] = obj_env_door;
 player_solidObj[3] = obj_env_terminal;
+player_solidObj[4] = obj_buh;
 
-//interaction 
+//interaction
 player_pressE = false;
 
 //actions

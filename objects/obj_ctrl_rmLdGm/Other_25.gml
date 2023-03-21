@@ -9,12 +9,17 @@ switch (action) {
 	break;
 	//удалить выбранное сохранение
 	case "delSv": 
-		
-		action = "";
+		//удаляем выбранное сохранение 
+		scr_ld_delSv(ctrl_ldGm_sv_currPath);
+		action = "selectLoaderBtn";	//обновляем инфо о кнопке в фокусе
 	break;
 	//удалить текущую игру
-	case "delGm": 
-		
+	case "delGm": //если игрок согласился с тем, что хочет удалить текущую игру, что ж, его выбор
+		//directory_destroy(ctrl_ldGm_gm_curr);
+		//выбирать другую директорию
+		//перезагружать кнопки
+		//обновлять количество игр и страниц и т.д.
+		//если это была единственная/последняя игра, выводить диалог о начале новой игры
 		action = "";
 	break;
 	//Следующее сохранение
@@ -89,15 +94,18 @@ switch (action) {
 			ctrl_ldGm_gm_curr++;
 			ctrl_ldGm_svPaths = [];	//обнуляем список сохранений
 			//получаю новый путь игры
-			ctrl_ldGm_gm_currPath = string_copy(ctrl_ldGm_gm_currPath, 0, string_last_pos("_", ctrl_ldGm_gm_currPath)) + string(ctrl_ldGm_gm_curr);
-			ctrl_ldGm_sv_currPath = ctrl_ldGm_gm_currPath + "/save_1";	//путь до первого сохранения
+			ctrl_ldGm_gm_currPath = ctrl_ldGm_gmPaths[ctrl_ldGm_gm_curr];
 			//нахожу все папки сохранений, считаю количество сохранений
-			scr_ld_findSvPaths(ctrl_ldGm_sv_currPath, 1);
+			//(передаю путь, дальше работа с индексами уже в скрипте)
+			scr_ld_findSvPaths(ctrl_ldGm_gm_currPath + "/save_");
+			//общее количество сохранений
+			ctrl_ldGm_sv = array_length(ctrl_ldGm_svPaths);
+			ctrl_ldGm_sv_currPath = ctrl_ldGm_svPaths[0]; //путь до первого сохранения
 			ctrl_ldGm_page_curr = 1;	//номер страницы (начинаем с начала)
 			//количество страниц считаем после того, как посчитали количество сохранений
 			ctrl_ldGm_page = ceil(ctrl_ldGm_sv / ctrl_ldGm_svOnPage);
 
-			event_user(14);	//создание кнопок-загрузчиков
+			scr_ld_createLdBtn();	//создание кнопок-загрузчиков
 			action = "selectLoaderBtn";
 		}
 	break;
@@ -107,15 +115,18 @@ switch (action) {
 			ctrl_ldGm_gm_curr--;
 			ctrl_ldGm_svPaths = [];	//обнуляем список сохранений
 			//получаю новый путь игры
-			ctrl_ldGm_gm_currPath = string_copy(ctrl_ldGm_gm_currPath, 0, string_last_pos("_", ctrl_ldGm_gm_currPath)) + string(ctrl_ldGm_gm_curr);
-			ctrl_ldGm_sv_currPath = ctrl_ldGm_gm_currPath + "/save_1";	//путь до первого сохранения
+			ctrl_ldGm_gm_currPath = ctrl_ldGm_gmPaths[ctrl_ldGm_gm_curr];
 			//нахожу все папки сохранений, считаю количество сохранений
-			scr_ld_findSvPaths(ctrl_ldGm_sv_currPath, 1);
+			//(передаю путь, дальше работа с индексами уже в скрипте)
+			scr_ld_findSvPaths(ctrl_ldGm_gm_currPath + "/save_");
+			//общее количество сохранений
+			ctrl_ldGm_sv = array_length(ctrl_ldGm_svPaths);
+			ctrl_ldGm_sv_currPath = ctrl_ldGm_svPaths[0]; //путь до первого сохранения
 			ctrl_ldGm_page_curr = 1;	//номер страницы (начинаем с начала)
 			//количество страниц считаем после того, как посчитали количество сохранений
 			ctrl_ldGm_page = ceil(ctrl_ldGm_sv / ctrl_ldGm_svOnPage);
 
-			event_user(14);	//создание кнопок-загрузчиков
+			scr_ld_createLdBtn();	//создание кнопок-загрузчиков
 			action = "selectLoaderBtn";
 		}
 	break;

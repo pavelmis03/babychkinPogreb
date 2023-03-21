@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Other",
-    "path": "folders/Objects/Game/MapObj/Simple/Other.yy",
+    "path": "folders/Objects/Game/MapObj/Interaction/Other.yy",
   },
   "parentObjectId": null,
   "persistent": false,

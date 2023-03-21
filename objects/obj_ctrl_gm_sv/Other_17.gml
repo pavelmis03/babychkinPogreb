@@ -11,6 +11,8 @@ if (ctrl_sv_ldDir == "newGm") {
 	ini_open(ctrl_sv_svDir + "/saveInfo.ini");
 	//действительность сохранения
 	ini_write_real("MAIN", "saveValid", 0);
+	ini_write_string("SAVE_INFO", "name", string(irandom(99999)));	//имя, которое потом сохранится в родителя
+	ini_write_string("SAVE_INFO", "parent", "root");	//родитель
 	ini_close();
 } else {  //если мы загружаемся из какой-то папки уже существующего сохранения
 	//создаем новое сохранение 
@@ -22,10 +24,16 @@ if (ctrl_sv_ldDir == "newGm") {
 	
 	directory_create(ctrl_sv_svDir);
 	
+	//получаю имя родительского файла 
+	ini_open(ctrl_sv_ldDir + "/saveInfo.ini");
+	var parent = ini_read_string("SAVE_INFO", "name", "err");
+	ini_close();
+	
 	//данные по текущему сохранению
 	ini_open(ctrl_sv_svDir + "/saveInfo.ini");
 	//действительность сохранения
 	ini_write_real("MAIN", "saveValid", 0);
+	ini_write_string("SAVE_INFO", "parent", parent);	//созраняю имя родителя
 	ini_close();
 	
 	//копируем файлы из папки последнего сохранения в новую папку
