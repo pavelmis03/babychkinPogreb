@@ -6,15 +6,15 @@ function scr_change_chapter(target_chp, target_chp_num) {
 	//если кто-то захочет перелистнуть в открытый раздел 
 	if (ctrl_jrn_btn_active != target_chp) {
 		//параметры текущего раздела
-		var t = ctrl_jrn_btn_map[?ctrl_jrn_btn_active];
+		var t = ctrl_jrn_map_btn[?ctrl_jrn_btn_active];
 		//параметры целевого раздела
-		var t2 = ctrl_jrn_btn_map[?target_chp];
+		var t2 = ctrl_jrn_map_btn[?target_chp];
 		//меняем флаг активации разделов
 		t[1] = false;
 		t2[1] = true;
 		//обновляем данные по разделам 
-		array_copy(ctrl_jrn_btn_map[?ctrl_jrn_btn_active], 0, t, 0, array_length(t));
-		array_copy(ctrl_jrn_btn_map[?target_chp], 0, t2, 0, array_length(t2));
+		array_copy(ctrl_jrn_map_btn[?ctrl_jrn_btn_active], 0, t, 0, array_length(t));
+		array_copy(ctrl_jrn_map_btn[?target_chp], 0, t2, 0, array_length(t2));
 		//назначаем активным раздел цели 
 		//ctrl_jrn_btn_active = target_chp;
 		//номер раздела 
@@ -29,7 +29,7 @@ function scr_change_chapter(target_chp, target_chp_num) {
 			image_index = 0;
 			image_speed = 1;
 			//скрываю перелистываемую закладку
-			var t = ctrl_jrn_btn_map[?ctrl_jrn_btn_active];
+			var t = ctrl_jrn_map_btn[?ctrl_jrn_btn_active];
 			t[0].visible = false;
 		}
 		//стрелочки на страницах не должны существовать во время перелистывания

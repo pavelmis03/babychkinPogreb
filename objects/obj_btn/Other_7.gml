@@ -11,7 +11,7 @@ image_index = image_number - 0.1 * image_speed;
 image_speed = 0;
 //если кнопка была нажата, совершаем действие
 if (btn_pressed) {
-	event_user(15);	
+	event_user(15);
 	//если кнопка нажалась и проиграла спрайт, возвращаем последнюю картинку спрайта наведения
 	var str = sprite_get_name(sprite_index);
 	var str1 = string_copy(str, 0, string_length(str) - 1); 

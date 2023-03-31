@@ -10,15 +10,15 @@ if (!file_exists("statistic.ini")) {
 //переносим в память статистику из файла
 ini_open("statistic.ini");
 //ориентируемся по ключам, причем их порядок неважен 
-var el = ds_map_find_first(ctrl_stat_map);
+var el = ds_map_find_first(ctrl_map_stat);
 //переписываем статичтику из файла
-for (var i = 0; i < ds_map_size(ctrl_stat_map); i++) {
+for (var i = 0; i < ds_map_size(ctrl_map_stat); i++) {
 	if (flag) {	//если файла не существует, создаем его с настройками по умолчанию 
-		ini_write_string("STATISTIC", el, ctrl_stat_map[?el]);
+		ini_write_string("STATISTIC", el, ctrl_map_stat[?el]);
 	}
 	//если игра только началась и считать надо из файла
-	ctrl_stat_map[?el] = ini_read_string("STATISTIC", el, ctrl_stat_map[?el]);
-	el = ds_map_find_next(ctrl_stat_map, el);
+	ctrl_map_stat[?el] = ini_read_string("STATISTIC", el, ctrl_map_stat[?el]);
+	el = ds_map_find_next(ctrl_map_stat, el);
 }
 ini_close();
 

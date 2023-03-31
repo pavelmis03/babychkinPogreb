@@ -27,8 +27,8 @@ ctrl_history_arr[3] = [7, 8];
 if (obj_ctrl_gm.ctrl_gm_goDlg) {
 	ctrl_history_arr[0] = [0, 1];
 	ctrl_history_arr[1] = [2, 2];
-	ctrl_history_arr[2] = [5, 6];
-	ctrl_history_arr[3] = [7, 8];
+	ctrl_history_arr[2] = [3, 3];
+	ctrl_history_arr[3] = [4, 5];
 }
 
 //отрисовка фона-скриншота при выводе диалогов 

@@ -9,8 +9,8 @@ switch (action) {
 	break;
 	//
 	case "set_hint":
-		var newH = ctrl_hint_hint_map[?ctrl_hint_newHint];
-		var curr = ctrl_hint_hint_map[?ctrl_hint_currHint];
+		var newH = ctrl_hint_map_hint[?ctrl_hint_newHint];
+		var curr = ctrl_hint_map_hint[?ctrl_hint_currHint];
 		//если сейчас подсказки нет или приоритет новой выше, назначаем, иначе ждем, пока сотрется предыдущая
 		if ((ctrl_hint_currHint == "") or (newH[1] >= curr[1])) {
 			//запоминаю последнюю подсказку, чтобы по ней можно было вычислить приоритет позже
@@ -23,7 +23,7 @@ switch (action) {
 			if (string_copy(ctrl_hint_currHint, 0, 3) == "RH_") {
 				//объявляю, что подсказка использовалась и теперь не стоит ее брать в ближайшее время
 				newH[3] = 15 * 60; //15 минут
-				ctrl_hint_hint_map[?ctrl_hint_currHint] = newH;
+				ctrl_hint_map_hint[?ctrl_hint_currHint] = newH;
 			}
 		}
 	break;

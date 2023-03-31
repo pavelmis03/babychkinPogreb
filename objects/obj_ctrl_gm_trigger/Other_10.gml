@@ -1,4 +1,4 @@
-/// @description 
+/// @description настройка видимости
 
 switch (type) {
 	//триггер по позиции

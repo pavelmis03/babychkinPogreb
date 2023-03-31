@@ -22,8 +22,7 @@ function scr_newGm() {
 	obj_ctrl_gm_sv.ctrl_sv_ldDir = "newGm";
 	obj_ctrl_gm_sv.ctrl_sv_gmDir = game_path;
 	
-	//пересоздаю или затираю данные, не важно
-	//общие данные по сохранениям
+	//создаю общие данные по сохранениям
 	ini_open(game_path + "/save_cmn.ini");
 	//данные для истории (номер просмотра)
 	ini_write_real("HISTORY", "history_number", 0);

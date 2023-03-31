@@ -11,11 +11,11 @@ if (!file_exists("journalInfo.ini")) {
 //переносим в память информацию из файла
 ini_open("journalInfo.ini");
 //ориентируемся по ключам в словаре, причем их порядок неважен 
-var el = ds_map_find_first(ctrl_jrn_txt_map);
+var el = ds_map_find_first(ctrl_jrn_map_txt);
 //переписываем инофрмацию из файла по разделам
-for (var i = 0; i < ds_map_size(ctrl_jrn_txt_map); i++) {
+for (var i = 0; i < ds_map_size(ctrl_jrn_map_txt); i++) {
 	if (flag) {	//если файла не существует, создаем его по умолчанию 
-		var t = ctrl_jrn_txt_map[?el];
+		var t = ctrl_jrn_map_txt[?el];
 		ini_write_string(el, "0", t[0]);	//0 - заголовое
 	}
 	var j = 0;
@@ -27,8 +27,8 @@ for (var i = 0; i < ds_map_size(ctrl_jrn_txt_map); i++) {
 		j++;
 	}
 	//добавляю получившийся массив строк к словарю текстов в журнале, в данный раздел
-	array_copy(ctrl_jrn_txt_map[?el], 0, arr, 0, array_length(arr));
-	el = ds_map_find_next(ctrl_jrn_txt_map, el);
+	array_copy(ctrl_jrn_map_txt[?el], 0, arr, 0, array_length(arr));
+	el = ds_map_find_next(ctrl_jrn_map_txt, el);
 }
 ini_close();
 

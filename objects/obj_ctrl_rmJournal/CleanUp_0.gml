@@ -1,3 +1,3 @@
 /// @description 
-ds_map_destroy(ctrl_jrn_txt_map);
-ds_map_destroy(ctrl_jrn_btn_map);
+ds_map_destroy(ctrl_jrn_map_txt);
+ds_map_destroy(ctrl_jrn_map_btn);

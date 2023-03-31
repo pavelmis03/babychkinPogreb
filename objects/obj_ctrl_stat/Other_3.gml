@@ -1,4 +1,4 @@
 /// @description 
 
-ds_map_destroy(ctrl_stat_map);
-//ds_map_destroy(ctrl_stat_map_draw);
+ds_map_destroy(ctrl_map_stat);
+//ds_map_destroy(ctrl_map_stat_draw);

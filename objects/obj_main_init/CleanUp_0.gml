@@ -2,12 +2,14 @@
 
 
 //описание 
-ds_map_destroy(global.CONST_DRAWINGS);
-ds_map_destroy(global.CONST_PRODUCT);
-ds_map_destroy(global.CONST_WEAPON);
-ds_map_destroy(global.CONST_AMULET);
-ds_map_destroy(global.CONST_PATRON);
-ds_map_destroy(global.CONST_ITEMS);
-ds_map_destroy(global.CONST_ENEMY);
-ds_map_destroy(global.CONST_NPC);
-//ds_map_destroy(global.CONST_WEIGHT);
+ds_map_destroy(global.CONST_MAP_DRAWINGS);
+ds_map_destroy(global.CONST_MAP_PRODUCT);
+ds_map_destroy(global.CONST_MAP_WEAPON);
+ds_map_destroy(global.CONST_MAP_AMULET);
+ds_map_destroy(global.CONST_MAP_PATRON);
+ds_map_destroy(global.CONST_MAP_ITEMS);
+ds_map_destroy(global.CONST_MAP_ENEMY);
+ds_map_destroy(global.CONST_MAP_NPC);
+//ds_map_destroy(global.CONST_MAP_WEIGHT);
+ds_map_destroy(global.CONST_MAP_RM_INFO);
+

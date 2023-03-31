@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.261224,
+  "duration": 1.123265,
   "parent": {
     "name": "lift",
     "path": "folders/Sounds/Snd/Game/History&comics&riddles&drawings&dialogs&MiniRms/Other/lift.yy",

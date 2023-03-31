@@ -15,31 +15,26 @@ if (btn_enable) {
 		image_index = 0;
 		//включаем скорость проигрывания 
 		image_speed = 1;
+		//воспроизводим звук клика
+		obj_ctrl_snd.action = "playSnd";
 		//проверяем, что еще не было нажато ни одной кнопки, иначе мы только меняем ей спрайт и все
-		//НАХНАЧЕНИЕ НАШЕГО ID ПРОИСХОДИТ В ANIMeND. ПОЭТОМУ СПРАЙТ ДОЛЖЕН БЫТЬ БЫСТРЫМ 
+		//НАЗНАЧЕНИЕ НАШЕГО ID ПРОИСХОДИТ В ANIMeND. ПОЭТОМУ СПРАЙТ ДОЛЖЕН БЫТЬ БЫСТРЫМ 
 		if (obj_ctrl_rmElevator.ctrl_elevator_id_btn_pressed == 0) {
-			//воспроизводим звук клика
-			obj_ctrl_snd.action = "playSnd";
 			//!!!!!добавлено следующее условие:!!!!
-			if (btn_lift_floor[?action] == rm) { //если этаж тот же самый, то звук другой
+			if (btn_lift_map_floor[?action] == rm) { //если этаж тот же самый, то звук другой
 				array_push(obj_ctrl_snd.sound, sound[0], "snd_gm_lift_currFloor");
 				btn_transitionDelay = 3;
 			} else {
 				array_push(obj_ctrl_snd.sound, sound[0], sound[2]);
-				btn_transitionDelay = 6;
+				btn_transitionDelay = 9;
 			}
 		} else {
 			//если мы нажимаем на кнопки диспетчера и выжженную, то звук надо воспроизвести
 			if ((action == "scaryVoice") or (action == "none")) {
-			//if (action == "scaryVoice") {
-				//воспроизводим звук клика
-				obj_ctrl_snd.action = "playSnd";
 				array_push(obj_ctrl_snd.sound, sound[0], sound[2]);
-				//array_push(obj_ctrl_snd.sound, sound[0], sound[2][irandom_range(1, 6)]);
+			} else { //если мы уже едем и нажата кнопка, то просто звук клика и все
+				array_push(obj_ctrl_snd.sound, sound[0], "snd_gm_lift_pressBtnOnlyClick");
 			}
-			/*} else { //для пустой кнопки
-				array_push(obj_ctrl_snd.sound, sound[0], sound[2]);
-			}*/
 		}
 		//назначаем нажатие, чтобы поменялся спрайт
 		btn_pressed = true;

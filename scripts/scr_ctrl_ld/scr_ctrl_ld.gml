@@ -1,14 +1,54 @@
-/// @function scr_ld_delSv(action);
+/// @function scr_ld_delGm(path);
+/// @param path путь удаляемой игры 
+/// @description удаляет игру
+function scr_ld_delGm(path) {
+	//удаляем папку игры
+	directory_destroy(path);
+	
+	array_delete(ctrl_ldGm_gmPaths, array_get_index(ctrl_ldGm_gmPaths, ctrl_ldGm_gm_currPath), 1);
+	ctrl_ldGm_gm--;
+	//если это была последняя игра
+	if (ctrl_ldGm_gm == 0) {
+		//удаляем кнопки-сохранений
+		instance_destroy(obj_btn_loader);
+		//запускаем новую игру
+		event_user(14);
+	} else {
+		//если это не последняя игра была, назначаем другую
+		ctrl_ldGm_gm_currPath = array_last(ctrl_ldGm_gmPaths);	
+		//определяем номер игры по индексу
+		ctrl_ldGm_gm_curr = scr_arr_fingEl(ctrl_ldGm_gmPaths, ctrl_ldGm_gm_currPath, 1);
+		ctrl_ldGm_svPaths = [];
+		//нахожу все папки сохранений
+		scr_ld_findSvPaths(ctrl_ldGm_gm_currPath);
+		//общее количество сохранений
+		ctrl_ldGm_sv = array_length(ctrl_ldGm_svPaths);
+		//назначаем последнее сохранение
+		ctrl_ldGm_sv_curr = array_length(ctrl_ldGm_svPaths) - 1;
+		ctrl_ldGm_sv_currPath = array_last(ctrl_ldGm_svPaths);	
+		
+		//общее количество сохранений
+		ctrl_ldGm_sv = array_length(ctrl_ldGm_svPaths);
+	
+		//номер страницы считаем после того, как получили номер сохранения
+		ctrl_ldGm_page_curr = ceil((ctrl_ldGm_sv_curr + 1) / ctrl_ldGm_svOnPage);	//подстраиваем страницу под номер сохранения
+		//количество страниц считаем после того, как посчитали количество сохранений
+		ctrl_ldGm_page = ceil(ctrl_ldGm_sv / ctrl_ldGm_svOnPage);
+		//обновить все переменные
+	
+		scr_ld_createLdBtn();	//создание кнопок-загрузчиков
+	}
+}
+
+/// @function scr_ld_delSv(path);
 /// @param path путь удаляемого сохранения 
 /// @description удаляет сохранение
-
 function scr_ld_delSv(path) {
 	//удаляем папку сохранения
 	directory_destroy(path);
 	
 	var parentPath = string_copy(path, 0, string_last_pos("/", path) - 1);	//копируем путь без последней папки (/save_
 	var flag = false;	//проверка на то, что, кроме нашего сохранения, были и другие папки в родитеской папке
-	//var delSv = array_length(ctrl_ldGm_svPaths);//для расчета количества сохранений, которые мы удалили
 	//удаляю несуществующие пути
 	//после удаления папки сохранения ветви тоже удаляются 
 	for (var i = 0; i < array_length(ctrl_ldGm_svPaths); i++) {
@@ -24,7 +64,6 @@ function scr_ld_delSv(path) {
 			}
 		}
 	}
-	//delSv -= array_length(ctrl_ldGm_svPaths);	//считаем разницу между 
 	
 	//если папка родителя - ветвь
 	var t = string_last_pos("/", parentPath) + 1;
@@ -36,6 +75,8 @@ function scr_ld_delSv(path) {
 	
 	//если это было последнее сохранение в игре
 	if (array_length(ctrl_ldGm_svPaths) == 0) {
+		scr_ld_delGm(ctrl_ldGm_gm_currPath);
+		/*
 		//удаляем текущую игру
 		directory_destroy(ctrl_ldGm_gm_currPath);
 		array_delete(ctrl_ldGm_gmPaths, array_get_index(ctrl_ldGm_gmPaths, ctrl_ldGm_gm_currPath), 1);
@@ -51,16 +92,15 @@ function scr_ld_delSv(path) {
 			ctrl_ldGm_gm_currPath = array_last(ctrl_ldGm_gmPaths);	
 			//определяем номер игры по индексу
 			ctrl_ldGm_gm_curr = scr_arr_fingEl(ctrl_ldGm_gmPaths, ctrl_ldGm_gm_currPath, 1);
-			//нахожу все папки сохранений, считаю количество сохранений
-			scr_ld_findSvPaths(ctrl_ldGm_gm_currPath + "/save_");
+			//нахожу все папки сохранений
+			scr_ld_findSvPaths(ctrl_ldGm_gm_currPath);
 			//общее количество сохранений
 			ctrl_ldGm_sv = array_length(ctrl_ldGm_svPaths);
 			//назначаем последнее сохранение
 			ctrl_ldGm_sv_curr = array_length(ctrl_ldGm_svPaths) - 1;
 			ctrl_ldGm_sv_currPath = array_last(ctrl_ldGm_svPaths);	
-		}
-	}
-	if (ctrl_ldGm_gm != 0) {
+		}*/
+	} else {
 		//если это не последнее сохранение 
 		//беру следующее сохранение (они же сдвигаются влево)
 		//вычитаю количество удаленных сохранений (чтобы оказаться в том же месте)
@@ -112,7 +152,7 @@ function scr_ld_createLdBtn() {
 			btn_infoStruct[$"path"] = path;
 			
 			//разбираю дату и время
-			var str = ini_read_string("SAVE_INFO", "dateTime", "1 Января 2003");
+			var str = ini_read_string("SAVE_INFO", "dateTime", "1/1/2000 6:6:6 AM");
 			var str1 = string_copy(str, 0, string_pos(" ", str));	//разбираю на дату
 			str = string_copy(str, string_pos(" ", str) + 1, 10);	//и время
 			str1 = string_split(str1, "/");		//разделяю на части
@@ -122,8 +162,8 @@ function scr_ld_createLdBtn() {
 			btn_infoStruct[$"dateTimeGm"] = ini_read_string("SAVE_INFO", "dateTimeInGame", "1 Января 2003");
 			btn_infoStruct[$"quest"] = ini_read_string("SAVE_INFO", "quest", "Лень выполнять квесты");
 			btn_infoStruct[$"location"] = ini_read_string("SAVE_INFO", "location", "Дома на диване");
-			btn_infoStruct[$"parent"] = ini_read_string("SAVE_INFO", "parent", "err");
-			btn_infoStruct[$"name"] = ini_read_string("SAVE_INFO", "name", "err");
+			btn_infoStruct[$"parent"] = scr_str_parsPath(ini_read_string("SAVE_INFO", "parent", "err"));
+			btn_infoStruct[$"name"] = scr_str_parsPath(ini_read_string("SAVE_INFO", "name", "err"));
 			btn_infoStruct[$"number"] = t_num;
 			//скрин сохранения
 			draw_img = sprite_add(path + "/svScreenShot.png", 1, true, true, 0, 0);
@@ -144,49 +184,47 @@ function scr_ld_createLdBtn() {
 }
 
 /// @function scr_ld_findSvPaths();
-/// @param {} path - корневая папка (игра или ветка) + /save_ без индекса
-/// @description находит все папки сохранений последовательно и сохраняет пути в массив рекурсивная функция
+/// @param {} path - корневая папка (игра или ветка)
+/// @description находит все папки сохранений, сортируя по длине пути. 
+	//Проверяет действительность сохранения, если оно недействительно, удаляет папку
 function scr_ld_findSvPaths(path) {	
-	//проходим по всем сохранениям в папке path с запасом
-	var n = 0;	//номера папок
-	var i = 0;	//счетчик
+	var arr = [path + "/"];	//в этот массив заношу все найденные папки, чтобы позже проверить, есть ли в них ветви 
+	var arr1 = [];	//в этот массив сохраняю пути, которые надо удалить
 	
-	/*
-	МОЖНО ИСКАТЬ ПАПКИИИИИИИ
-	fa_directory 
-	var files = [];
-	var file_name = file_find_first("/User Content/*.doc", fa_readonly);
-
-	while (file_name != "") {
-	    array_push(files, file_name);
-
-	    file_name = file_find_next();
+	//пока не проверю все, что нашел
+	while (array_length(arr) != 0) {
+		var i = 0;	//номер папки, в которой ищем ветви
+		var fn = file_find_first(arr[i] + "*", fa_directory);
+		//прохожу по выбранной папке в поисках ветвей
+		while ((fn != "") and (string_pos(".", fn) == 0)) {
+			//если это папка ветви, ее сохранять не нужно
+			if (string_copy(fn, 0, string_pos("_", fn)) != "branch_") {
+				ini_open(arr[i] + fn + "/saveInfo.ini");
+				//если сохранение действительно
+				if (ini_read_real("MAIN", "saveValid", 0) != 0) {
+					//а если это сохранение в ветви и оно действительно, то сохраняем, хех, сохранение
+					array_push(ctrl_ldGm_svPaths, arr[i] + fn);
+				} else { //иначе удаляем его
+					//directory_destroy(arr[i] + fn);
+					array_push(arr1, arr[i] + fn);	//запоминаем пустые сохранения
+				}
+				ini_close();
+			}
+			//ищем вложенные папки
+			array_push(arr, arr[i] + fn + "/");
+		
+			fn = file_find_next();
+		}
+		file_find_close();
+		//удаляем папку, которую проверили на потомков
+		array_delete(arr, i, 1);
 	}
-	file_find_close();
-*/
 	
-	while (i - n < 20) {	//если мы уже 20 итераций не встречали папку, выходим
-		i++;
-		//получаем номер сохранения
-		if (directory_exists(path + string(i))) {
-			n = i;
-			//добавляем найденный путь в массив
-			array_push(ctrl_ldGm_svPaths, path + string(i));
-		}
-		
-		var j = 1;
-		var m = 1;
-		//прохожу по веткам
-		while (j - m < 50) {	//если мы уже 50 итераций не встречали папку, выходим
-			//получаем номер сохранения
-			if (directory_exists(path + string(i) + "/branch_" + string(j))) {
-				m = j;
-				//(передаю путь, дальше работа с индексами уже в скрипте)
-				//если нахожу ветку, запускаю скрипт от нее
-				scr_ld_findSvPaths(path + string(i) + "/branch_" + string(j) + "/save_");
-			}	
-			j++;
-		}
-		
+	//удаляем пустые сохранения
+	for (var i = 0; i < array_length(arr1); i++) {
+		scr_ld_delSv(arr1[i]);
 	}
+	
+	//сортируем массив путей, чтобы были по порядку
+	array_sort(ctrl_ldGm_svPaths, true);
 }

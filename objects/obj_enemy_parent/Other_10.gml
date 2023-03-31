@@ -2,11 +2,12 @@
 
 //main
 //ПОТОМ УБРАТЬ ИЗ РОДИТЕЛЯ И ПОМЕСТИТЬ В НУЖНЫХ МОНСТРОВ
-need_sv = 1;	//нужно ли сохранять данный объект
+//need_sv = 1;	//нужно ли сохранять данный объект
+nonSvVar = ["nonSvVar", "init", "need_sv", "action", ];	
 action = "";
 
 //enemy info
-var arr = global.CONST_ENEMY[?enemy_keyName];
+var arr = global.CONST_MAP_ENEMY[?enemy_keyName];
 enemy_name = arr[0];		//название
 enemy_spd = arr[1];			//скорость
 //если враг бродит с момента создания, сразу задаем ему скорость

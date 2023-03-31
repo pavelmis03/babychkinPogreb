@@ -11,16 +11,25 @@ if (ctrl_sv_ldDir == "newGm") {
 	ini_open(ctrl_sv_svDir + "/saveInfo.ini");
 	//действительность сохранения
 	ini_write_real("MAIN", "saveValid", 0);
-	ini_write_string("SAVE_INFO", "name", string(irandom(99999)));	//имя, которое потом сохранится в родителя
+	ini_write_string("SAVE_INFO", "name", ctrl_sv_svDir);	//имя, которое потом сохранится в родителя
 	ini_write_string("SAVE_INFO", "parent", "root");	//родитель
 	ini_close();
 } else {  //если мы загружаемся из какой-то папки уже существующего сохранения
-	//создаем новое сохранение 
-	var str1 = scr_str_extractNums(ctrl_sv_ldDir); //выделяем из строки n
-	str1 = array_last(str1);	//n (предпоследнее число в строке saves/game_k/save_n
+	//создаем новое сохранение 	
+	var str1 = scr_str_extractNums(scr_file_findLast(ctrl_sv_ldDir)); //находим последнюю папку в ветви и выделяем из строки n
+	str1 = array_last(str1);	//n
  
+	//для загрузки игры (если при загрузке мы к пути сохранения добавили ветку)
+	//копирую последнее слово в пути загрузок без номера (7 - branch_) только для проверки на ветвь
+	var t = string_copy(ctrl_sv_svDir, string_last_pos("/", ctrl_sv_svDir) + 1, 7);
 	//создаю новую недействительную папку
-	ctrl_sv_svDir = string_copy(ctrl_sv_ldDir, 0, string_last_pos("_", ctrl_sv_ldDir)) + string(int64(str1) + 1);//вырезаем строку до номера сохранения и добавляем номер + 1
+	if (t == "branch_") {	//если при загрузке создана новая ветвь
+		ctrl_sv_svDir += "/save_1";
+	} else {
+		//для сохранения в течение игры и загрузки, когда не создается ветвь
+		//вырезаем строку до номера сохранения и добавляем номер + 1
+		ctrl_sv_svDir = string_copy(ctrl_sv_svDir, 0, string_last_pos("_", ctrl_sv_svDir)) + string(int64(str1) + 1);
+	}
 	
 	directory_create(ctrl_sv_svDir);
 	

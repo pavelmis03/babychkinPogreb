@@ -2,6 +2,12 @@
 
 //первая часть
 switch (action) {
+	case "dlg1_1": //второй диалог (обучалка: как передвигаться)
+		//вызываю первый диалог 
+		obj_ctrl_gm.action = "dlg1_1";
+		//ds_list_add(obj_ctrl_tml.ctrl_tml_list_, ["dlg1_1", 1.5]);
+		instance_destroy();
+	break;
 	case "dlg1_2": //второй диалог (обучалка: как взаимодействовать с предметами)
 		obj_ctrl_gm.action = "dlg1_2";
 		instance_destroy();
@@ -9,7 +15,7 @@ switch (action) {
 	case "dlg1_3": //разговор со Степаном, передача дела
 		obj_ctrl_gm.action = "dlg1_3";
 		instance_destroy();
-	break;
+	break; 
 	/*
 	case "":
 		

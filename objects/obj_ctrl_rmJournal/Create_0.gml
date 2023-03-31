@@ -3,8 +3,6 @@
 //действия:
 	//отрисовка книги
 
-randomize();
-
 //main
 action = "";
 
@@ -17,17 +15,17 @@ ctrl_jrn_chapter_target = 1;		//раздел, в который мы хотим 
 
 //text
 ctrl_jrn_txt_str = 7;	//количество строк на странице книги
-ctrl_jrn_txt_map = ds_map_create();	//здесь будет храниться текст по страницам и разделам
-ctrl_jrn_txt_map[?"history"] = ["ИСТОРИЯ"];
-ctrl_jrn_txt_map[?"quest"] = ["КВЕСТЫ"];
-ctrl_jrn_txt_map[?"monsterInfo"] = ["ИНФОРМАЦИЯ О МОНСТРАХ"];
-ctrl_jrn_txt_map[?"weaponInfo"] = ["ИНФОРМАЦИЯ ОБ ОРУЖИИ"];
-ctrl_jrn_txt_map[?"achiv"] = ["ДОСТИЖЕНИЯ"];
+ctrl_jrn_map_txt = ds_map_create();	//здесь будет храниться текст по страницам и разделам
+ctrl_jrn_map_txt[?"history"] = ["ИСТОРИЯ"];
+ctrl_jrn_map_txt[?"quest"] = ["КВЕСТЫ"];
+ctrl_jrn_map_txt[?"monsterInfo"] = ["ИНФОРМАЦИЯ О МОНСТРАХ"];
+ctrl_jrn_map_txt[?"weaponInfo"] = ["ИНФОРМАЦИЯ ОБ ОРУЖИИ"];
+ctrl_jrn_map_txt[?"achiv"] = ["ДОСТИЖЕНИЯ"];
 
 
 //btn
 //двумерный [id, open/not, page]
-ctrl_jrn_btn_map = ds_map_create(); //созданные динамически кнопки
+ctrl_jrn_map_btn = ds_map_create(); //созданные динамически кнопки
 ctrl_jrn_btn_arrow_arr = []; //массив id стрелочек
 ctrl_jrn_btn_active = "history";
 //ctrl_jrn_btn_del = []; //закладка, которую сейчас удалили 

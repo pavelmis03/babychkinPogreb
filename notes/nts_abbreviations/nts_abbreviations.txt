@@ -1,10 +1,14 @@
 persist - persistent
+animcrv - animationcurve
+path - path
+unkn - unknown
 achv - achievement
 diff - difference
 stat - statistics
 ctrl - controller
 curr - current
 inst - instance
+sStr - substring
 iss - issue
 equ - equipment
 dev - developers 
@@ -38,7 +42,18 @@ rmv - remove
 env - environment
 eff - effect
 buh - buhanka
+obj - object
+spr - sprite
+snd - sound
+sct - script
+fnt - font
+tml - timeline
+shdr - shader
+sqn - sequence
 
+
+rm - room
+tl - tiles
 bg - background
 el - element
 sv - saves/save
@@ -47,3 +62,4 @@ fp - first_part
 sp - second_part
 mv - moving
 hp - healph
+cp - copy

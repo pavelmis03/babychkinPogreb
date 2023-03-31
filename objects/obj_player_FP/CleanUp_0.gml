@@ -1,2 +1,2 @@
 /// @description 
-ds_list_destroy(player_move_key_list);
+ds_list_destroy(player_list_move_key);

@@ -19,7 +19,7 @@ if (sprite_index != spr_sys_none) {
 				sprite_index = asset_get_index("spr_journal_page" + string(ctrl_jrn_chapter_curr));
 				image_index = image_number - 0.1;;
 				//скрываю перелистываемую закладку
-				var t = ctrl_jrn_btn_map[?ctrl_jrn_btn_active];
+				var t = ctrl_jrn_map_btn[?ctrl_jrn_btn_active];
 				t[0].visible = false;
 			}
 			//завершение действия (если мы листаем назад и последним было перелистывание)
@@ -34,7 +34,7 @@ if (sprite_index != spr_sys_none) {
 		//страница с закладкой
 		if (sprite_index != spr_journal_page) {
 			//id закладки
-			var t = ctrl_jrn_btn_map[?ctrl_jrn_btn_active];
+			var t = ctrl_jrn_map_btn[?ctrl_jrn_btn_active];
 			t[0].visible = true;
 			//перемещаю закладку на нужное место
 			if (image_speed == -1) {

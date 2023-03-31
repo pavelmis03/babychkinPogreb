@@ -10,11 +10,9 @@ function scr_str_defEnding(word, num) {
 	if (num % 100 == 1) {
 		str += "е";
 	}
-	
 	if (2 <= num % 100 <= 4) {
 		str += "я";
 	}
-	
 	if ((5 <= num % 100 <= 19) or (num % 10 == 0)) {
 		str += "й";
 	}
@@ -54,13 +52,65 @@ function scr_str_extractNums(str) {
 	return numArr;
 }
 
+/// @function scr_str_parsPath(str);
+/// @param {} str строка, с которой мы работаем 
+/// @description скрипт разбирает путь к файлу сохранения saves/game_n/save_n/branche_m... на Сохр. n>Ветвь m>...
+function scr_str_parsPath(str) {
+	//если попала строка без сохранений
+	if (string_count("save_", str) == 0) {
+		return str;
+	}
+	
+	//копируем строку с первого сохранения
+	str = string_copy(str, string_pos("save_", str), string_length(str));
+	var arr = string_split(str, "/");
+	var newS = "";
+	
+	for (var i = 0; i < array_length(arr); i++) {
+		var t = string_split(arr[i], "_");
+		if (t[0] == "save") {
+			newS += "Сохр " + t[1] + ">";
+		}
+		if (t[0] == "branch") {
+			newS += "Ветвь " + t[1] + ">";
+		}
+	}
+	
+	//копирую без последней стрелочки
+	return string_copy(newS, 0, string_length(newS) - 1);
+}
 
+/// @function scr_str_spltStrOnSStrByLen(str, lenPx);
+/// @param {} str строка, с которой мы работаем 
+/// @param {} lenPx длина, на которой должна поместиться строка в пикселях
+/// @description скрипту передеается длина, не больше которой должна быть строка 
+function scr_str_spltStrOnSStrByLen(str, len) {
+	var c = string_copy(str, 1, 1);
+	var strLen = floor(len / string_width(c)); //количество символов в строке
+	
+	//собираем строку, добавляя в нее переносы
+	var i = strLen;
+	while (i < string_length(str)) {
+		str = string_insert("\n", str, i);
+		i += strLen + 1;
+	}
+	
+	return str;
+}
 
-
-
-
-
-
+/// @function scr_str_cpSStrByLen(str, lenPx);
+/// @param {} str строка, с которой мы работаем 
+/// @param {} lenPx длина, на которой должна поместиться строка в пикселях
+/// @description копирует часть строки, чтобы она поместилась на заданной длине
+function scr_str_cpSStrByLen(str, len) {
+	var sw = string_width(str);
+	//получаем среднюю длину символа
+	var cw = sw / string_length(str);
+	//делим доступную длину на длину одного символа
+	var newL = floor(len / cw);
+	str = string_copy(str, 1, newL);	//возвращаем максимальное количество символов
+	return str;
+}
 
 
 

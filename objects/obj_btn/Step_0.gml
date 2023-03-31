@@ -43,7 +43,7 @@ if ((btn_enable) and (num_spr == "0")) {
 if (btn_enable) {
 	if (point_in_rectangle(mouse_x, mouse_y, x1, y1, x2, y2)) {
 		//действия один раз выполняются (запустили спрайт)
-		if (!btn_enter) {
+		if ((!btn_enter) and (!btn_pressed)) {
 			image_index = 0;
 			//проигрываем изображение наведения
 			image_speed = 1;
@@ -55,7 +55,7 @@ if (btn_enable) {
 	} else {
 		//запустили обратный спрайт, если с кнопки убрали мышку
 		//диалоговые кнопки после нажатия не должны останавливаться и, тем более, проигрывать обратный спрайт
-		if ((btn_enter) and ((type != "dlg_btn") or (!btn_pressed))) {
+		if ((btn_enter) /*and ((type != "dlg_btn") or (!btn_pressed))*/) {
 			//если кнопка после нажатия, надо вернуть ей первый из двух спрайтов 
 			//if (btn_pressed) {
 			//	var str = sprite_get_name(sprite_index);

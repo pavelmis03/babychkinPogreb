@@ -1,7 +1,5 @@
 /// @description заполняет фон пикселями и очищает, может их отключать
 
-randomize();
-
 //main
 ctrl_pixelRm_on = obj_ctrl_set.ctrl_set_map_curr[?"pixels"];
 time = obj_ctrl_gm.ctrl_gm_pixel_time;	 //время заполнения экрана, время очистки в два раза меньше

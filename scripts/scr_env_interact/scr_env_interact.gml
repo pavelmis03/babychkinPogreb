@@ -13,9 +13,9 @@ function scr_env_canInteract(addVar, addVal) {
 			//аналогично addVar[0] in addVal[0], где addVal - набор допустимых значений для переменной addVar[0]
 			if (scr_arr_fingEl(addVal[0], addVar[0], 1) != -1) {
 				//если персонаж взаимодействует с именно с нашим объектом (чтобы сразу два случайно не сработали)
-				if ((player_obj.player_col[?type] == 0) or (player_obj.player_col[?type] == id)) {
+				if ((player_obj.player_map_col[?type] == 0) or (player_obj.player_map_col[?type] == id)) {
 					//массив коллизий игрока
-					player_obj.player_col[?type] = id;
+					player_obj.player_map_col[?type] = id;
 					//если дверь сейчас не находится в процессе открытия/закрытия
 					if (!interacting) {
 						can_interact = true;

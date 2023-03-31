@@ -14,7 +14,7 @@ init = false;
 //drawing
 draw_img = spr_sys_none;	//спрайт скриншота сохранения
 draw_txt_x = room_width * 0.687;	//координаты отрисовки скрина
-draw_txt_y = room_height * 0.26;
+draw_txt_y = room_height * 0.22;
 
 //работа с сохранениями
 btn_loaderId = [];	//массив id кнопок-сохранения

@@ -4,14 +4,14 @@ ctrl_hint_TWH++;
 
 //список ключей из которого будет рандомно выбираться один для мысли-подсказки
 var keyList = ds_list_create();
-var key = ds_map_find_first(ctrl_hint_hint_map);
+var key = ds_map_find_first(ctrl_hint_map_hint);
 //прохожу по словарю мыслей-подсказок
-for (var i = 0; i < ds_map_size(ctrl_hint_hint_map); i++) {
-	var arr = ctrl_hint_hint_map[?key];
+for (var i = 0; i < ds_map_size(ctrl_hint_map_hint); i++) {
+	var arr = ctrl_hint_map_hint[?key];
 	//первый элемент словаря не массив (см. create)
 	if (!is_array(arr)) {
 		//тогда это не подсказка, поэтому выбираем след. ключ и идем дальше 
-		key = ds_map_find_next(ctrl_hint_hint_map, key);
+		key = ds_map_find_next(ctrl_hint_map_hint, key);
 		continue;
 	}
 	//если эта подсказка не использовалась давно и подсказка является мыслью, запоминаю ключ 
@@ -21,10 +21,10 @@ for (var i = 0; i < ds_map_size(ctrl_hint_hint_map); i++) {
 	//уменьшаю время до следующего вохможного использования мысли-подсказки
 	if (arr[3] > 0) {
 		arr[3]--;
-		ctrl_hint_hint_map[?key] = arr;
+		ctrl_hint_map_hint[?key] = arr;
 	}
 		
-	key = ds_map_find_next(ctrl_hint_hint_map, key);
+	key = ds_map_find_next(ctrl_hint_map_hint, key);
 }
 
 //если подсказки отключены, не нужно выбирать мысль-подсказку и комната должна быть игровая 
@@ -32,13 +32,13 @@ if ((obj_ctrl_set.ctrl_set_map_curr[?"hints"]) and (obj_ctrl_gm.ctrl_gm_phase ==
 	//если больше двух минут не выводилось никаких подсказок и есть что выводить
 	if ((ctrl_hint_TWH mod 120 == 0) and (ds_list_size(keyList) > 0)) {
 		var t = irandom(ds_list_size(keyList) - 1);
-		//var newH = ctrl_hint_hint_map[?keyList[|t]];
+		//var newH = ctrl_hint_map_hint[?keyList[|t]];
 		//предлагаю новую подсказку на рассмотрение 
 		ctrl_hint_newHint = keyList[|t];
 		/* перенесено в UE(15)
 		//объявляю, что подсказка использовалась и теперь не стоит ее брать в ближайшее время
 		newH[3] = 15 * 60; //15 минут
-		ctrl_hint_hint_map[?keyList[|t]] = newH;
+		ctrl_hint_map_hint[?keyList[|t]] = newH;
 		*/
 	}	
 }

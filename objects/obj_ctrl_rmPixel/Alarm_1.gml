@@ -35,10 +35,10 @@ for (var i = 0; i < kol; i++) {
 				room_goto(rm_menu_history);
 			} else {
 				//переходим в следующую комнату в списке
-				//room_goto(obj_ctrl_mv.next_rm[|0]);
-				//ds_list_delete(obj_ctrl_mv.next_rm, 0);
-				room_goto(obj_ctrl_mv.next_rm[|ds_list_size(obj_ctrl_mv.next_rm) - 1]);
-				ds_list_delete(obj_ctrl_mv.next_rm, ds_list_size(obj_ctrl_mv.next_rm) - 1);
+				//room_goto(obj_ctrl_mv.next_rm_list_[|0]);
+				//ds_list_delete(obj_ctrl_mv.next_rm_list_, 0);
+				room_goto(obj_ctrl_mv.next_rm_list_[|ds_list_size(obj_ctrl_mv.next_rm_list_) - 1]);
+				ds_list_delete(obj_ctrl_mv.next_rm_list_, ds_list_size(obj_ctrl_mv.next_rm_list_) - 1);
 			}
 			break;
 		}

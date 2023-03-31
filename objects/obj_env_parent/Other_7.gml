@@ -4,7 +4,7 @@
 //если спрайт завершился после того, как было начато взаимодействие
 if (interacting) {
 	//если персонаж взаимодействует с нашим объектом
-	if ((player_obj.player_col[?type] == 0) or (player_obj.player_col[?type] == id)) {
+	if ((player_obj.player_map_col[?type] == 0) or (player_obj.player_map_col[?type] == id)) {
 		//сообщаю персонажу, что действие закончено
 		player_obj.player_pressE = false;
 	}

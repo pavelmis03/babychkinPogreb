@@ -1,5 +1,7 @@
 /// @description 
 
+randomize(); //общий на всю игру
+
 room_goto(rm_menu_mm);
 //room_goto(rm_gm_fp_elevator);
 

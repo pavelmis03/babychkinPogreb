@@ -5,7 +5,7 @@ if (!init) {
 }
 
 //провeрка нахождения игрока рядом
-//if (player_obj.player_col[?type] == id) {
+//if (player_obj.player_map_col[?type] == id) {
 //	inv_nearPlayer = true;	
 //} else {
 //	inv_nearPlayer = false;	
@@ -37,10 +37,10 @@ if (inv_canLoot) {
 		//проверяю корректность направления взгляда игрока
 		if (abs(angle_difference(player_obj.image_angle, point_direction(player_obj.x, player_obj.y, x, y))) <= 30) {
 			//если персонаж взаимодействует с именно с нашим объектом (чтобы сразу два случайно не сработали)
-			if ((player_obj.player_col[?type] == 0) or (player_obj.player_col[?type] == id)) {
+			if ((player_obj.player_map_col[?type] == 0) or (player_obj.player_map_col[?type] == id)) {
 				can_interact = true;
 				//массив коллизий игрока
-				player_obj.player_col[?type] = id;
+				player_obj.player_map_col[?type] = id;
 				//добавление подсказки
 				obj_ctrl_gm_hint.ctrl_hint_newHint = hint;
 			}		

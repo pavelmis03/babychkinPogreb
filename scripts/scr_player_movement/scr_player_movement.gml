@@ -3,14 +3,14 @@
 function scr_player_moveType() {
 	//если ни одна клавиша движения не нажата, то тип движения, очевидно, - стоит
 	//если игрок близко подошел к курсору
-	if (ds_list_size(player_move_key_list) == 0) {
+	if (ds_list_size(player_list_move_key) == 0) {
 		player_moveType = "stand";
 		speed = 0;
 		sprite_index = spr_playerFP_state;
 		return;
 	}
 	//получаем последнюю из нажатых клавиш
-	var t1 = player_move_key_list[|ds_list_size(player_move_key_list) - 1];
+	var t1 = player_list_move_key[|ds_list_size(player_list_move_key) - 1];
 	//при движении по сетке эта клавиша корректируется в зависимости от направления персонажа на курсор
 	if (obj_ctrl_set.ctrl_set_map_curr[?"gridMv"]) { 
 		t1 = scr_player_angleDiff(t1);
@@ -31,13 +31,13 @@ function scr_player_moveType() {
 		break;
 	}
 	//если клавиша в массиве только одна, определяем направление движения и завершаем скрипт
-	if (ds_list_size(player_move_key_list) == 1) {
+	if (ds_list_size(player_list_move_key) == 1) {
 		//т.к. направление движения зависит именно от нажатой клавиши (а в случае движения по сетке 
 		//клавиша искуственно подменяется), то в скрипт опр. направления движения передается клавиша из массива
-		scr_player_dir(player_move_key_list[|ds_list_size(player_move_key_list) - 1])
+		scr_player_dir(player_list_move_key[|ds_list_size(player_list_move_key) - 1])
 	} else {
 		//если в массиве нажатых клавиш больше одной ячейки, повторяем те же действия, что и выше, только для двух клавиш
-		var t2 = player_move_key_list[|ds_list_size(player_move_key_list) - 2];
+		var t2 = player_list_move_key[|ds_list_size(player_list_move_key) - 2];
 		if (obj_ctrl_set.ctrl_set_map_curr[?"gridMv"]) { 
 			t2 = scr_player_angleDiff(t2);
 		}
@@ -58,7 +58,7 @@ function scr_player_moveType() {
 		}
 		//т.к. направление движения зависит именно от нажатой клавиши (а в случае движения по сетке 
 		//клавиша искуственно подменяется), то в скрипт опр. направления движения передается клавиша из массива
-		s = player_move_key_list[|ds_list_size(player_move_key_list) - 1] + player_move_key_list[|ds_list_size(player_move_key_list) - 2];
+		s = player_list_move_key[|ds_list_size(player_list_move_key) - 1] + player_list_move_key[|ds_list_size(player_list_move_key) - 2];
 		scr_player_dir(s);
 	}
 }

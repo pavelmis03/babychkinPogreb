@@ -5,8 +5,8 @@ draw_sprite(draw_spr, 0, x, y);
 //если сейчас не проигрывается перелистывание
 if (sprite_index == spr_sys_none) {
 	//отрисовка текста
-	var t = ctrl_jrn_btn_map[?ctrl_jrn_btn_active];		//информация по разделу [btn_id, open/not, curr_page] фактически важна только страница
-	var t2 = ctrl_jrn_txt_map[?ctrl_jrn_btn_active];	//массив строк в разделе
+	var t = ctrl_jrn_map_btn[?ctrl_jrn_btn_active];		//информация по разделу [btn_id, open/not, curr_page] фактически важна только страница
+	var t2 = ctrl_jrn_map_txt[?ctrl_jrn_btn_active];	//массив строк в разделе
 	var str = array_length(t2);							//строк всего в разделе
 	var page = string(ceil(str / ctrl_jrn_txt_str));	//количество страниц
 	var start_str = (t[2] - 1) * ctrl_jrn_txt_str;		//начальная строка (номер) для вывода текста

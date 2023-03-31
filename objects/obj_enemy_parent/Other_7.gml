@@ -9,7 +9,7 @@ if (enemy_attack) {
 	image_index = 0;
 	speed = enemy_spd;
 	//проверяю, что игрок еще не отбежал
-	if (other.player_col[?type] == id) {
+	if (other.player_map_col[?type] == id) {
 		//по спрайту красивее, если урон игроку будет наноситься в конце анимации 
 		player.hp -= enemy_damage[0];
 	}

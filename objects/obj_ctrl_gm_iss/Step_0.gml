@@ -6,3 +6,6 @@ if (action != "") {
 	action = "";
 }
 
+if (!init) {
+	event_user(0);
+}

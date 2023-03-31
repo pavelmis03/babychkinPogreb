@@ -11,15 +11,15 @@ switch (action) {
 		var t2 = room_height * 0.36;
 		var t3 = sprite_get_height(spr_btn_journal_history1) + 10;
 		var obj = scr_btn_create(room_width * 0.2, t2, spr_btn_journal_history1, depth + 1, 0, "journalHistory", "func", [20, "snd_none", "snd_none"]);
-		ds_map_add(ctrl_jrn_btn_map, "history", [obj, true, 1]);
+		ds_map_add(ctrl_jrn_map_btn, "history", [obj, true, 1]);
 		var obj = scr_btn_create(t1, t2 + t3, spr_btn_journal_quest1, depth + 1, 0, "journalQuest", "func", [20, "snd_none", "snd_none"]);
-		ds_map_add(ctrl_jrn_btn_map, "quest", [obj, false, 1]);
+		ds_map_add(ctrl_jrn_map_btn, "quest", [obj, false, 1]);
 		var obj = scr_btn_create(t1, t2 + t3 * 2, spr_btn_journal_monsterInfo1, depth + 1, 0, "journalMonsterInfo", "func", [20, "snd_none", "snd_none"]);
-		ds_map_add(ctrl_jrn_btn_map, "monsterInfo", [obj, false, 1]);
+		ds_map_add(ctrl_jrn_map_btn, "monsterInfo", [obj, false, 1]);
 		var obj = scr_btn_create(t1, t2 + t3 * 3, spr_btn_journal_weaponInfo1, depth + 1, 0, "journalWeaponInfo", "func", [20, "snd_none", "snd_none"]);
-		ds_map_add(ctrl_jrn_btn_map, "weaponInfo", [obj, false, 1]);
+		ds_map_add(ctrl_jrn_map_btn, "weaponInfo", [obj, false, 1]);
 		var obj = scr_btn_create(t1, t2 + t3 * 4, spr_btn_journal_achiv1, depth + 1, 0, "journalAchiv", "func", [20, "snd_none", "snd_none"]);
-		ds_map_add(ctrl_jrn_btn_map, "achiv", [obj, false, 1]);
+		ds_map_add(ctrl_jrn_map_btn, "achiv", [obj, false, 1]);
 		//стрелочки страниц
 		var obj = scr_btn_create(room_width * 0.65, room_height * 0.8, spr_btn_journal_next1, depth - 1, 0, "journalNext", "func", [20, "snd_none", "snd_none"]);
 		//сохраняю стрелки, чтобы удалять их во время перелистывания 
@@ -33,8 +33,8 @@ switch (action) {
 	case "journalNext":
 		if (array_length(ctrl_jrn_btn_arrow_arr) != 0) {
 			//получаю текущую страницу и максимальное количество страниц
-			var t = ctrl_jrn_btn_map[?ctrl_jrn_btn_active];
-			var t2 = ctrl_jrn_txt_map[?ctrl_jrn_btn_active];
+			var t = ctrl_jrn_map_btn[?ctrl_jrn_btn_active];
+			var t2 = ctrl_jrn_map_txt[?ctrl_jrn_btn_active];
 			//если страница не последняя
 			if (t[2] + 2 <= ceil(array_length(t2) / ctrl_jrn_txt_str)) {
 				t[2] += 2;	//у нас ведь разворот и перелистывается сразу две страницы
@@ -46,15 +46,15 @@ switch (action) {
 				instance_destroy(ctrl_jrn_btn_arrow_arr[1]);
 			}
 			//переносим измененные данные (напрямую не позволяет движок)
-			array_copy(ctrl_jrn_btn_map[?ctrl_jrn_btn_active], 0, t, 0, array_length(t));
+			array_copy(ctrl_jrn_map_btn[?ctrl_jrn_btn_active], 0, t, 0, array_length(t));
 		}
 	break;
 	//перелистывание страницы раздела
 	case "journalPre":
 		if (array_length(ctrl_jrn_btn_arrow_arr) != 0) {
 			//получаю текущую страницу и максимальное количество страниц
-			var t = ctrl_jrn_btn_map[?ctrl_jrn_btn_active];
-			var t2 = ctrl_jrn_txt_map[?ctrl_jrn_btn_active];
+			var t = ctrl_jrn_map_btn[?ctrl_jrn_btn_active];
+			var t2 = ctrl_jrn_map_txt[?ctrl_jrn_btn_active];
 			//если страница не последняя
 			if (t[2] - 2 >= 1) {
 				t[2] -= 2;
@@ -67,7 +67,7 @@ switch (action) {
 				instance_destroy(ctrl_jrn_btn_arrow_arr[1]);
 			}
 			//переносим измененные данные (напрямую не позволяет движок)
-			array_copy(ctrl_jrn_btn_map[?ctrl_jrn_btn_active], 0, t, 0, array_length(t));
+			array_copy(ctrl_jrn_map_btn[?ctrl_jrn_btn_active], 0, t, 0, array_length(t));
 		}
 	break;
 	case "journalHistory":

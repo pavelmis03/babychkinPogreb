@@ -3,6 +3,7 @@
 /*
 //main
 need_sv = 1;	//нужно ли сохранять данный объект
+nonSvVar = ["nonSvVar", "init", "need_sv", "action", ];	
 saction = "";
 init = false;	//инициализация
 type = "inv";	//для взаимодействия с игроком

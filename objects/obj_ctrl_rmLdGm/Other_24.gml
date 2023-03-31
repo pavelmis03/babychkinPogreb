@@ -12,4 +12,5 @@ if (file_find_first("saves/*", fa_directory) == "") {
 	obj_ctrl_dlg.action = ["nothingSv", "back", "back"];
 	instance_destroy();
 }
+file_find_close();
 

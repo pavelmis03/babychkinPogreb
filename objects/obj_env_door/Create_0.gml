@@ -5,6 +5,7 @@
 //открыть дверь, pre_room - закрыть. room name - перейти в комнату
 destination = 0;
 need_sv = 1;  //нужно сохранять
+nonSvVar = ["nonSvVar", "init", "need_sv", "action", ];	
 
 
 // Inherit the parent event

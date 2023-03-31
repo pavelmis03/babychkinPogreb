@@ -22,25 +22,25 @@ ctrl_stat_arr_draw = [];
 ctrl_stat_arr_draw[0] = ["", false, 9, ""];		//общее
 
 //массив статистики
-ctrl_stat_map = ds_map_create();
-ctrl_stat_map[?"gameProgress"] = "0";
-ctrl_stat_map[?"plotProgress"] = "0";
-ctrl_stat_map[?"subPlotProgress"] = "0";
-ctrl_stat_map[?"achvCnt"] = "0";
-ctrl_stat_map[?"questCopmlete"] = "0";
-ctrl_stat_map[?"specialItems"] = "0";
-ctrl_stat_map[?"timeInGame"] = "0";
-ctrl_stat_map[?"kill"] = "0";
-ctrl_stat_map[?"death"] = "0";
-ctrl_stat_map[?"getDamage"] = "0";
-ctrl_stat_map[?"giveDamage"] = "0";
-ctrl_stat_map[?"dist"] = "0";
-ctrl_stat_map[?"shot"] = "0";
-ctrl_stat_map[?"accuracy"] = "0";
-ctrl_stat_map[?"hits"] = "0";
-ctrl_stat_map[?"mileage"] = "0";
-ctrl_stat_map[?"pumping"] = "0";
-ctrl_stat_map[?"integrity"] = "0";
+ctrl_map_stat = ds_map_create();
+ctrl_map_stat[?"gameProgress"] = "0";
+ctrl_map_stat[?"plotProgress"] = "0";
+ctrl_map_stat[?"subPlotProgress"] = "0";
+ctrl_map_stat[?"achvCnt"] = "0";
+ctrl_map_stat[?"questCopmlete"] = "0";
+ctrl_map_stat[?"specialItems"] = "0";
+ctrl_map_stat[?"timeInGame"] = "0";
+ctrl_map_stat[?"kill"] = "0";
+ctrl_map_stat[?"death"] = "0";
+ctrl_map_stat[?"getDamage"] = "0";
+ctrl_map_stat[?"giveDamage"] = "0";
+ctrl_map_stat[?"dist"] = "0";
+ctrl_map_stat[?"shot"] = "0";
+ctrl_map_stat[?"accuracy"] = "0";
+ctrl_map_stat[?"hits"] = "0";
+ctrl_map_stat[?"mileage"] = "0";
+ctrl_map_stat[?"pumping"] = "0";
+ctrl_map_stat[?"integrity"] = "0";
 
 //interaction
 ctrl_stat_arr_btn = [];

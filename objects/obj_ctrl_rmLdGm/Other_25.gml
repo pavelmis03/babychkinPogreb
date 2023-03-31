@@ -4,8 +4,19 @@
 switch (action) {
 	//загрузить выбранное сохранени
 	case "ldSv": 
-	
-		action = "";	
+		//сообщаем всем, кому нужно, что надо загрузить игру
+		obj_ctrl_gm_sv.action = "ldGm";
+		obj_ctrl_gm.action = "ldGm";
+		//передаем путь для загрузки
+		obj_ctrl_gm_sv.ctrl_sv_ldDir = ctrl_ldGm_sv_currPath;	//папка выбранного сохранения
+		obj_ctrl_gm_sv.ctrl_sv_gmDir = ctrl_ldGm_gm_currPath;	//папка игры
+		//записываем текущую игру, как последнюю, в которую играли,
+		//чтобы потом автоматически подставить в меню загрузок
+		ini_open("gameInfo.ini");
+		ini_write_string("GAMEINFO", "lastGame", ctrl_ldGm_gm_currPath);
+		ini_write_string("GAMEINFO", "lastSave", ctrl_ldGm_sv_currPath);
+		ini_close();
+		action = "";
 	break;
 	//удалить выбранное сохранение
 	case "delSv": 
@@ -15,12 +26,14 @@ switch (action) {
 	break;
 	//удалить текущую игру
 	case "delGm": //если игрок согласился с тем, что хочет удалить текущую игру, что ж, его выбор
-		//directory_destroy(ctrl_ldGm_gm_curr);
+		//удаляем папку игры
+		scr_ld_delGm(ctrl_ldGm_gm_currPath);
+		action = "selectLoaderBtn";	//обновляем инфо о кнопке в фокусе
+		
 		//выбирать другую директорию
 		//перезагружать кнопки
 		//обновлять количество игр и страниц и т.д.
 		//если это была единственная/последняя игра, выводить диалог о начале новой игры
-		action = "";
 	break;
 	//Следующее сохранение
 	case "nextSv": 
@@ -95,9 +108,8 @@ switch (action) {
 			ctrl_ldGm_svPaths = [];	//обнуляем список сохранений
 			//получаю новый путь игры
 			ctrl_ldGm_gm_currPath = ctrl_ldGm_gmPaths[ctrl_ldGm_gm_curr];
-			//нахожу все папки сохранений, считаю количество сохранений
-			//(передаю путь, дальше работа с индексами уже в скрипте)
-			scr_ld_findSvPaths(ctrl_ldGm_gm_currPath + "/save_");
+			//нахожу все папки сохранений в папке игры
+			scr_ld_findSvPaths(ctrl_ldGm_gm_currPath);
 			//общее количество сохранений
 			ctrl_ldGm_sv = array_length(ctrl_ldGm_svPaths);
 			ctrl_ldGm_sv_currPath = ctrl_ldGm_svPaths[0]; //путь до первого сохранения
@@ -116,9 +128,8 @@ switch (action) {
 			ctrl_ldGm_svPaths = [];	//обнуляем список сохранений
 			//получаю новый путь игры
 			ctrl_ldGm_gm_currPath = ctrl_ldGm_gmPaths[ctrl_ldGm_gm_curr];
-			//нахожу все папки сохранений, считаю количество сохранений
-			//(передаю путь, дальше работа с индексами уже в скрипте)
-			scr_ld_findSvPaths(ctrl_ldGm_gm_currPath + "/save_");
+			//нахожу все папки сохранений в папке игры
+			scr_ld_findSvPaths(ctrl_ldGm_gm_currPath);
 			//общее количество сохранений
 			ctrl_ldGm_sv = array_length(ctrl_ldGm_svPaths);
 			ctrl_ldGm_sv_currPath = ctrl_ldGm_svPaths[0]; //путь до первого сохранения

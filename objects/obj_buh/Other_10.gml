@@ -1,7 +1,7 @@
 /// @description инициализация
 
 //item info
-var arr = global.CONST_ITEMS[?inv_keyName];
+var arr = global.CONST_MAP_ITEMS[?inv_keyName];
 inv_name = arr[0];			//название предмета
 inv_weight = arr[1];		//вес предмета
 inv_maxCntInv = arr[2];		//максимальное количество предметов на инвентарь

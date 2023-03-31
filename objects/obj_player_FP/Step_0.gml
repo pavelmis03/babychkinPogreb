@@ -9,16 +9,16 @@ if (!player_attack and !player_pressE and sprite_index != spr_playerFP_use) {
 }
 
 //очистка массива коллизий от id тех, с кем их больше нет
-var key = ds_map_find_first(player_col);
-for (var i = 0; i < ds_map_size(player_col); i++) {
+var key = ds_map_find_first(player_map_col);
+for (var i = 0; i < ds_map_size(player_map_col); i++) {
 	//если ячейка вообще заполнена
-	if (player_col[?key] != 0) {
+	if (player_map_col[?key] != 0) {
 		//если перс уже не имеет коллизии с указанным экземп, то удаляю его id
-		if (instance_place(x, y, player_col[?key]) == noone) { 
-			player_col[?key] = 0;
+		if (instance_place(x, y, player_map_col[?key]) == noone) { 
+			player_map_col[?key] = 0;
 		}
 	}
-	key = ds_map_find_next(player_col, key);
+	key = ds_map_find_next(player_map_col, key);
 }
 
 //проверка на смерь персонажа

@@ -135,6 +135,7 @@ switch (type) {
 		if ((t != "") and (string_pos(".", t) == 0)) {	//второе условие, чтобы не находились файлы
 			action[0] = "delSv1";
 		}
+		file_find_close();
 		//выводим диалог предупреждения
 		obj_ctrl_dlg.action = action;
 		var str = sprite_get_name(sprite_index);
