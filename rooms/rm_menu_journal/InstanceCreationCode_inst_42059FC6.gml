@@ -6,4 +6,4 @@ y = 0;
 
 type = "func";
 action = "openJournal";
-sound = [20, "snd_none", "snd_none"];
+sound = [20, "snd_menu_journalEnter", "snd_menu_journalOpen"];

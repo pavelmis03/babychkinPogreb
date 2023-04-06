@@ -9,9 +9,10 @@ ini_write_string("MAIN", "lastRoom", room_get_name(room));	//комната, с 
 ini_write_string("SAVE_INFO", "dateTime", date_datetime_string(date_current_datetime()));
 ini_write_string("SAVE_INFO", "dateTimeInGame", string("/*игровые дата и время*/"));
 ini_write_string("SAVE_INFO", "quest", string("/*название квеста*/"));
+var l = "локация не распознана";
 if (ds_map_exists(global.CONST_MAP_RM_INFO, room)) {
 	var l = global.CONST_MAP_RM_INFO[?room];	//получаем описание комнаты по индексу
-}
+} 
 ini_write_string("SAVE_INFO", "location", l[0]);	//название локации
 ini_write_string("SAVE_INFO", "name", ctrl_sv_svDir);	//имя, которое потом сохранится в родителя
 ini_close();

@@ -7,6 +7,7 @@ switch (action) {
 		//сообщаем всем, кому нужно, что надо загрузить игру
 		obj_ctrl_gm_sv.action = "ldGm";
 		obj_ctrl_gm.action = "ldGm";
+		obj_ctrl_stat.action = "statchangeGm";	//загружаем статистику из другой игры
 		//передаем путь для загрузки
 		obj_ctrl_gm_sv.ctrl_sv_ldDir = ctrl_ldGm_sv_currPath;	//папка выбранного сохранения
 		obj_ctrl_gm_sv.ctrl_sv_gmDir = ctrl_ldGm_gm_currPath;	//папка игры

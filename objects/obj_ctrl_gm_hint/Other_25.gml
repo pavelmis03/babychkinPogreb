@@ -2,7 +2,7 @@
 
 switch (action) {
 	//очистка подсказки
-	case "cleareHint":
+	case "clearHint":
 		draw_txt = "";
 		ctrl_hint_newHint = "";
 		ctrl_hint_currHint = "";

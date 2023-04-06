@@ -19,8 +19,8 @@ ctrl_snd_arr_on = [];	//[звук, комната, в которой он вкл
 
 //работает по принципу действие-звук 
 //!ctrl_snd_map_ = ds_map_create();
-//!ctrl_snd_map_[?"enterDoor"] = [20, "snd_menu_enterDoor"];
-//!ctrl_snd_map_[?"openDoor"] = [20, "snd_menu_openDoor"];
+//!ctrl_snd_map_[?"enterDoor"] = [20, "snd_menu_MMEnterDoor"];
+//!ctrl_snd_map_[?"openDoor"] = [20, "snd_menu_MMOpenDoor"];
 
 //работает по принципу комната-музыка [priority, mysic1, mysic2...] запускаются все mysic1, mysic2...
 //или

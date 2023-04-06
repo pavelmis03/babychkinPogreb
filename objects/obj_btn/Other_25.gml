@@ -131,6 +131,7 @@ switch (type) {
 		obj_ctrl_dlg.type = type;
 		action[0] = "delSv";
 		//если в папке есть ветви, выводим дополнительное предупреждение
+		//ВНИМАНИЕ: file_find_first находит файлы тоже, причем в алфавитном порядке. Если будет создан файл, начинающийся на "a" или "b" Или цифру, этот механизм не сработает
 		var t = file_find_first(obj_ctrl_rmLdGm.ctrl_ldGm_sv_currPath + "/*", fa_directory);
 		if ((t != "") and (string_pos(".", t) == 0)) {	//второе условие, чтобы не находились файлы
 			action[0] = "delSv1";

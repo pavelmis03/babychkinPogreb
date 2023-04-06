@@ -196,23 +196,24 @@ function scr_ld_findSvPaths(path) {
 		var i = 0;	//номер папки, в которой ищем ветви
 		var fn = file_find_first(arr[i] + "*", fa_directory);
 		//прохожу по выбранной папке в поисках ветвей
-		while ((fn != "") and (string_pos(".", fn) == 0)) {
-			//если это папка ветви, ее сохранять не нужно
-			if (string_copy(fn, 0, string_pos("_", fn)) != "branch_") {
-				ini_open(arr[i] + fn + "/saveInfo.ini");
-				//если сохранение действительно
-				if (ini_read_real("MAIN", "saveValid", 0) != 0) {
-					//а если это сохранение в ветви и оно действительно, то сохраняем, хех, сохранение
-					array_push(ctrl_ldGm_svPaths, arr[i] + fn);
-				} else { //иначе удаляем его
-					//directory_destroy(arr[i] + fn);
-					array_push(arr1, arr[i] + fn);	//запоминаем пустые сохранения
+		while (fn != "") {
+			if (string_pos(".", fn) == 0) { //если найденный путь не файл
+				//если это папка ветви, ее сохранять не нужно
+				if (string_copy(fn, 0, string_pos("_", fn)) != "branch_") {
+					ini_open(arr[i] + fn + "/saveInfo.ini");
+					//если сохранение действительно
+					if (ini_read_real("MAIN", "saveValid", 0) != 0) {
+						//а если это сохранение в ветви и оно действительно, то сохраняем, хех, сохранение
+						array_push(ctrl_ldGm_svPaths, arr[i] + fn);
+					} else { //иначе удаляем его
+						//directory_destroy(arr[i] + fn);
+						array_push(arr1, arr[i] + fn);	//запоминаем пустые сохранения
+					}
+					ini_close();
 				}
-				ini_close();
+				//ищем вложенные папки
+				array_push(arr, arr[i] + fn + "/");
 			}
-			//ищем вложенные папки
-			array_push(arr, arr[i] + fn + "/");
-		
 			fn = file_find_next();
 		}
 		file_find_close();

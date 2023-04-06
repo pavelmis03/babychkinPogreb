@@ -9,4 +9,4 @@ y = room_height * 0.483;
 //type = "transition";
 type = "confirmYCl";
 action = ["noEndless", "cansel", "cansel"];
-sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];
+sound = [20, "snd_menu_MMEnterDoor", "snd_menu_MMOpenDoor"];

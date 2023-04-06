@@ -10,4 +10,4 @@ image_yscale = 0.95;
 type = "confirmYCl";
 //action = "goToEditor";
 action = ["noEditor", "cansel"];
-sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];
+sound = [20, "snd_menu_MMEnterDoor", "snd_menu_MMOpenDoor"];

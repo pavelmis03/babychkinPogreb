@@ -32,15 +32,17 @@ function scr_file_findStr(file, str) {
 */
 
 /// @function scr_file_findLast(dir);
-/// @param {} dir каталог, в котором ищем последний файл, например, .../path/ - поиск в path, или ...p1/p2 - поиск в p1
-/// @description возвращает путь до последнего файла в переданном каталоге или на уровень выше
+/// @param {} dir каталог, в котором ищем последнюю папку, например, .../path/ - поиск в path, или ...p1/p2 - поиск в p1
+/// @description возвращает путь до последней директории в переданном каталоге или на уровень выше
 function scr_file_findLast(dir) {
 	//копируем путь без последней папки (т.к. по идее искать надо в предпоследней)
 	dir = string_copy(dir, 0, string_last_pos("/", dir));
 	var fn = file_find_first(dir + "*", fa_directory);	
 	var lastF = "";
-	while ((fn != "") and (string_pos(".", fn) == 0)) {
-		lastF = fn;
+	while (fn != "") {
+		if (string_pos(".", fn) == 0) { //если найденный путь не файл
+			lastF = fn;
+		}
 		fn = file_find_next();
 	}
 	file_find_close();

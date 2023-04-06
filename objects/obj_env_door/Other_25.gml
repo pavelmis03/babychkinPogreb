@@ -18,7 +18,7 @@ switch (action) {
 	//переход в заданную комнату
 	case "goTo":
 		image_speed = 1;
-		//воспроизводим звук закрытия
+		//воспроизводим звук открытия
 		obj_ctrl_snd.action = "playSnd";
 		array_push(obj_ctrl_snd.sound, sound[0], sound[1]);
 	break;

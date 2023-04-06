@@ -42,7 +42,7 @@ function scr_change_chapter(target_chp, target_chp_num) {
 
 
 /// @function scr_change_chapter_end();
-/// @description создает стрелочки, меняет спрайт (нужен для сокращения одиакового когда)
+/// @description создает стрелочки, меняет спрайт (нужен для сокращения одинакового когда)
 function scr_change_chapter_end() {
 	//создаю кнопки стрелочек после перелистывания страниц
 	var obj = scr_btn_create(room_width * 0.7, room_height * 0.8, spr_btn_journal_next1, depth - 1, 0, "journalNext", "func", [20, "snd_none", "snd_none"]);

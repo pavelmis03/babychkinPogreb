@@ -1,7 +1,8 @@
 /// @function scr_str_defEnding(word, num);
 /// @param {} word слово без окончания, окончание подбирает скрипт
 /// @param {} num число, по которому мы подбираем окончание
-/// @description скрипт подбирает окончание (именно изменяемую часть) в зависимости от числа, которое стоит перед словом
+/// @description скрипт подбирает окончание слова (именно изменяемую часть) 
+	//в зависимости от числа, которое стоит перед словом
 function scr_str_defEnding(word, num) {
 	var str = word;
 	
@@ -22,7 +23,8 @@ function scr_str_defEnding(word, num) {
 
 /// @function scr_str_extractNums(str);
 /// @param {} str строка, с которой мы работаем 
-/// @description скрипт находит в строке все числа и возвращет их в качестве массива строк или ^, если чисел не найдено
+/// @description скрипт находит в строке все числа и возвращет их 
+	//в виде массива строк или ^, если чисел не найдено
 /// input: str123jfdl45ks2
 /// output: [123, 45, 2]
 function scr_str_extractNums(str) {
@@ -54,7 +56,8 @@ function scr_str_extractNums(str) {
 
 /// @function scr_str_parsPath(str);
 /// @param {} str строка, с которой мы работаем 
-/// @description скрипт разбирает путь к файлу сохранения saves/game_n/save_n/branche_m... на Сохр. n>Ветвь m>...
+/// @description скрипт разбирает путь к файлу сохранения
+	//saves/game_n/save_n/branche_m... на Сохр. n>Ветвь m>...
 function scr_str_parsPath(str) {
 	//если попала строка без сохранений
 	if (string_count("save_", str) == 0) {
@@ -83,7 +86,7 @@ function scr_str_parsPath(str) {
 /// @function scr_str_spltStrOnSStrByLen(str, lenPx);
 /// @param {} str строка, с которой мы работаем 
 /// @param {} lenPx длина, на которой должна поместиться строка в пикселях
-/// @description скрипту передеается длина, не больше которой должна быть строка 
+/// @description скрипт вставляет в строку переносы, чтобы получалась строка не длиннее заданной
 function scr_str_spltStrOnSStrByLen(str, len) {
 	var c = string_copy(str, 1, 1);
 	var strLen = floor(len / string_width(c)); //количество символов в строке

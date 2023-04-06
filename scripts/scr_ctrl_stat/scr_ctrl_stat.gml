@@ -1,6 +1,6 @@
 /// @function scr_stat_changeFlag(ind);
 /// @param {} ind индекс, с которого начинаются изменения
-/// @description меняет флаг в разделе и подразделах массива, если нужно, создает заголовки
+/// @description меняет флаг в разделе (открывает раздел) и подразделах массива, если нужно, создает заголовки
 function scr_stat_changeFlag(ind) {
 	//меняем флаг
 	var t = ctrl_stat_arr_draw[ind];

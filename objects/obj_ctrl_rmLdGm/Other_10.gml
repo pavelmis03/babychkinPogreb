@@ -42,7 +42,7 @@ ctrl_ldGm_gm = n;		//всего игр
 		ctrl_ldGm_sv = array_length(ctrl_ldGm_svPaths);
 	
 		//если не найдено последнее сохранение, что вполне уже 
-		//подгружаем первое сохранение из выбранной папки
+		//подгружаем последнее сохранение из выбранной папки
 		if (!directory_exists(str1)) {
 			//если не нашли папки последнего сохранения, сохраняем последнее из доступных
 			str1 = array_last(ctrl_ldGm_svPaths);
@@ -62,31 +62,34 @@ ctrl_ldGm_gm = n;		//всего игр
 
 		//создаю кнопки
 		//кнопка ,,загрузить сохранение,,
+		btn_ldSvId = scr_btn_create(room_width * 0.25, room_height * 0.85, spr_btn_ldGm_ldSv0, depth, 0, ["ldSv", "cansel", "cansel"], "confirmYNCl", [20, "snd_none", "snd_none"]);
+		/*
 		btn_ldSvId = instance_create_depth(room_width * 0.25, room_height * 0.85, depth, obj_btn);
 		btn_ldSvId.sprite_index = spr_btn_ldGm_ldSv0;
 		btn_ldSvId.type = "confirmYNCl";
 		btn_ldSvId.action = ["ldSv", "cansel", "cansel"];
 		btn_ldSvId.sound = [20, "snd_none", "snd_none"];
-		//пока не выбрано сохранение, кнопка загрузки не активна
-		btn_ldSvId.btn_enable = true;
-
+		*/
+		
 		//кнопка ,,удалить сохранение,,
+		btn_delSvId = scr_btn_create(room_width * 0.53, room_height * 0.85, spr_btn_ldGm_delSv0, depth, 0, ["delSv", "cansel", "cansel"], "confirmYNCl_delSv", [20, "snd_none", "snd_none"]);
+		/*
 		btn_delSvId = instance_create_depth(room_width * 0.53, room_height * 0.85, depth, obj_btn);
 		btn_delSvId.sprite_index = spr_btn_ldGm_delSv0;
 		btn_delSvId.type = "confirmYNCl_delSv";
 		btn_delSvId.action = ["delSv", "cansel", "cansel"];
 		btn_delSvId.sound = [20, "snd_none", "snd_none"];
-		//пока не выбрано сохранение, кнопка удаления не активна
-		btn_delSvId.btn_enable = true;
+		*/
 
 		//кнопка ,,удалить игру,,
+		btn_delGmId = scr_btn_create(room_width * 0.70, room_height * 0.85, spr_btn_ldGm_delGm1, depth, 0, ["delGm", "cansel", "cansel"], "confirmYNCl", [20, "snd_none", "snd_none"]);
+		/*
 		btn_delGmId = instance_create_depth(room_width * 0.70, room_height * 0.85, depth, obj_btn);
 		btn_delGmId.sprite_index = spr_btn_ldGm_delGm1;
 		btn_delGmId.type = "confirmYNCl";
 		btn_delGmId.action = ["delGm", "cansel", "cansel"];
 		btn_delGmId.sound = [20, "snd_none", "snd_none"]; 
-		btn_delGmId.btn_enable = true;
-
+		*/
 
 		//здесь создаем пять кнопок-загрузок
 		scr_ld_createLdBtn();

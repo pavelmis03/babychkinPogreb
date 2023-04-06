@@ -4,7 +4,9 @@
 if (sprite_index != spr_sys_none) {
 	//если было перелистывание страниц
 	if (sprite_index == spr_journal_pages) {
+		//проверяем, что раздел назначение не равен текущему разделу
 		if (ctrl_jrn_chapter_curr != ctrl_jrn_chapter_target) {
+			//определяем, в какую сторону листать
 			if (ctrl_jrn_chapter_curr < ctrl_jrn_chapter_target) {
 				ctrl_jrn_chapter_curr++;
 			} else {
@@ -17,6 +19,9 @@ if (sprite_index != spr_sys_none) {
 			if ((image_speed != 1) or (ctrl_jrn_chapter_curr != ctrl_jrn_chapter_target)) {
 				//назначаем спрайт перелистывания страница с закладкой
 				sprite_index = asset_get_index("spr_journal_page" + string(ctrl_jrn_chapter_curr));
+				//воспроизводим звук страницы
+				obj_ctrl_snd.action = "playSnd";
+				array_push(obj_ctrl_snd.sound, 20, "snd_menu_journalPage");
 				image_index = image_number - 0.1;;
 				//скрываю перелистываемую закладку
 				var t = ctrl_jrn_map_btn[?ctrl_jrn_btn_active];
@@ -48,6 +53,9 @@ if (sprite_index != spr_sys_none) {
 			if (ctrl_jrn_chapter_curr != ctrl_jrn_chapter_target) {
 				//снова перелистываю страницы
 				sprite_index = spr_journal_pages;
+				//воспроизводим звук страниц
+				obj_ctrl_snd.action = "playSnd";
+				array_push(obj_ctrl_snd.sound, 20, "snd_menu_journalPages");
 			} else {
 				//действия после перелистывания
 				scr_change_chapter_end();

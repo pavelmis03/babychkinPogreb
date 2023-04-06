@@ -22,7 +22,7 @@ switch (action) {
 	//выход в главное меню
 	case "exitToMM":
 		//очищаем переменные
-		ctrl_sv_gmDir = "";
+		ctrl_sv_gmDir = ""; 
 		ctrl_sv_ldDir = "";
 		ctrl_sv_svDir = "";	
 		ctrl_sv_ldRms = [];

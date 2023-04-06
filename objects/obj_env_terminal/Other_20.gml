@@ -13,7 +13,7 @@ if (hp <= 0) {
 }
 
 if (terminal_state != "reload") {
-	obj_ctrl_gm_hint.action = "cleareHint";
+	obj_ctrl_gm_hint.action = "clearHint";
 }
 
 

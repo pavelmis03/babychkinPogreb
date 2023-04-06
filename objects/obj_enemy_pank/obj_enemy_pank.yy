@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_enemy_pank_run",
-    "path": "sprites/spr_enemy_pank_run/spr_enemy_pank_run.yy",
+    "name": "spr_enemy_pank1_run",
+    "path": "sprites/spr_enemy_pank1_run/spr_enemy_pank1_run.yy",
   },
   "spriteMaskId": null,
   "visible": true,

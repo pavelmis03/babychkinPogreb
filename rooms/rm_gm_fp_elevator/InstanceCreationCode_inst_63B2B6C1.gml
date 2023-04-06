@@ -8,6 +8,6 @@ image_yscale = 1;
 
 type = "none";
 action = "none";	//выбитая кнопка
-sound = [20, "snd_menu_enterDoor", "snd_gm_lift_pressBtnEmpty"];
+sound = [20, "snd_menu_MMEnterDoor", "snd_gm_lift_pressBtnEmpty"];
 
 

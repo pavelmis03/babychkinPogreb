@@ -50,19 +50,24 @@ btn_id2 = 0;
 
 //создаю кнопки
 //кнопка ,,Следующий слайд,,
+btn_id1 = scr_btn_create(room_width * 0.32, room_height * 0.88, spr_btn_history_next1, depth, 0, "historyNextImg", "func", [20, "snd_none", "snd_none"]);
+/*
 btn_id1 = instance_create_depth(room_width * 0.32, room_height * 0.88, depth, obj_btn);
 btn_id1.sprite_index = spr_btn_history_next1;
 btn_id1.type = "func";
 btn_id1.action = "historyNextImg";
-btn_id1.sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];
+btn_id1.sound = [20, "snd_menu_MMEnterDoor", "snd_menu_MMOpenDoor"];
 btn_id1.btn_enable = true;
-	
+*/	
 //кнопка ,,предыдущий слайд,,
+btn_id2 = scr_btn_create(room_width * 0.19, room_height * 0.88, spr_btn_history_pre1, depth, 0, "historyPreImg", "func", [20, "snd_none", "snd_none"]);
+/*
 btn_id2 = instance_create_depth(room_width * 0.19, room_height * 0.88, depth, obj_btn);
 btn_id2.sprite_index = spr_btn_history_pre1;
 btn_id2.type = "func";
 btn_id2.action = "historyPreImg";
-btn_id2.sound = [20, "snd_menu_enterDoor", "snd_menu_openDoor"];
+btn_id2.sound = [20, "snd_menu_MMEnterDoor", "snd_menu_MMOpenDoor"];
+*/
 //листать назад незачем, т.к. это первый слайд в очереди
 btn_id2.btn_enable = false;
 

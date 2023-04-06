@@ -13,9 +13,9 @@ function scr_snd_musicInRm() {
 	audio_pause_all();
 	
 	//АКТИВАЦИЯ МУЗЫКИ
-		//если в словаре задана музыка по комнате
+		//если в словаре задана музыка по комнате, получаем ее
 	if (ds_map_exists(ctrl_msc_map_, rm_name)) {
-		//массив музыки и приоритета
+		//массив музыки и приоритета по комнате
 		var t_arr = [];
 		array_copy(t_arr, 0, ctrl_msc_map_[?rm_name], 0, array_length(ctrl_msc_map_[?rm_name]));
 		//приоритет музыки хранится первым значением
@@ -41,13 +41,13 @@ function scr_snd_musicInRm() {
 				audio_resume_sound(t_msc[0]);
 				//удаляю ее из массива тех, что надо запустить, чтобы не было дубляжа 
 				array_delete(t_arr, ind, 1);
-			} else {
-				audio_pause_sound(ctrl_msc_arr_on[i][0]);
-				//иначе останавливаю и удаляю из массива играющихся
-				//audio_stop_sound(ctrl_msc_arr_on[i][0]);
-				//array_delete(ctrl_msc_arr_on, i, 1);
-				//i--;
-			}
+			}// else {
+				//audio_pause_sound(ctrl_msc_arr_on[i][0]);
+				////иначе останавливаю и удаляю из массива играющихся
+				////audio_stop_sound(ctrl_msc_arr_on[i][0]);
+				////array_delete(ctrl_msc_arr_on, i, 1);
+				////i--;
+			//}
 		}
 		
 		//прогрываем все начатые в комнате и недоигранные звуки
@@ -97,15 +97,16 @@ function scr_snd_playSnd() {
 				sound[i] = sound[i][ti];
 			}
 			var t_msc = asset_get_index(sound[i]);
-			//если звук еще не воспроизводится
-			if (!audio_is_playing(t_msc)) {
-				audio_sound_gain(t_msc, ctrl_snd_vol, 0);
-				audio_play_sound(t_msc, priority, 0);
-				//добавляем в массив проигрываемых звуков
-				array_push(ctrl_snd_arr_on, [t_msc, room]);
-			} else { //или остановлен
-				if (audio_is_paused(t_msc)) {
-					audio_resume_sound(t_msc);
+			//если звук был остановлен, воспроизводим его
+			if (audio_is_paused(t_msc)) {
+				audio_resume_sound(t_msc);
+			} else {
+				//если звук еще не воспроизводится
+				if (!audio_is_playing(t_msc)) {	//проигрываем его
+					audio_sound_gain(t_msc, ctrl_snd_vol, 0);
+					audio_play_sound(t_msc, priority, 0);
+					//добавляем в массив проигрываемых звуков
+					array_push(ctrl_snd_arr_on, [t_msc, room]);
 				}
 			}
 		}
