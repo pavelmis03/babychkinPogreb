@@ -14,7 +14,7 @@ if (obj_ctrl_set.ctrl_set_map_curr[?"pixels"] and ctrl_gm_pixel_time != -1) {
 	//obj_ctrl_gm_sv.action = "svRm";		//сохраняем комнату
 } else {
 	//если необходимо зайти в комнату истории
-	if (obj_ctrl_gm.ctrl_gm_goHistory) { 
+	if (obj_ctrl_gm.ctrl_gm_histStatus) { 
 		room_goto(rm_menu_history);
 		//ЕСЛИ ПОСЛЕ ИСТОРИИ БУДЕМ ПЕРЕХОДИТЬ В ДРУГУЮ КОМНАТУ 
 		//obj_ctrl_gm_sv.action = "svRm";		//сохраняем комнату

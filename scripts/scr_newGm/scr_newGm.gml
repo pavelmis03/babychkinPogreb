@@ -33,10 +33,18 @@ function scr_newGm() {
 	
 	//создаю общие данные по сохранениям
 	ini_open(game_path + "/save_cmn.ini");
-	//данные для истории (номер просмотра)
-	ini_write_real("HISTORY", "history_number", 0);
-	//данные для диалогов (номер просмотра)
-	ini_write_real("DIALOG", "dialog_number", 0);
+	//данные для истории (номер истории и просмотрена или нет)
+	for (var i = 1; i < 100; i++) {
+		for (var j = 1; j < 20; j++) {
+			ini_write_real("HISTORY", "history" + string(i) + "_" + string(j), 0);
+		}
+	}
+	//данные для диалогов (номер диалога и просмотрен или нет)
+	for (var i = 1; i < 100; i++) {
+		for (var j = 1; j < 20; j++) {
+			ini_write_real("DIALOG", "dlg" + string(i) + "_" + string(j), 0);
+		}
+	}
 	//данные по сохранениям (количество)
 	ini_write_real("SAVES", "save_number", 0);
 	//список сохранение - дата

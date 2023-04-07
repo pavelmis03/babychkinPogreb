@@ -4,8 +4,8 @@ switch (action) {
 	//пропустить историю, закончить просмотр
 	case "skipHistory":
 		obj_ctrl_mv.action = "addRm";
-		obj_ctrl_gm.ctrl_gm_goDlg = false;
-		obj_ctrl_gm.ctrl_gm_goHistory = false;
+		//obj_ctrl_gm.ctrl_gm_goDlg = false;
+		obj_ctrl_gm.ctrl_gm_histStatus = 0;
 		//переходим в следующую комнату в списке
 		room_goto(obj_ctrl_mv.next_rm_list_[|ds_list_size(obj_ctrl_mv.next_rm_list_) - 1]);
 		ds_list_delete(obj_ctrl_mv.next_rm_list_, ds_list_size(obj_ctrl_mv.next_rm_list_) - 1);

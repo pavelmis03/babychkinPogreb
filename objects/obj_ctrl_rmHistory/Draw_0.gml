@@ -2,7 +2,7 @@
 
 //рисование слайда истории или диалога
 var t = 0.5;
-if (obj_ctrl_gm.ctrl_gm_goDlg) {
+if (obj_ctrl_gm.ctrl_gm_histStatus == 2) {
 	t = 0;
 }
 //спрайт диалога один, меняется лишь кадр

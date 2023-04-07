@@ -4,10 +4,10 @@ switch (action) {
 	//начало новой игры
 	case "startNewGm":
 		alarm[1] = 2 * room_speed;	//время пребывания в комнате псевдо загрузки игры
-		
 		ds_list_add(obj_ctrl_mv.next_rm_list_, rm_gm_fp_office);
 		ctrl_gm_pixel_time = 3;		//время пребывания в комнате пикселей
-		ctrl_gm_goHistory = true;	//говорим, что после пикселей надо идти в историю 
+		ctrl_gm_histStatus = 1;	//говорим, что после пикселей надо идти в историю 
+		ctrl_gm_historyInd = "1_1";	//индекс истории 
 		//если это самая первая игра, нужно создать общий файл информации по игре
 		if (!file_exists("gameInfo.ini")) {
 			ini_open("gameInfo.ini");
@@ -34,7 +34,7 @@ switch (action) {
 		ds_list_add(obj_ctrl_mv.next_rm_list_, asset_get_index(tRm));
 		//отправляемся в комнату пикселей
 		ctrl_gm_pixel_time = 3;		//время пребывания в комнате пикселей
-		ctrl_gm_goHistory = false;	//история не нужна
+		ctrl_gm_histStatus = 0;	//история не нужна
 		event_user(13);				//создание контроллеров
 	break;
 	//выход из игры (удаление контроллеров игры и т.д.)
@@ -60,8 +60,8 @@ switch (action) {
 		alarm[1] = 2 * room_speed;	//время на проигрывание спрайта смерти
 		//сохраняем комнату, куда нас отправит контроллер истории после просмотра истории
 		ds_list_add(obj_ctrl_mv.next_rm_list_, rm_menu_deathFP); 
-		ctrl_gm_goHistory = false;	//говорим, что после пикселей не надо идти в историю 
-		ctrl_gm_goDlg = false;		//никаких дилогов тоже не будет
+		ctrl_gm_histStatus = 0;	//говорим, что после пикселей не надо идти в историю 
+		//ctrl_gm_goDlg = false;		//никаких дилогов тоже не будет
 		ctrl_gm_pixel_time = 3;//время пребывания в комнате пикселей 
 	break;
 	/*
@@ -69,7 +69,7 @@ switch (action) {
 	case "goTo_rmPixel":
 		alarm[1] = 0.05 * room_speed;	//время на загрузку пикселей
 		ds_list_add(obj_ctrl_mv.next_rm_list_, room); //после возвращаемся в текущую комнату
-		ctrl_gm_goHistory = false;	//говорим, что после пикселей не надо идти в историю 
+		ctrl_gm_histStatus = 0;	//говорим, что после пикселей не надо идти в историю 
 		ctrl_gm_goDlg = false;		//никаких дилогов тоже не будет
 		ctrl_gm_pixel_time = 3;//время пребывания в комнате пикселей 
 	break;

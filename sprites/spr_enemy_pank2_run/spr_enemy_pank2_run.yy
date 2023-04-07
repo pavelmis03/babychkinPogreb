@@ -55,8 +55,8 @@
   },
   "origin": 9,
   "parent": {
-    "name": "pank1",
-    "path": "folders/Sprites/Game/Game_process/Character/Enemy/People/Panks/pank1.yy",
+    "name": "pank2",
+    "path": "folders/Sprites/Game/Game_process/Character/Enemy/People/Panks/pank2.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
