@@ -34,7 +34,7 @@ if (obj_ctrl_gm.ctrl_gm_histStatus == 2) {
 }
 
 //отрисовка фона-скриншота при выводе диалогов 
-if (!obj_ctrl_gm.ctrl_gm_histStatus == 2) {
+if (obj_ctrl_gm.ctrl_gm_histStatus == 2) {
 	obj_ctrl_gm_img.action = "drawTempScreenShot";
 }
 

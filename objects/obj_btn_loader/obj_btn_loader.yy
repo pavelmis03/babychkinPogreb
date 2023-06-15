@@ -13,8 +13,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "other",
-    "path": "folders/Objects/Menu/other.yy",
+    "name": "btn_menu",
+    "path": "folders/Objects/Menu/btn_menu.yy",
   },
   "parentObjectId": {
     "name": "obj_btn",

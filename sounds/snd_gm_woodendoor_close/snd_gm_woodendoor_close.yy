@@ -13,7 +13,7 @@
   "duration": 1.018776,
   "parent": {
     "name": "door",
-    "path": "folders/Sounds/Snd/Game/Map/MapObj/Interraction/Object/Environment/door.yy",
+    "path": "folders/Sounds/Snd/Game/Map/MapObj/Interaction/Environment/door.yy",
   },
   "preload": false,
   "sampleRate": 44100,

@@ -4,7 +4,7 @@
 //main
 //ПОТОМ УБРАТЬ ИЗ РОДИТЕЛЯ И ПОМЕСТИТЬ В НУЖНЫЕ ОБЪЕКТЫ
 need_sv = 1;	//нужно ли сохранять данный объект
-nonSvVar = ["nonSvVar", "init", "need_sv", "action", ];	
+nonSvVar = ["nonSvVar", "init", "need_sv", "action", "can_interact", "player_obj"];	
 action = "";
 init = false;	//инициализация
 type = "inv";	//для взаимодействия с игроком

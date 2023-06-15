@@ -5,6 +5,7 @@ unkn - unknown
 achv - achievement
 diff - difference
 stat - statistics
+surf - surface
 ctrl - controller
 curr - current
 inst - instance
@@ -26,6 +27,7 @@ btn - button
 bgi - background-image
 bgc - background-color
 img - image
+rot - rotation 
 sys - system
 str - string
 snd - sound
@@ -50,6 +52,7 @@ fnt - font
 tml - timeline
 shdr - shader
 sqn - sequence
+msg - message
 
 
 rm - room

@@ -15,4 +15,9 @@ switch (action) {
 		//выравнивание окна по центру
 		alarm[1] = 1;
 	break;
+	//перепривязка вида к новому игроку
+	case "changeView":
+		player_obj = scr_player_type();
+		camera_set_view_target(view_camera[0], player_obj);
+	break;
 }

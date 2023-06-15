@@ -6,6 +6,10 @@
 //определения типа игрока по комнате
 global.CONST_MAP_RM_INFO = ds_map_create();
 
+//словарь поверхностей и коэффициентов движения на них
+global.CONST_MAP_SURF = ds_map_create();
+
+
 //ОПИСАНИЕ ПРЕДМЕТОВ
 
 //все, что можно съесть и влияние этого на параметры игрока
@@ -24,7 +28,7 @@ global.CONST_MAP_AMULET = ds_map_create();		//!НЕ ГОТОВО
 global.CONST_MAP_PATRON = ds_map_create();
 
 //вещи
-global.CONST_CLOTHES = ds_map_create();
+global.CONST_MAP_CLOTHES = ds_map_create();
 
 //описание предметов
 global.CONST_MAP_ITEMS = ds_map_create();
@@ -227,49 +231,49 @@ global.CONST_MAP_PATRON[?"coctail"] = [[20, 30], /*скорость полета
 
 {//ОДЕЖДА
 //сопротивление холоду, урону, скорость, радиации, перегреву, уважение (все в процентах)
-global.CONST_CLOTHES[?"valenki"] = [15, /*холод*/ 
+global.CONST_MAP_CLOTHES[?"valenki"] = [15, /*холод*/ 
 									4, /*урону*/ 
 									8, /*скорость*/ 
 									0, /*радиации*/
 									5, /*перегрев*/
 									0];/*уважение*/
-global.CONST_CLOTHES[?"cap"] = [4, /*холод*/ 
+global.CONST_MAP_CLOTHES[?"cap"] = [4, /*холод*/ 
 								0, /*урону*/ 
 								0, /*скорость*/ 
 								0, /*радиация*/ 
 								0, /*перегрев*/
 								20];/*уважение*/
-global.CONST_CLOTHES[?"goldWatch"] = [0, /*холод*/ 
+global.CONST_MAP_CLOTHES[?"goldWatch"] = [0, /*холод*/ 
 									  3, /*урону*/ 
 									  0, /*скорость*/ 
 									  0, /*радиация*/ 
 									  0, /*перегрев*/
 									  70];/*уважение*/
-global.CONST_CLOTHES[?"downJacket"] = [20,  /*холод*/ 
+global.CONST_MAP_CLOTHES[?"downJacket"] = [20,  /*холод*/ 
 										5,  /*урону*/ 
 										-2, /*скорость*/ 
 										0,  /*радиация*/ 
 										10, /*перегрев*/
 										0]; /*уважение*/
-global.CONST_CLOTHES[?"steelworkerSuit"] = [10, /*холод*/ 
+global.CONST_MAP_CLOTHES[?"steelworkerSuit"] = [10, /*холод*/ 
 											10, /*урону*/ 
 											-5, /*скорость*/ 
 											5,  /*радиация*/ 
 											100,/*перегрев*/
 											10];/*уважение*/
-global.CONST_CLOTHES[?"antiradiationSuit"] = [0, /*холод*/ 
+global.CONST_MAP_CLOTHES[?"antiradiationSuit"] = [0, /*холод*/ 
 											  0, /*урону*/ 
 											  -7, /*скорость*/ 
 											  100,/*радиация*/ 
 											  0,  /*перегрев*/
 											  0]; /*уважение*/
-global.CONST_CLOTHES[?"bulletproof"] = [4, /*холод*/ 
+global.CONST_MAP_CLOTHES[?"bulletproof"] = [4, /*холод*/ 
 										15, /*урону*/ 
 										-5, /*скорость*/ 
 										0,  /*радиация*/ 
 										0,  /*перегрев*/
 										0]; /*уважение*/
-global.CONST_CLOTHES[?"snowshoes"] = [0, /*холод*/ 
+global.CONST_MAP_CLOTHES[?"snowshoes"] = [0, /*холод*/ 
 									  0, /*урону*/ 
 									  10,/*скорость*/ 
 									  0, /*радиация*/ 
@@ -508,5 +512,14 @@ global.CONST_MAP_RM_INFO[?rm_gm_fp_hole] = ["Первый этаж мвд", obj_
 global.CONST_MAP_RM_INFO[?rm_gm_fp_torture] = ["Допросная", obj_player_FP];
 global.CONST_MAP_RM_INFO[?rm_gm_fp_armory] = ["Оружейная", obj_player_FP];
 global.CONST_MAP_RM_INFO[?rm_gm_fp_parking] = ["Подземная парковка", obj_player_FP];
+
 //global.CONST_MAP_RM_INFO[?rm_gm_fp_elevator] = ["Офис Леонида", obj_player_FP];
+}
+
+{//ОПИСАНИЕ ПОВЕРХНОСТЕЙ
+	//комната - ["поверхность", [x1, y1, x2, y2 - координаты учacтка], 
+	//коэффициент скорости для игрока, [КС для буханки, износ на 10км], КС для владимира, КС для монстров]
+global.CONST_MAP_SURF[?rm_gm_fp_office] = ["Паркет", [0, 0, 2120, 1080], 1, [0.5, 1], 1, 1];
+global.CONST_MAP_SURF[?rm_gm_fp_parking] = ["Бетон", [0, 0, 3120, 3080], 1, [1.5, 1], 1, 1];
+
 }

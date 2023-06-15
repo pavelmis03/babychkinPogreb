@@ -70,8 +70,8 @@ switch (action) {
 							- sprite_get_width(spr_btn_other_slider1) / 2;
 		obj_btn_slider.val = real(obj_ctrl_set.ctrl_set_map_curr[?obj_btn_slider.action]);
 		//checkBtn вкл/выкл
-		obj_btn_check.btn_pressed = bool(obj_ctrl_set.ctrl_set_map_curr[?obj_btn_check.action]);
-		obj_btn_check.image_index = obj_btn_check.btn_pressed;
+		//obj_btn_check.btn_pressed = bool(obj_ctrl_set.ctrl_set_map_curr[?obj_btn_check.action]);
+		//obj_btn_check.image_index = obj_btn_check.btn_pressed;
 	break;
 	//выключает эффекты в игре
 	case "effectsChange":

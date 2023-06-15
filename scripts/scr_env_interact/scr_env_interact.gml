@@ -5,9 +5,13 @@
 /// @description проверяет может ли персонаж взаимодействовать с предметом окружения, если да, то
 	///привязывает свой id к словарю взаимодействий персонажа
 function scr_env_canInteract(addVar, addVal) {
-	if (distance_to_point(player_obj.x, player_obj.y) < 70) {
+	var px = player_obj.x, py = player_obj.y;
+	
+	//if (distance_to_point(player_obj.x, player_obj.y) < 70) {
+	//проверяю, что игрок смотрит именно на объект инвентаря (рисую линию коллизии от игрока прямо на 60 пх)
+	if (collision_line(px, py, px + lengthdir_x(60, player_obj.image_angle), py + lengthdir_y(60, player_obj.image_angle), id, true, false)) {	
 		//проверяю корректность направления взгляда игрока
-		if (abs(angle_difference(player_obj.image_angle, point_direction(player_obj.x, player_obj.y, x, y))) <= 30) {
+		if (abs(angle_difference(player_obj.image_angle, point_direction(px, py, x, y))) <= 30) {
 			//дополнительный набор условий (для отнаследованных от obj_env_parent объектов)
 			//addVall - двумерный массив, т.е. addVal[0] - одномерный 
 			//аналогично addVar[0] in addVal[0], где addVal - набор допустимых значений для переменной addVar[0]

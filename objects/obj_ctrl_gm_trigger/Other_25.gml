@@ -2,10 +2,11 @@
 
 //первая часть
 switch (action) {
+	//ДИАЛОГИ
 	case "dlg1_1": //второй диалог (обучалка: как передвигаться)
 		//вызываю первый диалог 
-		obj_ctrl_gm.action = "dlg2_1";
-		obj_ctrl_gm.ctrl_gm_historyInd = "2_1";	//индекс диалога для контроллера комнаты истории
+		obj_ctrl_gm.action = "dlg1_1";
+		obj_ctrl_gm.ctrl_gm_historyInd = "1_1";	//индекс диалога для контроллера комнаты истории
 		//ds_list_add(obj_ctrl_tml.ctrl_tml_list_, ["dlg1_1", 1.5]);
 		instance_destroy();
 	break;
@@ -24,6 +25,7 @@ switch (action) {
 		
 	break;
 	*/
+	//ПОДСКАЗКИ
 	//подсказка с уровня офиса о степашке (что он забыл у босса)
 	case "hint_office1":
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "hint_office1";
@@ -42,6 +44,17 @@ switch (action) {
 	case "hint_torture1":
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "hint_torture1";
 	break;
+	//БУХАНКА
+	case "createBuhInParking": //создать буханку на парковке
+		//меняю параметры контроллера буханки по положению буханки, чтобы он создал ее
+		obj_ctrl_gm_buh.buh_map_info[?"x"] = 1690;		
+		obj_ctrl_gm_buh.buh_map_info[?"y"] = 1205;
+		obj_ctrl_gm_buh.buh_map_info[?"depth"] = 0;
+		obj_ctrl_gm_buh.buh_map_info[?"room"] = rm_gm_fp_parking;
+		instance_destroy();
+	break;
+	//СИСТЕМНЫЕ
+	//удаление себя
 	case "selfDestroy":
 		instance_destroy();	
 	break;

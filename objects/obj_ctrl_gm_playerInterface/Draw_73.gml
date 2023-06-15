@@ -123,10 +123,10 @@ if (interface_on) {
 if (visible == 1) {
 	//жизни
 	draw_set_color(c_white);
-	draw_rectangle(player.x - 56, player.y - 37, player.x + 56, player.y - 54, true);
-	draw_rectangle_color(player.x - 54, player.y - 39, player.x + 54, player.y - 52, c_red, c_lime, c_lime, c_red, false);
+	draw_rectangle(player_obj.x - 56, player_obj.y - 37, player_obj.x + 56, player_obj.y - 54, true);
+	draw_rectangle_color(player_obj.x - 54, player_obj.y - 39, player_obj.x + 54, player_obj.y - 52, c_red, c_lime, c_lime, c_red, false);
 	draw_set_color(c_black);
-	draw_rectangle(player.x - 54 + (obj_ctrl_gm_playerStatus.hp) / 10, player.y - 39, player.x + 54 , player.y - 52, false);
+	draw_rectangle(player_obj.x - 54 + (obj_ctrl_gm_playerStatus.hp) / 10, player_obj.y - 39, player_obj.x + 54 , player_obj.y - 52, false);
 }
 
 //если интерфейс открыт
@@ -141,3 +141,62 @@ if (interface_on) {
 }
 //собственный спрайт (стрелочка инвентаря)
 draw_self();
+
+
+//БУХАНКА
+if (instance_exists(obj_buh)) {	//если буханка существует и заведена
+	if (obj_buh.buh_playerIn) {		
+		//интерфейс буханки
+		draw_sprite(spr_gm_bg_playerInterfaceBuh, image_index, view_x, view_y);
+		//стрелки
+		//аккумулятор (12.4 - минимальное нопряжение, 14 - обычно максимальное)
+		draw_sprite_ext(spr_buh_arrSmall, image_index, view_x + 424, view_y + 981, 1, 1, -120 / 60 * (draw_buh_battery + 12.4), c_white, 1);
+		//масло
+		draw_sprite_ext(spr_buh_arrSmall, image_index, view_x + 624, view_y + 981, 1, 1, 150 - 90 - (120 / 6) * draw_buh_oil, c_white, 1);
+		//температура двигателя (+40 - потому что нормальная температура охл. жидкости 80 градусов, но начинаем считать уже с 40 (медленно растет в таймере))
+		if (scr_arr_fingEl([1, 3], obj_buh.buh_status, 1) != -1) {	
+			//переменная температуры должна быть постоянной и расти, поэтому рандом добавил сюда, чтобы не создавать
+			//еще одну переменную, поэтому нужно условие
+			draw_sprite_ext(spr_buh_arrSmall, image_index, view_x + 831, view_y + 981, 1, 1, 135 - 90 - (90 / 80) * (draw_buh_temp + 40 /*+ irandom_range(-3, 3) папа сказал, что температура не дергаетяся)*/), c_white, 1);
+		} else {	//если не заведены, то просто на нуле
+			draw_sprite_ext(spr_buh_arrSmall, image_index, view_x + 831, view_y + 981, 1, 1, 135 - 90, c_white, 1);
+		}
+		//топливо
+		draw_sprite_ext(spr_buh_arrSmall, image_index, view_x + 1031, view_y + 981, 1, 1, 150 - 90 - (120 / 77) * obj_ctrl_gm_buh.buh_fuel, c_white, 1);
+		//подсказки по передаче
+		if (obj_buh.buh_transmissionNeed > obj_buh.buh_transmission) { //требуемая передача
+			draw_sprite_ext(spr_buh_arrHint, 0, view_x + 1350, view_y + 962, 1, 1, 0, c_white, 1);
+		} 
+		if (obj_buh.buh_transmissionNeed < obj_buh.buh_transmission) { 
+			draw_sprite_ext(spr_buh_arrHint, 1, view_x + 1350, view_y + 962, 1, 1, 0, c_white, 1);
+		}
+		//скорость
+		draw_sprite_ext(spr_buh_arrSpd, image_index, view_x + 1300, view_y + 922, 1, 1, 225 - 90 - (270 / 120) * (obj_buh.speed * 3.6/*км/ч*/), c_white, 1);
+		
+		//коэффициенты, чтобы легко подвинуть все значения
+		var coefx2 = 0;	
+		var coefy2 = 0;
+		
+		draw_set_color(c_white);
+		draw_set_halign(fa_left);
+		
+		//передача
+		draw_text(view_x + view_w * (coefx2 + 0.365), view_y + view_h * (coefy2 + 0.815), "Передача: " + string(obj_buh.buh_transmission));
+		
+		//расход
+		draw_text(view_x + view_w * (coefx2 + 0.42), view_y + view_h * (coefy2 + 0.815), "Расход: " + string(obj_buh.buh_fuelConsumption));
+		
+		//прочность
+		draw_text(view_x + view_w * (coefx2 + 0.21), view_y + view_h * (coefy2 + 0.815), "Прочность: ");
+		draw_rectangle(view_x + view_w * (coefx2 + 0.25), view_y + view_h * (coefy2 + 0.8), view_x + view_w * (coefx2 + 0.358), view_y + view_h * (coefy2 + 0.815), true);
+		draw_set_color(c_purple);
+		draw_rectangle(view_x + view_w * (coefx2 + 0.2515), view_y + view_h * (coefy2 + 0.803), view_x + view_w * (coefx2 + 0.252) + obj_ctrl_gm_buh.hp / 25, view_y + view_h * (coefy2 + 0.812), false);
+		
+		scr_interface_mileageCalc();
+		
+		for (var i = 0; i < 6; i++) {	//отображение каринок цифр 
+			draw_sprite(spr_buh_num, draw_buh_mileage[5 - i] * 4, view_x + 1250 + i * sprite_get_width(spr_buh_num), view_y + 994);
+		}
+		
+	}
+}

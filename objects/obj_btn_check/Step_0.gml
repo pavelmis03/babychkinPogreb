@@ -25,3 +25,7 @@ if (!obj_ctrl_dlg.ctrl_dlg_exist) {
 		}
 	}
 }
+
+//если кнопка нажата, меняем спрайт на нажатый (там всего две картинки)
+btn_pressed = bool(obj_ctrl_set.ctrl_set_map_curr[?action]);
+image_index = btn_pressed;

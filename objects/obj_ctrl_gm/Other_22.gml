@@ -16,6 +16,7 @@ if (instance_exists(obj_ctrl_gm_inv)) {
 if (instance_exists(obj_ctrl_gm_playerInterface)) {
 	instance_destroy(obj_ctrl_gm_playerInterface);
 }
+
 if (instance_exists(obj_ctrl_gm_playerStatus)) {
 	instance_destroy(obj_ctrl_gm_playerStatus);
 }
@@ -30,6 +31,10 @@ if (instance_exists(obj_ctrl_gm_iss)) {
 
 if (instance_exists(obj_ctrl_tml)) {
 	instance_destroy(obj_ctrl_tml);
+}
+
+if (instance_exists(obj_ctrl_gm_buh)) {
+	instance_destroy(obj_ctrl_gm_buh);
 }
 /*
 //удаление папки сохранения игры, если игрок вышел в меню, не сделав ни одного сохранения

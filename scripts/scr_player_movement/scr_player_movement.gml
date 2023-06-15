@@ -91,7 +91,7 @@ function scr_player_angleDiff(key) {
 
 /// @function scr_player_dir();
 /// @param {} str клавиши, из которых складывается направление. нужно для движения по сетке
-/// @description определяет непосредственно направление
+/// @description определяет непосредственно направление, в нем же определяется возможность дальнейшего бега
 function scr_player_dir(str) {
 	switch (player_moveType) {
 		case "forward": 
@@ -147,6 +147,7 @@ function scr_player_dir(str) {
 	var tx = lerp(x, x + hspeed, 1);
 	var ty = lerp(y, y + vspeed, 1);
 	var player_need_stop = false;	//флаг остановки игрока
+	
 	if ((distance_to_point(mouse_x, mouse_y) < 1) and
 		//проверка на приближение
 		(point_distance(x, y, mouse_x, mouse_y) > point_distance(tx, ty, mouse_x, mouse_y))) {
@@ -157,12 +158,16 @@ function scr_player_dir(str) {
 	for (var i = 0; i < array_length(player_solidObj); i++) {
 		
 		var obj = player_solidObj[i];
+		/*
 		//расстояние на текущий момент (потом сравним его с расстоянием, которое получилось бы, если бы игрок шагнул еще раз)
 		var curr_dist = distance_to_object(obj);
+		*/
 		//ближайший экземпляр (логично, что именно через него может попытаться пройти игрок)
 		var inst = instance_nearest(x, y, obj);
+		/*
 		var curr_x = x;
 		var curr_y = y;
+		*/
 		
 		//дверь проверяю таким образом только если она закрыта, иначе сквозь нее можно пройти) - скип)
 		if (obj == obj_env_door) {
@@ -171,7 +176,7 @@ function scr_player_dir(str) {
 				continue;
 			}
 		}
-		
+		/*
 		//если игрок слишком близко подошел к препятствию
 		if (curr_dist < 1) {
 			//по-другому distance_to_object не сработает 
@@ -182,7 +187,7 @@ function scr_player_dir(str) {
 				//на маленьких расстояниях distance_to_object не работает, поэтому
 				if (distance_to_object(obj) == curr_dist) {
 					//проверяю расстояние до центра объекта (если на следующем шаге мы будем ближе к центру твердого объекта, остановиться)
-					if (point_distance(x, y, inst.x, inst.y) < point_distance(curr_x, curr_y, inst.x, inst.y)) {
+					if (point_distance(x, y, inst.x, inst.y) - point_distance(curr_x, curr_y, inst.x, inst.y) < 1) {
 						player_need_stop = true;
 					}
 				} else { //если расстояние работает
@@ -192,7 +197,13 @@ function scr_player_dir(str) {
 			x = curr_x;
 			y = curr_y;
 		}
+		*/
+		//если в следующем положении после шаг
+		if (place_meeting(tx, ty, obj)) {
+			player_need_stop = true;
+		}
 	}
+	
 	//остановка персонажа
 	if (player_need_stop) {
 		player_moveType = "stand";

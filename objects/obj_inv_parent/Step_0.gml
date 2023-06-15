@@ -1,5 +1,7 @@
 /// @description
 
+var px = player_obj.x, py = player_obj.y;
+
 if (!init) {
 	event_user(0);	
 }
@@ -33,9 +35,11 @@ if (inv_hp == 0 or inv_cnt == 0) {
 if (inv_canLoot) {
 	//проверка на то, что направление и расстояние совпадают
 	can_interact = false;
-	if (distance_to_point(player_obj.x, player_obj.y) < 70) {
+	//if (distance_to_point(player_obj.x, player_obj.y) < 70) {
+	//проверяю, что игрок смотрит именно на объект инвентаря (рисую линию коллизии от игрока прямо на 60 пх)
+	if (collision_line(px, py, px + lengthdir_x(60, player_obj.image_angle), py + lengthdir_y(60, player_obj.image_angle), id, true, false)) {	
 		//проверяю корректность направления взгляда игрока
-		if (abs(angle_difference(player_obj.image_angle, point_direction(player_obj.x, player_obj.y, x, y))) <= 30) {
+		if (abs(angle_difference(player_obj.image_angle, point_direction(px, py, x, y))) <= 30) {
 			//если персонаж взаимодействует с именно с нашим объектом (чтобы сразу два случайно не сработали)
 			if ((player_obj.player_map_col[?type] == 0) or (player_obj.player_map_col[?type] == id)) {
 				can_interact = true;

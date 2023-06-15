@@ -3,6 +3,7 @@
 draw_sprite(sprite_index, image_index, x, y);
 draw_set_font(fnt_cmn_small);
 draw_set_valign(fa_top);
+draw_set_halign(fa_left);
 draw_set_color(c_black);
 
 //рисую скрин на кнопке сохранения (уменьшаю скриншот сохранения (изначально 1920х1080))

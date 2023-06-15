@@ -54,7 +54,8 @@ ctrl_dlg_map_txt = ds_map_create();
 //menu
 ctrl_dlg_map_txt[?"exitGm"] = @"Вы уверены, что хотите выйти из игры?!";
 //меню загрузки
-ctrl_dlg_map_txt[?"nothingSv"] = @"Сохранений нет хотите начать новую игру?";
+ctrl_dlg_map_txt[?"nothingSv"] = @"Сохранений нет(
+								Хотите начать новую игру?";
 ctrl_dlg_map_txt[?"ldSv"] = "Загрузить это сохранение?";
 ctrl_dlg_map_txt[?"delSv"] = @"Вы уверены, что хотите 
 							удалить это сохранение?

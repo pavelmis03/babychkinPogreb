@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "environment",
-    "path": "folders/Scripts/Game/MapObj/Simple/environment.yy",
+    "path": "folders/Scripts/Game/MapObj/Interaction/environment.yy",
   },
 }

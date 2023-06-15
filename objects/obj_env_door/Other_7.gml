@@ -18,7 +18,7 @@ switch (destination) { //нужно учесть, что когда очеред
 		//room_goto(destination);	//если в destination название комнаты
 		ds_list_add(obj_ctrl_mv.next_rm_list_, destination);	//говорим, куда мы направимся 
 		obj_ctrl_mv.ctrl_mv_rmChangeDelay = 0.1;				//даем время на сохранение
-		obj_ctrl_gm_sv.action = "svRm";						//сохраняем комнату
+		obj_ctrl_gm_sv.action = "svRm";							//сохраняем комнату
 	break;
 }
 

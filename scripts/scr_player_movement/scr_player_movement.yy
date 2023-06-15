@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "player",
-    "path": "folders/Scripts/Game/Character/player.yy",
+    "path": "folders/Scripts/Game/MapObj/Character/player.yy",
   },
 }

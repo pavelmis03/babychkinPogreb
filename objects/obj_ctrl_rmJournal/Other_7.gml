@@ -22,7 +22,7 @@ if (sprite_index != spr_sys_none) {
 				//воспроизводим звук страницы
 				obj_ctrl_snd.action = "playSnd";
 				array_push(obj_ctrl_snd.sound, 20, "snd_menu_journalPage");
-				image_index = image_number - 0.1;;
+				image_index = image_number - 0.1;
 				//скрываю перелистываемую закладку
 				var t = ctrl_jrn_map_btn[?ctrl_jrn_btn_active];
 				t[0].visible = false;

@@ -17,5 +17,5 @@ if ((player_obj != -1) and (draw_txt != "") and (obj_ctrl_set.ctrl_set_map_curr[
 	//draw_txt_y = player_obj.y - abs(lengthdir_y((player_obj.sprite_height + player_obj.sprite_width) / 2, player_obj.image_angle));
 	//беру максимальный отступ и не парюсь)
 	draw_txt_y = player_obj.y - player_obj.sprite_width / 2 - string_height(draw_txt) - 3;
-	draw_text_transformed(draw_txt_x, draw_txt_y, draw_txt, image_xscale, image_yscale, image_angle);
+	draw_text_transformed(draw_txt_x, draw_txt_y, string_hash_to_newline(draw_txt), image_xscale, image_yscale, image_angle);
 }
