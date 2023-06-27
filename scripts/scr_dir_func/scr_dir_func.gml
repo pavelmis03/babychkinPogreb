@@ -1,3 +1,4 @@
+/*
 /// @function scr_dir_defQuarter(dir);
 /// @param {} dir направление
 /// @param {} part (1 - по четвертям, 2 - на 8 частей по 45

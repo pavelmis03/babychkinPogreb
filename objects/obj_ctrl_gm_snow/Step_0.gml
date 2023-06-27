@@ -5,9 +5,7 @@ if (!init) {
 }
 
 
-//воспроизводим звук открытия
-//obj_ctrl_snd.action = "playSnd";
-//array_push(obj_ctrl_snd.sound, sound[0], sound[1]);
+//scr_snd_requestPlaySnd(snd_menu_journalPage, snd_menu_journalPage, 20, true);	//звук страницы
 
 		
 		

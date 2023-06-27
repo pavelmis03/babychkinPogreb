@@ -1,4 +1,4 @@
 1) ctrl_dlg_map_depth - obj_ctrl_dlg - create - глубина отрисовки диалогов
 2) ctrl_msc_map_ - obj_ctrl_snd - create - музыка к комнате
 3) ctrl_init - CONST_MAP_RM_INFO - описание комнаты, какой игрок в этой комнате
-4) ctrl_init - CONST_MAP_SURF - поверхности и коэффициенты движения в комнате
+4) ctrl_init - CONST_MAP_SURF - поверхности и коэффициенты движения по поверхности

@@ -5,7 +5,7 @@
 player_obj = scr_player_type();
 
 draw_set_font(fnt_gm_hint);
-draw_set_color(c_grey);
+draw_set_color(c_white);
 //текст будет рисоваться нижней координатой над играком (не нужно вычитать из У высоту строки)
 draw_set_valign(fa_bottom);
 draw_set_halign(fa_center);

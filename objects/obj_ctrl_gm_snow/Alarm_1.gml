@@ -108,7 +108,7 @@ for (var i = 0; i < snow_groupCnt; i++) {	//цикл по группам
 		obj.image_xscale = t;
 		obj.image_yscale = t;
 		
-		Object6.tcnt1++;
+		//Object6.tcnt1++;
 		
 		//увеличиваем количество снежинок в каждой группе
 		snow_nowCnt[i]++;

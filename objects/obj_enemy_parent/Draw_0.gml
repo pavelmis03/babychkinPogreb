@@ -1,7 +1,7 @@
 /// @description 
 
 draw_self();
-
+/*
 if (enemy_isDrawHp) { //нужно ли отображать жизни врагам
 	//полоска жизней
 	draw_set_color(c_white);

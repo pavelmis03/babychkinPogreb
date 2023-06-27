@@ -41,9 +41,7 @@ switch (action) {
 				t[2] += 2;	//у нас ведь разворот и перелистывается сразу две страницы
 				//спрайт перелистывания страницы
 				sprite_index = spr_journal_page;
-				//воспроизводим звук страницы
-				obj_ctrl_snd.action = "playSnd";
-				array_push(obj_ctrl_snd.sound, 20, "snd_menu_journalPage");
+				scr_snd_requestPlaySnd(snd_menu_journalPage, snd_menu_journalPage, 20, true);	//звук страницы
 				image_speed = 1;
 				//стрелочки на страницах не должны существовать во время перелистывания
 				instance_destroy(ctrl_jrn_btn_arrow_arr[0]);
@@ -64,9 +62,7 @@ switch (action) {
 				t[2] -= 2;
 				//спрайт перелистывания страницы
 				sprite_index = spr_journal_page;
-				//воспроизводим звук страницы
-				obj_ctrl_snd.action = "playSnd";
-				array_push(obj_ctrl_snd.sound, 20, "snd_menu_journalPage");
+				scr_snd_requestPlaySnd(snd_menu_journalPage, snd_menu_journalPage, 20, true);	//звук страницы
 				image_index = image_number - 0.1;
 				image_speed = -1;
 				//стрелочки на страницах не должны существовать во время перелистывания

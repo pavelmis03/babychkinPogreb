@@ -1,3 +1,3 @@
 /// @description 
 
-var player = scr_player_type();
+player_obj = scr_player_type();

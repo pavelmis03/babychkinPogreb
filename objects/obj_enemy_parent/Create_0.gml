@@ -1,6 +1,6 @@
 /// @description объект монстр
 
-
+/*
 //main
 action = "";
 type = "enemy";

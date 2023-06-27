@@ -1,8 +1,8 @@
 //игрок всегда смотрит на курсор, кроме атаки
 //во время удара и взаимодействия с предметом персонаж не может перемещаться
 //pressE нужно для случая, когда спрайт заканчивается раньше, чем предмет заканчивает действие
-//спрайт для противоположной ситуации
-if (!player_attack and !player_pressE and sprite_index != spr_playerFP_use) {
+//спрайт для противоположной ситуации, также спрайт пинания буханки
+if (!player_attack and !player_pressE and scr_arr_fingEl([spr_playerFP_use, spr_playerFP_kick], sprite_index, 1) == -1) {
 	image_angle = point_direction(x, y, mouse_x, mouse_y);
 	//тип движения 
 	scr_player_moveType();

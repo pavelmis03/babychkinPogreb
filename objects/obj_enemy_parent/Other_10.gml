@@ -7,6 +7,7 @@
 action = "";
 
 //enemy info
+/*
 var arr = global.CONST_MAP_ENEMY[?enemy_keyName];
 enemy_name = arr[0];		//название
 enemy_spd = arr[1];			//скорость

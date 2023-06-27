@@ -1,6 +1,7 @@
 /// @description инициализация
 
 //npc info
+/*
 var arr = global.CONST_MAP_NPC[?npc_keyName];
 npc_name = arr[0];		//название
 npc_spd = arr[1];			//скорость

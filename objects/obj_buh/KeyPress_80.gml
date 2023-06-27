@@ -9,14 +9,10 @@ if (buh_playerIn) {	//если игрок внутри
 					sprite_index = spr_buh_stateStarted;
 					buh_status = 1;	//завелись
 					buh_startTurn = 0;	//завелись! больше это не нужно до следующего раза
-					//воспроизводим звук
-					obj_ctrl_snd.action = "playSnd";
-					array_push(obj_ctrl_snd.sound, 20, "snd_buh_startSuccess");
+					scr_snd_requestPlaySnd(snd_buh_startSuccess, snd_buh_startSuccess, 20, true);	//звук 
 				} else {	//считаем неудачи
 					buh_startTurn++;
-					//воспроизводим звук
-					obj_ctrl_snd.action = "playSnd";
-					array_push(obj_ctrl_snd.sound, 20, "snd_buh_starter");
+					scr_snd_requestPlaySnd(snd_buh_starter, snd_buh_starter, 20, true);	//звук 
 				}
 			}
 		}

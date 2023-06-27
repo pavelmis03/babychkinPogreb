@@ -13,7 +13,7 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a4506c21-b5d6-4c55-a66b-4612c251b06e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b3612349-4444-49b2-9f93-ffbca689a9e4",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"091274a0-fe21-41b7-9ac8-5a5568fd6b0b",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fffab44e-ecb7-4af9-b92a-f6ec1a9bbc17",},
   ],
@@ -56,7 +56,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a4506c21-b5d6-4c55-a66b-4612c251b06e","path":"sprites/spr_buh_drive/spr_buh_drive.yy",},},},"Disabled":false,"id":"614d00b6-4262-475f-9113-7df2158165da","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b3612349-4444-49b2-9f93-ffbca689a9e4","path":"sprites/spr_buh_drive/spr_buh_drive.yy",},},},"Disabled":false,"id":"fe6a814a-fb4d-41a3-a98d-5cbcd3962724","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"091274a0-fe21-41b7-9ac8-5a5568fd6b0b","path":"sprites/spr_buh_drive/spr_buh_drive.yy",},},},"Disabled":false,"id":"0e557ff7-4c00-4bc0-a353-506c44be08aa","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fffab44e-ecb7-4af9-b92a-f6ec1a9bbc17","path":"sprites/spr_buh_drive/spr_buh_drive.yy",},},},"Disabled":false,"id":"67cee7df-2e4b-4fd2-9afb-802c2d18fe2a","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},

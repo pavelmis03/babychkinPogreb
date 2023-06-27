@@ -5,7 +5,5 @@ if (!player_attack and !player_pressE) {
 	sprite_index = spr_playerFP_attack;
 	image_index = 0;
 	image_speed = 1;
-	//звук удара
-	obj_ctrl_snd.action = "playSnd";
-	array_push(obj_ctrl_snd.sound, 20, "snd_playerFP_swing");
+	scr_snd_requestPlaySnd(snd_playerFP_swing, snd_playerFP_swing, 20, true);	//звук удара
 }

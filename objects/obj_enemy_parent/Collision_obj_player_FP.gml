@@ -5,7 +5,7 @@
 if (other.player_map_col[?type] == 0) {
 	other.player_map_col[?type] = id;
 }
-
+/*
 if (!enemy_attack) {
 	enemy_attack = true;
 	sprite_index = enemy_spr_attack;

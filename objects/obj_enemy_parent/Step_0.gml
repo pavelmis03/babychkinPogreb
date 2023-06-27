@@ -1,6 +1,6 @@
 /// @description 
 
-var player = scr_player_type();
+player_obj = scr_player_type();
 
 //инициализация 
 if (!init) {
@@ -35,6 +35,6 @@ if (distance_to_object(player) >= enemy_seeDist) {
 }
 */
 //если игрока пора атаковать, враг бежит к нему
-if (enemy_needAttack and !enemy_attack) {
+/*if (enemy_needAttack and !enemy_attack) {
 	scr_enemy_moveToPlayer();
 }

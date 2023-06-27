@@ -1,6 +1,6 @@
 /// @description родительский элемент для всех мирных npc
 
-
+/*
 //main
 action = "";
 type = "npc";

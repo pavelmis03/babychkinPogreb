@@ -69,8 +69,6 @@ function scr_snd_musicInRm() {
 	}
 }
 
-
-
 /// @function scr_snd_playSnd();
 /// @param {} 
 /// @description проигрывает переданный набор звуков
@@ -114,3 +112,43 @@ function scr_snd_playSnd() {
 	//очищаю массив
 	sound = [];
 }
+
+/// @function scr_snd_requestPlaySnd(snd1, snd2, val, playOrStop);
+/// @param {} snd1 - звук проверки (передавать как ресурс без строк)
+/// @param {} snd2 - звук запуска/остановки
+/// @param {} val - приоритет звука
+/// @param {} playOrStop - запустить или остановить звук
+/// @description создает запрос на запуск звука, если он еще не играет или останавливает, если играет
+function scr_snd_requestPlaySnd(snd1, snd2, val, playOrStop) {
+	if (playOrStop) {
+		if (!audio_is_playing(snd1)) {
+			//воспроизводим звук
+			obj_ctrl_snd.action = "playSnd";
+			array_push(obj_ctrl_snd.sound, val, audio_get_name(snd2));	//получаем звук в виде строки
+		}
+	} else {
+		if (audio_is_playing(snd1)) {	//останавливаем звук 
+			audio_stop_sound(snd2);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

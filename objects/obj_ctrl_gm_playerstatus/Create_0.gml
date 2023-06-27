@@ -8,7 +8,7 @@ nonSvVar = ["nonSvVar", "init", "need_sv", "action", "player_arr"];
 
 //персонаж основное
 	//массив персонажей
-player_arr = [obj_player_FP, obj_player_home, obj_player_SP, obj_player_village, obj_buh]; //изменение
+player_arr = [obj_player_FP, obj_player_home, obj_player_SP, obj_player_village, /*obj_buh*/]; 
 
 //параметры персонажа
 x = 0;	//здесь сохраняются х, у персонажа

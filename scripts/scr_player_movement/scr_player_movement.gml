@@ -144,8 +144,11 @@ function scr_player_dir(str) {
 	sprite_index = scr_player_moveSpr();
 	
 	//если игрок близко к курсору, то, если он приближается, останавливаем его
-	var tx = lerp(x, x + hspeed, 1);
-	var ty = lerp(y, y + vspeed, 1);
+	var tx = lerp(x, x + hspeed, 1);	//почему lerp ???
+	var ty = lerp(y, y + vspeed, 1);	//почему lerp ???
+	var tx1 = lerp(x, x + hspeed * 0.1 * room_speed, 1);	//через время, равное 1/10 секунды (h/vspeed считается в px/такт)
+	var ty1 = lerp(y, y + vspeed * 0.1 * room_speed, 1);	//
+	
 	var player_need_stop = false;	//флаг остановки игрока
 	
 	if ((distance_to_point(mouse_x, mouse_y) < 1) and
@@ -198,8 +201,8 @@ function scr_player_dir(str) {
 			y = curr_y;
 		}
 		*/
-		//если в следующем положении после шаг
-		if (place_meeting(tx, ty, obj)) {
+		//если в следующем положении после шага и через несколько шагов мы сталкиваемся с препятствием, то отстаанвливаемся
+		if ((place_meeting(tx, ty, obj)) and (place_meeting(tx1, ty1, obj))) {
 			player_need_stop = true;
 		}
 	}

@@ -22,6 +22,8 @@ if (obj_ctrl_mv.pre_rm != room) {
 	}
 }
 
+hp = clamp(hp, 0, CONST_BUH_MAXHP);
+
 //выполнение действия
 if (action != "") {
 	event_user(15);

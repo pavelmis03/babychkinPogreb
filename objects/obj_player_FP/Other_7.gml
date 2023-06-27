@@ -23,3 +23,6 @@ if (player_pressE) {
 if (sprite_index == spr_playerFP_use) {
 	sprite_index = spr_playerFP_state;
 }
+if (sprite_index == spr_playerFP_kick) {
+	sprite_index = spr_playerFP_state;
+}
