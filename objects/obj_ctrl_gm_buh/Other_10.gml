@@ -10,11 +10,11 @@ if (typeof(t) == "string") {
 } else { //по умолчанию
 	//buh_map_info[?"x"] = 1690;	//D
 	//buh_map_info[?"y"] = 1205;	//D
-	//buh_map_info[?"depth"] = 0;	//D
+	//buh_map_info[?"depth"] = -1;	//D
 	//buh_map_info[?"room"] = rm_gm_fp_parking;	//D
 	buh_map_info[?"x"] = 1108;	//!D
 	buh_map_info[?"y"] = 505;	//!D
-	buh_map_info[?"depth"] = 0;	//!D
+	buh_map_info[?"depth"] = -1;	//!D
 	buh_map_info[?"room"] = rm_gm_fp_office;	//!D
 	
 	buh_map_info[?"dir"] = 0;

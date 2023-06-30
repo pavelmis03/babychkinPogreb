@@ -8,7 +8,7 @@ if (player_attack) {
 		//если игрок смотрит в сторону врага
 		if (collision_line(x, y, x + lengthdir_x(1000, image_angle), y + lengthdir_y(1000, image_angle), obj_ind, true, true) != noone) {
 			//наносим врагу урон
-			player_map_col[?"enemy"].hp -= player_attackDamage;
+			player_map_col[?"enemy"].hp -= player_attackDmg;
 		}
 	}
 }

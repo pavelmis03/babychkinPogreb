@@ -226,30 +226,36 @@ function scr_player_spd() {
 	if (obj_ctrl_set.ctrl_set_map_curr[?"gridMv"]) { 
 		t = -1;
 	}
+	var tt = instance_position(x, y, obj_ctrl_gm_surf);	//проверяю коллизию с поверхностью
+	var surf_coef = 1;	//коэффициент скорости на поверхности
+	if (tt != noone) {	//если под нами определена поверхность
+		surf_coef = tt.surf_params[0];	//коэффициент скорости на поверхности
+	}
+	
 	switch (player_moveType) {
 		case "forward": 
-			spd = CONST_PLAYER_NORMALSPEED;
+			spd = CONST_PLAYER_NORMALSPEED * surf_coef;
 		break;
 		case "lforward": 
-			spd = CONST_PLAYER_NORMALSPEED;
+			spd = CONST_PLAYER_NORMALSPEED * surf_coef;
 		break;
 		case "rforward": 
-	 		spd = CONST_PLAYER_NORMALSPEED;
+	 		spd = CONST_PLAYER_NORMALSPEED * surf_coef;
 		break;
 		case "backward": 
-			spd = -CONST_PLAYER_NORMALSPEED * t;
+			spd = -CONST_PLAYER_NORMALSPEED * t * surf_coef;
 		break;
 		case "lbackward": 
-			spd = -CONST_PLAYER_NORMALSPEED * t;
+			spd = -CONST_PLAYER_NORMALSPEED * t * surf_coef;
 		break;
 		case "rbackward": 
-			spd = -CONST_PLAYER_NORMALSPEED * t;
+			spd = -CONST_PLAYER_NORMALSPEED * t * surf_coef;
 		break;
 		case "right": 
-			spd = CONST_PLAYER_NORMALSPEED / 3 * 2;
+			spd = CONST_PLAYER_NORMALSPEED / 3 * 2 * surf_coef;
 		break;
 		case "left": 
-			spd = CONST_PLAYER_NORMALSPEED / 3 * 2;
+			spd = CONST_PLAYER_NORMALSPEED / 3 * 2 * surf_coef;
 		break;
 	}
 	
@@ -349,6 +355,14 @@ function scr_player_checkCanRun() {
 	if (obj_ctrl_gm_playerStatus.hp <= 150) {
 		canRun = false;
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "run_hp";
+	}
+	//проверка на возможность бежать по поверхности
+	var t = instance_position(x, y, obj_ctrl_gm_surf);	//проверяю коллизию с поверхностью
+	if (t != noone) {	//если под нами определена поверхность
+		if (scr_arr_fingEl(["Болото", "Глубокий снег", "Глубокая вода"], t.surf_name, 1) != -1) {
+			canRun = false;	//поверхности, по которым не можем бежать
+			obj_ctrl_gm_hint.ctrl_hint_newHint = "run_surf";
+		}
 	}
 	/*
 	//голод

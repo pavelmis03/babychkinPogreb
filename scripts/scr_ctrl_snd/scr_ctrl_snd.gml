@@ -120,8 +120,8 @@ function scr_snd_playSnd() {
 /// @param {} playOrStop - запустить или остановить звук
 /// @description создает запрос на запуск звука, если он еще не играет или останавливает, если играет
 function scr_snd_requestPlaySnd(snd1, snd2, val, playOrStop) {
-	if (playOrStop) {
-		if (!audio_is_playing(snd1)) {
+	if (playOrStop) {	//звук может быть активен, но может не воспроизводиться, если он относится к другой комнате
+		if ((!audio_is_playing(snd1)) or (audio_is_paused(snd1))) {
 			//воспроизводим звук
 			obj_ctrl_snd.action = "playSnd";
 			array_push(obj_ctrl_snd.sound, val, audio_get_name(snd2));	//получаем звук в виде строки

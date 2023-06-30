@@ -16,13 +16,15 @@ if (obj_ctrl_mv.pre_rm != room) {
 		buh_map_info[?"x"] = obj_buh.x;
 		buh_map_info[?"y"] = obj_buh.y;
 		buh_map_info[?"depth"] = obj_buh.depth;
-		//buh_map_info[?"room"] = room; //она бы просто не создалась, если бы комната была не эта
+		buh_map_info[?"room"] = room; 
 	
 		buh_map_info[?"dir"] = obj_buh.direction;
 	}
 }
 
 hp = clamp(hp, 0, CONST_BUH_MAXHP);
+armor = clamp(armor, 0, CONST_BUH_MAXARMOR);
+buh_fuel = clamp(buh_fuel, 0, CONST_BUH_MAXFUEL);
 
 //выполнение действия
 if (action != "") {

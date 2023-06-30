@@ -26,8 +26,8 @@ switch (action) {
 		//изменяю громкость всех звуков
 		for (var i = 0; i < array_length(ctrl_snd_arr_on); i++) {
 			audio_sound_gain(ctrl_snd_arr_on[i][0], ctrl_snd_vol, 0);
-		}
-	break;
+		} 
+	break; 
 	//очистка звуков при начале новой игры и выходе из игры
 	case "sndClear":
 		//останавливаем все звуки

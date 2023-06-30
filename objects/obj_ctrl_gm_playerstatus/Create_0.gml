@@ -8,7 +8,11 @@ nonSvVar = ["nonSvVar", "init", "need_sv", "action", "player_arr"];
 
 //персонаж основное
 	//массив персонажей
-player_arr = [obj_player_FP, obj_player_home, obj_player_SP, obj_player_village, /*obj_buh*/]; 
+player_arr = [obj_player_FP, obj_player_home, obj_player_SP, obj_player_village]; 
+	//перемещение по комнатам
+player_creationX = 0;		//координаты создания игрока в новой комнате при переходе по триггеру-телепорту
+player_creationY = 0;		//используются триггерами перемещения, когда большая локация разбита на несколько комнат
+player_creationDepth = 0;	//глубина создания
 
 //параметры персонажа
 x = 0;	//здесь сохраняются х, у персонажа
@@ -18,7 +22,7 @@ player_preHp = 1080;		//предыдущее значение жизней (дл
 player_dmgTimeLess = 0;		//сколько времени прошло с момента получения последнего урона 
 							//нужно (10сек) для восстановления жизней от 1 до 120
 //player_map_sysParam = 0;	//словарь системных параметров игрока
-player_map_info = 0;		//информация об игроке в кождой посещенной комнате
+player_map_info = 0;		//информация об игроке в каждой посещенной комнате
 									//player_map_info?[room] = [x, y, depth]
 
 //быстрый бег

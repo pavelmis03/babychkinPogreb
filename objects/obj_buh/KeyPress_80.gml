@@ -4,8 +4,8 @@ if (buh_playerIn) {	//если игрок внутри
 	if (buh_startTurn < 3) {	//если мы еще не пытались завести
 		if (buh_status == 0) {	//если буханка не заведена
 			if (!audio_is_playing(snd_buh_starter)) {	//попробовать еще раз можно, когда звук доиграл
-				//if (irandom_range(1, 100) <= 25) {	//если нам повезло и она завелась	//!D
-				if (true) {	
+				if (irandom_range(1, 100) <= 25) {	//если нам повезло и она завелась	//!D
+				//if (true) {	
 					sprite_index = spr_buh_stateStarted;
 					buh_status = 1;	//завелись
 					buh_startTurn = 0;	//завелись! больше это не нужно до следующего раза

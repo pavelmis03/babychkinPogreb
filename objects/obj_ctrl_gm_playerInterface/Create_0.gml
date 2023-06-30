@@ -13,6 +13,7 @@ draw_buh_oil = 0;		//масло
 draw_buh_temp = 0;		//температура 
 draw_buh_mileageLast = obj_ctrl_gm_buh.buh_mileage;	//проверка на изменение пробега
 draw_buh_mileage = [];		//индексы спрайтов с цифрами для каждой цифры
+draw_buh_fuelWarning = 0;	//моргание значка топлива
 var t = round(obj_ctrl_gm_buh.buh_mileage);
 for (var i = 0; i < 6; i++) {
 	array_push(draw_buh_mileage, t % 10);

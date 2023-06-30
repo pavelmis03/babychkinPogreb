@@ -12,7 +12,7 @@ scr_buh_chechPlayerDir();
 
 image_angle = direction;
 
-if (buh_status != 4) {	//если она не сломана
+if (obj_ctrl_gm_buh.buh_broke != 2) {	//если она не сломана
 	//движение
 	if (speed != 0) {
 		//поворот буханки не зависит от статуса буханки
@@ -26,8 +26,14 @@ if (buh_status != 4) {	//если она не сломана
 		//direction += 360 / T / room_speed * sign(buh_rotAngle);	
 		direction += 360 / R * speed / room_speed / t * sign(buh_rotAngle);	
 		
-		buh_decomposition1 = 
-	
+		var tt = instance_position(x, y, obj_ctrl_gm_surf);	//проверяю коллизию с поверхностью
+		if (tt != noone) {	//если под нами определена поверхность
+			//получаем массив параметров поверхности - параметры для буханки - износ на км 
+			//делю на 100, чтобы получить в процентах, потом делю на время, за которое буханка проедет 1км при скорости (speed / 1000)км/с
+			//buh_decomposition1 = 5000 * (t.surf_params[1][1] / 100) / (1 / (speed / 1000));	//линейная зависимость от скорости
+			buh_decomposition1 = 5000 * (tt.surf_params[1][1] / 100) / (1 / (power(speed, 2) / 1000));		//квадратичная
+		}
+		
 		if (buh_status != 2) {	//если мы не заглохли
 			buh_status = 3;		//говорим о том, что мы движемся
 			//спрайт движения
@@ -46,6 +52,7 @@ if (buh_status != 4) {	//если она не сломана
 			image_index = 0;
 		}
 		buh_decomposition = 0;
+		buh_decomposition1 = 0;	//когда мы стоим, износа нет
 	}
 
 	//звук холостых оборотов
@@ -55,15 +62,26 @@ if (buh_status != 4) {	//если она не сломана
 
 	//если мы едем
 	if (buh_status == 3) {
-		obj_ctrl_gm_buh.buh_mileage	+= (speed / 1000 / room_speed);	//пробег / 1000, потому что км/сек считаю
+		obj_ctrl_gm_buh.buh_mileage	+= (speed / 1000 / room_speed);	//пробег / 1000, потому что км/сек считаю. (км = 1/1000м)
 		scr_snd_requestPlaySnd(snd_buh_movement, snd_buh_movement, 20, true);	//звук движения
 	
 		//автоторможение при включенных нейтрали или сцеплении	
 		if ((buh_coupling) or (buh_transmission == 0)) {	//если нейтраль или сцепление
 			var t = clamp(abs(speed) * 3.6 / 60, 0, 2);	//торможение об воздух на холостом ходу до 2 от скорости зависит
-			var t1 = clamp(0.7, 0.5, 2);			//торможение по поверхности на холостых
+			var t1 = 0;
+			var tt = instance_position(x, y, obj_ctrl_gm_surf);	//проверяю коллизию с поверхностью
+			if (tt != noone) {	//если под нами определена поверхность
+				t1 = tt.surf_params[1][0];	//торможение по поверхности
+			}
+			var tc = 0.15;
+			if (abs(speed) * 3.6 < 1.5) {	//если едем медленнее, чем 1.5км/ч
+				tc = 1;				//чтобы мы не останавливались 10 минут со скорости 1км/ч
+			}
 			//добавил clamp, чтобы при небольшой скорости влияние шифта и нейтрали не сказывалось так сильно
-			speed -= clamp(t + t1, 0, abs(speed) * 0.15) / room_speed * signSpd;	
+			speed -= clamp(t + t1, 0, abs(speed) * tc) / room_speed * signSpd;
+			if (abs(speed) * 3.6 < 0.5) {	//округляем скорость, если она совсем маленькая
+				speed = 0;
+			}
 		}
 	
 		if (buh_transmissionNeed > buh_transmission) { //если передача ниже нужной
@@ -74,12 +92,13 @@ if (buh_status != 4) {	//если она не сломана
 		if (abs(obj_ctrl_gm_buh.buh_fuel - 7) < 0.01) {
 			obj_ctrl_gm_hint.ctrl_hint_newHint = "buhankafuelLow1";
 		}
-		if (abs(obj_ctrl_gm_buh.buh_fuel - 2) < 0.01) {
+		if (abs(obj_ctrl_gm_buh.buh_fuel - 2.5) < 0.01) {
 			obj_ctrl_gm_hint.ctrl_hint_newHint = "buhankafuelLow2";
 		}
 		//глохнем, если топливо кончилось
 		if (obj_ctrl_gm_buh.buh_fuel < 0.1) {
 			scr_buh_stallAction(false);	//глохнем
+			obj_ctrl_gm_hint.ctrl_hint_newHint = "buhankaFuelEnd";
 		}
 	}
 
@@ -133,7 +152,12 @@ if (buh_status != 4) {	//если она не сломана
 				sprite_index = spr_buh_state;
 				image_index = 0;
 			}
-			buh_decomposition = 0;
+			buh_decomposition = 0;	//когда мы стоим, износа нет
+			buh_decomposition1 = 0;	//когда мы стоим, износа нет
+			
+			if (obj_ctrl_gm_buh.buh_broke == 1) {	//если буханка сломалась, когда ехала, а теперь остановилась
+				obj_ctrl_gm_buh.buh_broke = 2;		//окончательно ломаем) (чтобы нельзя было сесть обратно)
+			}
 		}
 	}
 
@@ -142,7 +166,7 @@ if (buh_status != 4) {	//если она не сломана
 	var t2 = speed * (1 - signSpd) / 2;	//будет clamp(speed, 0, speed) при speed > 0
 											//и clamp(speed, speed, 0) при speed < 0
 
-	speed = clamp(round(speed * 100) / 100, t2, t1);
+	speed = clamp(round(speed * 10000) / 10000, t2, t1);
 	buh_decomposition = clamp(buh_decomposition, 0, 1000);	//в секунду
 
 	//если игрок в буханке, то мы его привязываем к координатам буханки
@@ -154,15 +178,23 @@ if (buh_status != 4) {	//если она не сломана
 	}
 	
 	obj_ctrl_gm_buh.hp -= (buh_decomposition + buh_decomposition1) / room_speed;	//износ в секунду
+	obj_ctrl_gm_buh.hp = clamp(obj_ctrl_gm_buh.hp, 0, obj_ctrl_gm_buh.CONST_BUH_MAXHP);
+	
+	//если жизни равны нулю, мы ломаемся
+	if ((obj_ctrl_gm_buh.hp == 0) and (obj_ctrl_gm_buh.buh_broke == 0)) {
+		scr_buh_stallAction(false);		//глохнем
+		obj_ctrl_gm_buh.buh_broke = 1;	//мы полностью сломаемся после остановки
+		obj_ctrl_gm_hint.ctrl_hint_newHint = "buhankaBrokeNow";
+	}
 } else {
-	//спрайт сломанной буханки
-	if (sprite_index != spr_buh_broke) {
+	//спрайт сломанной буханки, если еще не назначен
+	if (sprite_index == spr_buh_state) {
 		sprite_index = spr_buh_broke;
 		image_index = 0;
 	}
 	//проверить
-	//починить буханку можно, если вернуть ей целостность больше 80%
-	if (obj_ctrl_gm_buh.hp > 0.8 * obj_ctrl_gm_buh.CONST_BUH_MAXHP) {
+	//починить буханку можно, если вернуть ей целостность больше 70% от первоначальной целостности
+	if (obj_ctrl_gm_buh.hp > 0.7 * 5000) {
 		buh_status = 0;
 	}
 }

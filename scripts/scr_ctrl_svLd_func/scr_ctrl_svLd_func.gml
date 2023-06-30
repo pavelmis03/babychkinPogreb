@@ -21,6 +21,7 @@ function scr_sv_getName(str) {
 /// @description создает все объекты из файла с сохраненными характеристиками в текущей комнате
 function scr_ld_createObjFromFile(filePath) {
 	//открываем файл с объектами
+	obj_name = 0;	//чтобы варнинга не было (эта переменная читается из файла сохранения, как ключ)
 	var file = file_text_open_read(filePath);
 	var objVal = {};	//переменные объекта
 	while (!file_text_eof(file)) {

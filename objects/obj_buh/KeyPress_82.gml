@@ -8,9 +8,9 @@ if ((buh_coupling) and (buh_transmission != 5)) {
 			obj_ctrl_gm_buh.hp -= 5000 * 0.03; //мгновенный разовый износ 3%
 		} else {
 			scr_snd_requestPlaySnd(snd_buh_transmissionChange, snd_buh_transmissionChange, 20, true);	//звук 
-			if (speed == 0) {	//если мы до этого стояли
+			/*if (speed == 0) {	//если мы до этого стояли
 				speed = -4.5 / 3.6;	//едем на холостых
-			}	
+			}*/	
 		}
 		buh_transmission = 5;	//включаем задний ход
 	} else {	//если попытаться включить заднюю, когда едем вперед

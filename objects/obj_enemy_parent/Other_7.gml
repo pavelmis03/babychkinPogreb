@@ -11,6 +11,6 @@ if (enemy_attack) {
 	//проверяю, что игрок еще не отбежал
 	if (other.player_map_col[?type] == id) {
 		//по спрайту красивее, если урон игроку будет наноситься в конце анимации 
-		player.hp -= enemy_damage[0];
+		player.hp -= enemy_dmg[0];
 	}
 }

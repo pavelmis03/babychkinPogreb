@@ -154,16 +154,23 @@ if (instance_exists(obj_buh)) {	//если буханка существует �
 		draw_sprite_ext(spr_buh_arrSmall, image_index, view_x + 424, view_y + 981, 1, 1, -120 / 60 * (draw_buh_battery + 12.4), c_white, 1);
 		//масло
 		draw_sprite_ext(spr_buh_arrSmall, image_index, view_x + 624, view_y + 981, 1, 1, 150 - 90 - (120 / 6) * draw_buh_oil, c_white, 1);
-		//температура двигателя (+40 - потому что нормальная температура охл. жидкости 80 градусов, но начинаем считать уже с 40 (медленно растет в таймере))
+		//показатели, которые работают только когда машина заведена
 		if (scr_arr_fingEl([1, 3], obj_buh.buh_status, 1) != -1) {	
+			//температура двигателя (+40 - потому что нормальная температура охл. жидкости 80 градусов, но начинаем считать уже с 40 (медленно растет в таймере))
 			//переменная температуры должна быть постоянной и расти, поэтому рандом добавил сюда, чтобы не создавать
 			//еще одну переменную, поэтому нужно условие
 			draw_sprite_ext(spr_buh_arrSmall, image_index, view_x + 831, view_y + 981, 1, 1, 135 - 90 - (90 / 80) * (draw_buh_temp + 40 /*+ irandom_range(-3, 3) папа сказал, что температура не дергаетяся)*/), c_white, 1);
+			
+			//топливо
+			if (obj_ctrl_gm_buh.buh_fuel <= 7) {	//если топлива мало, рисуем моргающий бачок
+				draw_sprite_ext(spr_buh_fuel, draw_buh_fuelWarning, view_x + 1028, view_y + 1031, 1, 1, 0, c_white, 1);
+				draw_buh_fuelWarning = (draw_buh_fuelWarning + 1 / room_speed) mod 2;	//так скорость изменения будет 1 кадр в секунду, а после второго кадра мы начинаем сначала
+			}
+			draw_sprite_ext(spr_buh_arrSmall, image_index, view_x + 1031, view_y + 981, 1, 1, 150 - 90 - (120 / 77) * obj_ctrl_gm_buh.buh_fuel, c_white, 1);	
 		} else {	//если не заведены, то просто на нуле
 			draw_sprite_ext(spr_buh_arrSmall, image_index, view_x + 831, view_y + 981, 1, 1, 135 - 90, c_white, 1);
+			draw_sprite_ext(spr_buh_arrSmall, image_index, view_x + 1031, view_y + 981, 1, 1, 150 - 90, c_white, 1);	
 		}
-		//топливо
-		draw_sprite_ext(spr_buh_arrSmall, image_index, view_x + 1031, view_y + 981, 1, 1, 150 - 90 - (120 / 77) * obj_ctrl_gm_buh.buh_fuel, c_white, 1);
 		//подсказки по передаче
 		var t = 0;	//номер картинки подсказки (0 - пустая)
 		if (scr_arr_fingEl([1, 3], obj_buh.buh_status, 1) != -1) {
@@ -212,15 +219,21 @@ if (instance_exists(obj_buh)) {	//если буханка существует �
 				draw_text(view_x + view_w * (coefx2 + 0.365), view_y + view_h * (coefy2 + 0.815), "Передача: " + string(obj_buh.buh_transmission));
 		}
 		*/
+		//банкой пива, катающейся по приборке, показываем угол поворота руля
+		draw_sprite_ext(spr_buh_beer, 0, view_x + 831 + obj_buh.buh_rotAngle / 2, view_y + 792, 1, 1, 0, c_white, 1);
 		//расход
-		draw_text(view_x + view_w * (coefx2 + 0.475), view_y + view_h * (coefy2 + 0.953), "Расход: " + string(obj_buh.buh_fuelConsumption));
+		draw_text(view_x + view_w * (coefx2 + 0.515), view_y + view_h * (coefy2 + 0.94), "Расход: " + string(obj_buh.buh_fuelConsumption));
 		//износ
-		draw_text(view_x + view_w * (coefx2 + 0.19), view_y + view_h * (coefy2 + 0.795), "Износ/сек: " + string(obj_buh.buh_decomposition + obj_buh.buh_decomposition1));
+		//draw_text(view_x + view_w * (coefx2 + 0.19), view_y + view_h * (coefy2 + 0.795), "Износ/сек: " + string(obj_buh.buh_decomposition + obj_buh.buh_decomposition1));
+		var td = clamp(obj_buh.buh_decomposition + obj_buh.buh_decomposition1, 0, 1);
+		draw_sprite_ext(spr_buh_arrVertical, 0, view_x + 790 + td * 290, view_y + 820, 1, 1, 0, c_white, 1);
 		//прочность
 		draw_text(view_x + view_w * (coefx2 + 0.19), view_y + view_h * (coefy2 + 0.815), "Прочность: ");
 		draw_rectangle(view_x + view_w * (coefx2 + 0.25), view_y + view_h * (coefy2 + 0.8), view_x + view_w * (coefx2 + 0.358), view_y + view_h * (coefy2 + 0.815), true);
 		draw_set_color(c_purple);
 		draw_rectangle(view_x + view_w * (coefx2 + 0.2515), view_y + view_h * (coefy2 + 0.803), view_x + view_w * (coefx2 + 0.252) + obj_ctrl_gm_buh.hp / 25, view_y + view_h * (coefy2 + 0.812), false);
+		draw_set_color(c_white);	//отображаю жизни числовым значением
+		draw_text(view_x + view_w * (coefx2 + 0.295), view_y + view_h * (coefy2 + 0.815), string(obj_ctrl_gm_buh.hp));	//число
 		
 		scr_interface_mileageCalc();
 		

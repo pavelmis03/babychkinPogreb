@@ -33,7 +33,7 @@ right
 
 //attack
 player_attack = false;	//показывает, что персонаж собирается ударить
-player_attackDamage = 15;		//урон игрока
+player_attackDmg = 15;		//урон игрока
 
 //collisions
 player_buhIn = false;	//персонаж в буханке
@@ -60,3 +60,5 @@ player_pressE = false;
 
 
 //СОСТОЯНИЯ
+
+depth = -1;

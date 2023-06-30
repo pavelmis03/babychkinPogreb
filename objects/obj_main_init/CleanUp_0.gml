@@ -14,4 +14,5 @@ ds_map_destroy(global.CONST_MAP_NPC);
 //ds_map_destroy(global.CONST_MAP_WEIGHT);
 ds_map_destroy(global.CONST_MAP_RM_INFO);
 ds_map_destroy(global.CONST_MAP_SURF);
+ds_map_destroy(global.CONST_MAP_SOLIDOBJ);
 

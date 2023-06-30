@@ -1,2 +1,2 @@
 /// @description 
-ctrl_map_stat[?"getDamage"] = int64(ctrl_map_stat[?"getDamage"]) + 10;
+ctrl_map_stat[?"getDmg"] = int64(ctrl_map_stat[?"getDmg"]) + 10;

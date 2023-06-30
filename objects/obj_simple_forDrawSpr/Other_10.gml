@@ -1,0 +1,3 @@
+/// @description инициализация
+
+init = true;

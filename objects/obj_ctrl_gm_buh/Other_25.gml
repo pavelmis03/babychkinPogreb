@@ -11,6 +11,7 @@ switch (action) {
 				obj_buh.y = buh_map_info[?"y"];
 				obj_buh.depth = buh_map_info[?"depth"];
 				obj_buh.direction = buh_map_info[?"dir"];
+				obj_buh.persistent = false;	//при переходах между комнатами-частями локаций контроллер триггеров делает буханку постоянной для сохранения ее переменных				
 			} else {//если не существует, создаем
 				obj = instance_create_depth(buh_map_info[?"x"], buh_map_info[?"y"], buh_map_info[?"depth"], obj_buh);
 				obj.direction = buh_map_info[?"dir"];

@@ -33,7 +33,7 @@ function scr_buh_chechPlayerDir() {
 			//проверяю, что мы не смотрим на капот
 			/*!(abs(angle_difference(player_obj.image_angle, (direction + 180) %360)) <= 40)*/) {
 				if (point_distance(x, y, px, py) < 150) {	//проверяю, что расстояние от центра игрока до кабины небольшое
-					if (buh_status != 4) {	//если она не сломана
+					if (obj_ctrl_gm_buh.buh_broke == 0) {	//если она не сломана
 						//добавление подсказки о возможности сесть в буханку
 						obj_ctrl_gm_hint.ctrl_hint_newHint = "buhankaSitdown";
 						//массив коллизий игрока
@@ -155,9 +155,13 @@ function scr_buh_calcFuelConsumption() {
 		}
 		if (buh_transmission != 0) {	//потребление на всех передачах, кроме нейтрали
 			var t1 = 1;	//поверхность
+			var tt = instance_position(x, y, obj_ctrl_gm_surf);	//проверяю коллизию с поверхностью
+			if (tt != noone) {	//если под нами определена поверхность
+				t1 = tt.surf_params[1][2];	//потребление на этой поверхности
+			}
 			//потребление на 100 км
 			var t = (buh_fuelConsumption * t1) / room_speed / (100 / (abs(speed) * 3.6) * 3600/*за сколько сек. мы проедем 100 км*/);
-			//в формуле выше что-то не так: он тратится в 8 раз медленнее 
+			//в формуле выше что-то не так: оно тратится в 8 раз медленнее 
 			obj_ctrl_gm_buh.buh_fuel -= t * 10;
 		}
 		//если нейтралка или сцепление
@@ -182,7 +186,7 @@ function scr_buh_stallAction(flag) {
 		if (abs(speed) > 0.3 * abs(arr[0])) {//если скорость меньше, чем 30% от мин скорости для текущей передачи
 			if (alarm_get(1) <= 0) {	//если мы еще не завели таймер
 				//даем шанс исправить скорость или передачу
-				alarm[1] = irandom_range(2, 6) * room_speed;
+				alarm[1] = irandom_range(2, 5) * room_speed;
 				scr_snd_requestPlaySnd(snd_buh_preStall, snd_buh_preStall, 20, true);	//звук чихающего движка
 				obj_ctrl_gm_hint.ctrl_hint_newHint = "buhankaPreStall";
 				buh_decomposition = 5000 * 0.01; //износ при чихании движка 1%/сек
@@ -194,10 +198,10 @@ function scr_buh_stallAction(flag) {
 			//когда speed * 3.6 == 16.5 - износ 6% (16.5 делю га 2.75, чтобы получить 6)
 			obj_ctrl_gm_buh.hp -= 5000 * (abs(speed) * 3.6 / 2.75) / 100; //мгновенный разовый износ (до 6%)
 		}
-	} else {
+	} else {//эта часть функции может быть вызвана другими объектами
 		//заглушение движка сразу
-		buh_status = 2;
-		buh_startTurn = 3;	//чтобы статус заглохшей не сбросился, когда выйдем из машины
+		obj_buh.buh_status = 2;
+		obj_buh.buh_startTurn = 3;	//чтобы статус заглохшей не сбросился, когда выйдем из машины
 		scr_snd_requestPlaySnd(snd_buh_stall, snd_buh_stall, 20, true);	//звук глохнущего движка
 		obj_ctrl_gm_hint.ctrl_hint_newHint = "buhankaStall";	
 		scr_snd_requestPlaySnd(snd_buh_idle, snd_buh_idle, 20, false);	//останавливаем звук холостого двигателя
@@ -206,9 +210,30 @@ function scr_buh_stallAction(flag) {
 	}
 }
 
-
-
-
+/// @function scr_buh_aniEndFunc(spr);
+/// @param {} spr спрайт, с которым мы работаем
+/// @param {} snd звук к этому спрайту
+/// @description вынес сюда одинаковый код для запуска спрайтов в обратную сторону
+	//после проигрывания вперед (это для багажника и капота буханки)
+function scr_buh_aniEndFunc(spr, snd) {
+	
+	//переход в комнату взаимодействия с буханкой
+	
+	if (image_speed == -1) {	//если выходим из комнаты взаимодействия
+		scr_snd_requestPlaySnd(snd, snd, 20, true);	//звук 
+		scr_env_stopInteract()	//прекращаем взаимодействие с персонажем
+		//буханка теперь просто стоит
+		sprite_index = spr_buh_state;
+		image_index = 0;
+		image_speed = 1;
+	} else { // если только зашли в багажник/капот
+		//если открывали багажник/капот, то попали в другую комнату, при выходе, проигрываем 
+		//спрайт в другую сторону: закрываем багажник/капот
+		sprite_index = spr;
+		image_speed = -1;
+		image_index = image_number - 0.1;
+	}
+}
 
 
 
