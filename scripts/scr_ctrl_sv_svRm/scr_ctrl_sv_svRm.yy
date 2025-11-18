@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_ctrl_sv_svRm",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "save&load",
-    "path": "folders/Scripts/Ctrl/save&load.yy",
+  "$GMScript":"v1",
+  "%Name":"scr_ctrl_sv_svRm",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_ctrl_sv_svRm",
+  "parent":{
+    "name":"save&load",
+    "path":"folders/Scripts/Ctrl/Main/save&load.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_env_interact",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "environment",
-    "path": "folders/Scripts/Game/MapObj/Interaction/environment.yy",
+  "$GMScript":"v1",
+  "%Name":"scr_env_interact",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_env_interact",
+  "parent":{
+    "name":"environment",
+    "path":"folders/Scripts/Game/MapObj/Interaction/environment.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

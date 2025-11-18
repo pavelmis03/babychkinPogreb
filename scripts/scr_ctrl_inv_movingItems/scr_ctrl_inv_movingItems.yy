@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_ctrl_inv_movingItems",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_ctrl_inv_movingItems",
+  "parent":{
+    "name":"inventory",
+    "path":"folders/Scripts/Ctrl/Gm/Player/inventory.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

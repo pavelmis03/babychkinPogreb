@@ -1,9 +1,11 @@
 {
-  "resourceType": "GMNotes",
-  "resourceVersion": "1.1",
-  "name": "nts_cmnReserdevVar",
-  "parent": {
-    "name": "common",
-    "path": "folders/Notes/common.yy",
+  "$GMNotes":"",
+  "%Name":"nts_cmnReserdevVar",
+  "name":"nts_cmnReserdevVar",
+  "parent":{
+    "name":"common",
+    "path":"folders/Notes/common.yy",
   },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
 }

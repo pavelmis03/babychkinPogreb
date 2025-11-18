@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_ctrl_stat",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "other",
-    "path": "folders/Scripts/Ctrl/other.yy",
+  "$GMScript":"v1",
+  "%Name":"scr_ctrl_stat",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_ctrl_stat",
+  "parent":{
+    "name":"other",
+    "path":"folders/Scripts/Ctrl/Main/other.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

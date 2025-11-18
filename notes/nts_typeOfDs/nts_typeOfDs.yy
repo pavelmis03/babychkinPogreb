@@ -1,9 +1,11 @@
 {
-  "resourceType": "GMNotes",
-  "resourceVersion": "1.1",
-  "name": "nts_typeOfDs",
-  "parent": {
-    "name": "WARNING&ERROR",
-    "path": "folders/Notes/WARNING&ERROR.yy",
+  "$GMNotes":"",
+  "%Name":"nts_typeOfDs",
+  "name":"nts_typeOfDs",
+  "parent":{
+    "name":"WARNING&ERROR",
+    "path":"folders/Notes/WARNING&ERROR.yy",
   },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
 }

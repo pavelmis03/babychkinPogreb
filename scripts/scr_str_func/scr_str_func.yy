@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_str_func",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "strings",
-    "path": "folders/Scripts/Func/strings.yy",
+  "$GMScript":"v1",
+  "%Name":"scr_str_func",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_str_func",
+  "parent":{
+    "name":"strings",
+    "path":"folders/Scripts/Func/strings.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

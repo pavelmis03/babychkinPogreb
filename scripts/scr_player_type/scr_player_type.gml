@@ -4,11 +4,11 @@ function scr_player_type() {
 	var player = -1;
 	var arr = obj_ctrl_gm_playerStatus.player_arr;
 	
-	//ищем по массиву игроков того, что существует
+	// ищем по массиву игроков того, что существует
 	for (var i = 0; i < array_length(arr); i++) {
 		if (instance_exists(arr[i])) {
 			player = arr[i];
-			break;	//прекращаем поиск, потому что в массиве игроков есть буханка, если никто не был найден
+			break;	// прекращаем поиск, потому что в массиве игроков есть буханка, если никто не был найден
 		}
 	}
 	/*

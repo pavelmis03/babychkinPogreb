@@ -1,4 +1,4 @@
-//деревянная дверь
+// деревянная дверь
 
 destination = "next_room";
 sprite_index = spr_door_wooden1;

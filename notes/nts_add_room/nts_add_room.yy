@@ -1,9 +1,11 @@
 {
-  "resourceType": "GMNotes",
-  "resourceVersion": "1.1",
-  "name": "nts_add_room",
-  "parent": {
-    "name": "add_source",
-    "path": "folders/Notes/add_source.yy",
+  "$GMNotes":"",
+  "%Name":"nts_add_room",
+  "name":"nts_add_room",
+  "parent":{
+    "name":"add_source",
+    "path":"folders/Notes/add_source.yy",
   },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
 }

@@ -1,4 +1,4 @@
-//выйти в главное меню
+// выйти в главное меню
 sprite_index = spr_btn_pause_exitToMM1;
 
 var t = scr_btn_posInScr(4, 4);

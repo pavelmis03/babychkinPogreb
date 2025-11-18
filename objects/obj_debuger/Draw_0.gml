@@ -4,13 +4,13 @@ if (instance_exists(obj_player_FP)) {
 
 	/*
 	draw_text(100, 100, "direction: " + string(obj_player_FP.direction));
-	//x + lengthdir_x(100, t)
+	// x + lengthdir_x(100, t)
 	draw_text(100, 130, obj_player_FP.player_moveType);
 	for (var i = 0; i < ds_list_size(obj_player_FP.player_list_move_key); i++) {
 		draw_text(100 + i * 40, 160, obj_player_FP.player_list_move_key[|i]);
 	}
 
-	//коллизии
+	// коллизии
 	draw_text(100, 260, "коллизии");
 	var t1 = obj_player_FP.player_map_col[?"enemy"];
 	var t2 = obj_player_FP.player_map_col[?"inv"];
@@ -25,6 +25,6 @@ if (instance_exists(obj_player_FP)) {
 		draw_text(100, 300, string(0));
 	}
 	*/
-	//draw_text(100, 100, "id: " + string(obj_player_FP.id));
+	// draw_text(100, 100, "id: " + string(obj_player_FP.id));
 	
 }

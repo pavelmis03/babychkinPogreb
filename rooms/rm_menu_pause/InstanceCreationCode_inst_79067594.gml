@@ -1,4 +1,4 @@
-//журнад
+// журнад
 sprite_index = spr_btn_pause_journal1;
 
 var t = scr_btn_posInScr(2, 4);

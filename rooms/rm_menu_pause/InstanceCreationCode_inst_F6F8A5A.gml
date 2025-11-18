@@ -1,4 +1,4 @@
-//настройки
+// настройки
 sprite_index = spr_btn_pause_settings1;
 
 var t = scr_btn_posInScr(3, 4);

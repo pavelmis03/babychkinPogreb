@@ -1,7 +1,7 @@
 /// @description выполнение действия
 
 switch (action) {
-	//настройка режима экрана
+	// настройка режима экрана
 	case "cameraChange":
 		if (obj_ctrl_set.ctrl_set_map_curr[?"screenMode"] = "Полноэкранный") {
 			window_set_fullscreen(1);
@@ -12,10 +12,10 @@ switch (action) {
 			var h = string_copy(t, string_pos("x", t) + 1, 10);
 			window_set_size(real(w), real(h))
 		}
-		//выравнивание окна по центру
+		// выравнивание окна по центру
 		alarm[1] = 1;
 	break;
-	//перепривязка вида к новому игроку
+	// перепривязка вида к новому игроку
 	case "changeView":
 		player_obj = scr_player_type();
 		camera_set_view_target(view_camera[0], player_obj);

@@ -1,13 +1,13 @@
 /// @description отвечает за паузу в игре
 
-//main
+// main
 action = "";
 /* объяснение см. в Clean up
-isPause = false;	//активирована ли пауза
+isPause = false;	// активирована ли пауза
 */
 
 
-//drawing
+// drawing
 draw_img = spr_sys_none;
 
-//rooms
+// rooms

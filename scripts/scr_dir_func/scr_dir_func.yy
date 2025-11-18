@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_dir_func",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "direction",
-    "path": "folders/Scripts/Func/direction.yy",
+  "$GMScript":"v1",
+  "%Name":"scr_dir_func",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_dir_func",
+  "parent":{
+    "name":"direction",
+    "path":"folders/Scripts/Func/direction.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

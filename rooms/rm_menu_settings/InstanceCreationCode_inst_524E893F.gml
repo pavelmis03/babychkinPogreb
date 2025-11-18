@@ -1,6 +1,6 @@
 sprite_index = spr_btn_other_check;
 
-//var t = scr_btn_posInScr(id, 1, -1);
+// var t = scr_btn_posInScr(id, 1, -1);
 x = room_width * 0.44;
 y = room_height * 0.55;
 
@@ -9,12 +9,12 @@ action = "pixels";
 sound = [20, "snd_none", "snd_none"];
 
 
-//подгрузка настроек
+// подгрузка настроек
 btn_pressed = bool(obj_ctrl_set.ctrl_set_map_curr[?"pixels"]);
-//в спрайте всего две картинки: активно/не активно
+// в спрайте всего две картинки: активно/не активно
 image_index = btn_pressed;
 
-//drawing
+// drawing
 draw_txt = "Эффект шума";
 draw_txt_cl = c_black;
 draw_txt_x = x - 10;

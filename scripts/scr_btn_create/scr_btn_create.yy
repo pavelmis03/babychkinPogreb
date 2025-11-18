@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_btn_create",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Btn",
-    "path": "folders/Scripts/Menu/Btn.yy",
+  "$GMScript":"v1",
+  "%Name":"scr_btn_create",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_btn_create",
+  "parent":{
+    "name":"Btn",
+    "path":"folders/Scripts/Menu/Btn.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

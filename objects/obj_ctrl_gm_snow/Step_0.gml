@@ -5,7 +5,7 @@ if (!init) {
 }
 
 
-//scr_snd_requestPlaySnd(snd_menu_journalPage, snd_menu_journalPage, 20, true);	//звук страницы
+// scr_snd_requestPlaySnd(20, "snd_menu_journalPage", "snd_menu_journalPage", true);	// звук страницы
 
 		
 		

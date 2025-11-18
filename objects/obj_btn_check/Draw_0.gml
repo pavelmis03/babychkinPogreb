@@ -1,7 +1,7 @@
 /// @description 
 
 draw_self();
-//подпись (что за галочка)
+// подпись (что за галочка)
 draw_set_font(fnt_set);
 draw_set_color(draw_txt_cl);
 draw_set_valign(fa_top);

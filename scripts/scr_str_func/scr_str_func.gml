@@ -2,12 +2,12 @@
 /// @param {} word слово без окончания, окончание подбирает скрипт
 /// @param {} num число, по которому мы подбираем окончание
 /// @description скрипт подбирает окончание слова (именно изменяемую часть) 
-	//в зависимости от числа, которое стоит перед словом
+	// в зависимости от числа, которое стоит перед словом
 function scr_str_defEnding(word, num) {
 	var str = word;
 	
-	//пока работает только для таких окончаний: сохранение/я/й
-	//можно еще сделать для ответ/а/ов, задача/и/
+	// пока работает только для таких окончаний: сохранение/я/й
+	// можно еще сделать для ответ/а/ов, задача/и/
 	if (num % 100 == 1) {
 		str += "е";
 	}
@@ -24,7 +24,7 @@ function scr_str_defEnding(word, num) {
 /// @function scr_str_extractNums(str);
 /// @param {} str строка, с которой мы работаем 
 /// @description скрипт находит в строке все числа и возвращет их 
-	//в виде массива строк или ^, если чисел не найдено
+	// в виде массива строк или ^, если чисел не найдено
 /// input: str123jfdl45ks2
 /// output: [123, 45, 2]
 function scr_str_extractNums(str) {
@@ -33,7 +33,7 @@ function scr_str_extractNums(str) {
 	
 	for (var i = 1; i <= string_length(str); i++) {
 		var t = string_copy(str, i, 1);
-		if (scr_arr_fingEl(["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], t, 1) != -1) {
+		if (scr_arr_findEl(["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], t, 1) != -1) {
 			tStr += t;
 		} else {
 			if (tStr != "") {
@@ -42,7 +42,7 @@ function scr_str_extractNums(str) {
 			tStr = "";
 		}
 	}
-	//если на последней итерации была цифра 
+	// если на последней итерации была цифра 
 	if (tStr != "") {
 		array_push(numArr, tStr);
 	}
@@ -57,14 +57,14 @@ function scr_str_extractNums(str) {
 /// @function scr_str_parsPath(str);
 /// @param {} str строка, с которой мы работаем 
 /// @description скрипт разбирает путь к файлу сохранения
-	//saves/game_n/save_n/branche_m... на Сохр. n>Ветвь m>...
+	// saves/game_n/save_n/branche_m... на Сохр. n>Ветвь m>...
 function scr_str_parsPath(str) {
-	//если попала строка без сохранений
+	// если попала строка без сохранений
 	if (string_count("save_", str) == 0) {
 		return str;
 	}
 	
-	//копируем строку с первого сохранения
+	// копируем строку с первого сохранения
 	str = string_copy(str, string_pos("save_", str), string_length(str));
 	var arr = string_split(str, "/");
 	var newS = "";
@@ -79,7 +79,7 @@ function scr_str_parsPath(str) {
 		}
 	}
 	
-	//копирую без последней стрелочки
+	// копирую без последней стрелочки
 	return string_copy(newS, 0, string_length(newS) - 1);
 }
 
@@ -89,9 +89,9 @@ function scr_str_parsPath(str) {
 /// @description скрипт вставляет в строку переносы, чтобы получалась строка не длиннее заданной
 function scr_str_spltStrOnSStrByLen(str, len) {
 	var c = string_copy(str, 1, 1);
-	var strLen = floor(len / string_width(c)); //количество символов в строке
+	var strLen = floor(len / string_width(c)); // количество символов в строке
 	
-	//собираем строку, добавляя в нее переносы
+	// собираем строку, добавляя в нее переносы
 	var i = strLen;
 	while (i < string_length(str)) {
 		str = string_insert("\n", str, i);
@@ -107,11 +107,11 @@ function scr_str_spltStrOnSStrByLen(str, len) {
 /// @description копирует часть строки, чтобы она поместилась на заданной длине
 function scr_str_cpSStrByLen(str, len) {
 	var sw = string_width(str);
-	//получаем среднюю длину символа
+	// получаем среднюю длину символа
 	var cw = sw / string_length(str);
-	//делим доступную длину на длину одного символа
+	// делим доступную длину на длину одного символа
 	var newL = floor(len / cw);
-	str = string_copy(str, 1, newL);	//возвращаем максимальное количество символов
+	str = string_copy(str, 1, newL);	// возвращаем максимальное количество символов
 	return str;
 }
 

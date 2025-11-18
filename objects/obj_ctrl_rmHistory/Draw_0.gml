@@ -1,14 +1,14 @@
 /// @description 
 
-//рисование слайда истории или диалога
+// рисование слайда истории или диалога
 var t = 0.5;
 if (obj_ctrl_gm.ctrl_gm_histStatus == 2) {
 	t = 0;
 }
-//спрайт диалога один, меняется лишь кадр
+// спрайт диалога один, меняется лишь кадр
 draw_sprite(draw_spr, ctrl_history_page_curr, room_width * t, room_height * t);
 
-//справка
+// справка
 draw_set_color(c_white);
 draw_set_font(fnt_set);
 var t1 = "Нажимайте “←/→”, “пробел”, чтобы листать";

@@ -1,4 +1,4 @@
-//продолжить
+// продолжить
 sprite_index = spr_btn_pause_resume1;
 
 var t = scr_btn_posInScr(1, 4);

@@ -2,14 +2,14 @@
 
 
 switch (action) {
-	//НАСТРОЙКИ
+	// НАСТРОЙКИ
 	case "sound_val":
-		//говорим об изменении настроек звука
+		// говорим об изменении настроек звука
 		obj_ctrl_set.action = "soundValChange";
 		obj_ctrl_set.iid = id;
 	break;
 	case "music_val":
-		//говорим об изменении настроек звука
+		// говорим об изменении настроек звука
 		obj_ctrl_set.action = "musicValChange";
 		obj_ctrl_set.iid = id;
 	break;

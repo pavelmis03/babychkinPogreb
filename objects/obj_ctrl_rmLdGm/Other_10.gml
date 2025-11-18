@@ -1,67 +1,67 @@
 /// @description init
 
-//считаю, сколько игр существует
+// считаю, сколько игр существует
 var n = 0;
 for (var i = 0; i < 5; i++) {
 	if (directory_exists("saves/game_" + string(i))) {
-		array_push(ctrl_ldGm_gmPaths, "saves/game_" + string(i));	//скрипт удаления игры удаляет папку сам, поэтому нужно ее сохранить даже если она пустая
+		array_push(ctrl_ldGm_gmPaths, "saves/game_" + string(i));	// скрипт удаления игры удаляет папку сам, поэтому нужно ее сохранить даже если она пустая
 		n++;
 	}
 }
-ctrl_ldGm_gm = n;		//всего игр
+ctrl_ldGm_gm = n;		// всего игр
 
-//if (ctrl_ldGm_gm > 0) { //если у нас есть игры 
+// if (ctrl_ldGm_gm > 0) { // если у нас есть игры 
 	var str = "", str1 = "";
-	//автоподстановка последних игры и сохранения
+	// автоподстановка последних игры и сохранения
 	if (file_exists("gameInfo.ini")) {
 		ini_open("gameInfo.ini");
-		//загружаю последнюю игру из файла информации по играм
+		// загружаю последнюю игру из файла информации по играм
 		str = ini_read_string("GAMEINFO", "lastGame", "saves/game_0");
-		//последнее сохранение
+		// последнее сохранение
 		str1 = ini_read_string("GAMEINFO", "lastSave", str + "/save_1");
 		ini_close();
 	}
 
 	if (!directory_exists(str)) {
-		str = array_last(ctrl_ldGm_gmPaths);	//если папки, сохраненной, как последняя игра нет, берем последнюю из существующих
-		//может быть, если игрок удалит через меню загрузок папку игры, в которой только что играл
-		//и снова войдет в меню загрузок
-		//номер игры приравнивается к последней игре в списке игр
+		str = array_last(ctrl_ldGm_gmPaths);	// если папки, сохраненной, как последняя игра нет, берем последнюю из существующих
+		// может быть, если игрок удалит через меню загрузок папку игры, в которой только что играл
+		// и снова войдет в меню загрузок
+		// номер игры приравнивается к последней игре в списке игр
 		ctrl_ldGm_gm_curr = ctrl_ldGm_gm;
 	}
 
-	ctrl_ldGm_gm_currPath = str;	//путь игры
-	//определяем номер игры по индексу
-	ctrl_ldGm_gm_curr = scr_arr_fingEl(ctrl_ldGm_gmPaths, ctrl_ldGm_gm_currPath, 1);
+	ctrl_ldGm_gm_currPath = str;	// путь игры
+	// определяем номер игры по индексу
+	ctrl_ldGm_gm_curr = scr_arr_findEl(ctrl_ldGm_gmPaths, ctrl_ldGm_gm_currPath, 1);
 	
-	//нахожу все папки сохранений в папке игры
+	// нахожу все папки сохранений в папке игры и проверяю их на действительность
 	scr_ld_findSvPaths(ctrl_ldGm_gm_currPath);
 
-	if (ctrl_ldGm_gm) {	//если сохранения игр есть (после прохода scr_ld_findSvPaths пустые папки игр могут удалиться)
-		//общее количество сохранений
+	if (ctrl_ldGm_gm) {	// если сохранения игр есть (после прохода scr_ld_findSvPaths пустые папки игр могут удалиться)
+		// общее количество сохранений
 		ctrl_ldGm_sv = array_length(ctrl_ldGm_svPaths);
 	
-		//если не найдено последнее сохранение, что вполне уже 
-		//подгружаем последнее сохранение из выбранной папки
+		// если не найдено последнее сохранение, что вполне уже 
+		// подгружаем последнее сохранение из выбранной папки
 		if (!directory_exists(str1)) {
-			//если не нашли папки последнего сохранения, сохраняем последнее из доступных
+			// если не нашли папки последнего сохранения, сохраняем последнее из доступных
 			str1 = array_last(ctrl_ldGm_svPaths);
 		}
 	
-		ctrl_ldGm_sv_currPath = str1;	//путь сохранения
-		ctrl_ldGm_sv_curr = scr_arr_fingEl(ctrl_ldGm_svPaths, ctrl_ldGm_sv_currPath, 1);	//номер сохранения
+		ctrl_ldGm_sv_currPath = str1;	// путь сохранения
+		ctrl_ldGm_sv_curr = scr_arr_findEl(ctrl_ldGm_svPaths, ctrl_ldGm_sv_currPath, 1);	// номер сохранения
 
-		//номер страницы считаем после того, как получили номер сохранения
-		ctrl_ldGm_page_curr = ceil((ctrl_ldGm_sv_curr + 1) / ctrl_ldGm_svOnPage);	//подстраиваем страницу под номер сохранения
-		//количество страниц считаем после того, как посчитали количество сохранений
+		// номер страницы считаем после того, как получили номер сохранения
+		ctrl_ldGm_page_curr = ceil((ctrl_ldGm_sv_curr + 1) / ctrl_ldGm_svOnPage);	// подстраиваем страницу под номер сохранения
+		// количество страниц считаем после того, как посчитали количество сохранений
 		ctrl_ldGm_page = ceil(ctrl_ldGm_sv / ctrl_ldGm_svOnPage);
 
-		//скрин текущего сохранения
+		// скрин текущего сохранения
 		draw_img = sprite_add(ctrl_ldGm_sv_currPath + "/svScreenShot.png", 1, true, true, 0, 0);
 
 
-		//создаю кнопки
-		//кнопка ,,загрузить сохранение,,
+		// создаю кнопки
+		// кнопка ,,загрузить сохранение,,
 		btn_ldSvId = scr_btn_create(room_width * 0.25, room_height * 0.85, spr_btn_ldGm_ldSv0, depth, 0, ["ldSv", "cansel", "cansel"], "confirmYNCl", [20, "snd_none", "snd_none"]);
 		/*
 		btn_ldSvId = instance_create_depth(room_width * 0.25, room_height * 0.85, depth, obj_btn);
@@ -71,7 +71,7 @@ ctrl_ldGm_gm = n;		//всего игр
 		btn_ldSvId.sound = [20, "snd_none", "snd_none"];
 		*/
 		
-		//кнопка ,,удалить сохранение,,
+		// кнопка ,,удалить сохранение,,
 		btn_delSvId = scr_btn_create(room_width * 0.53, room_height * 0.85, spr_btn_ldGm_delSv0, depth, 0, ["delSv", "cansel", "cansel"], "confirmYNCl_delSv", [20, "snd_none", "snd_none"]);
 		/*
 		btn_delSvId = instance_create_depth(room_width * 0.53, room_height * 0.85, depth, obj_btn);
@@ -81,7 +81,7 @@ ctrl_ldGm_gm = n;		//всего игр
 		btn_delSvId.sound = [20, "snd_none", "snd_none"];
 		*/
 
-		//кнопка ,,удалить игру,,
+		// кнопка ,,удалить игру,,
 		btn_delGmId = scr_btn_create(room_width * 0.70, room_height * 0.85, spr_btn_ldGm_delGm1, depth, 0, ["delGm", "cansel", "cansel"], "confirmYNCl", [20, "snd_none", "snd_none"]);
 		/*
 		btn_delGmId = instance_create_depth(room_width * 0.70, room_height * 0.85, depth, obj_btn);
@@ -91,10 +91,10 @@ ctrl_ldGm_gm = n;		//всего игр
 		btn_delGmId.sound = [20, "snd_none", "snd_none"]; 
 		*/
 
-		//здесь создаем пять кнопок-загрузок
+		// здесь создаем пять кнопок-загрузок
 		scr_ld_createLdBtn();
 	}
-//}
+// }
 
 init = true;
 

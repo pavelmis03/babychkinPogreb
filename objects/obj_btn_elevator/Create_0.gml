@@ -2,7 +2,7 @@
 
 event_inherited();
 
-//словарь соответствия действие - этаж. нужен для блокировки попыток приехать на текущий этаж
+// словарь соответствия действие - этаж. нужен для блокировки попыток приехать на текущий этаж
 btn_lift_map_floor = ds_map_create();
 btn_lift_map_floor[?"goToFloor1"] = rm_gm_fp_floor1;
 btn_lift_map_floor[?"goToFloor2"] = rm_gm_fp_floor2;

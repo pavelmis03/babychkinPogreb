@@ -1,9 +1,11 @@
 {
-  "resourceType": "GMNotes",
-  "resourceVersion": "1.1",
-  "name": "nts_savesInfo",
-  "parent": {
-    "name": "SAVES",
-    "path": "folders/Notes/SAVES.yy",
+  "$GMNotes":"",
+  "%Name":"nts_savesInfo",
+  "name":"nts_savesInfo",
+  "parent":{
+    "name":"SAVES",
+    "path":"folders/Notes/SAVES.yy",
   },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
 }

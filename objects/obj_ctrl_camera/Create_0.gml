@@ -1,11 +1,11 @@
 /// @description отвечает за настройку вида игрока и разрешение экрана
 
 
-//main
+// main
 action = ""
 
 
-//настройка режима экрана
+// настройка режима экрана
 if (obj_ctrl_set.ctrl_set_map_curr[?"screenMode"] = "Полноэкранный") {
 	window_set_fullscreen(1);
 } else {
@@ -15,5 +15,5 @@ if (obj_ctrl_set.ctrl_set_map_curr[?"screenMode"] = "Полноэкранный"
 	var h = string_copy(t, string_pos("x", t) + 1, 10);
 	window_set_size(real(w), real(h))
 }
-//выравнивание окна по центру
+// выравнивание окна по центру
 alarm[1] = 1;

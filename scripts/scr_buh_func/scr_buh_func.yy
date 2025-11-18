@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_buh_func",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "buh",
-    "path": "folders/Scripts/Game/MapObj/Interaction/Object/buh.yy",
+  "$GMScript":"v1",
+  "%Name":"scr_buh_func",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_buh_func",
+  "parent":{
+    "name":"buh",
+    "path":"folders/Scripts/Game/MapObj/Interaction/Object/buh.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,26 +1,26 @@
 /// @description 
 
-//флаг смены комнаты актуален только один такт игры
+// флаг смены комнаты актуален только один такт игры
 if (ctrl_mv_change_rm) {
 	ctrl_mv_change_rm = false;
 }
 
-//проверка на переход в другую комнату
+// проверка на переход в другую комнату
 if (pre_rm != room) {
 	pre_rm = room;
-	//произошла смена комнаты
+	// произошла смена комнаты
 	ctrl_mv_change_rm = true;
-	//добавляем комнату в список
-	//action = "addRm";
+	// добавляем комнату в список
+	// action = "addRm";
 }
 
-//таймер перехода в новую комнату
+// таймер перехода в новую комнату
 if (ctrl_mv_rmChangeDelay != 0) {
-	alarm[0] = ctrl_mv_rmChangeDelay * room_speed;
+	alarm[0] = ctrl_mv_rmChangeDelay * fps;
 	ctrl_mv_rmChangeDelay = 0;
 }
 
-//выполнение действия
+// выполнение действия
 if (action != "") {
 	event_user(15);
 	action = "";

@@ -1,5 +1,6 @@
 persist - persistent
 animcrv - animationcurve
+wpn - weapoon
 path - path
 unkn - unknown
 coef - coefficent
@@ -16,7 +17,7 @@ equ - equipment
 dev - developers 
 set - settings
 stg - stages
-btl - bullet
+blt - bullet
 dmg - damage
 ptr - patron
 cmn - common

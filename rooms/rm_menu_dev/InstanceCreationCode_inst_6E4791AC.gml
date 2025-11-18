@@ -1,6 +1,6 @@
 sprite_index = spr_btn_menu_back1;
 
-//var t = scr_btn_posInScr(id, 5, 5);
+// var t = scr_btn_posInScr(id, 5, 5);
 x = room_width * 0.8;
 y = room_height * 0.8;
 

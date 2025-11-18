@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_ctrl_playerInterface",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "other",
-    "path": "folders/Scripts/Ctrl/other.yy",
+  "$GMScript":"v1",
+  "%Name":"scr_ctrl_playerInterface",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_ctrl_playerInterface",
+  "parent":{
+    "name":"other",
+    "path":"folders/Scripts/Ctrl/Gm/Player/other.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

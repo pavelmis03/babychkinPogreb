@@ -2,7 +2,7 @@
 /// @param {} val - значение переменной, тип которой мы определяем
 /// @param {} varName - име переменной, с которой мы работаем
 /// @description определяет в удобном виде тип переменной, возвращает строку.
-	//типы структур определяет по именам переменных
+	// типы структур определяет по именам переменных
 function scr_var_typeOf(val, varName) {
 	var type = val;
 	
@@ -12,10 +12,10 @@ function scr_var_typeOf(val, varName) {
 		case "int32": type = "int"; break;
 		case "int64": type = "int"; break;
 		case "struct": type = "struct"; break;
-		case "ref": type = "inst"; break;
+		case "ref": type = "ref"; break;
 		case "array": type = "arr"; break;
 		case "string": type = "str"; break;
-		//пока не нужные
+		// пока не нужные
 		case "ptr": type = "ptr"; break;
 		case "undefined": type = "undefined"; break;
 		case "null": type = "null"; break;
@@ -24,9 +24,9 @@ function scr_var_typeOf(val, varName) {
 		case "method": type = "method"; break;
 	}
 	
-	//попытка определить тип структуры. (функция ds_exists может ошибаться и принимать одни структуры за другие)
-	if (typeof(val) == "number") {
-		//в имени каждой структуры есть ее тип, по имени определяю тип структуры
+	// попытка определить тип структуры. (функция ds_exists может ошибаться и принимать одни структуры за другие)
+	if ((typeof(val) == "number") or (typeof(val) == "ref")) {
+		// в имени каждой структуры есть ее тип, по имени определяю тип структуры
 		if (string_count("_queue_", varName) != 0) {
 			type = "queue";
 		}
@@ -70,9 +70,9 @@ function scr_var_typeOfAsset(val) {
 		case asset_animationcurve: type = "animcrv"; break;
 		case asset_sequence: type = "sqn"; break;
 		case asset_unknown: type = "unkn"; break;
-		//case asset_particlesystem: type = "method"; break;
-		//default: 
-			//if () {}
+		// case asset_particlesystem: type = "method"; break;
+		// default: 
+			// if () {}
 	}
 	
 	return type;
@@ -90,9 +90,10 @@ function scr_var_convVal(val, type) {
 			case "int": val = int64(val);break;
 			case "str": val = string(val);break;
 			case "struct": val = scr_struct_readFromStr(val); break;
-			case "inst": val = val; break;	//вызывать чтение экземпляра из строк
+			// case "inst": val = val; break;	// вызывать чтение экземпляра из строк
+			case "ref": val = int64(val); break;
 			case "arr": val = scr_arr_readFromStr(val); break;
-			//пока не нужные
+			// пока не нужные
 			case "ptr": val = real(val); break;
 			case "undefined": val = real(val); break;
 			case "null": val = real(val); break;
@@ -110,4 +111,16 @@ function scr_var_convVal(val, type) {
 	
 	return val;
 }
-	
+
+/// @function scr_var_inRange(val, a, b);
+/// @param {} val - значение переменной
+/// @param {} a - левая граница включительно
+/// @param {} b - правая граница включительно
+/// @description определяет, лежит ли val в отрезке [a, b]
+function scr_var_inRange(val, a, b) {
+	if ((a <= val) and (val <= b)) {
+		return true;
+	} else {
+		return false;
+	}
+}

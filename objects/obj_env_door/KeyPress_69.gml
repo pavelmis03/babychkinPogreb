@@ -1,6 +1,6 @@
 /// @description проверяется нажатие кнопки взаимодействия игроком
 
-//если игрок поблизости и смотрит на дверь, 
+// если игрок поблизости и смотрит на дверь, 
 if (can_interact) {
 	switch (destination) {
 		case "next_room": 
@@ -10,10 +10,10 @@ if (can_interact) {
 			action = "close"; 
 		break;
 		default: 
-			action = "goTo";	//если в destination название комнаты
+			action = "goTo";	// если в destination название комнаты
 	}
 }
-//остальные действия наследуются
+// остальные действия наследуются
 
 // Inherit the parent event
 event_inherited();

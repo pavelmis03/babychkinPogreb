@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_journal_func",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "journal",
-    "path": "folders/Scripts/Menu/Menu/journal.yy",
+  "$GMScript":"v1",
+  "%Name":"scr_journal_func",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_journal_func",
+  "parent":{
+    "name":"journal",
+    "path":"folders/Scripts/Menu/Menu/journal.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

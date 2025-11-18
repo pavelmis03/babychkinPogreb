@@ -1,9 +1,11 @@
 {
-  "resourceType": "GMNotes",
-  "resourceVersion": "1.1",
-  "name": "nts_plot",
-  "parent": {
-    "name": "plot",
-    "path": "folders/Notes/plot.yy",
+  "$GMNotes":"",
+  "%Name":"nts_plot",
+  "name":"nts_plot",
+  "parent":{
+    "name":"plot",
+    "path":"folders/Notes/plot.yy",
   },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
 }
