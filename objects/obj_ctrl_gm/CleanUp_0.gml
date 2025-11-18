@@ -1,1 +1,1 @@
-/// @description 
+/// @description очистка данных
