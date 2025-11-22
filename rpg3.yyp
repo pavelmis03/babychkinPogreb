@@ -580,6 +580,7 @@
     {"id":{"name":"scr_enemy_move","path":"scripts/scr_enemy_move/scr_enemy_move.yy",},},
     {"id":{"name":"scr_env_interact","path":"scripts/scr_env_interact/scr_env_interact.yy",},},
     {"id":{"name":"scr_file_func","path":"scripts/scr_file_func/scr_file_func.yy",},},
+    {"id":{"name":"scr_journal_draw","path":"scripts/scr_journal_draw/scr_journal_draw.yy",},},
     {"id":{"name":"scr_journal_func","path":"scripts/scr_journal_func/scr_journal_func.yy",},},
     {"id":{"name":"scr_map_func","path":"scripts/scr_map_func/scr_map_func.yy",},},
     {"id":{"name":"scr_newGm","path":"scripts/scr_newGm/scr_newGm.yy",},},

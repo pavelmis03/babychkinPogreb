@@ -36,7 +36,8 @@ cells = [];			// массив id ячеек инвентаря игрока
 cells_other = [];	// массив id ячеек инвентаря контрагента
 
 inv_weight_other = ctrl.inv_weight_other;	// вес инвентаря-контрагента
-inv_maxWeight_other = ctrl.inv_maxWeight_other;
+inv_maxWeight_other = ctrl.inv_maxWeight_other;	// максимальный вес ячеек контрагента
+inv_maxCnt_other = ctrl.inv_maxCnt_other;	// максимальный количество предметов на ячеку контрагента
 inv_cell_type_other = ctrl.inv_cell_type_other;	// тип ячеек контрагента
 // cellTargetRow = 0;	// ячейка, куда мы будем переносить наш предмет
 // cellTargetCol = 0;	// также используется для отложенного удаления ячейки

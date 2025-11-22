@@ -427,6 +427,7 @@
     {"name":"scr_ctrl_stat","order":1,"path":"scripts/scr_ctrl_stat/scr_ctrl_stat.yy",},
     {"name":"scr_ctrl_sv_ldRm","order":2,"path":"scripts/scr_ctrl_sv_ldRm/scr_ctrl_sv_ldRm.yy",},
     {"name":"scr_ctrl_sv_svRm","order":1,"path":"scripts/scr_ctrl_sv_svRm/scr_ctrl_sv_svRm.yy",},
+    {"name":"scr_journal_draw","order":1,"path":"scripts/scr_journal_draw/scr_journal_draw.yy",},
     {"name":"scr_map_func","order":1,"path":"scripts/scr_map_func/scr_map_func.yy",},
     {"name":"scr_player_movement","order":1,"path":"scripts/scr_player_movement/scr_player_movement.yy",},
     {"name":"scr_struct_func","order":2,"path":"scripts/scr_struct_func/scr_struct_func.yy",},

@@ -17,8 +17,8 @@ if (!init) {
 		// с пустыми шкафчиками можно взаимодействовать 
 	} 
 	// если предметы есть в ящике и еще не назначен спрайт не пустого ящика
-	if ((inv_weight != 0) and (sprite_index != global.CONST_MAP_BOXES[?inv_keyName][3][0])) {
-		sprite_index = global.CONST_MAP_BOXES[?inv_keyName][3][0];
+	if ((inv_weight != 0) and (sprite_index != inv_spr)) {
+		sprite_index = inv_spr;
 		image_index = 0;
 		image_speed = 1;
 	} 

@@ -131,6 +131,7 @@ function scr_inv_moveItem(cnt, owner, row, col) {
 		inv_freeCell = scr_inv_calcFreeCell("ctrl"); // количество пустых ячеек
 	} else {	// если перемещаем в контрагента	
 		str = "put";
+		tarr = [];
 		for (var i = 0; i < array_length(inv_items_other); i++) {	
 			for (var j = 0; j < array_length(inv_items_other[i]); j++) {	
 				// var t = ... с рюкзаком нет таких проблем
@@ -173,14 +174,17 @@ function scr_inv_moveItem(cnt, owner, row, col) {
 				
 							// подсказки в зависимости от действия (put/take)
 							tarr = ["box_put_fail_type1", "box_put_fail_type2", "box_put_fail_type3"];
-							obj_ctrl_gm_hint.ctrl_hint_newHint = tarr[irandom_range(0, 2)];
 						}
 					} 	
 				}
 				
 			}
 		}
-		inv_freeCell_other = scr_inv_calcFreeCell("other"); // количество пустых ячеек
+		if (array_length(tarr) != 0) {
+			// назначаем подсказку по результатам, если не получилось переместить все предметы 
+			obj_ctrl_gm_hint.ctrl_hint_newHint = tarr[irandom_range(0, 2)];
+			inv_freeCell_other = scr_inv_calcFreeCell("other"); // количество пустых ячеек
+		}
 	}
 	
 	if (tryPushItems == 0) { // если не нашли подходящую ячейку, значит, они все заполнены
@@ -259,13 +263,16 @@ function scr_inv_checkMoveItem(cnt, towner, powner, trow, tcol, prow, pcol) {
 	if (powner == towner) {	// если действия происходят в одном инвентаре, то это всегда допустимо
 		return true;	
 	}
+	
+	
 	// получаю данные в зависимости оттого, куда кладем
 	if (powner == "ctrl") {
 		titems = ctrl.inv_items_other;	// это не ошибка: берем информацию о ячейке, откуда будем перемещать предметы
 		tweightMax = obj_ctrl_gm_inv.inv_maxWeight;
+		tcntMax = global.CONST_MAP_ITEMS[?titems[trow][tcol][0]][2];	// макс количество предметов на инвентарь
 		tcell = scr_inv_calcFreeCell("ctrl");	// пересчитываем вес и количество ячеек
 		str = "take";
-		tweight = obj_ctrl_gm_inv.inv_weight;
+		tweight = obj_ctrl_gm_inv.inv_weight;	//текущий вес
 		if (ds_map_exists(obj_ctrl_gm_inv.inv_map_items, titems[trow][tcol][0])) {
 			tcnt = obj_ctrl_gm_inv.inv_map_items[?titems[trow][tcol][0]] 	// количество данных предметов в инвентаре
 		} else {
@@ -274,13 +281,20 @@ function scr_inv_checkMoveItem(cnt, towner, powner, trow, tcol, prow, pcol) {
 	} else {
 		titems = ctrl.inv_items;
 		tweightMax = ctrl.inv_maxWeight_other;
+		// если количество предметов на инвентарь -1, значит оставляем значение из global.CONST_MAP_ITEMS
+		// иначе берем собственное значение 
+		if (ctrl.inv_maxCnt_other != -1) {
+			tcntMax = ctrl.inv_maxCnt_other;
+		} else {
+			tcntMax = global.CONST_MAP_ITEMS[?titems[trow][tcol][0]][2];	// макс количество предметов на инвентарь
+		}
 		tcell = scr_inv_calcFreeCell("other");	// пересчитываем вес и количество ячеек
 		str = "put";
-		tweight = ctrl.inv_weight_other;
-		tcnt = scr_inv_calcItems(titems[trow][tcol][0], "other");
+		tweight = ctrl.inv_weight_other;	//текущий вес
+		tcnt = scr_inv_calcItems(titems[trow][tcol][0], "other");	// количество таких предметов
 	}
+	
 	titemW = global.CONST_MAP_ITEMS[?titems[trow][tcol][0]][1];		// вес предмета
-	tcntMax = global.CONST_MAP_ITEMS[?titems[trow][tcol][0]][2];	// макс количество предметов на инвентарь
 	
 	var tarr = [], flag = true;
 	
@@ -292,12 +306,15 @@ function scr_inv_checkMoveItem(cnt, towner, powner, trow, tcol, prow, pcol) {
 	}
 	*/
 	
-	// коробки по весу не ограничены
-	if (tweight + titemW * cnt > tweightMax) {	// если не проходим по весу
-		// подсказки в зависимости от действия (put/take)
-		// tarr = ["box_" + str + "_fail_weight1", "box_" + str + "_fail_weight2", "box_" + str + "_fail_weight3"]
-		tarr = ["box_take_fail_weight1", "box_take_fail_weight2", "box_take_fail_weight3"]
-		flag = false;
+	// если мы работаем в режиме обычного инвентаря, то перекладывать можем туда-сюда сколько угодно, не нужно проверять вес
+	if (obj_ctrl_gm_rmInv.inv_type != "normalInv") {
+		// ящики и коробки по весу не ограничены
+		if (tweight + titemW * cnt > tweightMax) {	// если не проходим по весу
+			// подсказки в зависимости от действия (put/take)
+			// tarr = ["box_" + str + "_fail_weight1", "box_" + str + "_fail_weight2", "box_" + str + "_fail_weight3"]
+			tarr = ["box_take_fail_weight1", "box_take_fail_weight2", "box_take_fail_weight3"]
+			flag = false;
+		}
 	}
 	
 	if (cnt + tcnt > tcntMax) {	// если не проходим по количеству предметов на инвентарь
@@ -309,7 +326,7 @@ function scr_inv_checkMoveItem(cnt, towner, powner, trow, tcol, prow, pcol) {
 	// только для контрагента, потому что в рюкзак можно положить предмет любого типа
 	if (powner != "ctrl") {
 		// индекс ячейки контрагента, куда мы хотим положить предметы
-		var tind = (prow - (ctrl.page_other - 1) * ctrl.maxRow) *ctrl.maxCol + pcol;
+		var tind = (prow - (ctrl.page_other - 1) * ctrl.maxRow) * ctrl.maxCol + pcol;
 		// если эта ячейка на открытой странице
 		if (scr_var_inRange(tind, 0, array_length(ctrl.cells_other) - 1)) {
 			// если предмет, который мы хотим переложить нельзя положить в эту ячейку

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_journal_draw",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_journal_draw",
+  "parent":{
+    "name":"journal",
+    "path":"folders/Scripts/Menu/Menu/journal.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

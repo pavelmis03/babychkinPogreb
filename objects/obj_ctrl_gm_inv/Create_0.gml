@@ -8,7 +8,7 @@ need_sv = 2;	// нужно ли сохранять данный объект
 // имена переменных, которые не нужно сохранять
 nonSvVar = ["nonSvVar", "init", "need_sv", "maxRow", "maxCol", "maxEl", "inv_itemId", 
 			"action", "inv_map_items_del", "inv_ico_ind_other", "maxEl_other", 
-			"inv_items_other", "inv_maxWeight_other", "inv_type", "inv_name"];	
+			"inv_items_other", "inv_maxWeight_other", "inv_maxCnt_other", "inv_type", "inv_name"];	
 action = "";
 init = false;
 
@@ -24,7 +24,9 @@ inv_map_items_del = ds_map_create();	// словарь предметов, ко�
 // inv_map_items = ds_map_create();	// количество предметов во всём инвентаре
 inv_map_items = ds_map_create();		// количество предметов во всём инвенторе
 inv_maxWeight = 100;	// максимальное значение общего веса инвентаря
-inv_maxWeight_other = 100;
+inv_maxWeight_other = 100;	// максимальное значение общего веса инвентаря контрагента
+inv_maxCnt_other = -1;	// максимальное количество ячеек любого типа на инвентарь контрагента
+							// -1 - стандартное значение, брать из global.CONST_MAP_ITEMS
 inv_weight = 0;			// текущее значение общего веса инвентаря
 inv_weight_other = 0;
 inv_ico_ind_other = 0;	// номер картинки в спрайте иконки контрагента

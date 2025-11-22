@@ -17,6 +17,7 @@ switch (action) {
 			// получаем данные из того, с кем взаимодействуем
 			inv_weight_other = inv_itemId.inv_weight;
 			inv_maxWeight_other = inv_itemId.inv_maxWeight;
+			inv_maxCnt_other = inv_itemId.inv_maxCnt;
 			maxEl_other = inv_itemId.maxEl;
 			inv_ico_ind_other = inv_itemId.inv_ico_num;	// номер картинке в спрайте иконки
 			inv_items_other = inv_itemId.inv_items;		// массив инвентаря-контрагента
