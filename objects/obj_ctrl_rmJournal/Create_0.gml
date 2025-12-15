@@ -16,11 +16,11 @@ ctrl_jrn_chapter_target = 1;		// раздел, в который мы хотим
 // text
 ctrl_jrn_txt_str = 7;	// количество строк на странице книги
 ctrl_jrn_map_txt = ds_map_create();	// здесь будет храниться текст по страницам и разделам
-ctrl_jrn_map_txt[?"history"] = ["ИСТОРИЯ"];
-ctrl_jrn_map_txt[?"quest"] = ["КВЕСТЫ"];
-ctrl_jrn_map_txt[?"monsterInfo"] = ["ИНФОРМАЦИЯ О МОНСТРАХ"];
-ctrl_jrn_map_txt[?"weaponInfo"] = ["ИНФОРМАЦИЯ ОБ ОРУЖИИ"];
-ctrl_jrn_map_txt[?"achiv"] = ["ДОСТИЖЕНИЯ"];
+ctrl_jrn_map_txt[?"history"] = ["История"];
+ctrl_jrn_map_txt[?"quest"] = ["Задачи"];
+ctrl_jrn_map_txt[?"monsterInfo"] = ["Монстры"];
+ctrl_jrn_map_txt[?"weaponInfo"] = ["Родимое"];
+ctrl_jrn_map_txt[?"achiv"] = ["Победы"];
 
 
 // btn

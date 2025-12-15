@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_ctrl_iss",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_ctrl_iss",
+  "parent":{
+    "name":"other",
+    "path":"folders/Scripts/Ctrl/Gm/Player/other.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

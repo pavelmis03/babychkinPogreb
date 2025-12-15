@@ -18,7 +18,7 @@ if (sprite_index == spr_sys_none) {
 	// поэтому вывод не в цикле, поэтому и start_str надо подвинуть 
 	if (t[2] == 1) {	
 		inc = 1;
-		draw_set_font(fnt_menu_jrn_header);
+		draw_set_font(fnt_menu_jrn_h1);
 		draw_text(draw_txt_x + room_width * 0.09, draw_txt_y - string_height(t2[0]) * 2, t2[0]);	// заголовок раздела
 	}
 	// если страница заполнена не до конца, т.е. кол-во строк не делится нацело на ctrl_jrn_txt_str
@@ -29,34 +29,13 @@ if (sprite_index == spr_sys_none) {
 	// отрисовка основного текста
 	if (ctrl_jrn_btn_active == "quest") {
 		// скрипт для отрисовки задач в журнале
-		scr_draw_quests();
+		scr_draw_quests(t, t2, page, start_str, end_str, inc);
 	} else {
 		// скрипт для отрисовки остальных разделов в журнале
-		scr_draw_chapters();
+		scr_draw_chapters(t, t2, page, start_str, end_str, inc);
 	}
-	//ПЕРЕНЕСТИ ЭТО В СКРИПТ 
-	draw_set_font(fnt_menu_jrn_txt);
-	// текст на левой странице
-	for (var i = start_str + inc; i < end_str; i++) {
-		// i mod 7, чтобы не зависимо от страницы первая строка начиналась в начале листа
-		draw_text(draw_txt_x, draw_txt_y + (10 * i/*между строками*/) + (i mod 7) * string_height(t2[i]), t2[i]);
-	}
-	// текст на правой странице
-	if (real(t[2]) + 1 <= real(page)) {	// если эта страница есть 
-		// аналогичная проверка последней строки
-		end_str += ctrl_jrn_txt_str;
-		if (end_str > str) {
-			end_str = str;
-		}
-		// вывод текста со сдвигом вправо 
-		for (var i = start_str + ctrl_jrn_txt_str; i < end_str; i++) {
-			draw_text(draw_txt_x + room_width * 0.22, draw_txt_y +
-													(10 * (i - ctrl_jrn_txt_str)/*между строками*/)
-													+ (i mod 7) * string_height(t2[i]) 
-													 - string_height(t2[0]) * 2, t2[i]);
-		}
-	}
-	// страница
+	
+	// страницы
 	// страница слева
 	draw_text(room_width * 0.45, room_height * 0.8, string(t[2]) + "/" + page);
 	// страница справа, но ее может и не быть
