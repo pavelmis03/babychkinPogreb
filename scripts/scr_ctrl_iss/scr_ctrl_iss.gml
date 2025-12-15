@@ -9,6 +9,7 @@ function scr_iss_findIssind(iss_id) {
 			return i;
 		}
 	}
+	return -1;
 }
 
 
