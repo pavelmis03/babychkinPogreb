@@ -26,10 +26,10 @@ switch (action) {
 		var obj = scr_btn_create(t1, t2 + t3 * 4, spr_btn_journal_achiv1, depth + 1, 0, "journalAchiv", "func", [20, "snd_none", "snd_menu_journalPage"]);
 		ds_map_add(ctrl_jrn_map_btn, "achiv", [obj, false, 1]);
 		// стрелочки страниц
-		var obj = scr_btn_create(room_width * 0.65, room_height * 0.8, spr_btn_journal_next1, depth - 1, 0, "journalNext", "func", [20, "snd_none", "snd_menu_journalPage"]);
+		var obj = scr_btn_create(room_width * 0.70, room_height * 0.82, spr_btn_journal_next1, depth - 1, 0, "journalNext", "func", [20, "snd_none", "snd_menu_journalPage"]);
 		// сохраняю стрелки, чтобы удалять их во время перелистывания 
 		ctrl_jrn_btn_arrow_arr[0] = obj;
-		var obj = scr_btn_create(room_width * 0.33, room_height * 0.8, spr_btn_journal_pre1, depth - 1, 0, "journalPre", "func", [20, "snd_none", "snd_menu_journalPage"]);
+		var obj = scr_btn_create(room_width * 0.33, room_height * 0.82, spr_btn_journal_pre1, depth - 1, 0, "journalPre", "func", [20, "snd_none", "snd_menu_journalPage"]);
 		ctrl_jrn_btn_arrow_arr[1] = obj;
 		// подгружаем текст из файла
 		event_user(14);
@@ -46,7 +46,8 @@ switch (action) {
 				// спрайт перелистывания страницы
 				sprite_index = spr_journal_page;
 				scr_snd_requestPlaySnd(20, "snd_menu_journalPage", "snd_menu_journalPage", true);	// звук страницы
-				image_speed = 1;
+				image_index = image_number - 0.1;
+				image_speed = -1;
 				// стрелочки на страницах не должны существовать во время перелистывания
 				instance_destroy(ctrl_jrn_btn_arrow_arr[0]);
 				instance_destroy(ctrl_jrn_btn_arrow_arr[1]);
@@ -67,8 +68,7 @@ switch (action) {
 				// спрайт перелистывания страницы
 				sprite_index = spr_journal_page;
 				scr_snd_requestPlaySnd(20, "snd_menu_journalPage", "snd_menu_journalPage", true);	// звук страницы
-				image_index = image_number - 0.1;
-				image_speed = -1;
+				image_speed = 1;
 				// стрелочки на страницах не должны существовать во время перелистывания
 				instance_destroy(ctrl_jrn_btn_arrow_arr[0]);
 				instance_destroy(ctrl_jrn_btn_arrow_arr[1]);

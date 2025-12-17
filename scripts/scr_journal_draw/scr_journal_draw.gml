@@ -1,13 +1,11 @@
-/// @function scr_draw_quests(t, t2, page, start_str, end_str, inc);
-/// @param t информация по разделу [btn_id, open/not, curr_page] фактически важна только страница
+/// @function scr_draw_quests_record(t2, start_str, end_str, inc, page_pos);
 /// @param t2 массив строк в разделе
-/// @param page количество страниц
 /// @param start_str начальная строка (номер) для вывода текста
 /// @param end_str конечная строка (номер) 
 /// @param inc если страница первая, добавляет в цикле к start_str, чтобы учитывался заголовок
-/// @description скрипт для отображения остальных глав
-/// @description скрипт для отображения красивой структуры квестов 
-function scr_draw_quests(t, t2, page, start_str, end_str, inc) {
+/// @param page_pos для какой страницы выводим текст: для левой или правой
+/// @description выводит непосредственно пункты заданий на левой или правой страницах
+function scr_draw_quests_record(t2, start_str, end_str, inc, page_pos) {
 	// словарь задач, по которому строим вывод
 	//var tmap = obj_ctrl_gm_iss.ctrl_iss_list_iss;
 	// Z - маркер заголовков, P - подзаголовки, M - маркированный список (точечки слева (порядок неважен),
@@ -15,59 +13,85 @@ function scr_draw_quests(t, t2, page, start_str, end_str, inc) {
 	// id = номер задачи (две цифры: 01, 02...) + номер подзадачи (01) + номер пункта (01) 
 	// пример: 010204 - первая задача, вторая подзадача, 4ый пункт, +1 - 5ый пункт, +100 - третья подзадача
 	
-	//УДАЛИТЬ ПОСЛЕ ОТЛАДКИ
-	draw_set_font(fnt_menu_jrn_txt);
-	// текст на левой странице
-	for (var i = start_str + inc; i < end_str; i++) {
-		// i mod 7, чтобы не зависимо от страницы первая строка начиналась в начале листа
-		draw_text(draw_txt_x, draw_txt_y + (10 * i/*между строками*/) + (i mod 7) * string_height(t2[i]), t2[i]);
-	}
-	// текст на правой странице
-	if (real(t[2]) + 1 <= real(page)) {	// если эта страница есть 
-		// аналогичная проверка последней строки
-		end_str += ctrl_jrn_txt_str;
-		if (end_str > str) {
-			end_str = str;
-		}
-		// вывод текста со сдвигом вправо 
-		for (var i = start_str + ctrl_jrn_txt_str; i < end_str; i++) {
-			draw_text(draw_txt_x + room_width * 0.22, 
-						draw_txt_y + (10 * (i - ctrl_jrn_txt_str)/*между строками*/)
-							+ (i mod 7) * string_height(t2[i]) - string_height(t2[0]) * 2,
-						t2[i]);
-		}
+	// откуда начинаем перебирать текст
+	var start_i = 0;
+	// для левой и правой страниц циклы тоже отличаются 
+	if (page_pos == "left") {
+		start_i = inc;
+	} else {
+		start_i = ctrl_jrn_txt_str;
 	}
 	
+	// номер подзадачи
+	var num = 0;
+	for (var i = start_str + start_i; i < end_str; i++) {
+		// разбираем текст 
+		var marker = string_copy(t2[i], 1, 1);	// какой вариант текста: заголовок, подзаголовок и т.д.
+		// строка без маркера
+		var str = string_copy(t2[i], 3, string_length(t2[i]));
+		draw_set_font(fnt_menu_jrn_txt);
+		if (marker == "Z") {
+			draw_set_font(fnt_menu_jrn_h2);
+			num = 0;	// сбрасываем счетчик
+		}
+		if (marker == "P") {
+			draw_set_font(fnt_menu_jrn_h3);
+			num = 0;	// сбрасываем счетчик
+			str = "  " + str;
+		}
+		// увеличиваем номер подзадачи
+		if (marker == "N") {
+			num++;
+			str = "      " + string(num) + ") " + str;
+		}
+		if (marker == "M") {
+			num = 0;	// сбрасываем счетчик
+			str = "      *  " + str;
+		}
+		
+		var txt_y = 0, txt_x = 0;
+		// для левой и правой страниц разные координаты вывода
+		if (page_pos == "left") {
+			// i mod 7, чтобы не зависимо от страницы первая строка начиналась в начале листа
+			// взял высоту шрифта за 36, чтобы для всех строк была одинаковая
+			txt_y = draw_txt_y + (10 * i/*между строками*/) + (i mod ctrl_jrn_txt_str) * /*string_height(str)*/ 36;
+		} else {
+			// взял высоту шрифта за 36, чтобы для всех строк была одинаковая
+			txt_y = draw_txt_y + (10 * (i - ctrl_jrn_txt_str)/*между строками*/)
+							+ (i mod ctrl_jrn_txt_str) * /*string_height(str)*/ 36;
+			 txt_x = room_width * 0.22;
+		}
+		
+		// сам вывод текста
+		draw_text(draw_txt_x + txt_x, txt_y, str);
+	}
 }
-	
-/// @function scr_draw_chapters(t, t2, page, start_str, end_str, inc);
+
+
+/// @function scr_draw_quests(t, t2, page, start_str, end_str, inc, str_cnt);
 /// @param t информация по разделу [btn_id, open/not, curr_page] фактически важна только страница
 /// @param t2 массив строк в разделе
 /// @param page количество страниц
 /// @param start_str начальная строка (номер) для вывода текста
 /// @param end_str конечная строка (номер) 
 /// @param inc если страница первая, добавляет в цикле к start_str, чтобы учитывался заголовок
-/// @description скрипт для отображения остальных глав
-function scr_draw_chapters(t, t2, page, start_str, end_str, inc) {
-	draw_set_font(fnt_menu_jrn_txt);
+/// @param str_cnt количество строк в раделе
+/// @description скрипт для отображения красивой структуры квестов 
+function scr_draw_quests(t, t2, page, start_str, end_str, inc, str_cnt) {
+	// словарь задач, по которому строим вывод
+	//var tmap = obj_ctrl_gm_iss.ctrl_iss_list_iss;
+	
 	// текст на левой странице
-	for (var i = start_str + inc; i < end_str; i++) {
-		// i mod 7, чтобы не зависимо от страницы первая строка начиналась в начале листа
-		draw_text(draw_txt_x, draw_txt_y + (10 * i/*между строками*/) + (i mod 7) * string_height(t2[i]), t2[i]);
-	}
+	scr_draw_quests_record(t2, start_str, end_str, inc, "left");
 	// текст на правой странице
 	if (real(t[2]) + 1 <= real(page)) {	// если эта страница есть 
 		// аналогичная проверка последней строки
 		end_str += ctrl_jrn_txt_str;
-		if (end_str > str) {
-			end_str = str;
+		if (end_str > str_cnt) {
+			end_str = str_cnt;
 		}
-		// вывод текста со сдвигом вправо 
-		for (var i = start_str + ctrl_jrn_txt_str; i < end_str; i++) {
-			draw_text(draw_txt_x + room_width * 0.22, 
-						draw_txt_y + (10 * (i - ctrl_jrn_txt_str)/*между строками*/)
-							+ (i mod 7) * string_height(t2[i]) - string_height(t2[0]) * 2,
-						t2[i]);
-		}
+		
+		scr_draw_quests_record(t2, start_str, end_str, inc, "right");
 	}
+	
 }

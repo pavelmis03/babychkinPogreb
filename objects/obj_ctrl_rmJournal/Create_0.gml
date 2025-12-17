@@ -9,12 +9,12 @@ action = "";
 // drawing
 draw_spr = spr_journal1;	// для фона книги
 draw_txt_x = room_width * 0.32;	// начало рисования текста на книге
-draw_txt_y = room_height * 0.29;
+draw_txt_y = room_height * 0.25;
 ctrl_jrn_chapter_curr = 1;			// текущий раздел 
 ctrl_jrn_chapter_target = 1;		// раздел, в который мы хотим попасть
 
 // text
-ctrl_jrn_txt_str = 7;	// количество строк на странице книги
+ctrl_jrn_txt_str = 10;	// количество строк на странице книги
 ctrl_jrn_map_txt = ds_map_create();	// здесь будет храниться текст по страницам и разделам
 ctrl_jrn_map_txt[?"history"] = ["История"];
 ctrl_jrn_map_txt[?"quest"] = ["Задачи"];

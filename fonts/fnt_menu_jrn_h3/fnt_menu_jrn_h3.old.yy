@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_menu_jrn_h2",
+  "%Name":"fnt_menu_jrn_h3",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":30,
@@ -178,7 +178,7 @@
   "last":0,
   "lineHeight":36,
   "maintainGms1Font":false,
-  "name":"fnt_menu_jrn_h2",
+  "name":"fnt_menu_jrn_h3",
   "parent":{
     "name":"journal",
     "path":"folders/Fonts/Menu/journal.yy",

@@ -6,7 +6,8 @@ function scr_iss_findIssind(iss_id) {
 	for (var i = 0; i < ds_list_size(ctrl_iss_list_iss); i++) {
 		// если нашли нужную строку с правильным id, возвращаем индекс
 		if (ctrl_iss_list_iss[|i][0] == iss_id) {
-			return i;
+			// возвращаем номер, потому что под значением 0 стоит заголовок
+			return i + 1;
 		}
 	}
 	return -1;
