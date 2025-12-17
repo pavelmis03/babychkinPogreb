@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_gm_btnDlgCanselEnter",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.30147392,
+  "name":"snd_gm_btnDlgCanselEnter",
+  "parent":{
+    "name":"dlg",
+    "path":"folders/Sounds/Snd/Menu/Game/Main/common/dlg.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_gm_btnDlgCanselEnter.mp3",
+  "type":0,
+  "volume":1.0,
+}

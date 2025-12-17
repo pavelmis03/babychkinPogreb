@@ -6,7 +6,7 @@ y = room_height * 0.35;
 
 type = "func";
 action = "screenMode";
-sound = [20, "snd_none", "snd_none"];
+sound = [20, "snd_menu_btnEnter", "snd_menu_btnClick"];
 
 // подгрузка настроек
 draw_txt = obj_ctrl_set.ctrl_set_map_curr[?"screenMode"];

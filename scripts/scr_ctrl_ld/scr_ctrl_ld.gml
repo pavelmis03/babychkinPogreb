@@ -176,7 +176,7 @@ function scr_ld_createLdBtn() {
 			sprite_index = spr_btn_ldGm_loader1;
 			type = "func";
 			action = "selectLoaderBtn";
-			sound = [20, "snd_none", "snd_none"]; 
+			sound = [20, "snd_menu_btnEnter", "snd_menu_btnClick"];
 			btn_enable = true;
 		}
 		// если номер создаваемой кнопки совпадает с номером выбранной, делаем ее активной

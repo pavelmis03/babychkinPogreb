@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.880816,
+  "duration":1.8688209,
   "name":"snd_menu_MMOpenDoor",
   "parent":{
     "name":"mm",

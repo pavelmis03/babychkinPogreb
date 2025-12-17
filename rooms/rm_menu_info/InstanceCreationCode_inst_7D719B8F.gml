@@ -6,7 +6,7 @@ y = t[1];
 
 type = "transition";
 action = "back";
-sound = [20, "snd_none", "snd_none"];
+sound = [20, "snd_menu_btnBackEnter", "snd_menu_btnBackClick"];
 
 
 

@@ -8,4 +8,4 @@ depth = 1;	// костыль, чтобы текст подсказки рисо�
 
 type = "func";
 action = "invPrePage";
-sound = [20, "snd_none", "snd_none"];
+sound = [20, "snd_gm_btnEnter", "snd_gm_btnClick"];

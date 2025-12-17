@@ -6,7 +6,7 @@ y = room_height * 0.5;
 
 type = "func";
 action = "screenResolution";
-sound = [20, "snd_none", "snd_none"];
+sound = [20, "snd_menu_btnEnter", "snd_menu_btnClick"];
 
 
 // подгрузка настроек

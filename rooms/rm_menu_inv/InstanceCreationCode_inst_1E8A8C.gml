@@ -6,7 +6,7 @@ sprite_index = spr_btn_inv_pre1;
 
 type = "func";
 action = "invPrePageBox";
-sound = [20, "snd_none", "snd_none"];
+sound = [20, "snd_gm_btnEnter", "snd_gm_btnClick"];
 
 // отправляем свои id контроллеру комнаты инвентаря 
 obj_ctrl_gm_rmInv.inv_btn[0] = id;

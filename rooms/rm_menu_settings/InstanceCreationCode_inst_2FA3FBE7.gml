@@ -6,7 +6,7 @@ y = room_height * 0.4;
 
 type = "flag";
 action = "music";
-sound = [20, "snd_none", "snd_none"];
+sound = [20, "snd_menu_checkBoxEnter", "snd_menu_checkBoxClick"];
 
 // подгрузка настроек из файла
 btn_pressed = bool(obj_ctrl_set.ctrl_set_map_curr[?"music"]);

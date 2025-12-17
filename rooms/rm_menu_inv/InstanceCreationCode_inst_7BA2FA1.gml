@@ -6,7 +6,7 @@ sprite_index = spr_btn_inv_next1;
 
 type = "func";
 action = "invNextPageBox";
-sound = [20, "snd_none", "snd_none"];
+sound = [20, "snd_gm_btnEnter", "snd_gm_btnClick"];
 
 
 // отправляем свои id контроллеру комнаты инвентаря 

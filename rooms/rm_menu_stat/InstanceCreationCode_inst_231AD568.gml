@@ -6,7 +6,7 @@ y = view_hport[0] * 0.8;
 
 type = "transition";
 action = "back";
-sound = [20, "snd_none", "snd_none"];
+sound = [20, "snd_menu_btnBackEnter", "snd_menu_btnBackClick"];
 
 // передаем id контроллеру статистики, чтобы он мог привязать кнопку к виду
 array_push(obj_ctrl_stat.ctrl_stat_arr_btn, id);

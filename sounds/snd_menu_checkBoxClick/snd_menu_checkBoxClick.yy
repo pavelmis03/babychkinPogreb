@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_menu_checkBoxClick",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.30147392,
+  "name":"snd_menu_checkBoxClick",
+  "parent":{
+    "name":"other_btn",
+    "path":"folders/Sounds/Snd/Menu/Menu/Common/other_btn.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_menu_checkBoxClick.mp3",
+  "type":0,
+  "volume":1.0,
+}

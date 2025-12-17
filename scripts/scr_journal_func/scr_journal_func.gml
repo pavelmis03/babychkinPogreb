@@ -45,9 +45,9 @@ function scr_change_chapter(target_chp, target_chp_num) {
 /// @description создает стрелочки, меняет спрайт (нужен для сокращения одинакового когда)
 function scr_change_chapter_end() {
 	// создаю кнопки стрелочек после перелистывания страниц
-	var obj = scr_btn_create(room_width * 0.7, room_height * 0.82, spr_btn_journal_next1, depth - 1, 0, "journalNext", "func", [20, "snd_none", "snd_none"]);
+	var obj = scr_btn_create(room_width * 0.7, room_height * 0.82, spr_btn_journal_next1, depth - 1, 0, "journalNext", "func", [20, "snd_menu_btnEnter", "snd_menu_btnClick"]);
 	ctrl_jrn_btn_arrow_arr[0] = obj;
-	var obj = scr_btn_create(room_width * 0.33, room_height * 0.82, spr_btn_journal_pre1, depth - 1, 0, "journalPre", "func", [20, "snd_none", "snd_none"]);
+	var obj = scr_btn_create(room_width * 0.33, room_height * 0.82, spr_btn_journal_pre1, depth - 1, 0, "journalPre", "func", [20, "snd_menu_btnEnter", "snd_menu_btnClick"]);
 	ctrl_jrn_btn_arrow_arr[1] = obj;
 	sprite_index = spr_sys_none;
 	image_speed = 0;

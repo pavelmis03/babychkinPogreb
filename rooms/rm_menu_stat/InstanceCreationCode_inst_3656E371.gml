@@ -6,7 +6,7 @@ y = room_height * 0.35;
 
 type = "flag";
 action = "statCmnCompany";
-sound = [20, "snd_none", "snd_none"];
+sound = [20, "snd_menu_checkBoxEnter", "snd_menu_checkBoxClick"];
 
 // drawing (текст рядом - подпись)
 draw_txt = "ОБЩЕЕ";

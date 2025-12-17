@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.766667,
+  "duration":0.75600904,
   "name":"snd_menu_journalOpen",
   "parent":{
     "name":"journal",

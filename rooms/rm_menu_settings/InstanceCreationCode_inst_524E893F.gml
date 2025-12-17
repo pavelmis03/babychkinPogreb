@@ -6,7 +6,7 @@ y = room_height * 0.55;
 
 type = "flag";
 action = "pixels";
-sound = [20, "snd_none", "snd_none"];
+sound = [20, "snd_menu_checkBoxEnter", "snd_menu_checkBoxClick"];
 
 
 // подгрузка настроек

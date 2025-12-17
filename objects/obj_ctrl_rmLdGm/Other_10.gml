@@ -62,33 +62,33 @@ ctrl_ldGm_gm = n;		// всего игр
 
 		// создаю кнопки
 		// кнопка ,,загрузить сохранение,,
-		btn_ldSvId = scr_btn_create(room_width * 0.25, room_height * 0.85, spr_btn_ldGm_ldSv0, depth, 0, ["ldSv", "cansel", "cansel"], "confirmYNCl", [20, "snd_none", "snd_none"]);
+		btn_ldSvId = scr_btn_create(room_width * 0.25, room_height * 0.85, spr_btn_ldGm_ldSv0, depth, 0, ["ldSv", "cansel", "cansel"], "confirmYNCl", [20, "snd_menu_btnEnter", "snd_menu_btnClick"]);
 		/*
 		btn_ldSvId = instance_create_depth(room_width * 0.25, room_height * 0.85, depth, obj_btn);
 		btn_ldSvId.sprite_index = spr_btn_ldGm_ldSv0;
 		btn_ldSvId.type = "confirmYNCl";
 		btn_ldSvId.action = ["ldSv", "cansel", "cansel"];
-		btn_ldSvId.sound = [20, "snd_none", "snd_none"];
+		btn_ldSvId.sound = [20, "snd_menu_btnEnter", "snd_menu_btnClick"];
 		*/
 		
 		// кнопка ,,удалить сохранение,,
-		btn_delSvId = scr_btn_create(room_width * 0.53, room_height * 0.85, spr_btn_ldGm_delSv0, depth, 0, ["delSv", "cansel", "cansel"], "confirmYNCl_delSv", [20, "snd_none", "snd_none"]);
+		btn_delSvId = scr_btn_create(room_width * 0.53, room_height * 0.85, spr_btn_ldGm_delSv0, depth, 0, ["delSv", "cansel", "cansel"], "confirmYNCl_delSv", [20, "snd_menu_btnEnter", "snd_menu_btnClick"]);
 		/*
 		btn_delSvId = instance_create_depth(room_width * 0.53, room_height * 0.85, depth, obj_btn);
 		btn_delSvId.sprite_index = spr_btn_ldGm_delSv0;
 		btn_delSvId.type = "confirmYNCl_delSv";
 		btn_delSvId.action = ["delSv", "cansel", "cansel"];
-		btn_delSvId.sound = [20, "snd_none", "snd_none"];
+		btn_delSvId.sound = [20, "snd_menu_btnEnter", "snd_menu_btnClick"];
 		*/
 
 		// кнопка ,,удалить игру,,
-		btn_delGmId = scr_btn_create(room_width * 0.70, room_height * 0.85, spr_btn_ldGm_delGm1, depth, 0, ["delGm", "cansel", "cansel"], "confirmYNCl", [20, "snd_none", "snd_none"]);
+		btn_delGmId = scr_btn_create(room_width * 0.70, room_height * 0.85, spr_btn_ldGm_delGm1, depth, 0, ["delGm", "cansel", "cansel"], "confirmYNCl", [20, "snd_menu_btnEnter", "snd_menu_btnClick"]);
 		/*
 		btn_delGmId = instance_create_depth(room_width * 0.70, room_height * 0.85, depth, obj_btn);
 		btn_delGmId.sprite_index = spr_btn_ldGm_delGm1;
 		btn_delGmId.type = "confirmYNCl";
 		btn_delGmId.action = ["delGm", "cansel", "cansel"];
-		btn_delGmId.sound = [20, "snd_none", "snd_none"]; 
+		btn_delGmId.sound = [20, "snd_menu_btnEnter", "snd_menu_btnClick"];
 		*/
 
 		// здесь создаем пять кнопок-загрузок

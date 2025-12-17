@@ -6,4 +6,4 @@ sprite_index = spr_btn_ldGm_arrow_1;
 
 type = "func";
 action = "preSv";
-sound = [20, "snd_none", "snd_none"];
+sound = [20, "snd_menu_btnEnter", "snd_menu_btnClick"];

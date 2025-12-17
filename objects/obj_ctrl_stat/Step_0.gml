@@ -16,14 +16,14 @@ if (ctrl_stat_menu) {
 			obj.sprite_index = spr_btn_stat_up1;
 			obj.type = "func";
 			obj.action = "arrowUp";
-			obj.sound = [20, "snd_none", "snd_none"];
+			obj.sound = [20, "snd_menu_btnEnter", "snd_menu_btnClick"];
 			array_push(ctrl_stat_arr_btn, obj);
 			
 			obj = instance_create_depth(room_width * 0.05, room_height * 0.9, 0, obj_btn);
 			obj.sprite_index = spr_btn_stat_down1;
 			obj.type = "func";
 			obj.action = "arrowDown";
-			obj.sound = [20, "snd_none", "snd_none"];
+			obj.sound = [20, "snd_menu_btnEnter", "snd_menu_btnClick"];
 			array_push(ctrl_stat_arr_btn, obj);
 		}
 		// двигаем камеру вниз при увеличении комнаты
