@@ -20,9 +20,9 @@ if (directory_exists(obj_ctrl_gm_sv.ctrl_sv_gmDir)) {
 }
 
 // произойдет запись файла, если его не существует
-if (!file_exists(str + "journalInfo.ini")) {
-	flag = true;
-}
+//if (!file_exists(str + "journalInfo.ini")) {
+//	flag = true;
+//}
 
 // переносим в память информацию из файла
 ini_open(str + "journalInfo.ini");
@@ -30,10 +30,10 @@ ini_open(str + "journalInfo.ini");
 var el = ds_map_find_first(ctrl_jrn_map_txt);
 // переписываем инофрмацию из файла по разделам
 for (var i = 0; i < ds_map_size(ctrl_jrn_map_txt); i++) {
-	if (flag) {	// если файла не существует, создаем его по умолчанию 
+	//if (flag) {	// если файла не существует, создаем его по умолчанию 
 		var t = ctrl_jrn_map_txt[?el];
 		ini_write_string(el, "0", t[0]);	// 0 - заголовое
-	}
+	//}
 	var j = 0;
 	// массив строк, относящихся к разделу
 	var arr = [];

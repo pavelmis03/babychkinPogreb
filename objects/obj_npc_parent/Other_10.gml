@@ -1,5 +1,7 @@
 /// @description инициализация
 
+hp = 1;		// !D
+
 // npc info
 /*
 var arr = global.CONST_MAP_NPC[?npc_keyName];

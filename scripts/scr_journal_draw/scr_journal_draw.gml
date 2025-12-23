@@ -10,8 +10,8 @@ function scr_draw_quests_record(t2, start_str, end_str, inc, page_pos) {
 	//var tmap = obj_ctrl_gm_iss.ctrl_iss_list_iss;
 	// Z - маркер заголовков, P - подзаголовки, M - маркированный список (точечки слева (порядок неважен),
 	// N - нумерованный (1, 2, 3 (порядок важен - последовательное выполнение)
-	// id = номер задачи (две цифры: 01, 02...) + номер подзадачи (01) + номер пункта (01) 
-	// пример: 010204 - первая задача, вторая подзадача, 4ый пункт, +1 - 5ый пункт, +100 - третья подзадача
+	// O - открыта/C - закрыта
+	// пример: OP_Разобраться, OZ_ВСПОМНИТЬ
 	
 	// откуда начинаем перебирать текст
 	var start_i = 0;
@@ -26,9 +26,10 @@ function scr_draw_quests_record(t2, start_str, end_str, inc, page_pos) {
 	var num = 0;
 	for (var i = start_str + start_i; i < end_str; i++) {
 		// разбираем текст 
-		var marker = string_copy(t2[i], 1, 1);	// какой вариант текста: заголовок, подзаголовок и т.д.
+		var status = string_copy(t2[i], 1, 1);	// открыта или закрыта задача
+		var marker = string_copy(t2[i], 2, 1);	// какой вариант текста: заголовок, подзаголовок и т.д.
 		// строка без маркера
-		var str = string_copy(t2[i], 3, string_length(t2[i]));
+		var str = string_copy(t2[i], 4, string_length(t2[i]));
 		draw_set_font(fnt_menu_jrn_txt);
 		if (marker == "Z") {
 			draw_set_font(fnt_menu_jrn_h2);
@@ -64,6 +65,12 @@ function scr_draw_quests_record(t2, start_str, end_str, inc, page_pos) {
 		
 		// сам вывод текста
 		draw_text(draw_txt_x + txt_x, txt_y, str);
+		
+		// зачеркиваем задачу, если она выполнена
+		if (status == "C") {
+			var endX = draw_txt_x + txt_x + 10 + string_width(str);
+			draw_line_width(draw_txt_x + txt_x - 10, txt_y, endX, txt_y, 2);	
+		}
 	}
 }
 
@@ -80,6 +87,9 @@ function scr_draw_quests_record(t2, start_str, end_str, inc, page_pos) {
 function scr_draw_quests(t, t2, page, start_str, end_str, inc, str_cnt) {
 	// словарь задач, по которому строим вывод
 	//var tmap = obj_ctrl_gm_iss.ctrl_iss_list_iss;
+	
+	// вывод от левого края
+	draw_set_halign(fa_left);
 	
 	// текст на левой странице
 	scr_draw_quests_record(t2, start_str, end_str, inc, "left");

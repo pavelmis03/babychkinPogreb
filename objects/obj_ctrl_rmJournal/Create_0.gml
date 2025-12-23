@@ -9,7 +9,8 @@ action = "";
 // drawing
 draw_spr = spr_journal1;	// для фона книги
 draw_txt_x = room_width * 0.32;	// начало рисования текста на книге
-draw_txt_y = room_height * 0.25;
+draw_txt_y = room_height * 0.26;
+draw_str_height = 36;		// общая примерная высота строки
 ctrl_jrn_chapter_curr = 1;			// текущий раздел 
 ctrl_jrn_chapter_target = 1;		// раздел, в который мы хотим попасть
 

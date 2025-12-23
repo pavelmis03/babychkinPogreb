@@ -5,6 +5,39 @@ var t, tx, ty;
 
 // первая часть
 switch (action) {
+	// ЗАДАЧИ
+	// научиться ходить, научиться открывать двери
+	case "iss1_1_1":
+		// активируем задачи по обучению
+		obj_ctrl_gm_iss.action = "change_iss_status";
+		// список активируемых задач
+		obj_ctrl_gm_iss.ctrl_iss_arr_id = [010000, 010100, 010101, 010102];
+		instance_destroy();
+	break;
+	// зайти к шефу
+	case "iss1_2_1":
+		// активируем задачи по обучению
+		obj_ctrl_gm_iss.action = "change_iss_status";
+		// список активируемых задач
+		obj_ctrl_gm_iss.ctrl_iss_arr_id = [010200, 010201, 010202];
+		instance_destroy();
+	break;
+	// научиться ходить - выполнена
+	case "issComplete1_1_1":
+		// активируем задачи по обучению
+		obj_ctrl_gm_iss.action = "change_iss_status";
+		// список активируемых задач
+		obj_ctrl_gm_iss.ctrl_iss_arr_id = [010101];
+		instance_destroy();
+	break;
+	// научиться открывать двери (и заголовки с ней) - выполнена
+	case "issComplete1_1_2":
+		// активируем задачи по обучению
+		obj_ctrl_gm_iss.action = "change_iss_status";
+		// список активируемых задач
+		obj_ctrl_gm_iss.ctrl_iss_arr_id = [010000, 010100, 010102];
+		instance_destroy();
+	break;
 	// ДИАЛОГИ
 	case "dlg1_1": // второй диалог (обучалка: как передвигаться)
 		// вызываю первый диалог 
@@ -13,14 +46,19 @@ switch (action) {
 		// ds_list_add(obj_ctrl_tml.ctrl_tml_list_, ["dlg1_1", 1.5]);
 		instance_destroy();
 	break;
-	case "dlg1_2": // второй диалог (обучалка: как взаимодействовать с предметами)
+	case "dlg1_2": // второй диалог (загляни в журнал)
 		obj_ctrl_gm.action = "dlg1_2";
 		obj_ctrl_gm.ctrl_gm_historyInd = "1_2";	// индекс диалога для контроллера комнаты истории
 		instance_destroy();
 	break;
-	case "dlg1_3": // разговор со Степаном, передача дела
+	case "dlg1_3": // второй диалог (обучалка: как взаимодействовать с предметами)
 		obj_ctrl_gm.action = "dlg1_3";
 		obj_ctrl_gm.ctrl_gm_historyInd = "1_3";	// индекс диалога для контроллера комнаты истории
+		instance_destroy();
+	break;
+	case "dlg1_4": // вызов на седьмой этаж
+		obj_ctrl_gm.action = "dlg1_4";
+		obj_ctrl_gm.ctrl_gm_historyInd = "1_4";	// индекс диалога для контроллера комнаты истории
 		instance_destroy();
 	break; 
 	/*

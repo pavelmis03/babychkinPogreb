@@ -44,16 +44,24 @@ switch (action) {
 	break;
 	// диалоги
 	// вызывается из контроллера триггеров
-	case "dlg1_1":	// диалог ,,Леня зайди,,
+	case "dlg1_1":	// обучение ходьбе
 		scr_gm_goToDlgRm(rm_gm_fp_office, 2);
 	break;
 	// вызывается из контроллера триггеров
-	case "dlg1_2":  // диалог ,,ну, открывай,,
+	case "dlg1_2":	// загляни в журнал
 		scr_gm_goToDlgRm(rm_gm_fp_office, 2);
 	break;
 	// вызывается из контроллера триггеров
-	case "dlg1_3":
-		scr_gm_goToDlgRm(rm_gm_fp_bossFloor, 2);
+	case "dlg1_3":  // диалог ,,ну, открывай,,
+		scr_gm_goToDlgRm(rm_gm_fp_office, 2);
+	break;
+	// вызывается из контроллера триггеров
+	case "dlg1_4":	// зайди на седьмой этаж
+		scr_gm_goToDlgRm(rm_gm_fp_office, 2);
+	break;
+	// вызывается из контроллера триггеров
+	case "dlg1_5":	// зайди на седьмой этаж
+		scr_gm_goToDlgRm(rm_gm_fp_office, 2);
 	break;
 	// действия при смерти игрока в первой части 
 	case "player_death_FP":

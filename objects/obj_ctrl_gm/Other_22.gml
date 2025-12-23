@@ -34,6 +34,7 @@ if (instance_exists(obj_ctrl_gm_iss)) {
 if (instance_exists(obj_ctrl_gm_equ)) {
 	instance_destroy(obj_ctrl_gm_equ);
 }
+
 // ИГРОК КОНЕЦ
 
 // ИГРОВЫЕ ОБЪЕКТЫ

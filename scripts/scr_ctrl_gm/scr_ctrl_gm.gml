@@ -4,7 +4,7 @@ function scr_gm_phase() {
 	var phase = -1;
 	var name = room_get_name(room);
 	
-	if (string_copy(name, 0, 7) == "rm_menu" or room == rm_pixel) {
+	if ((string_copy(name, 0, 7) == "rm_menu") or (room == rm_pixel)) {
 		phase = 0;
 	}
 	
@@ -29,7 +29,7 @@ function scr_gm_goToDlgRm(rm, time) {
 	alarm[1] = time;	// время на создание скрина
 	// сохраняем комнату, куда нас отправит контроллер истории после просмотра истории
 	ds_list_add(obj_ctrl_mv.next_rm_list_, rm); 
-	ctrl_gm_histStatus = 2;	// говорим, что после пикселей надо идти в диалоги, а не в историю
-	ctrl_gm_pixel_time = -1;		// время пребывания в комнате пикселей (-1 - не надо нам пиксели)
+	ctrl_gm_histStatus = 2;		// говорим, что после пикселей надо идти в диалоги, а не в историю
+	ctrl_gm_pixel_time = -1;	// время пребывания в комнате пикселей (-1 - не надо нам пиксели)
 }
 

@@ -965,6 +965,8 @@
     {"id":{"name":"spr_gm_buh_wheel","path":"sprites/spr_gm_buh_wheel/spr_gm_buh_wheel.yy",},},
     {"id":{"name":"spr_gm_buh_windscreen","path":"sprites/spr_gm_buh_windscreen/spr_gm_buh_windscreen.yy",},},
     {"id":{"name":"spr_gm_buh_wiper","path":"sprites/spr_gm_buh_wiper/spr_gm_buh_wiper.yy",},},
+    {"id":{"name":"spr_gm_caption_changeTask","path":"sprites/spr_gm_caption_changeTask/spr_gm_caption_changeTask.yy",},},
+    {"id":{"name":"spr_gm_caption_completeTask","path":"sprites/spr_gm_caption_completeTask/spr_gm_caption_completeTask.yy",},},
     {"id":{"name":"spr_gm_caption_gameSave","path":"sprites/spr_gm_caption_gameSave/spr_gm_caption_gameSave.yy",},},
     {"id":{"name":"spr_gm_caption_newTask","path":"sprites/spr_gm_caption_newTask/spr_gm_caption_newTask.yy",},},
     {"id":{"name":"spr_gm_caption_screen","path":"sprites/spr_gm_caption_screen/spr_gm_caption_screen.yy",},},

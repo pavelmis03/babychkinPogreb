@@ -4,6 +4,8 @@
 	// отрисовка слайда истории
 	// перелистывание слайдов и т.д.
 
+// ШРИФТ ДЛЯ ДИАЛОГОВ: Boockman Old Style (Bold-Italic 17size)
+
 // main
 action = "";
 
@@ -26,11 +28,11 @@ ctrl_history_map_[?"1_3"] = [5, 6];
 ctrl_history_map_[?"1_4"] = [7, 8];
 	
 if (obj_ctrl_gm.ctrl_gm_histStatus == 2) {
-	// для комнаты диалогов
-	ctrl_history_map_[?"1_1"] = [0, 1];
-	ctrl_history_map_[?"1_2"] = [2, 2];
-	ctrl_history_map_[?"1_3"] = [3, 3];
-	ctrl_history_map_[?"1_4"] = [4, 5];
+	// для комнаты диалогов [индекс_начала_диапахона, конец_диапазона]
+	ctrl_history_map_[?"1_1"] = [0, 0];
+	ctrl_history_map_[?"1_2"] = [1, 1];
+	ctrl_history_map_[?"1_3"] = [2, 2];
+	ctrl_history_map_[?"1_4"] = [3, 3];
 }
 
 // отрисовка фона-скриншота при выводе диалогов 

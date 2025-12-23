@@ -28,8 +28,23 @@ switch (action) {
 		// движение текста вверх
 		alarm[1] = 0.1 * fps;
 	break;
+	// новая задача добавлена
 	case "newTaskAlert": 
 		draw_caption = spr_gm_caption_newTask;
+		draw_caption_y = room_height / 2;
+		// движение текста вверх
+		alarm[1] = 0.1 * fps;
+	break;
+	// задача выполнена
+	case "completeTaskAlert": 
+		draw_caption = spr_gm_caption_completeTask;
+		draw_caption_y = room_height / 2;
+		// движение текста вверх
+		alarm[1] = 0.1 * fps;
+	break;
+	// список задач обновлен
+	case "changeTaskAlert": 
+		draw_caption = spr_gm_caption_changeTask;
 		draw_caption_y = room_height / 2;
 		// движение текста вверх
 		alarm[1] = 0.1 * fps;

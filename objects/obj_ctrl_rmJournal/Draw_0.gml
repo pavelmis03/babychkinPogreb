@@ -19,7 +19,7 @@ if (sprite_index == spr_sys_none) {
 	if (t[2] == 1) {	
 		inc = 1;
 		draw_set_font(fnt_menu_jrn_h1);
-		draw_text(draw_txt_x + room_width * 0.089, draw_txt_y - 36, t2[0]);	// заголовок раздела
+		draw_text(draw_txt_x + room_width * 0.089, draw_txt_y - draw_str_height, t2[0]);	// заголовок раздела
 	}
 	// если страница заполнена не до конца, т.е. кол-во строк не делится нацело на ctrl_jrn_txt_str
 	if (end_str > str_cnt) {	
@@ -37,10 +37,11 @@ if (sprite_index == spr_sys_none) {
 	
 	// страницы
 	// страница слева
-	draw_text(room_width * 0.42, room_height * 0.8, string(t[2]) + "/" + page);
+	draw_set_font(fnt_menu_jrn_h1);
+	draw_text(room_width * 0.42, room_height * 0.83, string(t[2]) + "/" + page);
 	// страница справа, но ее может и не быть
 	if (real(t[2]) + 1 <= real(page)) {
-		draw_text(room_width * 0.58, room_height * 0.8, string(t[2] + 1) + "/" + page);
+		draw_text(room_width * 0.58, room_height * 0.83, string(t[2] + 1) + "/" + page);
 	}
 } else {
 	draw_sprite(sprite_index, image_index, x, y);	
