@@ -41,6 +41,7 @@
     {"name":"inst_3ED5B4E6","path":"rooms/rm_gm_fp_office/rm_gm_fp_office.yy",},
     {"name":"inst_2883F809","path":"rooms/rm_gm_fp_office/rm_gm_fp_office.yy",},
     {"name":"inst_16CC1A23","path":"rooms/rm_gm_fp_office/rm_gm_fp_office.yy",},
+    {"name":"inst_391103C","path":"rooms/rm_gm_fp_office/rm_gm_fp_office.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -80,6 +81,7 @@
         {"$GMRInstance":"v2","%Name":"inst_3ED5B4E6","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3ED5B4E6","objectId":{"name":"obj_ctrl_gm_trigger","path":"objects/obj_ctrl_gm_trigger/obj_ctrl_gm_trigger.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":90.0,"scaleX":4.6980276,"scaleY":0.79687595,"x":555.5,"y":606.60486,},
         {"$GMRInstance":"v2","%Name":"inst_2883F809","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2883F809","objectId":{"name":"obj_ctrl_gm_trigger","path":"objects/obj_ctrl_gm_trigger/obj_ctrl_gm_trigger.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":90.0,"scaleX":1.8386531,"scaleY":3.6011472,"x":1816.2855,"y":827.0,},
         {"$GMRInstance":"v2","%Name":"inst_16CC1A23","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_16CC1A23","objectId":{"name":"obj_ctrl_gm_trigger","path":"objects/obj_ctrl_gm_trigger/obj_ctrl_gm_trigger.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":90.0,"scaleX":1.4262643,"scaleY":7.1573596,"x":1608.9358,"y":577.07684,},
+        {"$GMRInstance":"v2","%Name":"inst_391103C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_391103C","objectId":{"name":"obj_enemy_punk","path":"objects/obj_enemy_punk/obj_enemy_punk.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1193.0,"y":452.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":100,"effectEnabled":true,"effectType":"none","gridX":64,"gridY":64,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":135,"SerialiseWidth":265,"TileCompressedData":[
           -6,0,259,805306451,805306450,805306449,805306448,1342177347,1342177343,1342177339,1342177311,1342177307,

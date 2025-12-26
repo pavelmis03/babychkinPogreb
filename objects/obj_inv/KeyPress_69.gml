@@ -9,6 +9,7 @@ if (can_interact) {
 		obj_ctrl_gm_inv.inv_itemId = id;		// говорим, кого именно подбирать
 		interacting = true;
 		image_speed = 1;
+		image_index = 0;
 	}
 }
 

@@ -1,3 +1,3 @@
 // загляни в журнал
-action = "dlg1_2";
+action = "dlg1_1_2";
 type = "posT";

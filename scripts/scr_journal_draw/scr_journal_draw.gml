@@ -69,7 +69,7 @@ function scr_draw_quests_record(t2, start_str, end_str, inc, page_pos) {
 		// зачеркиваем задачу, если она выполнена
 		if (status == "C") {
 			var endX = draw_txt_x + txt_x + 10 + string_width(str);
-			draw_line_width(draw_txt_x + txt_x - 10, txt_y, endX, txt_y, 2);	
+			draw_line_width(draw_txt_x + txt_x - 10, txt_y - 10, endX, txt_y - 10, 2);	
 		}
 	}
 }

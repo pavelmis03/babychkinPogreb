@@ -11,7 +11,7 @@ player_isDeath = false;	// переменная, которая становит
 // moving
 // бег
 CONST_PLAYER_NORMALSPEED = 3;	// константа скорости шага
-CONST_PLAYER_RUNSPEED = 2.1;	// константа коэффициента бега
+CONST_PLAYER_RUNSPEED = /*2.1D*/ 5/*!D*/;	// константа коэффициента бега
 CONST_PLAYER_RUNPOWERCONSUMPTION = 6.66; // потребление сил в секунду (чтобы хватило на 15 сек. бега)
 CONST_PLAYER_RUNPOWERREGDELAY = 10;	// задержка перед восстановлением сил в секундах
 CONST_PLAYER_RUNPOWERREGSPEED = 5;	// скорость восстановления сил для бега

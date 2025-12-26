@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_enemy_pank1_run",
+  "%Name":"spr_enemy_punk1_run",
   "bboxMode":2,
   "bbox_bottom":95,
   "bbox_left":3,
@@ -28,7 +28,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"cdaa6831-bb81-4e7e-b568-cd8d44b0017e","blendMode":0,"displayName":"default","isLocked":false,"name":"cdaa6831-bb81-4e7e-b568-cd8d44b0017e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_enemy_pank1_run",
+  "name":"spr_enemy_punk1_run",
   "nineSlice":{
     "$GMNineSliceData":"",
     "bottom":0,
@@ -59,7 +59,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_enemy_pank1_run",
+    "%Name":"spr_enemy_punk1_run",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -83,40 +83,42 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_enemy_pank1_run",
+    "name":"spr_enemy_punk1_run",
     "playback":1,
     "playbackSpeed":12.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
+    "seqHeight":159.0,
+    "seqWidth":140.0,
     "showBackdrop":true,
     "showBackdropImage":false,
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"97dc46aa-aa01-43b7-b7bf-181a941a809c","path":"sprites/spr_enemy_pank1_run/spr_enemy_pank1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"97dc46aa-aa01-43b7-b7bf-181a941a809c","path":"sprites/spr_enemy_punk1_run/spr_enemy_punk1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"f61131fb-108d-4be2-a64d-b1a660643ef6","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c9b1ddbc-124f-47e2-a9b3-c3923b7f7640","path":"sprites/spr_enemy_pank1_run/spr_enemy_pank1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c9b1ddbc-124f-47e2-a9b3-c3923b7f7640","path":"sprites/spr_enemy_punk1_run/spr_enemy_punk1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"8c9b31cf-405a-440c-b70c-306c27d3b718","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a7ef6ad1-6ad2-49a4-ba3c-e79bd07f9966","path":"sprites/spr_enemy_pank1_run/spr_enemy_pank1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a7ef6ad1-6ad2-49a4-ba3c-e79bd07f9966","path":"sprites/spr_enemy_punk1_run/spr_enemy_punk1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"90b5a380-16ed-4dfb-a1fc-4e5bcb606f30","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bb161788-7e02-4681-8e8d-e170417d4088","path":"sprites/spr_enemy_pank1_run/spr_enemy_pank1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bb161788-7e02-4681-8e8d-e170417d4088","path":"sprites/spr_enemy_punk1_run/spr_enemy_punk1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"5baa7e09-da85-4253-85f2-775ded13579e","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"451b5705-0e21-4e9a-9829-5759e83c090d","path":"sprites/spr_enemy_pank1_run/spr_enemy_pank1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"451b5705-0e21-4e9a-9829-5759e83c090d","path":"sprites/spr_enemy_punk1_run/spr_enemy_punk1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"76391eda-0e0b-444f-a333-09f5c2f4837c","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"984e435b-6e51-4c37-b1e7-71f9eba4331d","path":"sprites/spr_enemy_pank1_run/spr_enemy_pank1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"984e435b-6e51-4c37-b1e7-71f9eba4331d","path":"sprites/spr_enemy_punk1_run/spr_enemy_punk1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"25b7334b-a43b-49f4-a91c-f92054b63ebc","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d568b26c-63b0-4006-b147-9187f217eb51","path":"sprites/spr_enemy_pank1_run/spr_enemy_pank1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d568b26c-63b0-4006-b147-9187f217eb51","path":"sprites/spr_enemy_punk1_run/spr_enemy_punk1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"a1b7e672-7028-483a-bca3-35031a77af70","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"891e3fbb-d001-4926-a992-dfe9494745a3","path":"sprites/spr_enemy_pank1_run/spr_enemy_pank1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"891e3fbb-d001-4926-a992-dfe9494745a3","path":"sprites/spr_enemy_punk1_run/spr_enemy_punk1_run.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"528a9ec8-6503-45e1-873c-66d9fa2126f1","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

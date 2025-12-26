@@ -18,11 +18,11 @@ switch (action) {
 		ds_list_clear(ctrl_tml_list_);
 	break;
 	// запустить диалог 1
-	// case "dlg1_1":
-	// 	obj_ctrl_gm.action = "dlg1_1";
+	// case "dlg1_1_1":
+	// 	obj_ctrl_gm.action = "dlg1_1_1";
 	// break;
 	// действия при выходе в главное меню
-	// case "dlg1_1":
+	// case "dlg1_1_1":
 	// 	for (var i = 0; i < 12; i++) {
 	// 		ctrl_tml_alarmAction_arr[i] = "";
 	// 	}

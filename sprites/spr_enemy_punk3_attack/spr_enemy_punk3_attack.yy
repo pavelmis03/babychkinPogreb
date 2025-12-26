@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_enemy_pank2_attack",
+  "%Name":"spr_enemy_punk3_attack",
   "bboxMode":2,
   "bbox_bottom":103,
   "bbox_left":8,
@@ -30,19 +30,19 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"e9d32031-c27a-4b51-80dd-053b9f930cb2","blendMode":0,"displayName":"default","isLocked":false,"name":"e9d32031-c27a-4b51-80dd-053b9f930cb2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_enemy_pank2_attack",
+  "name":"spr_enemy_punk3_attack",
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"pank2",
-    "path":"folders/Sprites/Game/Game_process/Character/Enemy/People/Panks/pank2.yy",
+    "name":"pank3",
+    "path":"folders/Sprites/Game/Game_process/Character/Enemy/People/Panks/pank3.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_enemy_pank2_attack",
+    "%Name":"spr_enemy_punk3_attack",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -66,7 +66,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_enemy_pank2_attack",
+    "name":"spr_enemy_punk3_attack",
     "playback":1,
     "playbackSpeed":10.0,
     "playbackSpeedType":0,
@@ -78,35 +78,35 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d0b6e62e-1366-4eac-9e06-3f755a70353b","path":"sprites/spr_enemy_pank2_attack/spr_enemy_pank2_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"337891ef-f492-4ba6-8852-d3d40980889d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d0b6e62e-1366-4eac-9e06-3f755a70353b","path":"sprites/spr_enemy_punk3_attack/spr_enemy_punk3_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"5c9d4496-4066-468a-ba9b-fbb2dc88615d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c284ea20-410e-4161-884d-32f4f81996f8","path":"sprites/spr_enemy_pank2_attack/spr_enemy_pank2_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3553a72e-c0aa-49e9-9024-12567be92d7c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c284ea20-410e-4161-884d-32f4f81996f8","path":"sprites/spr_enemy_punk3_attack/spr_enemy_punk3_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"a2af471a-0255-4c3c-9baf-09d6509e20f3","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a476d0cc-a3cd-4e71-b779-112385fa8713","path":"sprites/spr_enemy_pank2_attack/spr_enemy_pank2_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2c272643-39ab-4ee1-87c3-1faa00f030ee","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a476d0cc-a3cd-4e71-b779-112385fa8713","path":"sprites/spr_enemy_punk3_attack/spr_enemy_punk3_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"7e2b1e24-0aac-463a-9c7f-7ff1eeb37d49","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0a7d1298-4acb-43a9-bcb3-09bf869ff26c","path":"sprites/spr_enemy_pank2_attack/spr_enemy_pank2_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e48b9bda-83b2-4dd1-8795-8d44a87c6d8b","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0a7d1298-4acb-43a9-bcb3-09bf869ff26c","path":"sprites/spr_enemy_punk3_attack/spr_enemy_punk3_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"b403a0cb-9a4d-4f35-ad48-17ed2265cc29","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b6ea8004-bb11-4fe0-b2fa-419220adffb6","path":"sprites/spr_enemy_pank2_attack/spr_enemy_pank2_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d8fb7595-c572-48fb-acdb-27b1a7eff6f8","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b6ea8004-bb11-4fe0-b2fa-419220adffb6","path":"sprites/spr_enemy_punk3_attack/spr_enemy_punk3_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"64c8415a-d2a1-43f5-92bf-e91f6fb002d3","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"25c25c7d-2aa5-4816-a8e9-4f1d8a04f573","path":"sprites/spr_enemy_pank2_attack/spr_enemy_pank2_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8e678e78-991b-4ee8-90d3-dbfbf3c20a3c","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"25c25c7d-2aa5-4816-a8e9-4f1d8a04f573","path":"sprites/spr_enemy_punk3_attack/spr_enemy_punk3_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"361e8445-94f6-40d5-9f17-6e75fd646011","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"99f0a395-6de8-4e79-b0e4-3b4353f85423","path":"sprites/spr_enemy_pank2_attack/spr_enemy_pank2_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"99db09db-d983-46f4-bbf6-ced5e1912998","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"99f0a395-6de8-4e79-b0e4-3b4353f85423","path":"sprites/spr_enemy_punk3_attack/spr_enemy_punk3_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"24a8f68f-7dd8-4fcf-861c-b97ef6cc8bd5","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9563e2ee-aa2d-4de7-aaa2-baced927e392","path":"sprites/spr_enemy_pank2_attack/spr_enemy_pank2_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c9370dc3-6767-4917-a363-e22ea700bd0b","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9563e2ee-aa2d-4de7-aaa2-baced927e392","path":"sprites/spr_enemy_punk3_attack/spr_enemy_punk3_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"77b8d9f1-2384-4a6f-893a-99aec5cbc94c","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d9d4879c-e288-4cdb-8e7a-de5267ba277e","path":"sprites/spr_enemy_pank2_attack/spr_enemy_pank2_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6e589e62-3a38-4c80-987b-cd0d2b7deace","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d9d4879c-e288-4cdb-8e7a-de5267ba277e","path":"sprites/spr_enemy_punk3_attack/spr_enemy_punk3_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"1cc63d43-2a16-46ea-81ff-21648b908372","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"874c3c3d-bfa9-4389-a87d-051cfdc94d96","path":"sprites/spr_enemy_pank2_attack/spr_enemy_pank2_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"bd8510bc-ef56-48ce-a7df-b027fd0ab968","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"874c3c3d-bfa9-4389-a87d-051cfdc94d96","path":"sprites/spr_enemy_punk3_attack/spr_enemy_punk3_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"e551998d-7190-44c5-8894-d27eeb561952","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

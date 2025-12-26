@@ -22,17 +22,19 @@ ctrl_history_page_last = 2;		// последняя
 
 // промежутки просмотра для комнаты истории
 ctrl_history_map_ = ds_map_create();
-ctrl_history_map_[?"1_1"] = [0, 2];
-ctrl_history_map_[?"1_2"] = [3, 4];
-ctrl_history_map_[?"1_3"] = [5, 6];
-ctrl_history_map_[?"1_4"] = [7, 8];
+ctrl_history_map_[?"1_1_1"] = [0, 2];
+ctrl_history_map_[?"1_1_2"] = [3, 4];
+ctrl_history_map_[?"1_1_3"] = [5, 6];
+ctrl_history_map_[?"1_1_4"] = [7, 8];
 	
 if (obj_ctrl_gm.ctrl_gm_histStatus == 2) {
 	// для комнаты диалогов [индекс_начала_диапахона, конец_диапазона]
-	ctrl_history_map_[?"1_1"] = [0, 0];
-	ctrl_history_map_[?"1_2"] = [1, 1];
-	ctrl_history_map_[?"1_3"] = [2, 2];
-	ctrl_history_map_[?"1_4"] = [3, 3];
+	ctrl_history_map_[?"1_1_1"] = [0, 0];
+	ctrl_history_map_[?"1_1_2"] = [1, 1];
+	ctrl_history_map_[?"1_1_3"] = [2, 2];
+	ctrl_history_map_[?"1_2_1"] = [3, 3];
+	ctrl_history_map_[?"1_2_2"] = [4, 4];
+	ctrl_history_map_[?"1_2_3"] = [5, 5];
 }
 
 // отрисовка фона-скриншота при выводе диалогов 

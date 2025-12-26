@@ -1,3 +1,3 @@
 // зайди к шефу
-action = "dlg1_4";
+action = "dlg1_2_1";
 type = "posT";

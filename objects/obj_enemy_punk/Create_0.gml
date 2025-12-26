@@ -24,9 +24,9 @@ enemy_wanderMaxDist = 200; // расстояние, на которое може
 // drawing
 enemy_isDrawHp = false; // нужно ли отображать жизни врагам
 // основные спрайты !!!!!возможно стоит сделать массив спрайтов и передавать его из init с константами
-enemy_spr_go = spr_enemy_pank1_run;
-enemy_spr_state = spr_enemy_pank1_state;
-enemy_spr_attack = spr_enemy_pank1_attack;
+enemy_spr_go = spr_enemy_punk1_run;
+enemy_spr_state = spr_enemy_punk1_state;
+enemy_spr_attack = spr_enemy_punk1_attack;
 
 // setting
 alarm[6] = 10; // бесцельное перемещение

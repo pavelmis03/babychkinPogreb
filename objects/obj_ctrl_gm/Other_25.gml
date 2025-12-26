@@ -7,7 +7,7 @@ switch (action) {
 		ds_list_add(obj_ctrl_mv.next_rm_list_, rm_gm_fp_office);
 		ctrl_gm_pixel_time = 3;		// время пребывания в комнате пикселей
 		ctrl_gm_histStatus = 1;	// говорим, что после пикселей надо идти в историю 
-		ctrl_gm_historyInd = "1_1";	// индекс истории 
+		ctrl_gm_historyInd = "1_1_1";	// индекс истории 
 		// если это самая первая игра, нужно создать общий файл информации по игре
 		if (!file_exists("gameInfo.ini")) {
 			ini_open("gameInfo.ini");
@@ -44,24 +44,24 @@ switch (action) {
 	break;
 	// диалоги
 	// вызывается из контроллера триггеров
-	case "dlg1_1":	// обучение ходьбе
+	case "dlg1_1_1":	// обучение ходьбе
 		scr_gm_goToDlgRm(rm_gm_fp_office, 2);
 	break;
 	// вызывается из контроллера триггеров
-	case "dlg1_2":	// загляни в журнал
+	case "dlg1_1_2":	// загляни в журнал
 		scr_gm_goToDlgRm(rm_gm_fp_office, 2);
 	break;
 	// вызывается из контроллера триггеров
-	case "dlg1_3":  // диалог ,,ну, открывай,,
+	case "dlg1_1_3":  // диалог ,,ну, открывай,,
 		scr_gm_goToDlgRm(rm_gm_fp_office, 2);
 	break;
 	// вызывается из контроллера триггеров
-	case "dlg1_4":	// зайди на седьмой этаж
+	case "dlg1_2_1":	// зайди на седьмой этаж
 		scr_gm_goToDlgRm(rm_gm_fp_office, 2);
 	break;
 	// вызывается из контроллера триггеров
-	case "dlg1_5":	// зайди на седьмой этаж
-		scr_gm_goToDlgRm(rm_gm_fp_office, 2);
+	case "dlg1_2_2":	// забери дело
+		scr_gm_goToDlgRm(rm_gm_fp_bossFloor, 2);
 	break;
 	// действия при смерти игрока в первой части 
 	case "player_death_FP":

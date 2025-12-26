@@ -10,7 +10,7 @@ if (obj_ctrl_gm.ctrl_gm_histStatus == 2) {
 }
 */
 
-// индекс диалога (или истории) (например "1_1", "2_4")
+// индекс диалога (или истории) (например "1_1_1", "1_2_4")
 var ind = obj_ctrl_gm.ctrl_gm_historyInd;
 // получаю границы промежутка 
 var t2 = ctrl_history_map_[?ind];

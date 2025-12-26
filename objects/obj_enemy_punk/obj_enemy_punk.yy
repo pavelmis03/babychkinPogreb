@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enemy_pank",
+  "%Name":"obj_enemy_punk",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_enemy_pank",
+  "name":"obj_enemy_punk",
   "overriddenProperties":[],
   "parent":{
     "name":"FP",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_pank1_run",
-    "path":"sprites/spr_enemy_pank1_run/spr_enemy_pank1_run.yy",
+    "name":"spr_enemy_punk1_run",
+    "path":"sprites/spr_enemy_punk1_run/spr_enemy_punk1_run.yy",
   },
   "spriteMaskId":null,
   "visible":true,

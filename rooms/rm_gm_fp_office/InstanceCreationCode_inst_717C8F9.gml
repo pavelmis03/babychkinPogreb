@@ -1,3 +1,3 @@
 // чего стоишь, открывай
-action = "dlg1_3";
+action = "dlg1_1_3";
 type = "posT";
