@@ -11,6 +11,9 @@ if (can_interact) {
 			terminal_state = "reload";
 			// уменьшаю количество сохранений
 			terminal_saves--;
+			
+			// снимаю метку новой игры из контроллера статуса игрока
+			obj_ctrl_gm_playerStatus.player_isNewGm = false;
 		}
 	}
 }

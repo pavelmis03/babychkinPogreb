@@ -72,7 +72,7 @@ if (player != -1) {
 	
 	// БЛОК ВОССТАНОВЛЕНИЯ ХП
 	// если персонаж ранен, его жизни сами восстанавливаются на четверть, потребляя больше пищи
-	if (hp < hpMax / 4) {
+	if (hp < HP_MAX / 4) {
 		// hp восстанавливается только при достаточном запасе еды и воды
 		if ((player_water > 15) and (player_food > 20) and (player_temp > 20) and (player_crazy < 80)) {
 			// если персонаж не получает урон, засекаем 10 секунд, чтобы начать восстанавливать жизни 
@@ -87,7 +87,7 @@ if (player != -1) {
 			// если с момента последнего получения урона прошло 10 сек., начинаем воссанавливать жизни
 			if (player_dmgTimeLess >= 10) {	
 				// до 110 быстрее восстановление идет
-				if (hp < hpMax / 10) {
+				if (hp < HP_MAX / 10) {
 					// до 40 +3 hp/sec, до 80 +2 hp/sec, до 110 +hp/sec
 					hp += (3 - hp / 40) / fps;
 					// при восстановлении здоровья расход пищи и воды увеличивается
@@ -137,7 +137,7 @@ player_food = clamp(player_food, 0, player_foodMax);	// в процентах
 player_water = clamp(player_water, 0, player_waterMax);
 player_temp = clamp(player_temp, 0, player_tempMax);
 player_crazy = clamp(player_crazy, 0, player_crazyMax);
-hp = clamp(hp, 0, hpMax);
+hp = clamp(hp, 0, HP_MAX);
 player_runPower = clamp(player_runPower, 0, player_runPowerMax);
 
 
