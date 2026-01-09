@@ -40,7 +40,7 @@ switch (inv_type) {
 			instance_destroy(inv_btn[0]);	// удаляем стрелки второго инвентаря
 			instance_destroy(inv_btn[1]);
 		}
-		instance_destroy(inv_btn[2]);	// удаляем кнопку ,,использовать,,
+		// instance_destroy(inv_btn[2]);	// удаляем кнопку ,,использовать,,
 		
 		scr_inv_createCell(0, "other");	// создаю ячейки для инвентаря-контрагента
 		
@@ -61,7 +61,7 @@ switch (inv_type) {
 		
 		scr_inv_createCell(0, "other");	// создаю ячейки для инвентаря-контрагента
 		
-		instance_destroy(inv_btn[2]);	// удаляем кнопку ,,использовать,,
+		// instance_destroy(inv_btn[2]);	// удаляем кнопку ,,использовать,,
 	break;
 	case "craftInv":// инвентарь крафта 
 		// inv_btn[0].action = "invPrePageCraft";
@@ -69,7 +69,7 @@ switch (inv_type) {
 		layer_background_sprite(back_id, spr_gm_bg_invCraft);	// меняю фон инвентаря по типу инвентаря
 		instance_destroy(inv_btn[0]);	// удаляем стрелки второго инвентаря
 		instance_destroy(inv_btn[1]);
-		instance_destroy(inv_btn[2]);	// удаляем кнопку ,,использовать,,
+		// instance_destroy(inv_btn[2]);	// удаляем кнопку ,,использовать,,
 		instance_destroy(inv_btn[4]);	// удаляем кнопки ,,переместить все,, ,,взять все,,
 		instance_destroy(inv_btn[5]);
 	break;
@@ -77,7 +77,7 @@ switch (inv_type) {
 		inv_btn[0].action = "invPrePageBuh";
 		inv_btn[1].action = "invNextPageBuh";
 		layer_background_sprite(back_id, spr_gm_bg_invBuh);	// меняю фон инвентаря по типу инвентаря
-		instance_destroy(inv_btn[2]);	// удаляем кнопку ,,использовать,,
+		// instance_destroy(inv_btn[2]);	// удаляем кнопку ,,использовать,,
 		
 		scr_inv_createCell(0, "other");	// создаю ячейки для инвентаря-контрагента
 		
@@ -89,7 +89,7 @@ switch (inv_type) {
 		layer_background_sprite(back_id, spr_gm_bg_invBuhUpgrade);	// меняю фон инвентаря по типу инвентаря
 		instance_destroy(inv_btn[0]);	// удаляем стрелки второго инвентаря
 		instance_destroy(inv_btn[1]);
-		instance_destroy(inv_btn[2]);	// удаляем кнопку ,,использовать,,
+		// instance_destroy(inv_btn[2]);	// удаляем кнопку ,,использовать,,
 		instance_destroy(inv_btn[4]);	// удаляем кнопки ,,переместить все,, ,,взять все,,
 		instance_destroy(inv_btn[5]);
 	break;

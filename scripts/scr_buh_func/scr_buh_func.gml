@@ -1,7 +1,7 @@
-/// @function scr_buh_chechPlayerDir();
+/// @function scr_buh_checkPlayerDir();
 /// @description в зависимости от направления и близости игрока определяет возможность 
 	// взаимодействия: открыть инвентарь буханки, капот, сесть внутрь
-function scr_buh_chechPlayerDir() {
+function scr_buh_checkPlayerDir() {
 	if (!buh_playerIn) {	// иначе игрок сидит в буханке
 		// проверка на то, что направление и расстояние совпадают
 		can_interact = 0;

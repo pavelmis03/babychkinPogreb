@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"btn_gmMenu_del",
-    "path":"folders/Sprites/Menu/Game/GmMenu/Inventory/Btn/btn_gmMenu_del.yy",
+    "name":"btn_inv_del",
+    "path":"folders/Sprites/Menu/Game/GmMenu/Inventory/Btn/btn_inv_del.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

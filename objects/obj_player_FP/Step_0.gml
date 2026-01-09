@@ -15,7 +15,10 @@ for (var i = 0; i < ds_map_size(player_map_col); i++) {
 	// если ячейка вообще заполнена
 	if (player_map_col[?key] != 0) {
 		// если перс уже не имеет коллизии с указанным экземп, то удаляю его id
-		if (instance_place(x, y, player_map_col[?key]) == noone) { 
+		// if (instance_place(x, y, player_map_col[?key]) == noone) { 
+		// проверяю коллизию, как в инвентаре, чтобы не было расхождений
+		var objId = player_map_col[?key];
+		if (!scr_col_checkPlayerCol(x, y, image_angle, objId, 60, 60)) {
 			player_map_col[?key] = 0;
 		}
 	}

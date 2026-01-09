@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"btn_gmMenu_takeAll",
-    "path":"folders/Sprites/Menu/Game/GmMenu/Inventory/Btn/btn_gmMenu_takeAll.yy",
+    "name":"btn_inv_takeAll",
+    "path":"folders/Sprites/Menu/Game/GmMenu/Inventory/Btn/btn_inv_takeAll.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

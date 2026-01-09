@@ -47,8 +47,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"btn_arrow",
-    "path":"folders/Sprites/Menu/Game/GmMenu/Inventory/Btn/btn_arrow.yy",
+    "name":"btn_inv_arrow",
+    "path":"folders/Sprites/Menu/Game/GmMenu/Inventory/Btn/btn_inv_arrow.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

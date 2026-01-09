@@ -1,6 +1,31 @@
+/// @function scr_col_checkPlayerCol(px, py, pimg_angle, objId, dist, angle);
+/// @param {} px координата игрока
+/// @param {} py координата игрока
+/// @param {} pimg_angle image_angle игрока
+/// @param {} objId id предмета, с которым проверяем коллизию 
+/// @param {} dist дистанция до предмета, на которой считаем взаимодействие доступным
+/// @param {} angle угол зрения игрока, который нас устраивает
+/// @description проверяет, если ли коллизия с кем-нибудь из указанных объектов 
+		/// по расстоянию и направлению взгляда. Возвращает false, если предмета не существует
+function scr_col_checkPlayerCol(px, py, pimg_angle, objId, dist, angle) {
+	// отдельно проверяем, что предмета не существует
+	if (!instance_exists(objId)) {
+		return false;
+	}
+	
+	// проверяю, что игрок смотрит именно на объект инвентаря (рисую линию коллизии от игрока прямо на 60 пх)
+	if (collision_line(px, py, px + lengthdir_x(dist, pimg_angle), py + lengthdir_y(dist, pimg_angle), objId, true, false)) {	
+		// проверяю корректность направления взгляда игрока
+		if (abs(angle_difference(pimg_angle, point_direction(px, py, objId.x, objId.y))) <= angle) {
+			return true;
+		}
+	}
+	return false;
+}
+
 /// @function scr_col_checkColObj(objType);
 /// @param {} objType какие это объекты ("enemy", "player", "buh"...)
-/// @description проверяет, если ли коллизия с кем-нибудь из указанных объектов
+/// @description проверяет, если ли коллизия игрока с кем-нибудь из указанных объектов в точке, где стоит игрок
 function scr_col_checkColObj(objType) {
 	if (objType == "player") {	// проверяем коллизии с игроками
 		var player_obj = scr_player_type();	// игрок в комнате
@@ -21,7 +46,6 @@ function scr_col_checkColObj(objType) {
 		// смотрим, есть ли контакт с кем-то из них
 		// возвращаем id
 	}
-	
 	
 	return -1;
 }

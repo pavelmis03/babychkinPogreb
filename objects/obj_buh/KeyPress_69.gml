@@ -26,7 +26,7 @@ if (scr_arr_findEl([spr_buh_state, spr_buh_stateStarted, spr_buh_broke], sprite_
 	} else {
 		// варианты взаимодействия 
 		switch (can_interact) {
-			case 1:// когда она сломана, такого варианта просто не будет (см. скрипт scr_buh_chechPlayerDir())
+			case 1:// когда она сломана, такого варианта просто не будет (см. скрипт scr_buh_checkPlayerDir())
 				player_obj.visible = false;	// делаем игрока невидимым
 				// на всякий: так направление персонажа ни с кем не совпадет и он не сможет взаимодействовать
 				player_obj.image_angle = direction + 180;

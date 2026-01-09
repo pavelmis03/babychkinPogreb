@@ -8,7 +8,7 @@ if (!init) {
 }
 
 // определяем способ взаимодействия с игроком по направлению и близости к буханке
-scr_buh_chechPlayerDir();
+scr_buh_checkPlayerDir();
 
 image_angle = direction;
 

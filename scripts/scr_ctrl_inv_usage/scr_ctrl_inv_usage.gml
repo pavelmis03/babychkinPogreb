@@ -43,7 +43,7 @@ function scr_inv_useItem(tid) {
 				var hintArr = [];
 				
 				// добавляем подсказку по жизням
-				array_push(hintArr, scr_hint_inv(thp, ctrl.hp, ctrl.hpMax, "hp"));
+				array_push(hintArr, scr_hint_inv(thp, ctrl.hp, ctrl.HP_MAX, "hp"));
 				if (hintArr[array_length(hintArr) - 1] == -1) {
 					array_pop(hintArr);
 				}

@@ -42,9 +42,10 @@ if (inv_canLoot) {
 	// если игрок не атакует и т.д., если свободен, короче
 	if ((!player_obj.player_attack) and (!player_obj.player_pressE) and (!player_obj.player_openInv)) {	
 		// проверяю, что игрок смотрит именно на объект инвентаря (рисую линию коллизии от игрока прямо на 60 пх)
-		if (collision_line(px, py, px + lengthdir_x(60, player_obj.image_angle), py + lengthdir_y(60, player_obj.image_angle), id, true, false)) {	
+		// if (collision_line(px, py, px + lengthdir_x(60, player_obj.image_angle), py + lengthdir_y(60, player_obj.image_angle), id, true, false)) {	
 			// проверяю корректность направления взгляда игрока
-			if (abs(angle_difference(player_obj.image_angle, point_direction(px, py, x, y))) <= 60) {
+			// if (abs(angle_difference(player_obj.image_angle, point_direction(px, py, x, y))) <= 60) {
+			if (scr_col_checkPlayerCol(px, py, player_obj.image_angle, id, 60, 60)) {
 				// если персонаж взаимодействует с именно с нашим объектом (чтобы сразу два случайно не сработали)
 				if ((player_obj.player_map_col[?type] == 0) or (player_obj.player_map_col[?type] == id)) {
 					can_interact = true;
@@ -54,7 +55,7 @@ if (inv_canLoot) {
 					obj_ctrl_gm_hint.ctrl_hint_newHint = hint;
 				}		
 			}
-		}
+		// }
 	}
 }
 
