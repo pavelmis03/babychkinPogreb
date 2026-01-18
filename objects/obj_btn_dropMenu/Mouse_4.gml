@@ -11,8 +11,7 @@ if (!obj_ctrl_dlg.ctrl_dlg_exist) {
 	image_speed = sprite_get_speed(sprite_index);
 	// воспроизводим звук клика
 	scr_snd_requestPlaySnd(sound[0], sound[2], sound[2], true);	// звук 
-	// obj_ctrl_snd.action = "playSnd";
-	// array_push(obj_ctrl_snd.sound, sound[0], sound[2]);
+	
 	// эту кнопку можно включить и выключить вторым щелчком
 	btn_pressed = !btn_pressed;
 	// если кнопка была выключена, меняем спрайт на наеведенный 

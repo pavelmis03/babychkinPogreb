@@ -14,7 +14,6 @@ if (btn_enable and !btn_pressed) {
 	// image_speed = sprite_get_speed(sprite_index);
 	// воспроизводим звук клика
 	scr_snd_requestPlaySnd(sound[0], sound[2], sound[2], true);	// звук 
-	// obj_ctrl_snd.action = "playSnd";
-	// array_push(obj_ctrl_snd.sound, sound[0], sound[2]);
+	
 	btn_pressed = true;
 }

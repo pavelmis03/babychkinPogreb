@@ -11,10 +11,8 @@ if (!obj_ctrl_dlg.ctrl_dlg_exist) {
 	if (point_in_rectangle(mouse_x, mouse_y, x1, y1, x2, y2)) {
 		// действия один раз выполняются (запустили спрайт)
 		if (!btn_enter) {
-			//// воспроизводим звук наведения
+			// воспроизводим звук наведения
 			scr_snd_requestPlaySnd(sound[0], sound[1], sound[1], true);	// звук 
-			// obj_ctrl_snd.action = "playSnd";
-			// array_push(obj_ctrl_snd.sound, sound[0], sound[1]);
 			btn_enter = true;
 		}
 	} else {

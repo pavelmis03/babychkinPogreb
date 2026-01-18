@@ -127,7 +127,7 @@ function scr_snd_requestPlaySnd(priority, snd1, snd2, playOrStop) {
 	if (playOrStop) {	// звук может быть активен, но может не воспроизводиться, если он относится к другой комнате
 		if ((!audio_is_playing(snd1)) or (audio_is_paused(snd1))) {
 			// воспроизводим звук
-			obj_ctrl_snd.action = "playSnd";
+			array_push(obj_ctrl_snd.action, "playSnd");
 			array_push(obj_ctrl_snd.sound, priority, snd2);
 		}
 	} else {

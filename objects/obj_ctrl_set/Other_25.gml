@@ -8,7 +8,7 @@ switch (action) {
 		// меняем значение на противоположное (было on, стало off и наоборот)
 		ctrl_set_map_curr[?"sound"] = !bool(ctrl_set_map_curr[?"sound"]);
 		// сообщаем об изменении настроек звука
-		obj_ctrl_snd.action = "sndChange";
+		array_push(obj_ctrl_snd.action, "sndChange")
 	break;
 	// выключает всю музыку
 	case "musicChange":
@@ -17,7 +17,7 @@ switch (action) {
 		// меняем значение на противоположное (было on, стало off и наоборот)
 		ctrl_set_map_curr[?"music"] = !bool(ctrl_set_map_curr[?"music"]);
 		// сообщаем об изменении настроек звука
-		obj_ctrl_snd.action = "sndChange";
+		array_push(obj_ctrl_snd.action, "sndChange")
 	break;
 	// меняет громкость звуков
 	case "soundValChange":
@@ -26,7 +26,7 @@ switch (action) {
 		// меняем значение громкости музыки
 		ctrl_set_map_curr[?"sound_val"] = iid.val;
 		// сообщаем об изменении настроек звука
-		obj_ctrl_snd.action = "sndChange";
+		array_push(obj_ctrl_snd.action, "sndChange")
 	break;
 	// меняет громкость музыки
 	case "musicValChange":
@@ -35,7 +35,7 @@ switch (action) {
 		// меняем значение громкости звуков
 		ctrl_set_map_curr[?"music_val"] = iid.val;
 		// сообщаем об изменении настроек звука
-		obj_ctrl_snd.action = "sndChange";
+		array_push(obj_ctrl_snd.action, "sndChange")
 	break;
 	// сохранить измененные настройки перед выходом в главное меню
 	case "saveSettings":
@@ -52,7 +52,7 @@ switch (action) {
 		// отменяем изменения (откатываемся до предыдущих настроек)
 		ds_map_copy(ctrl_set_map_curr, ctrl_set_map_pre);
 		// сообщаем об изменении настроек звука
-		obj_ctrl_snd.action = "sndChange";
+		array_push(obj_ctrl_snd.action, "sndChange")
 	break;
 	// откатить до настроек по умолчанию
 	case "defaultSettings":
@@ -61,7 +61,7 @@ switch (action) {
 		// отменяем изменения (откатываемся до предыдущих настроек)
 		ds_map_copy(ctrl_set_map_curr, ctrl_set_map_def);
 		// сообщаем об изменении настроек звука
-		obj_ctrl_snd.action = "sndChange";
+		array_push(obj_ctrl_snd.action, "sndChange")
 		
 		// костыль, наверное: обновление спрайтов кнопкам настроек:
 		// ползунок положение 

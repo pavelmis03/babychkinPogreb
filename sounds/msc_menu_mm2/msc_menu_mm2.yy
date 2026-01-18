@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":63.60815,
+  "duration":-1.0,
   "name":"msc_menu_mm2",
   "parent":{
     "name":"menu",

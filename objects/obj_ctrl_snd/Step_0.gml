@@ -8,9 +8,7 @@ if (!init) {
 // музыка продолжает играть, если другая, удаляется и играет новая
 // проверка на переход в другую комнату
 if (obj_ctrl_mv.ctrl_mv_change_rm) {
-	if (action == "") {
-		action = "changeRm";
-	}
+	array_push(action, "changeRm");
 }
 
 // удаление отыгранных звуков
@@ -25,7 +23,7 @@ for (var i = 0; i < array_length(ctrl_snd_arr_on); i++) {
 
 
 // выполнение действия
-if (action != "") {
+if (array_length(action) != 0) {
 	event_user(15);
-	action = "";
+	action = [];
 }

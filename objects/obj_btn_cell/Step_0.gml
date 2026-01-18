@@ -40,8 +40,6 @@ if (btn_enable) {
 			cl_subl = c_white;
 			// воспроизводим звук наведения
 			scr_snd_requestPlaySnd(sound[0], sound[1], sound[1], true);	// звук 
-			// obj_ctrl_snd.action = "playSnd";
-			// array_push(obj_ctrl_snd.sound, sound[0], sound[1]);
 			btn_enter = true;
 			// назначаем ячейку в фокусе
 			// ctrl.row = cell_numR;

@@ -23,21 +23,19 @@ if (btn_enable) {
 			// !!!!!добавлено следующее условие:!!!!
 			if (btn_lift_map_floor[?action] == rm) { // если этаж тот же самый, то звук другой
 				scr_snd_requestPlaySnd(sound[0], "snd_gm_lift_currFloor", "snd_gm_lift_currFloor", true);	// звук 
-				// array_push(obj_ctrl_snd.sound, sound[0], "snd_gm_lift_currFloor");
 				btn_transitionDelay = 3;
 			} else {
 				scr_snd_requestPlaySnd(sound[0], sound[2], sound[2], true);	// звук 
-				// array_push(obj_ctrl_snd.sound, sound[0], sound[2]);
+				
 				btn_transitionDelay = 9;
 			}
 		} else {
 			// если мы нажимаем на кнопки диспетчера и выжженную, то звук надо воспроизвести
 			if ((action == "scaryVoice") or (action == "none")) {
 				scr_snd_requestPlaySnd(sound[0], sound[2], sound[2], true);	// звук 
-				// array_push(obj_ctrl_snd.sound, sound[0], sound[2]);
+				
 			} else { // если мы уже едем и нажата кнопка, то просто звук клика и все
 				scr_snd_requestPlaySnd(sound[0], "snd_gm_lift_pressBtnOnlyClick", "snd_gm_lift_pressBtnOnlyClick", true);	// звук 
-				// array_push(obj_ctrl_snd.sound, sound[0], "snd_gm_lift_pressBtnOnlyClick");
 			}
 		}
 		// назначаем нажатие, чтобы поменялся спрайт

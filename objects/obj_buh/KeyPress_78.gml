@@ -5,5 +5,4 @@
 if ((buh_playerIn) and (keyboard_check(vk_shift)) and (buh_transmission != 0)) {
 	buh_transmission = 0;	// включаем нейтраль
 	scr_snd_requestPlaySnd(20, "snd_buh_transmissionChange", "snd_buh_transmissionChange", true);	// звук 
-	// array_push(obj_ctrl_snd.sound, 20, "snd_buh_transmissionChange");
 }

@@ -1,5 +1,5 @@
 /// @description инициализация
 
 // применяем прочитанные настройки в контроллере звуков
-action = "sndChange";
+action = ["sndChange"];
 init = true;
