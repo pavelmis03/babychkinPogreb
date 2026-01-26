@@ -16,7 +16,7 @@ if (btn_enable) {
 		// включаем скорость проигрывания 
 		image_speed = 1;
 		// воспроизводим звук клика
-		obj_ctrl_snd.action = "playSnd";
+		array_push(obj_ctrl_snd.action, "playSnd");
 		// проверяем, что еще не было нажато ни одной кнопки, иначе мы только меняем ей спрайт и все
 		// НАЗНАЧЕНИЕ НАШЕГО ID ПРОИСХОДИТ В ANIMeND. ПОЭТОМУ СПРАЙТ ДОЛЖЕН БЫТЬ БЫСТРЫМ 
 		if (obj_ctrl_rmElevator.ctrl_elevator_id_btn_pressed == 0) {

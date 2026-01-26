@@ -71,7 +71,7 @@ ini_close();
 */
 obj_ctrl_mv.action = "addRm";		// сохраняем комнату из которой переходи
 obj_ctrl_stat.action = "exitToMM";	// сохраняем статистику
-obj_ctrl_gm_sv.action = "exitToMM";	// сообщаем контроллеру сохранений, чтобы очистил все, что надо 
-obj_ctrl_snd.action = "sndClear";	// чистим звуки игры
+obj_ctrl_gm_sv.action = "exitToMM";	// сообщаем контроллеру сохранений, чтобы очистил все, что надо
+array_push(obj_ctrl_snd.action, "sndClear"); // чистим звуки игры
 // obj_ctrl_tml.action = "exitToMM";	// сообщаем контроллеру таймлайнов, чтобы очистил все, что надо 
 room_goto(rm_menu_mm);
